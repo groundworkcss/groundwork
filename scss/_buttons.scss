@@ -116,10 +116,10 @@ button, .button, a.button, a.button:link, a.button:visited, input[type=submit], 
         &:last-child {
           @include rounded(0 0 $radius $radius);
         }
-      }
-      hr {
-        margin:0;
-        border-color:#ececec;
+        hr {
+          margin:0;
+          border-color:#dddddd;
+        }
       }
     }
   }

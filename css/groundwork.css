@@ -1693,9 +1693,9 @@ button.dropdown ul li:last-child, .button.dropdown ul li:last-child, a.button.dr
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-button.dropdown ul hr, .button.dropdown ul hr, a.button.dropdown ul hr, a.button:link.dropdown ul hr, a.button:visited.dropdown ul hr, input[type=submit].dropdown ul hr, input[type=button].dropdown ul hr, input[type=reset].dropdown ul hr {
+button.dropdown ul li hr, .button.dropdown ul li hr, a.button.dropdown ul li hr, a.button:link.dropdown ul li hr, a.button:visited.dropdown ul li hr, input[type=submit].dropdown ul li hr, input[type=button].dropdown ul li hr, input[type=reset].dropdown ul li hr {
   margin: 0;
-  border-color: #ececec;
+  border-color: #dddddd;
 }
 
 ul.button-list, ol.button-list {
