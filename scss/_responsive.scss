@@ -9,7 +9,7 @@
 //       ipads       //
 ///////////////////////
 @media only screen and (min-width:768px) and (max-width:1024px) {
-    
+
 }
 
 
@@ -20,8 +20,8 @@
 ///////////////////////
 @media only screen and (max-width:767px) {
   // responsive grid
-  .column:not(.small-tablet):not(.mobile), 
-  .columns:not(.small-tablet):not(.mobile), 
+  .column:not(.small-tablet):not(.mobile),
+  .columns:not(.small-tablet):not(.mobile),
   .half:not(.small-tablet):not(.mobile),
   .halves:not(.small-tablet):not(.mobile),
   .third:not(.small-tablet):not(.mobile),
@@ -123,12 +123,12 @@
           @include filter-shadow(rgba(0,0,0,0), 0, 0, 0);
           li {
             &:first-child {
-              a, a:link, a:visited {
+              a, a:visited {
                 @include rounded(0 !important);
               }
             }
             &:last-child {
-              a, a:link, a:visited {
+              a, a:visited {
                 @include rounded(0 !important);
               }
             }
@@ -141,7 +141,7 @@
             ul {
               li {
                 &:last-child {
-                  a, a:link, a:visited {
+                  a, a:visited {
                     @include rounded(0 0 $radius $radius !important);
                   }
                 }
@@ -156,16 +156,16 @@
     ul, ul.row {
       li {
         &:first-child {
-          > a, > a:link, > a:visited {
+          > a, > , > a:visited {
             @include rounded($radius $radius 0 0 !important);
           }
         }
         &:last-child {
-          > a, > a:link, > a:visited {
+          > a, > , > a:visited {
             @include rounded(0 0 $radius $radius !important);
           }
           &.on {
-            > a, > a:link, > a:visited {
+            > a, > , > a:visited {
               border-bottom-right-radius:0 !important;
               border-bottom-left-radius:0 !important;
             }
@@ -175,7 +175,7 @@
       li {
         ul {
           li {
-            a, a:link, a:visited {
+            a, a:visited {
               @include rounded(0 !important);
             }
           }
@@ -193,7 +193,7 @@
           border-bottom:none;
         }
         &:first-child a {
-          @include rounded($radius $radius 0 0); 
+          @include rounded($radius $radius 0 0);
         }
       }
     }
@@ -214,8 +214,8 @@
 ///////////////////////
 @media only screen and (max-width:480px) {
   // responsive grid
-  .column:not(.mobile), 
-  .columns:not(.mobile), 
+  .column:not(.mobile),
+  .columns:not(.mobile),
   .half:not(.mobile),
   .halves:not(.mobile),
   .third:not(.mobile),
@@ -291,7 +291,7 @@
           border-bottom:none;
         }
         &:first-child a {
-          @include rounded($radius $radius 0 0); 
+          @include rounded($radius $radius 0 0);
         }
       }
     }
@@ -311,5 +311,5 @@
 //  small handhelds  //
 ///////////////////////
 @media only screen and (max-width:320px) {
-    
+
 }

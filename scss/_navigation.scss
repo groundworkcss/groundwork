@@ -14,7 +14,7 @@ nav {
     li {
       display:block;
       position:relative;
-      a, a:link, a:visited {
+      a, a:visited {
         display:block;
         width:100%;
         word-wrap:break-word;
@@ -72,12 +72,12 @@ nav {
         }
       }
       &:first-child {
-        a, a:link, a:visited {
+        a, a:visited {
           @include rounded($radius $radius 0 0);
         }
       }
       &:last-child {
-        a, a:link, a:visited {
+        a, a:visited {
           @include rounded(0 0 $radius $radius);
         }
       }
@@ -90,7 +90,7 @@ nav {
       width:auto;
       z-index:99;
       li {
-        a, a:link, a:visited {
+        a, a:visited {
           @include rounded(0 !important);
           background:lighten($button-color, 5%);
           &:hover, &:active {
@@ -98,12 +98,12 @@ nav {
           }
         }
         &:first-child {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded(0 $radius 0 0 !important);
           }
         }
         &:last-child {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded(0 0 $radius $radius !important);
           }
         }
@@ -112,16 +112,16 @@ nav {
     // horizontal grid navigation
     &.row {
       li {
-        a, a:link, a:visited {
+        a, a:visited {
           @include rounded(0);
         }
         &:first-child {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded($radius 0 0 $radius);
           }
         }
         &:last-child {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded(0 $radius $radius 0);
           }
         }
@@ -134,11 +134,11 @@ nav {
         min-width:100%;
         z-index:99;
         li {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded(0 !important);
           }
           &:last-child {
-            a, a:link, a:visited {
+            a, a:visited {
               @include rounded(0 0 $radius $radius !important);
             }
           }
@@ -157,16 +157,16 @@ nav {
         display:inline-block;
         white-space-collapse:discard;
         float:none;
-        a, a:link, a:visited {
+        a, a:visited {
 
         }
         &:first-child {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded($radius 0 0 $radius);
           }
         }
         &:last-child {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded(0 $radius $radius 0);
           }
         }
@@ -179,11 +179,11 @@ nav {
           z-index:99;
           li {
             display:block;
-            a, a:link, a:visited {
+            a, a:visited {
               @include rounded(0 !important);
             }
             &:last-child {
-              a, a:link, a:visited {
+              a, a:visited {
                 @include rounded(0 0 $radius $radius !important);
               }
             }
@@ -256,12 +256,12 @@ nav {
           }
         }
         &:first-child {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded($radius);
           }
         }
         &:last-child {
-          a, a:link, a:visited {
+          a, a:visited {
             @include rounded($radius);
           }
         }
