@@ -5,7 +5,7 @@
 
 
 
-button, .button, a.button, a.button:link, a.button:visited, input[type=submit],  input[type=button], input[type=reset] {
+button, .button, a.button, a.button:visited, input[type=submit],  input[type=button], input[type=reset] {
   display:inline-block;
   word-wrap:break-word;
   padding:0.25em 1em;
@@ -103,7 +103,7 @@ button, .button, a.button, a.button:link, a.button:visited, input[type=submit], 
       @include rounded(0 0 $radius $radius);
       li {
         display:block;
-        a, a:link, a:visited {
+        a, a:visited {
           display:block;
           padding:0.5em 1em;
           border:none;
