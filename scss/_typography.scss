@@ -206,51 +206,47 @@ em, .italic { font-style:italic; }
 b, strong, .bold, .strong { font-weight:900; }
 sup { font-size:0.8em; }
 sub { font-size:0.8em; }
+
 code {
-	color: white;
+	color:       white;
 	white-space: pre-wrap;
 	word-wrap:   break-word;
 	min-height:  1em;
-	line-height: 1.4;
-	&:not(.inline):before {
-		counter-increment: linenumber;
-		content:           counter(linenumber) ".";
-		display:           inline-block;
-		width:             2em;
-		text-align:        right;
-		position:          absolute;
-		left:              0.4em;
-		color:             white;
-	}
-	&:before {
-		counter-increment: linenumber;
-		content:           counter(linenumber) ".";
-		display:           inline-block;
-		width:             2em;
-		text-align:        right;
-		position:          absolute;
-		left:              1em;
-		color:             white;
-	}
-	&.inline {
-		display:     inline-block;
-		background:  lighten(gray, 5%);
-		border:      none;
-		padding:     0 0.3em;
-		margin:      0 0.2em;
-		font-weight: normal;
-		line-height: inherit;
-  }
+	display:     inline-block;
+	color:       white;
+	background:  lighten(gray, 5%);
+	border:      none;
+	padding:     0 0.3em;
+	margin:      0 0.2em;
+	font-weight: normal;
+	line-height: inherit;
 }
+
 pre {
 	color:         white;
-	background:    black;
+	background:    #050505;
 	font-size:     0.9em;
 	padding:       0.5em;
 	display:       block;
 	border-left:   2.5em solid gray;
 	counter-reset: linenumber;
+	code {
+		background: inherit;
+		margin:     0;
+		padding:    0;
+		&:before {
+			text-align:        right;
+			color:             white;
+			width:             2em;
+			display:           inline-block;
+			counter-increment: linenumber;
+			content:           counter(linenumber) ".";
+			position:          absolute;
+			left:              1.2em;
+		}
+	}
 }
+
 .error, .invalid {
   color:$error-color;
 }
