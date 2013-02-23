@@ -1844,8 +1844,8 @@ textarea {
 }
 textarea:focus {
   -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
-  filter: Glow(color=#20000000, strength=15);
-  -ms-filter: glow(color=#20000000, strength=15);
+  filter: Glow(color=#200000, strength=15);
+  -ms-filter: glow(color=#200000, strength=15);
   -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
@@ -1854,8 +1854,8 @@ textarea:focus {
 
 span.select select:focus {
   -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
-  filter: Glow(color=#59000000, strength=15);
-  -ms-filter: glow(color=#59000000, strength=15);
+  filter: Glow(color=#590000, strength=15);
+  -ms-filter: glow(color=#590000, strength=15);
   -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
@@ -3882,8 +3882,8 @@ ul.icons li [class*=" icon-"] {
   margin-bottom: 3px;
   vertical-align: bottom;
   -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  filter: Glow(color=#33000000, strength=5);
-  -ms-filter: glow(color=#33000000, strength=5);
+  filter: Glow(color=#330000, strength=5);
+  -ms-filter: glow(color=#330000, strength=5);
   -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -4416,8 +4416,8 @@ div.modal {
   background: #222;
   background: rgba(0, 0, 0, 0.4);
   -ms-box-shadow: 0 0 50px #323232;
-  filter: Glow(color=#FF323232, strength=50);
-  -ms-filter: glow(color=#FF323232, strength=50);
+  filter: Glow(color=#FF3232, strength=50);
+  -ms-filter: glow(color=#FF3232, strength=50);
   -o-box-shadow: 0 0 50px #323232;
   -moz-box-shadow: 0 0 50px #323232;
   -webkit-box-shadow: 0 0 50px #323232;
