@@ -34,8 +34,8 @@ html.lt-ie9 span.select select {
 html.lt-ie9 span.select select:focus {
   border: 1px solid #198d98;
   -ms-box-shadow: 0 0 0 white;
-  filter: Glow(color=#FFFFFFFF, strength=0);
-  -ms-filter: glow(color=#FFFFFFFF, strength=0);
+  filter: Glow(color=#FFFFFF, strength=0);
+  -ms-filter: glow(color=#FFFFFF, strength=0);
   -o-box-shadow: 0 0 0 white;
   -moz-box-shadow: 0 0 0 white;
   -webkit-box-shadow: 0 0 0 white;
