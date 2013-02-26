@@ -1566,11 +1566,14 @@ button, .button, a.button, a.button:visited, input[type=submit], input[type=butt
   background: #1dabb8;
   border: 1px solid #198d98;
   color: white;
+  font-family: Helvetica, Arial, Geneva, sans-serif;
   font-weight: bold;
   font-size: 1em;
   text-decoration: none;
   cursor: pointer;
   line-height: 1.5;
+  width: auto;
+  height: auto;
   -ms-transition: background-color 0.25s ease-out;
   -o-transition: background-color 0.25s ease-out;
   -moz-transition: background-color 0.25s ease-out;
@@ -2692,7 +2695,7 @@ li [class*=" icon-"].icon-large, .nav li [class^="icon-"].icon-large,
 
 ul.icons {
   list-style-type: none;
-  text-indent: -.75em;
+  text-indent: -0.75em;
 }
 ul.icons li [class^="icon-"],
 ul.icons li [class*=" icon-"] {
@@ -2705,7 +2708,7 @@ ul.icons li [class*=" icon-"] {
 
 .icon-border {
   border: solid 1px #eeeeee;
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;

@@ -12,11 +12,14 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
   background:$button-color;
   border:1px solid $button-active;
   color:$button-text;
+  font-family:$font-family;
   font-weight:bold;
   font-size:1em;
   text-decoration:none;
   cursor:pointer;
   line-height:1.5;
+  width:auto;
+  height:auto;
   @include transition(background-color 0.25s ease-out);
   @include rounded($radius);
   &:hover, &:focus {
