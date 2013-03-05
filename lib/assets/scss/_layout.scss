@@ -17,43 +17,43 @@
 .pull-left        { float:left; }
 .padded           { padding:$gutter;
   &.double        { padding:$gutter*2; }
-  &.tripple       { padding:$gutter*3; }
+  &.triple       { padding:$gutter*3; }
 }
 .pad-top          { padding-top:$gutter;
   &.double        { padding-top:$gutter*2; }
-  &.tripple       { padding-top:$gutter*3; }
+  &.triple       { padding-top:$gutter*3; }
 }
 .pad-right        { padding-right:$gutter;
   &.double        { padding-right:$gutter*2; }
-  &.tripple       { padding-right:$gutter*3; }
+  &.triple       { padding-right:$gutter*3; }
 }
 .pad-bottom       { padding-bottom:$gutter;
   &.double        { padding-bottom:$gutter*2; }
-  &.tripple       { padding-bottom:$gutter*3; }
+  &.triple       { padding-bottom:$gutter*3; }
 }
 .pad-left         { padding-left:$gutter;
   &.double        { padding-left:$gutter*2; }
-  &.tripple       { padding-left:$gutter*3; }
+  &.triple       { padding-left:$gutter*3; }
 }
 .gapped           { margin:$gutter;
   &.double        { margin:$gutter*2; }
-  &.tripple       { margin:$gutter*3; }
+  &.triple       { margin:$gutter*3; }
 }
 .gap-top          { margin-top:$gutter;
   &.double        { margin-top:$gutter*2; }
-  &.tripple       { margin-top:$gutter*3; }
+  &.triple       { margin-top:$gutter*3; }
 }
 .gap-right        { margin-right:$gutter;
   &.double        { margin-right:$gutter*2; }
-  &.tripple       { margin-right:$gutter*3; }
+  &.triple       { margin-right:$gutter*3; }
 }
 .gap-bottom       { margin-bottom:$gutter;
   &.double        { margin-bottom:$gutter*2; }
-  &.tripple       { margin-bottom:$gutter*3; }
+  &.triple       { margin-bottom:$gutter*3; }
 }
 .gap-left         { margin-left:$gutter;
-  &.double        { padding:$gutter*2; }
-  &.tripple       { padding:$gutter*3; }
+  &.double        { margin-left:$gutter*2; }
+  &.triple       { margin-left:$gutter*3; }
 }
 .border-right     { border-right:1px solid $border-color; }
 .border-left      { border-left:1px solid $border-color; }

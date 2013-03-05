@@ -7,14 +7,69 @@
 // =============================================
 
 
+/////////////////////////////////////
+//    grid system - placeholders   //
+/////////////////////////////////////
+
+%container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+%row {
+  @extend .clear;
+  width: $one-whole;
+}
+
+%column {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+
+%centered {
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+$numbers: one two three four five six seven eight nine ten eleven twelve;
+$fractions: whole half third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth;
+$fractions-plural: wholes halves thirds fourths fifths sixths sevenths eighths ninths tenths elevenths twelfths;
+
+// function to generate the grid code
+@for $i from 1 through length($numbers) {
+  %#{nth($fractions, $i)},
+  %#{nth($fractions-plural, $i)}  //the parent placeholder {
+    width: percentage(1 / $i);
+    @extend %column;
+    @for $width from 1 through $i {
+      &%#{nth($numbers, $width)} {
+        width: percentage($width / $i);
+        @extend %column //the column is again extended so you can use @extend %sixth%five without having to extend %sixth;
+      }
+    }
+    @for $right-left-skip from 1 through $i - 1 {
+      &%right-#{nth($numbers, $right-left-skip)} {
+        left: percentage($right-left-skip / $i);
+      }
+      &%left-#{nth($numbers, $right-left-skip)} {
+        right: percentage($right-left-skip / $i);
+      }
+      &%skip-#{nth($numbers, $right-left-skip)} {
+        margin-left: percentage($right-left-skip / $i);
+      }
+    }
+  }
+}
 
 
-///////////////////////
-//    grid system    //
-///////////////////////
+////////////////////////////////
+//    grid system - classes   //
+////////////////////////////////
 .container          { max-width:$max-width;margin:0 auto; }
 .row                { @extend .clear;width:$one-whole; }
-%column             { float:left;position:relative;min-height:1px; }
+.column             { float:left;position:relative;min-height:1px; }
 .centered           { float:none !important;margin:0 auto !important; }
 
 
