@@ -12,7 +12,8 @@ $(document).ready ->
 
   # navigation menus
   delay = ''
-  $('nav > ul > li.menu').on
+  $submenu = $('nav > ul > li.menu')
+  $submenu.on
     mouseenter: (e) ->
       if $(window).width() > 768
         clearTimeout(delay)
@@ -41,6 +42,23 @@ $(document).ready ->
         e.preventDefault()
         return false
  
+  # a11y : tab access to submenu (by Geoffrey Crofte - CreativeJuiz.com)
+  $submenu.find('>a').on 'focus', ( ->
+    $(this).closest('li.menu').trigger('mouseenter')
+  )
+  
+  $submenu.find('li:last-child > a').on 'blur', ( -> 
+    $(this).closest('li.menu').trigger('mouseleave')
+  )
+  
+  # DropDown Button a11y (by Geoffrey Crofte - CreativeJuiz.com)
+  $('.dropdown.button').attr('tabindex', '0').on 'focus', ( ->
+    $(this).find('>ul').css('display', 'block')
+  ).find('>ul li:last-child a').on 'blur', ( ->
+    $(this).closest('ul').css('display', 'none')
+  )
+  
+
   # dynamically adjust pagination items
   limitPaginationItems()
   # change active page
