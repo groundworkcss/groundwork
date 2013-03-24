@@ -7,9 +7,9 @@
 // =============================================
 
 
-/////////////////////////////////////
-//    grid system - placeholders   //
-/////////////////////////////////////
+///////////////////////////////////////////////
+//    grid system - placeholders & classes   //
+///////////////////////////////////////////////
 
 %container {
   max-width: $max-width;
@@ -33,32 +33,112 @@
   margin-right: auto !important;
 }
 
+@if $classes {
+  .container          { @extend %container; }
+  .row                { @extend %row; }
+  .column             { @extend %column; }
+  .centered           { @extend %centered; }
+}
+
+$selectors: if($classes, "%" ".", "%");
+
 $numbers: one two three four five six seven eight nine ten eleven twelve;
 $fractions: whole half third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth;
 $fractions-plural: wholes halves thirds fourths fifths sixths sevenths eighths ninths tenths elevenths twelfths;
 
-// function to generate the grid code
-@for $i from 1 through length($numbers) {
-  %#{nth($fractions, $i)},
-  %#{nth($fractions-plural, $i)} {
-    width: percentage(1 / $i);
-    @extend %column;
-    @for $width from 1 through $i {
-      &%#{nth($numbers, $width)} {
-        width: percentage($width / $i);
-        @extend %column;
+// function to generate the grid code (placeholders and optionally, classes)
+@for $i from 1 through length($selectors) {
+  @for $j from 1 through length($numbers) {
+    #{nth($selectors, $i) + nth($fractions, $j)},
+    #{nth($selectors, $i) + nth($fractions-plural, $j)} {
+      width: percentage(1 / $j);
+      @extend %column;
+      @for $width from 1 through $j {
+        &#{nth($selectors, $i) + nth($numbers, $width)} {
+          width: percentage($width / $j);
+          @extend %column;
+        }
       }
-    }
-    @for $right-left-skip from 1 through $i - 1 {
-      &%right-#{nth($numbers, $right-left-skip)} {
-        left: percentage($right-left-skip / $i);
-      }
-      &%left-#{nth($numbers, $right-left-skip)} {
-        right: percentage($right-left-skip / $i);
-      }
-      &%skip-#{nth($numbers, $right-left-skip)} {
-        margin-left: percentage($right-left-skip / $i);
+      @for $right-left-skip from 1 through $j - 1 {
+        &#{nth($selectors, $i) + "right-" + nth($numbers, $right-left-skip)} {
+          left: percentage($right-left-skip / $j);
+        }
+        &#{nth($selectors, $i) + "left-" + nth($numbers, $right-left-skip)} {
+          right: percentage($right-left-skip / $j);
+        }
+        &#{nth($selectors, $i) + "skip-" + nth($numbers, $right-left-skip)} {
+          margin-left: percentage($right-left-skip / $j);
+        }
       }
     }
   }
+}
+
+// grid classes responsive
+@mixin grid-responsive($both: true) {
+  // responsive grid
+  %half, %halves,
+  %third, %thirds,
+  %fourth, %fourths,
+  %fifth, %fifths,
+  %sixth, %sixths,
+  %seventh, %sevenths,
+  %eighth, %eighths,
+  %ninth, %ninths,
+  %tenth, %tenths,
+  %eleventh, %elevenths,
+  %twelfth, %twelfths#{if($classes, ", .half, .halves, .third, .thirds, .fourth, .fourths, .fifth, .fifths, .sixth, .sixths, .seventh, .sevenths, .eighth, .eighths, .ninth, .ninths, .tenth, .tenths, .eleventh, .elevenths, .twelfth, .twelfths", "")} {
+    @if $both {
+      &:not(.small-tablet):not(.mobile) {
+        @include grid-collapse();
+      }
+    }
+    @else {
+      &:not(.mobile) {
+        @include grid-collapse();
+      }
+    }
+  }
+}
+
+@mixin grid-collapse() {
+  width:100% !important;
+  float:none;
+  clear:both;
+  // reset push
+  &%right-one,
+  &%right-two,
+  &%right-three,
+  &%right-four,
+  &%right-five,
+  &%right-six,
+  &%right-seven,
+  &%right-eight,
+  &%right-nine,
+  &%right-ten,
+  &%right-eleven#{if($classes, ", &.right-one, &.right-two, &.right-three, &.right-four, &.right-five, &.right-six, &.right-seven, &.right-eight, &.right-nine, &.right-ten, &.right-eleven", "")}  { left:0; }
+  // reset pull
+  &%left-one,
+  &%left-two,
+  &%left-three,
+  &%left-four,
+  &%left-five,
+  &%left-six,
+  &%left-seven,
+  &%left-eight,
+  &%left-nine,
+  &%left-ten,
+  &%left-eleven#{if($classes, ", &.left-one, &.left-two, &.left-three, &.left-four, &.left-five, &.left-six, &.left-seven, &.left-eight, &.left-nine, &.left-ten, &.left-eleven", "")}   { right:0; }
+  // reset offset
+  &%skip-one,
+  &%skip-two,
+  &%skip-three,
+  &%skip-four,
+  &%skip-five,
+  &%skip-six,
+  &%skip-seven,
+  &%skip-eight,
+  &%skip-nine,
+  &%skip-ten,
+  &%skip-eleven#{if($classes, ", &.skip-one, &.skip-two, &.skip-three, &.skip-four, &.skip-five, &.skip-six, &.skip-seven, &.skip-eight, &.skip-nine, &.skip-ten, &.skip-eleven", "")}   { margin-left:0; }
 }

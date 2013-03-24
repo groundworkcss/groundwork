@@ -16,9 +16,6 @@
 
 // grid
 @import "grid";
-@if $classes {
-  @include grid-classes();
-}
 
 // helper classes
 @import "helpers";

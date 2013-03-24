@@ -1,0 +1,6 @@
+@import "../../../src/scss/groundwork";
+
+.washroom {@extend %container};
+.soap-dispenser {@extend %row};
+.packet-of-soap {@extend %one, %whole};
+.satchet-of-soap {@extend %one, %third};

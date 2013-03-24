@@ -32,9 +32,7 @@
 //   small tablets   //
 ///////////////////////
 @include small-tablet {
-  @if $classes {
-    @include grid-responsive();
-  }
+  @include grid-responsive();
   nav:not(.pagination), nav.inline {
     width:100%;
     ul, ul.row {
@@ -168,9 +166,7 @@
 //     handhelds     //
 ///////////////////////
 @include mobile {
-  @if $classes {
-    @include grid-responsive(false);
-  }
+  @include grid-responsive(false);
   .tabs:not(.mobile) {
     > ul {
       li {
