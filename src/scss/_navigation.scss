@@ -83,6 +83,11 @@ nav {
           @include rounded(0 0 $radius $radius);
         }
       }
+      &:only-child {
+         a, a:visited {
+          @include rounded($radius $radius $radius $radius);
+        }
+      }
     }
     ul {
       display:none;
@@ -109,6 +114,11 @@ nav {
             @include rounded(0 0 $radius $radius);
           }
         }
+        &:only-child {
+          a, a:visited {
+            @include rounded(0 $radius $radius 0);
+          }
+        }
       }
     }
     // horizontal grid navigation
@@ -125,6 +135,11 @@ nav {
         &:last-child {
           a, a:visited {
             @include rounded(0 $radius $radius 0);
+          }
+        }
+        &:only-child {
+          a, a:visited {
+            @include rounded($radius $radius $radius $radius);
           }
         }
       }
@@ -179,6 +194,11 @@ nav {
         &:last-child {
           a, a:visited {
             @include rounded(0 $radius $radius 0);
+          }
+        }
+        &:only-child {
+          a, a:visited {
+            @include rounded($radius $radius $radius $radius);
           }
         }
         ul {
