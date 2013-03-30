@@ -2075,6 +2075,13 @@ nav ul li:last-child a, nav ul li:last-child a:visited {
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
+nav ul li:only-child a, nav ul li:only-child a:visited {
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+}
 nav ul ul {
   display: none;
   position: absolute;
@@ -2108,6 +2115,13 @@ nav ul ul li:last-child a, nav ul ul li:last-child a:visited {
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
+nav ul ul li:only-child a, nav ul ul li:only-child a:visited {
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
 nav ul.row li a, nav ul.row li a:visited {
   -ms-border-radius: 0;
   -o-border-radius: 0;
@@ -2128,6 +2142,13 @@ nav ul.row li:last-child a, nav ul.row li:last-child a:visited {
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+}
+nav ul.row li:only-child a, nav ul.row li:only-child a:visited {
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
 }
 nav ul.row ul {
   display: none;
@@ -2188,6 +2209,13 @@ nav.inline ul li:last-child a, nav.inline ul li:last-child a:visited {
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+}
+nav.inline ul li:only-child a, nav.inline ul li:only-child a:visited {
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
 }
 nav.inline ul li ul {
   display: none;
