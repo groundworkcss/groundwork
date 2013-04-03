@@ -20,3 +20,4 @@
 #   -  components/responsiveText.coffee     (required for responsive text)
 #   -  components/tabs.coffee               (required for tabs)
 #   -  components/tooltips.coffee           (required for tooltips)
+#   -  components/tiles.coffee              (required for tiles)

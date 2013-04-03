@@ -1,0 +1,189 @@
+// ===================================
+//         GroundworkCSS Squares
+// ===================================
+
+
+
+$square-color:        #dfdfdf;
+$square-border:       #c0c0c0;
+$square-hover:        #489AC1;
+$square-hover-text:   #489AC1;
+$square-active:       #198D98;
+$square-active-text:  #fff;
+
+$green: #2ecc71;
+$blue: #3498db;
+$purple: #9b59b6;
+$yellow: #f1c40f;
+$orange: #e67e22;
+$red: #e74c3c;
+$pink: #f02475;
+$turquoise: #1abc9c;
+$asphalt: #34495e;
+
+
+.tiles {
+  position: relative;
+
+  > .tile {
+    display: inline-block;
+    background-color: $square-color;
+    border: 6px solid $square-border;
+    display:inline-block;
+    word-wrap:break-word;
+    padding:0.25em;
+    margin-bottom: 0.25em;
+    text-align: center;
+    font-size: 1em;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    @include transition(background-color 0.25s ease-out);
+    @include rounded($radius);
+    cursor: pointer;
+    i {
+      font-size: 3em;
+      display: block;
+      margin: 0.15em 1em;
+    }
+    &.on, &:hover, &:focus {
+      border-color: $square-hover;
+      color:$square-hover-text;
+      text-decoration:none;
+    }
+    &.active, &.active:hover, &.active:focus {
+      background-color: $square-active;
+      color:$square-active-text;
+      border-color: $square-border;
+    }
+    &.disabled {
+      @include state(disabled);
+    }
+    &.small {
+      font-size:0.8em;
+    }
+    &.large {
+      font-size:1.5em;
+    }
+    &.square {
+      @include rounded(0);
+    }
+
+    &.green {
+      color: $green;
+      &.on, &:hover, &:focus {
+        border-color: $green;
+        color:$green;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $green;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+
+    &.blue {
+      color: $blue;
+      &.on, &:hover, &:focus {
+        border-color: $blue;
+        color:$blue;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $blue;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+
+    &.purple {
+      color: $purple;
+      &.on, &:hover, &:focus {
+        border-color: $purple;
+        color:$purple;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $purple;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+
+    &.yellow {
+      color: $yellow;
+      &.on, &:hover, &:focus {
+        border-color: $yellow;
+        color:$yellow;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $yellow;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+
+    &.orange {
+      color: $orange;
+      &.on, &:hover, &:focus {
+        border-color: $orange;
+        color:$orange;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $orange;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+
+    &.red {
+      color: $red;
+      &.on, &:hover, &:focus {
+        border-color: $red;
+        color:$red;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $red;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+
+    &.pink {
+      color: $pink;
+      &.on, &:hover, &:focus {
+        border-color: pink;
+        color:$pink;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $pink;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+
+    &.turquoise {
+      color: $turquoise;
+      &.on, &:hover, &:focus {
+        border-color: $turquoise;
+        color:$turquoise;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $turquoise;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+
+    &.asphalt {
+      color: $asphalt;
+      &.on, &:hover, &:focus {
+        border-color: $asphalt;
+        color:$asphalt;
+      }
+      &.active, &.active:hover, &.active:focus {
+        background-color: $asphalt;
+        color:$square-active-text;
+        border-color: $square-border;
+      }
+    }
+  }
+}

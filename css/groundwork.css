@@ -4833,6 +4833,179 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   left: 10px;
 }
 
+.tiles {
+  position: relative;
+}
+.tiles > .tile {
+  display: inline-block;
+  background-color: #dfdfdf;
+  border: 6px solid silver;
+  display: inline-block;
+  word-wrap: break-word;
+  padding: 0.25em;
+  margin-bottom: 0.25em;
+  text-align: center;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -ms-transition: background-color 0.25s ease-out;
+  -o-transition: background-color 0.25s ease-out;
+  -moz-transition: background-color 0.25s ease-out;
+  -webkit-transition: background-color 0.25s ease-out;
+  transition: background-color 0.25s ease-out;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tiles > .tile i {
+  font-size: 3em;
+  display: block;
+  margin: 0.15em 1em;
+}
+.tiles > .tile.on, .tiles > .tile:hover, .tiles > .tile:focus {
+  border-color: #489ac1;
+  color: #489ac1;
+  text-decoration: none;
+}
+.tiles > .tile.active, .tiles > .tile.active:hover, .tiles > .tile.active:focus {
+  background-color: #198d98;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.disabled {
+  color: gray;
+  background: #a6a6a6;
+  border-color: silver;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.tiles > .tile.small {
+  font-size: 0.8em;
+}
+.tiles > .tile.large {
+  font-size: 1.5em;
+}
+.tiles > .tile.square {
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.tiles > .tile.green {
+  color: #2ecc71;
+}
+.tiles > .tile.green.on, .tiles > .tile.green:hover, .tiles > .tile.green:focus {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+.tiles > .tile.green.active, .tiles > .tile.green.active:hover, .tiles > .tile.green.active:focus {
+  background-color: #2ecc71;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.blue {
+  color: #3498db;
+}
+.tiles > .tile.blue.on, .tiles > .tile.blue:hover, .tiles > .tile.blue:focus {
+  border-color: #3498db;
+  color: #3498db;
+}
+.tiles > .tile.blue.active, .tiles > .tile.blue.active:hover, .tiles > .tile.blue.active:focus {
+  background-color: #3498db;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.purple {
+  color: #9b59b6;
+}
+.tiles > .tile.purple.on, .tiles > .tile.purple:hover, .tiles > .tile.purple:focus {
+  border-color: #9b59b6;
+  color: #9b59b6;
+}
+.tiles > .tile.purple.active, .tiles > .tile.purple.active:hover, .tiles > .tile.purple.active:focus {
+  background-color: #9b59b6;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.yellow {
+  color: #f1c40f;
+}
+.tiles > .tile.yellow.on, .tiles > .tile.yellow:hover, .tiles > .tile.yellow:focus {
+  border-color: #f1c40f;
+  color: #f1c40f;
+}
+.tiles > .tile.yellow.active, .tiles > .tile.yellow.active:hover, .tiles > .tile.yellow.active:focus {
+  background-color: #f1c40f;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.orange {
+  color: #e67e22;
+}
+.tiles > .tile.orange.on, .tiles > .tile.orange:hover, .tiles > .tile.orange:focus {
+  border-color: #e67e22;
+  color: #e67e22;
+}
+.tiles > .tile.orange.active, .tiles > .tile.orange.active:hover, .tiles > .tile.orange.active:focus {
+  background-color: #e67e22;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.red {
+  color: #e74c3c;
+}
+.tiles > .tile.red.on, .tiles > .tile.red:hover, .tiles > .tile.red:focus {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+.tiles > .tile.red.active, .tiles > .tile.red.active:hover, .tiles > .tile.red.active:focus {
+  background-color: #e74c3c;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.pink {
+  color: #f02475;
+}
+.tiles > .tile.pink.on, .tiles > .tile.pink:hover, .tiles > .tile.pink:focus {
+  border-color: pink;
+  color: #f02475;
+}
+.tiles > .tile.pink.active, .tiles > .tile.pink.active:hover, .tiles > .tile.pink.active:focus {
+  background-color: #f02475;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.turquoise {
+  color: #1abc9c;
+}
+.tiles > .tile.turquoise.on, .tiles > .tile.turquoise:hover, .tiles > .tile.turquoise:focus {
+  border-color: #1abc9c;
+  color: #1abc9c;
+}
+.tiles > .tile.turquoise.active, .tiles > .tile.turquoise.active:hover, .tiles > .tile.turquoise.active:focus {
+  background-color: #1abc9c;
+  color: white;
+  border-color: silver;
+}
+.tiles > .tile.asphalt {
+  color: #34495e;
+}
+.tiles > .tile.asphalt.on, .tiles > .tile.asphalt:hover, .tiles > .tile.asphalt:focus {
+  border-color: #34495e;
+  color: #34495e;
+}
+.tiles > .tile.asphalt.active, .tiles > .tile.asphalt.active:hover, .tiles > .tile.asphalt.active:focus {
+  background-color: #34495e;
+  color: white;
+  border-color: silver;
+}
+
 @-moz-keyframes spin {
   0% {
     -moz-transform: rotate(0deg);

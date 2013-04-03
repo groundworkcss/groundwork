@@ -1642,5 +1642,60 @@ include includes/header
             | applied to it.
           p
             a.large.button(href='#') Click Me
+      h2 Tiles
+      .tiles
+        input(type='submit', value='single')
+        .tile(data-value='single')
+          i.icon-user
+          | Single user
+        .tile(data-value='group')
+          i.icon-group
+          | Small group
+        .tile(data-value='corp')
+          i.icon-building
+          | Corporation
+      hr
+      h4 All variations
+      .tiles
+        input(type='submit', value='')
+        .tile(data-value='default')
+          i.icon-leaf
+          | default
+        .tile(data-value='disabled')
+          i.icon-leaf
+          | disabled
+        .tile(data-value='small')
+          i.icon-leaf
+          | small
+        .tile(data-value='large')
+          i.icon-leaf
+          | large
+        .tile(data-value='square')
+          i.icon-leaf
+          | square
+        .tile(data-value='green')
+          i.icon-leaf
+          | green
+        .tile(data-value='blue')
+          i.icon-leaf
+          | blue
+        .tile(data-value='purple')
+          i.icon-leaf
+          | purple
+        .tile(data-value='yellow')
+          i.icon-leaf
+          | yellow
+        .tile(data-value='orange')
+          i.icon-leaf
+          | orange
+        .tile(data-value='red')
+          i.icon-leaf
+          | red
+        .tile(data-value='turquoise')
+          i.icon-leaf
+          | turquoise
+        .tile(data-value='asphalt')
+          i.icon-leaf
+          | asphalt
   include includes/foot
   include includes/scripts
