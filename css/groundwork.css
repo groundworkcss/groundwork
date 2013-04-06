@@ -3054,7 +3054,7 @@ ul.icons li [class*=" icon-"] {
 
 .icon-border {
   border: solid 1px #eeeeee;
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -5199,30 +5199,42 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   z-index: 1;
 }
 .stick.top {
+  position: fixed;
+  z-index: 1;
   top: 0;
 }
 .stick.right {
+  position: fixed;
+  z-index: 1;
   right: 0;
 }
 .stick.bottom {
+  position: fixed;
+  z-index: 1;
   bottom: 0;
 }
 .stick.left {
+  position: fixed;
+  z-index: 1;
   left: 0;
 }
 .stick.middle {
+  position: fixed;
+  z-index: 1;
   top: 50%;
 }
 .center.stick {
+  position: fixed;
+  z-index: 1;
   left: 50%;
 }
 
-.rotate-90, .rotate-180, .rotate-270, .rotate-90-ctr, .rotate-180-ctr, .rotate-270-ctr, .spin, .spin-once, .spin-twice, .spin-thrice, .spin-fast, .spin-fast-once, .spin-fast-twice, .spin-fast-thrice, .spin-slow, .spin-slow-once, .spin-slow-twice, .spin-slow-thrice, .inline {
+.inline {
   display: inline-block;
   width: auto;
 }
 
-.center, .stick.center, .block {
+.block {
   display: block;
 }
 
@@ -5292,6 +5304,7 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .center, .stick.center {
+  display: block;
   margin: 0 auto;
 }
 
@@ -5308,6 +5321,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .rotate-90 {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -5316,6 +5331,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .rotate-180 {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -5324,6 +5341,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .rotate-270 {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -5332,6 +5351,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .rotate-90-ctr {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -5340,6 +5361,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .rotate-180-ctr {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
@@ -5348,6 +5371,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .rotate-270-ctr {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(-270deg);
   -o-transform: rotate(-270deg);
   -moz-transform: rotate(-270deg);
@@ -5356,6 +5381,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 2s linear;
   -moz-animation-iteration-count: infinite;
   -o-animation: spin 2s linear;
@@ -5367,6 +5394,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-once {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 2s linear;
   -moz-animation-iteration-count: 1;
   -o-animation: spin 2s linear;
@@ -5378,6 +5407,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-twice {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 2s linear;
   -moz-animation-iteration-count: 2;
   -o-animation: spin 2s linear;
@@ -5389,6 +5420,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-thrice {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 2s linear;
   -moz-animation-iteration-count: 3;
   -o-animation: spin 2s linear;
@@ -5400,6 +5433,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-fast {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 1s linear;
   -moz-animation-iteration-count: infinite;
   -o-animation: spin 1s linear;
@@ -5411,6 +5446,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-fast-once {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 1s linear;
   -moz-animation-iteration-count: 1;
   -o-animation: spin 1s linear;
@@ -5422,6 +5459,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-fast-twice {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 1s linear;
   -moz-animation-iteration-count: 2;
   -o-animation: spin 1s linear;
@@ -5433,6 +5472,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-fast-thrice {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 1s linear;
   -moz-animation-iteration-count: 3;
   -o-animation: spin 1s linear;
@@ -5444,6 +5485,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-slow {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 5s linear;
   -moz-animation-iteration-count: infinite;
   -o-animation: spin 5s linear;
@@ -5455,6 +5498,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-slow-once {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 5s linear;
   -moz-animation-iteration-count: 1;
   -o-animation: spin 5s linear;
@@ -5466,6 +5511,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-slow-twice {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 5s linear;
   -moz-animation-iteration-count: 2;
   -o-animation: spin 5s linear;
@@ -5477,6 +5524,8 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 
 .spin-slow-thrice {
+  display: inline-block;
+  width: auto;
   -moz-animation: spin 5s linear;
   -moz-animation-iteration-count: 3;
   -o-animation: spin 5s linear;

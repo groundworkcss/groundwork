@@ -1,0 +1,77 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Grids
+    link(rel="stylesheet", href="test-grid.css")
+  
+    style div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}
+  
+  body    
+    h1 Groundwork Tests: Grids
+    p This page generates grid elements using classes and extends. Things are good when:
+    ol
+      li Elements appear as they should regardless of whether classes or extends are used.
+      li All grid elements behave responsively.
+    
+    - var selectors = { class: "", extend: "extend-"}
+    
+    h2 #1 Grids
+    each type, name in selectors
+      div(class="#{type}container")
+        div(class="#{type}row")
+          - for (var i = 1; i <= 3; i++) {
+            div(class="#{type}one #{type}third")
+              h3 Heading
+              p One third #{name} 
+          - }
+    
+    h2 #2 Re-ordering
+    each type, name in selectors
+      div(class="#{type}container")
+        div(class="#{type}row")
+          div(class="#{type}three #{type}fifths")
+            p First block #{name}
+          div(class="#{type}two #{type}fifths")
+            p Second block #{name}
+        div(class="#{type}row")
+          div(class="#{type}three #{type}fifths #{type}right-one")
+            p First block right-one #{name}
+          div(class="#{type}two #{type}fifths #{type}left-one")
+            p Second block left-one #{name}
+        div(class="#{type}row")
+          div(class="#{type}three #{type}fifths #{type}right-two")
+            p First block right-two #{name}
+          div(class="#{type}two #{type}fifths #{type}left-three")
+            p Second block left-three #{name}
+    
+    h2 #3 Centering
+    each type, name in selectors
+      div(class="#{type}container")
+        div(class="#{type}row")
+          div(class="#{type}one #{type}third #{type}centered")
+            p One third centered #{name}
+
+    h2 #4 Offsetting
+    each type, name in selectors
+      div(class="#{type}container")
+        div(class="#{type}row")
+          div(class="#{type}one #{type}fifths")
+            p One fifths #{name}
+          div(class="#{type}two #{type}fifths #{type}skip-two")
+            p Two fifths skip-two #{name}
+    
+    h2 #5 Mobile Adjustments
+    each type, name in selectors
+      div(class="#{type}container")
+        div(class="#{type}row")
+          each device in ["small-tablet", "mobile"]
+            div(class="#{type}one #{type}fifths #{type}#{device}")
+              p One fifths #{device} #{name}
+            div(class="#{type}one #{type}fifths #{type}right-one #{type}#{device}")
+              p One fifths right-one #{device} #{name}
+            div(class="#{type}one #{type}fifths #{type}skip-two #{type}#{device}")
+              p One fifths skip-two #{device} #{name}
+    
+          
+    h2 #6 Equal Height Columns (To be created)

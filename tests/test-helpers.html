@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Groundwork Tests: Helpers</title>
+    <link rel="stylesheet" href="test-helpers.css">
+    <style>.one.third {border: 1px solid #ccc;} div > div > div > div {background-color: rgba(0,0,0,0.1);}</style>
+  </head>
+  <body>   
+    <h1>Groundwork Tests: Helpers</h1>
+    <p>This page generates elements that use Groundwork helpers using all 3 possible ways: classes, includes, and extends.</p>
+    <p>Things are good when:</p>
+    <ol>
+      <li>Includes and extends function like their class counterparts.</li>
+    </ol>
+    <div class="container">
+      <div style="text-align: center; background-color: #444; color: white;" class="row headings">
+        <div class="one third">
+          <h2>Classes</h2>
+          <p>Normal CSS Classes</p>
+        </div>
+        <div class="one third">
+          <h2>Mixins</h2>
+          <p>SCSS: @include _foo;</p>
+        </div>
+        <div class="one third">
+          <h2>Placeholders</h2>
+          <p>SCSS: @extend %foo;</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="padded">
+            <p>padded</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-padded">
+            <p>padded</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-padded">
+            <p>padded</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="pad-top">
+            <p>pad-top</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-pad-top">
+            <p>pad-top</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-pad-top">
+            <p>pad-top</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="pad-right">
+            <p>pad-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-pad-right">
+            <p>pad-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-pad-right">
+            <p>pad-right</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="pad-bottom">
+            <p>pad-bottom</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-pad-bottom">
+            <p>pad-bottom</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-pad-bottom">
+            <p>pad-bottom</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="pad-left">
+            <p>pad-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-pad-left">
+            <p>pad-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-pad-left">
+            <p>pad-left</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="gapped">
+            <p>gapped</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-gapped">
+            <p>gapped</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-gapped">
+            <p>gapped</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="gap-top">
+            <p>gap-top</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-gap-top">
+            <p>gap-top</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-gap-top">
+            <p>gap-top</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="gap-right">
+            <p>gap-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-gap-right">
+            <p>gap-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-gap-right">
+            <p>gap-right</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="gap-bottom">
+            <p>gap-bottom</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-gap-bottom">
+            <p>gap-bottom</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-gap-bottom">
+            <p>gap-bottom</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="gap-left">
+            <p>gap-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-gap-left">
+            <p>gap-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-gap-left">
+            <p>gap-left</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="inline">
+            <p>inline</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-inline">
+            <p>inline</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-inline">
+            <p>inline</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="block">
+            <p>block</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-block">
+            <p>block</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-block">
+            <p>block</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="zero">
+            <p>zero</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-zero">
+            <p>zero</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-zero">
+            <p>zero</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="pull-right">
+            <p>pull-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-pull-right">
+            <p>pull-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-pull-right">
+            <p>pull-right</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="pull-left">
+            <p>pull-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-pull-left">
+            <p>pull-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-pull-left">
+            <p>pull-left</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="border-right">
+            <p>border-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-border-right">
+            <p>border-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-border-right">
+            <p>border-right</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="border-left">
+            <p>border-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-border-left">
+            <p>border-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-border-left">
+            <p>border-left</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="border-top">
+            <p>border-top</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-border-top">
+            <p>border-top</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-border-top">
+            <p>border-top</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="border-bottom">
+            <p>border-bottom</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-border-bottom">
+            <p>border-bottom</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-border-bottom">
+            <p>border-bottom</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="align-top">
+            <p>align-top</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-align-top">
+            <p>align-top</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-align-top">
+            <p>align-top</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="align-right">
+            <p>align-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-align-right">
+            <p>align-right</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-align-right">
+            <p>align-right</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="align-bottom">
+            <p>align-bottom</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-align-bottom">
+            <p>align-bottom</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-align-bottom">
+            <p>align-bottom</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="align-left">
+            <p>align-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-align-left">
+            <p>align-left</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-align-left">
+            <p>align-left</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="align-center">
+            <p>align-center</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-align-center">
+            <p>align-center</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-align-center">
+            <p>align-center</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="justify">
+            <p>justify</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-justify">
+            <p>justify</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-justify">
+            <p>justify</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="truncate">
+            <p>truncate</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-truncate">
+            <p>truncate</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-truncate">
+            <p>truncate</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="center">
+            <p>center</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-center">
+            <p>center</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-center">
+            <p>center</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="disabled">
+            <p>disabled</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-disabled">
+            <p>disabled</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-disabled">
+            <p>disabled</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="space">
+            <p>space</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-space">
+            <p>space</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-space">
+            <p>space</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="round">
+            <p>round</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-round">
+            <p>round</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-round">
+            <p>round</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="rotate-90">
+            <p>rotate-90</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-rotate-90">
+            <p>rotate-90</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-rotate-90">
+            <p>rotate-90</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="rotate-180">
+            <p>rotate-180</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-rotate-180">
+            <p>rotate-180</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-rotate-180">
+            <p>rotate-180</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="rotate-270">
+            <p>rotate-270</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-rotate-270">
+            <p>rotate-270</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-rotate-270">
+            <p>rotate-270</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="rotate-90-ctr">
+            <p>rotate-90-ctr</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-rotate-90-ctr">
+            <p>rotate-90-ctr</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-rotate-90-ctr">
+            <p>rotate-90-ctr</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="rotate-180-ctr">
+            <p>rotate-180-ctr</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-rotate-180-ctr">
+            <p>rotate-180-ctr</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-rotate-180-ctr">
+            <p>rotate-180-ctr</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <div class="rotate-270-ctr">
+            <p>rotate-270-ctr</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-rotate-270-ctr">
+            <p>rotate-270-ctr</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-rotate-270-ctr">
+            <p>rotate-270-ctr</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2>Special Combinations</h2>
+      <div class="row">
+        <div class="one third">
+          <div class="padded double">
+            <p>padded double</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="include-padded-2">
+            <p>@include _padded(2);</p>
+          </div>
+        </div>
+        <div class="one third">
+          <div class="extend-padded extend-double">
+            <p>extend-padded extend-double</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,101 +1,181 @@
-// ====================
-//    layout helpers 
-// ====================
+// ================================
+//    layout helpers: mixins 
+// ================================
 
-%clear, %clearfix { clear:both;
-  &:after         { content:''; display:block; clear:both; }
+@mixin _clear {
+  clear: both;
+  &:after {content:''; display:block; clear:both;}
 }
-%padded           { padding:$gutter;
-  &%double        { padding:$gutter*2; }
-  &%triple        { padding:$gutter*3; }
+@mixin _clearfix {@include _clear;}
+
+@mixin _padded($multiple: 1)      { padding: $gutter * $multiple; }
+@mixin _pad-top($multiple: 1)     { padding-top: $gutter * $multiple; }
+@mixin _pad-right($multiple: 1)   { padding-right: $gutter * $multiple; }
+@mixin _pad-bottom($multiple: 1)  { padding-bottom: $gutter * $multiple; }
+@mixin _pad-left($multiple: 1)    { padding-left: $gutter * $multiple; }
+
+@mixin _gapped($multiple: 1)      { margin: $gutter * $multiple; }
+@mixin _gap-top($multiple: 1)     { margin-top: $gutter * $multiple; }
+@mixin _gap-right($multiple: 1)   { margin-right: $gutter * $multiple; }
+@mixin _gap-bottom($multiple: 1)  { margin-bottom: $gutter * $multiple; }
+@mixin _gap-left($multiple: 1)    { margin-left: $gutter * $multiple; }
+
+@mixin _stick($position: null) {
+  position: fixed;
+  z-index: 1;
+  @each $anchor in top, right, bottom, left {
+    @if $position == $anchor {#{$position}: 0;}
+  }
+  @if $position == middle {top: 50%;}
+  @if $position == center {left: 50%;}
 }
-%pad-top          { padding-top:$gutter;
-  &%double        { padding-top:$gutter*2; }
-  &%triple        { padding-top:$gutter*3; }
+
+@mixin _inline                    { display:inline-block; width:auto; }
+@mixin _block                     { display:block; }
+@mixin _zero                      { margin:0; padding:0; }
+@mixin _pull-right                { float:right; }
+@mixin _pull-left                 { float:left; }
+@mixin _bordered                  { border: 1px solid $border-color; }
+@mixin _border-top                { border-top:1px solid $border-color; }
+@mixin _border-right              { border-right:1px solid $border-color; }
+@mixin _border-bottom             { border-bottom:1px solid $border-color; }
+@mixin _border-left               { border-left:1px solid $border-color; }
+@mixin _align-top                 { display:table-cell; vertical-align:top; } // must have height (experimental)
+@mixin _align-right               { text-align:right; }
+@mixin _align-bottom              { display:table-cell; vertical-align:bottom; } // must have height (experimental)
+@mixin _align-left                { text-align:left; }
+@mixin _align-center              { text-align:center; }
+@mixin _justify                   { text-align:justify; }
+@mixin _truncate                  { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+@mixin _center                    { @include _block; margin:0 auto; }
+@mixin _spacer                    { height:$gutter; }
+@mixin _round                     { @include rounded(9999px); } // function is found in _mixins.scss
+@mixin _disabled                  { @include state(disabled,textOnly); }
+
+// Seems like redundant rotate and spin mixins, but are there any side implications if we move "@include _inline;" into the rotate() and spin() mixin in _mixins.scss?
+@mixin _rotate-90                 { @include _inline; @include rotate(90deg); }
+@mixin _rotate-180                { @include _inline; @include rotate(180deg); }
+@mixin _rotate-270                { @include _inline; @include rotate(270deg); }
+@mixin _rotate-90-ctr             { @include _inline; @include rotate(-90deg); }
+@mixin _rotate-180-ctr            { @include _inline; @include rotate(-180deg); }
+@mixin _rotate-270-ctr            { @include _inline; @include rotate(-270deg); }
+@mixin _spin                      { @include _inline; @include spin; }
+@mixin _spin-once                 { @include _inline; @include spin(1); }
+@mixin _spin-twice                { @include _inline; @include spin(2); }
+@mixin _spin-thrice               { @include _inline; @include spin(3); }
+@mixin _spin-fast                 { @include _inline; @include spin(infinite,1s); }
+@mixin _spin-fast-once            { @include _inline; @include spin(1,1s); }
+@mixin _spin-fast-twice           { @include _inline; @include spin(2,1s); }
+@mixin _spin-fast-thrice          { @include _inline; @include spin(3,1s); }
+@mixin _spin-slow                 { @include _inline; @include spin(infinite,5s); }
+@mixin _spin-slow-once            { @include _inline; @include spin(1,5s); }
+@mixin _spin-slow-twice           { @include _inline; @include spin(2,5s); }
+@mixin _spin-slow-thrice          { @include _inline; @include spin(3,5s); }
+
+// ================================
+//    layout helpers: placeholders
+// ================================
+
+%clear, %clearfix { @include _clear;}
+
+%padded           { @include _padded;
+  &%double        { @include _padded(2); }
+  &%triple        { @include _padded(3); }
 }
-%pad-right        { padding-right:$gutter;
-  &%double        { padding-right:$gutter*2; }
-  &%triple        { padding-right:$gutter*3; }
+%pad-top          { @include _pad-top;
+  &%double        { @include _pad-top(2); }
+  &%triple        { @include _pad-top(3); }
 }
-%pad-bottom       { padding-bottom:$gutter;
-  &%double        { padding-bottom:$gutter*2; }
-  &%triple        { padding-bottom:$gutter*3; }
+%pad-right        { @include _pad-right;
+  &%double        { @include _pad-right(2); }
+  &%triple        { @include _pad-right(3); }
 }
-%pad-left         { padding-left:$gutter;
-  &%double        { padding-left:$gutter*2; }
-  &%triple        { padding-left:$gutter*3; }
+%pad-bottom       { @include _pad-bottom;
+  &%double        { @include _pad-bottom(2); }
+  &%triple        { @include _pad-bottom(3); }
 }
-%gapped           { margin:$gutter;
-  &%double        { margin:$gutter*2; }
-  &%triple        { margin:$gutter*3; }
+%pad-left         { @include _pad-left;
+  &%double        { @include _pad-left(2); }
+  &%triple        { @include _pad-left(3); }
 }
-%gap-top          { margin-top:$gutter;
-  &%double        { margin-top:$gutter*2; }
-  &%triple        { margin-top:$gutter*3; }
+%gapped           { @include _gapped;
+  &%double        { @include _gapped(2); }
+  &%triple        { @include _gapped(3); }
 }
-%gap-right        { margin-right:$gutter;
-  &%double        { margin-right:$gutter*2; }
-  &%triple        { margin-right:$gutter*3; }
+%gap-top          { @include _gap-top;
+  &%double        { @include _gap-top(2); }
+  &%triple        { @include _gap-top(3); }
+}                   
+%gap-right        { @include _gap-right;
+  &%double        { @include _gap-right(2); }
+  &%triple        { @include _gap-right(3); }
+}                   
+%gap-bottom       { @include _gap-bottom;
+  &%double        { @include _gap-bottom(2); }
+  &%triple        { @include _gap-bottom(3); }
+}                   
+%gap-left         { @include _gap-left;
+  &%double        { @include _gap-left(2); }
+  &%triple        { @include _gap-left(3); }
 }
-%gap-bottom       { margin-bottom:$gutter;
-  &%double        { margin-bottom:$gutter*2; }
-  &%triple        { margin-bottom:$gutter*3; }
+%stick            { @include _stick;
+  &%top           { @include _stick(top); } // Will this compile position:fixed and z:1 twice? Have to check.
+  &%right         { @include _stick(right); }
+  &%bottom        { @include _stick(bottom); }
+  &%left          { @include _stick(left); }
+  &%middle        { @include _stick(middle); }
+  &%center        { @include _stick(center); }
 }
-%gap-left         { margin-left:$gutter;
-  &%double        { margin-left:$gutter*2; }
-  &%triple        { margin-left:$gutter*3; }
-}
-%stick            { position:fixed; z-index:1;
-  &%top           { top:0; }
-  &%right         { right:0; }
-  &%bottom        { bottom:0; }
-  &%left          { left:0; }
-  &%middle        { top:50%; }
-  &%center        { left:50%; }
-}
-%inline           { display:inline-block; width:auto; }
-%block            { display:block; }
+
+%inline           { @include _inline; }
+%block            { @include _block; }
 %zero             { @include _zero; }
-%pull-right       { float:right; }
-%pull-left        { float:left; }
-%bordered         { border: 1px solid $border-color; }
-%border-top       { border-top:1px solid $border-color; }
-%border-right     { border-right:1px solid $border-color; }
-%border-bottom    { border-bottom:1px solid $border-color; }
-%border-left      { border-left:1px solid $border-color; }
-%align-top        { display:table-cell; vertical-align:top; } // must have height (experimental)
-%align-right      { text-align:right; }
-%align-bottom     { display:table-cell; vertical-align:bottom; } // must have height (experimental)
-%align-left       { text-align:left; }
-%align-center     { text-align:center; }
-%justify          { text-align:justify; }
-%truncate         { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
-%center           { @extend %block; margin:0 auto; }
-%spacer           { height:$gutter; }
-%round            { @include rounded(9999px); }
-%disabled         { @include state(disabled,textOnly); }
-%rotate-90        { @extend %inline; @include rotate(90deg); }
-%rotate-180       { @extend %inline; @include rotate(180deg); }
-%rotate-270       { @extend %inline; @include rotate(270deg); }
-%rotate-90-ctr    { @extend %inline; @include rotate(-90deg); }
-%rotate-180-ctr   { @extend %inline; @include rotate(-180deg); }
-%rotate-270-ctr   { @extend %inline; @include rotate(-270deg); }
-%spin             { @extend %inline; @include spin; }
-%spin-once        { @extend %inline; @include spin(1); }
-%spin-twice       { @extend %inline; @include spin(2); }
-%spin-thrice      { @extend %inline; @include spin(3); }
-%spin-fast        { @extend %inline; @include spin(infinite,1s); }
-%spin-fast-once   { @extend %inline; @include spin(1,1s); }
-%spin-fast-twice  { @extend %inline; @include spin(2,1s); }
-%spin-fast-thrice { @extend %inline; @include spin(3,1s); }
-%spin-slow        { @extend %inline; @include spin(infinite,5s); }
-%spin-slow-once   { @extend %inline; @include spin(1,5s); }
-%spin-slow-twice  { @extend %inline; @include spin(2,5s); }
-%spin-slow-thrice { @extend %inline; @include spin(3,5s); }
+%pull-right       { @include _pull-right; }
+%pull-left        { @include _pull-left; }
+%bordered         { @include _bordered; }
+%border-top       { @include _border-top; }
+%border-right     { @include _border-right; }
+%border-bottom    { @include _border-bottom; }
+%border-left      { @include _border-left; }
+%align-top        { @include _align-top; } // must have height (experimental)
+%align-right      { @include _align-right; }
+%align-bottom     { @include _align-bottom; } // must have height (experimental)
+%align-left       { @include _align-left; }
+%align-center     { @include _align-center; }   
+%justify          { @include _justify; }
+%truncate         { @include _truncate; }
+%center           { @include _center; }
+%spacer           { @include _spacer; }
+%round            { @include _round; }
+%disabled         { @include _disabled; }
+%rotate-90        { @include _rotate-90; } // As mentioned above, might be referring to redundant mixins.
+%rotate-180       { @include _rotate-180; }
+%rotate-270       { @include _rotate-270; }
+%rotate-90-ctr    { @include _rotate-90-ctr; }
+%rotate-180-ctr   { @include _rotate-180-ctr; }
+%rotate-270-ctr   { @include _rotate-270-ctr; }
+%spin             { @include _spin; }
+%spin-once        { @include _spin-once; }
+%spin-twice       { @include _spin-twice; }
+%spin-thrice      { @include _spin-thrice; }
+%spin-fast        { @include _spin-fast; }
+%spin-fast-once   { @include _spin-fast-once; }
+%spin-fast-twice  { @include _spin-fast-twice; }
+%spin-fast-thrice { @include _spin-fast-thrice; }
+%spin-slow        { @include _spin-slow; }
+%spin-slow-once   { @include _spin-slow-once; }
+%spin-slow-twice  { @include _spin-slow-twice; }
+%spin-slow-thrice { @include _spin-slow-thrice; }
+
+
+// ================================
+//    layout helpers: classes
+// ================================
 
 @if $classes {
 
   $helpers: inline block zero pull-right pull-left bordered border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center spacer round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
+
   // function to generate the helpers
   @for $i from 1 through length($helpers) {
     .#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }

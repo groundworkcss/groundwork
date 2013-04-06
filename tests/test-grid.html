@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Groundwork Tests: Grids</title>
+    <link rel="stylesheet" href="test-grid.css">
+    <style>div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}</style>
+  </head>
+  <body>   
+    <h1>Groundwork Tests: Grids</h1>
+    <p>This page generates grid elements using classes and extends. Things are good when:</p>
+    <ol>
+      <li>Elements appear as they should regardless of whether classes or extends are used.</li>
+      <li>All grid elements behave responsively.</li>
+    </ol>
+    <h2>#1 Grids</h2>
+    <div class="container">
+      <div class="row">
+        <div class="one third">
+          <h3>Heading</h3>
+          <p>One third class </p>
+        </div>
+        <div class="one third">
+          <h3>Heading</h3>
+          <p>One third class </p>
+        </div>
+        <div class="one third">
+          <h3>Heading</h3>
+          <p>One third class </p>
+        </div>
+      </div>
+    </div>
+    <div class="extend-container">
+      <div class="extend-row">
+        <div class="extend-one extend-third">
+          <h3>Heading</h3>
+          <p>One third extend </p>
+        </div>
+        <div class="extend-one extend-third">
+          <h3>Heading</h3>
+          <p>One third extend </p>
+        </div>
+        <div class="extend-one extend-third">
+          <h3>Heading</h3>
+          <p>One third extend </p>
+        </div>
+      </div>
+    </div>
+    <h2>#2 Re-ordering</h2>
+    <div class="container">
+      <div class="row">
+        <div class="three fifths">
+          <p>First block class</p>
+        </div>
+        <div class="two fifths">
+          <p>Second block class</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="three fifths right-one">
+          <p>First block right-one class</p>
+        </div>
+        <div class="two fifths left-one">
+          <p>Second block left-one class</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="three fifths right-two">
+          <p>First block right-two class</p>
+        </div>
+        <div class="two fifths left-three">
+          <p>Second block left-three class</p>
+        </div>
+      </div>
+    </div>
+    <div class="extend-container">
+      <div class="extend-row">
+        <div class="extend-three extend-fifths">
+          <p>First block extend</p>
+        </div>
+        <div class="extend-two extend-fifths">
+          <p>Second block extend</p>
+        </div>
+      </div>
+      <div class="extend-row">
+        <div class="extend-three extend-fifths extend-right-one">
+          <p>First block right-one extend</p>
+        </div>
+        <div class="extend-two extend-fifths extend-left-one">
+          <p>Second block left-one extend</p>
+        </div>
+      </div>
+      <div class="extend-row">
+        <div class="extend-three extend-fifths extend-right-two">
+          <p>First block right-two extend</p>
+        </div>
+        <div class="extend-two extend-fifths extend-left-three">
+          <p>Second block left-three extend</p>
+        </div>
+      </div>
+    </div>
+    <h2>#3 Centering</h2>
+    <div class="container">
+      <div class="row">
+        <div class="one third centered">
+          <p>One third centered class</p>
+        </div>
+      </div>
+    </div>
+    <div class="extend-container">
+      <div class="extend-row">
+        <div class="extend-one extend-third extend-centered">
+          <p>One third centered extend</p>
+        </div>
+      </div>
+    </div>
+    <h2>#4 Offsetting</h2>
+    <div class="container">
+      <div class="row">
+        <div class="one fifths">
+          <p>One fifths class</p>
+        </div>
+        <div class="two fifths skip-two">
+          <p>Two fifths skip-two class</p>
+        </div>
+      </div>
+    </div>
+    <div class="extend-container">
+      <div class="extend-row">
+        <div class="extend-one extend-fifths">
+          <p>One fifths extend</p>
+        </div>
+        <div class="extend-two extend-fifths extend-skip-two">
+          <p>Two fifths skip-two extend</p>
+        </div>
+      </div>
+    </div>
+    <h2>#5 Mobile Adjustments</h2>
+    <div class="container">
+      <div class="row">
+        <div class="one fifths small-tablet">
+          <p>One fifths small-tablet class</p>
+        </div>
+        <div class="one fifths right-one small-tablet">
+          <p>One fifths right-one small-tablet class</p>
+        </div>
+        <div class="one fifths skip-two small-tablet">
+          <p>One fifths skip-two small-tablet class</p>
+        </div>
+        <div class="one fifths mobile">
+          <p>One fifths mobile class</p>
+        </div>
+        <div class="one fifths right-one mobile">
+          <p>One fifths right-one mobile class</p>
+        </div>
+        <div class="one fifths skip-two mobile">
+          <p>One fifths skip-two mobile class</p>
+        </div>
+      </div>
+    </div>
+    <div class="extend-container">
+      <div class="extend-row">
+        <div class="extend-one extend-fifths extend-small-tablet">
+          <p>One fifths small-tablet extend</p>
+        </div>
+        <div class="extend-one extend-fifths extend-right-one extend-small-tablet">
+          <p>One fifths right-one small-tablet extend</p>
+        </div>
+        <div class="extend-one extend-fifths extend-skip-two extend-small-tablet">
+          <p>One fifths skip-two small-tablet extend</p>
+        </div>
+        <div class="extend-one extend-fifths extend-mobile">
+          <p>One fifths mobile extend</p>
+        </div>
+        <div class="extend-one extend-fifths extend-right-one extend-mobile">
+          <p>One fifths right-one mobile extend</p>
+        </div>
+        <div class="extend-one extend-fifths extend-skip-two extend-mobile">
+          <p>One fifths skip-two mobile extend</p>
+        </div>
+      </div>
+    </div>
+    <h2>#6 Equal Height Columns (To be created)</h2>
+  </body>
+</html>

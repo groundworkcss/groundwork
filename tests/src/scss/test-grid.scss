@@ -1,0 +1,7 @@
+@import "../../../src/scss/groundwork";
+
+$list: container row one third two three fifths right-one left-one right-two left-three centered skip-two mobile small-tablet;
+
+@each $item in $list {
+  .extend-#{$item} {@extend %#{$item};}
+}

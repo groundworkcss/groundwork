@@ -1,0 +1,61 @@
+@import "../../../src/scss/groundwork";
+
+// This should sync with cases in test-helpers.jade
+$cases: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center disabled space round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
+// End cases
+
+@each $item in $cases {
+  .extend-#{$item} {@extend %#{$item};}
+}
+
+//Can't get this to work like it should, so am temporarily resorting to hard listing below this. If anyone can fix, please do.
+//@each $item in $cases {
+//  .include-#{$item} {@include _#{$item};}
+//}
+
+// Start hard-coded listing
+.include-padded             { @include _padded         ;}
+.include-pad-top            { @include _pad-top        ;}
+.include-pad-right          { @include _pad-right      ;}
+.include-pad-bottom         { @include _pad-bottom     ;}
+.include-pad-left           { @include _pad-left       ;}
+.include-gapped             { @include _gapped         ;}
+.include-gap-top            { @include _gap-top        ;}
+.include-gap-right          { @include _gap-right      ;}
+.include-gap-bottom         { @include _gap-bottom     ;}
+.include-gap-left           { @include _gap-left       ;}
+.include-inline             { @include _inline         ;}
+.include-block              { @include _block          ;}
+.include-zero               { @include _zero           ;}
+.include-pull-right         { @include _pull-right     ;}
+.include-pull-left          { @include _pull-left      ;}
+.include-border-right       { @include _border-right   ;}
+.include-border-left        { @include _border-left    ;}
+.include-border-top         { @include _border-top     ;}
+.include-border-bottom      { @include _border-bottom  ;}
+.include-align-top          { @include _align-top      ;}
+.include-align-right        { @include _align-right    ;}
+.include-align-bottom       { @include _align-bottom   ;}
+.include-align-left         { @include _align-left     ;}
+.include-align-center       { @include _align-center   ;}
+.include-justify            { @include _justify        ;}
+.include-truncate           { @include _truncate       ;}
+.include-center             { @include _center         ;}
+.include-disabled           { @include disabled(true)  ;} //different format from the rest?
+.include-space              { @include _space          ;}
+.include-round              { @include _round          ;}
+.include-rotate-90          { @include _rotate-90      ;}
+.include-rotate-180         { @include _rotate-180     ;}
+.include-rotate-270         { @include _rotate-270     ;}
+.include-rotate-90-ctr      { @include _rotate-90-ctr  ;}
+.include-rotate-180-ctr     { @include _rotate-180-ctr ;}
+.include-rotate-270-ctr     { @include _rotate-270-ctr ;}
+// End hard-coded listing
+
+$specials: double;
+
+@each $item in $specials {
+  .extend-#{$item} {@extend %#{$item};}
+}
+
+.include-padded-2 {@include _padded(2);}

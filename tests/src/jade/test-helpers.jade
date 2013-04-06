@@ -1,0 +1,44 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Helpers
+    link(rel="stylesheet", href="test-helpers.css")
+    
+    style .one.third {border: 1px solid #ccc;} div > div > div > div {background-color: rgba(0,0,0,0.1);}
+  
+  body    
+    h1 Groundwork Tests: Helpers
+    p This page generates elements that use Groundwork helpers using all 3 possible ways: classes, includes, and extends.
+    p Things are good when:
+    ol
+      li Includes and extends function like their class counterparts.
+    
+    .container
+      .row.headings(style="text-align: center; background-color: #444; color: white;")
+        .one.third
+          h2 Classes
+          p Normal CSS Classes
+        .one.third
+          h2 Mixins
+          p SCSS: @include _foo;
+        .one.third
+          h2 Placeholders
+          p SCSS: @extend %foo;
+      
+      //- This should sync with cases in test-helpers.scss
+      - var cases = ["padded", "pad-top", "pad-right", "pad-bottom", "pad-left", "gapped", "gap-top", "gap-right", "gap-bottom", "gap-left", "inline", "block", "zero", "pull-right", "pull-left", "border-right", "border-left", "border-top", "border-bottom", "align-top", "align-right", "align-bottom", "align-left", "align-center", "justify", "truncate", "center", "disabled", "space", "round", "rotate-90", "rotate-180", "rotate-270", "rotate-90-ctr", "rotate-180-ctr", "rotate-270-ctr"]
+      //- End cases
+      
+      each item in cases
+        .row
+          .one.third: div(class="#{item}"): p #{item}
+          .one.third: div(class="include-#{item}"): p #{item}
+          .one.third: div(class="extend-#{item}"): p #{item}
+      
+      hr
+      h2 Special Combinations
+      .row
+        .one.third: div(class="padded double"): p padded double
+        .one.third: div(class="include-padded-2"): p @include _padded(2);
+        .one.third: div(class="extend-padded extend-double"): p extend-padded extend-double

@@ -1,3 +1,3 @@
-This folder contains tests to check that responsive grid placeholders have been implemented correctly.
+This folder contains developer tests to check that Groundwork components are functioning properly as Groundwork code gets changed.
 
-View test.html on different commits of the responsive-grid-placeholders branch to check that things are behaving as expected (remember to recompile test.css from test.scss!).
+Compiled CSS is not included in this folder, to save space. To use, compile tests/src/scss/(whatever).scss into tests/(whatever).css, then view tests/(whatever).html.
