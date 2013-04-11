@@ -71,7 +71,7 @@
             content:'\f0d7';
             display:inline-block;
             width:1.1em;
-            margin-left:0.25em;
+            margin-#{$defaultFloat}:0.25em;
             font-family:FontAwesome;
             font-weight:normal;
             font-style:normal;
@@ -115,7 +115,7 @@
     ul {
       @extend %menu-closed;
       position:absolute;
-      left:100%;
+      #{$defaultFloat}:100%;
       top:0;
       width:auto;
       z-index:101;
@@ -154,13 +154,13 @@
     &.row {
       li {
         a, a:visited {
-          border-left:1px solid $button-active;
+          border-#{$defaultFloat}:1px solid $button-active;
           border-top:none;
           @include rounded(0);
         }
         &:first-child {
           a, a:visited {
-            border-left:none;
+            border-#{$defaultFloat}:none;
             @include rounded($radius 0 0 $radius);
           }
         }
@@ -178,14 +178,14 @@
       ul {
         @extend %menu-closed;
         position:absolute;
-        left:auto;
+        #{$defaultFloat}:auto;
         top:auto;
         min-width:100%;
         z-index:101;
         li {
           a, a:visited {
             @include rounded(0);
-            border-left:none;
+            border-#{$defaultFloat}:none;
             border-top:1px solid $button-active;
           }
           &:first-child {
@@ -213,12 +213,12 @@
         white-space-collapse:discard;
         float:none;
         a, a:visited {
-          border-left:1px solid $button-active;
+          border-#{$defaultFloat}:1px solid $button-active;
           border-top:none;
         }
         &:first-child {
           a, a:visited {
-            border-left:none;
+            border-#{$defaultFloat}:none;
             @include rounded($radius 0 0 $radius);
           }
         }
@@ -236,7 +236,7 @@
           @extend %menu-closed;
           // display:none;
           position:absolute;
-          left:auto;
+          #{$defaultFloat}:auto;
           top:auto;
           min-width:100%;
           z-index:101;
@@ -244,7 +244,7 @@
             display:block;
             a, a:visited {
               @include rounded(0);
-              border-left:none;
+              border-#{$defaultFloat}:none;
               border-top:1px solid $button-active;
             }
             &:first-child {
