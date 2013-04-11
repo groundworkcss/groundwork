@@ -219,12 +219,20 @@
         &:first-child {
           a, a:visited {
             border-#{$defaultFloat}:none;
-            @include rounded($radius 0 0 $radius);
+            @if $textDirection == ltr {
+			  @include rounded($radius 0 0 $radius);
+			} @else {
+			  @include rounded(0 $radius $radius 0);
+			}
           }
         }
         &:last-child {
           a, a:visited {
-            @include rounded(0 $radius $radius 0);
+            @if $textDirection == ltr {
+			  @include rounded(0 $radius $radius 0);
+			} @else {
+			  @include rounded($radius 0 0 $radius);
+			}
           }
         }
         &:only-child {
