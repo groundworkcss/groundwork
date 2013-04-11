@@ -22,14 +22,14 @@
 }
 
 %column {
-  float: left;
+  float: $defaultFloat;
   position: relative;
   min-height: 1px;
 }
 
 %centered {
   float: none !important;
-  margin-left: auto !important;
+  margin-#{$defaultFloat}: auto !important;
   margin-right: auto !important;
 }
 
