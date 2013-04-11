@@ -68,20 +68,20 @@ p, ul, ol, dl {
   line-height:1.6;
 }
 ul, ol {
-  margin-left:20px;
+  margin-#{$defaultFloat}:20px;
   li {
     display:list-item;
   }
 }
 ul.list {
   list-style:none;
-  margin-left:0;
+  margin-#{$defaultFloat}:0;
   > li {
     &:before {
       content:'\f00c';
       display:inline-block;
       width:1.1em;
-      margin-right:0.25em;
+      margin-#{$oppositeFloat}:0.25em;
       font-family:FontAwesome;
       font-weight:normal;
       font-style:normal;
@@ -100,7 +100,7 @@ ul.list {
 ol.list {
   counter-reset:li;
   list-style:none;
-  margin-left:1.5em;
+  margin-#{$defaultFloat}:1.5em;
   > li {
     position:relative;
     padding:2px 6px 0;
@@ -109,7 +109,7 @@ ol.list {
       counter-increment:li;
       position:absolute;
       top:2px;
-      left:-2em;
+      #{$defaultFloat}:-2em;
       width:2em;
       text-align:center;
       padding:2px;
@@ -126,7 +126,7 @@ dl {
     font-weight:bold;
   }
   dd {
-    padding-left:1em;
+    padding-#{$defaultFloat}:1em;
     margin-bottom:$gutter;
   }
 }
@@ -145,7 +145,7 @@ blockquote {
     display:block;
     position:absolute;
     top:-0.15em;
-    left:0.1em;
+    #{$defaultFloat}:0.1em;
     z-index:-1;
   }
   &:after {
@@ -155,14 +155,14 @@ blockquote {
     display:block;
     position:absolute;
     top:-0.15em;
-    right:0.1em;
+    #{$oppositeFloat}:0.1em;
     z-index:-1;
   }
 }
 cite {
   display:block;
   position:relative;
-  left:-1em;
+  #{$defaultFloat}:-1em;
   margin-top:0.25em;
   font-size:0.95em;
   font-weight:normal;
@@ -199,7 +199,7 @@ pre {
 	font-size:0.9em;
 	padding:0.5em;
 	display:block;
-	border-left:#{$border} solid gray;
+	border-#{$defaultFloat}:#{$border} solid gray;
 	counter-reset:linenumber;
 	code {
     display:block;
@@ -207,12 +207,12 @@ pre {
 		margin:0;
 		padding:0;
 		&:before {
-			text-align:right;
+			text-align:$oppositeFloat;
 			color:white;
 			counter-increment:linenumber;
 			content:counter(linenumber) ".";
 			position:absolute;
-			left:0.65em;
+			#{$defaultFloat}:0.65em;
 			width:#{$border};
 		}
 	}
