@@ -182,23 +182,23 @@ ul.icons {
 // -------------------------
 
 // Quick floats
-.pull-right { float: right; }
-.pull-left { float: left; }
+.pull-#{$oppositeFloat} { float: $oppositeFloat; }
+.pull-left { #{$defaultFloat}: $defaultFloat; }
 
 [class^="icon-"],
 [class*=" icon-"] {
-  &.pull-left {
-    margin-right: .3em;
+  &.pull-#{$defaultFloat} {
+    margin-#{$oppositeFloat}: .3em;
   }
   &.pull-right {
-    margin-left: .3em;
+    margin-#{$defaultFloat}: .3em;
   }
 }
 
 .btn {
   [class^="icon-"],
   [class*=" icon-"] {
-    &.pull-left, &.pull-right {
+    &.pull-#{$defaultFloat}, &.pull-#{$oppositeFloat} {
       &.icon-2x { margin-top: .18em; }
     }
     &.icon-spin.icon-large { line-height: .8em; }
@@ -208,7 +208,7 @@ ul.icons {
 .btn.btn-small {
   [class^="icon-"],
   [class*=" icon-"] {
-    &.pull-left, &.pull-right {
+    &.pull-#{$defaultFloat}, &.pull-#{$oppositeFloat} {
       &.icon-2x { margin-top: .25em; }
     }
   }
@@ -218,7 +218,7 @@ ul.icons {
   [class^="icon-"],
   [class*=" icon-"] {
     margin-top: 0; // overrides bootstrap default
-    &.pull-left, &.pull-right {
+    &.pull-#{$defaultFloat}, &.pull-#{$oppositeFloat} {
       &.icon-2x { margin-top: .05em; }
     }
     &.pull-left.icon-2x { margin-right: .2em; }
