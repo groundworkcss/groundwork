@@ -159,9 +159,17 @@ ul.radio-list {
 }
 .prefix {
   #{$defaultFloat}:2px;
-  @include rounded($radius 0 0 $radius);
+  @if $textDirection == ltr {
+    @include rounded($radius 0 0 $radius);
+  } @else {
+    @include rounded(0 $radius $radius 0);
+  }
 }
 .suffix {
   #{$defaultFloat}:-2px;
-  @include rounded(0 $radius $radius 0);
+  @if $textDirection == ltr {
+    @include rounded(0 $radius $radius 0);
+  } @else {
+    @include rounded($radius 0 0 $radius);
+  }
 }
