@@ -109,7 +109,7 @@ span.select {
     font-size:1.5em;
     line-height:1.25;
     top:0;
-    right:0;
+    #{$oppositeFloat}:0;
     background:darken(white, 12.5%);
   }
   select {
@@ -125,7 +125,7 @@ span.select {
     font-size:1em;
     line-height:1.5;
     height:2.25em;
-    padding-right:2.5em;
+    padding-#{$oppositeFloat}:2.5em;
     position:relative;
     z-index:2;
     &.unselected {
@@ -158,10 +158,10 @@ ul.radio-list {
   border:1px solid darken(white, 17.5%);
 }
 .prefix {
-  left:2px;
+  #{$defaultFloat}:2px;
   @include rounded($radius 0 0 $radius);
 }
 .suffix {
-  left:-2px;
+  #{$defaultFloat}:-2px;
   @include rounded(0 $radius $radius 0);
 }
