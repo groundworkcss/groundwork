@@ -1336,6 +1336,10 @@ img, a img {
   margin-left: 91.66667%;
 }
 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  direction: ltr;
+}
+
 body {
   font-family: Helvetica, Arial, Geneva, sans-serif;
   font-size: 14px;
@@ -1823,9 +1827,17 @@ ul.button-list li, ol.button-list li {
   border-radius: 0;
 }
 ul.button-list li:first-child a, ol.button-list li:first-child a {
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
 }
 ul.button-list li:last-child a, ol.button-list li:last-child a {
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
 }
 ul.button-list li a, ol.button-list li a {
@@ -3053,7 +3065,7 @@ li [class*=" icon-"].icon-large, .nav li [class^="icon-"].icon-large,
 
 ul.icons {
   list-style-type: none;
-  text-indent: -.75em;
+  text-indent: -0.75em;
 }
 ul.icons li [class^="icon-"],
 ul.icons li [class*=" icon-"] {
@@ -3066,7 +3078,7 @@ ul.icons li [class*=" icon-"] {
 
 .icon-border {
   border: solid 1px #eeeeee;
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -3107,7 +3119,7 @@ ul.icons li [class*=" icon-"] {
 }
 
 .pull-left {
-  float: left;
+  left: left;
 }
 
 [class^="icon-"].pull-left,
