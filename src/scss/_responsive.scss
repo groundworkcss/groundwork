@@ -120,7 +120,7 @@
       float:none;
       &:before {
         content:attr(data-label);
-        float:left;
+        float:$defaultFloat;
         color:$button-text;
         line-height:2.2;
       }
@@ -130,7 +130,7 @@
       @include rounded($radius);
       .menu-toggle {
         display:inline-block !important;
-        float:right;
+        float:$oppositeFloat;
         margin-bottom:$gutter;
       }
       > ul, > ul.row {

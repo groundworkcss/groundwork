@@ -10,15 +10,15 @@
 
 @mixin _padded($multiple: 1)      { padding: $gutter * $multiple; }
 @mixin _pad-top($multiple: 1)     { padding-top: $gutter * $multiple; }
-@mixin _pad-right($multiple: 1)   { padding-right: $gutter * $multiple; }
+@mixin _pad-right($multiple: 1)   { padding-#{$oppositeFloat}: $gutter * $multiple; }
 @mixin _pad-bottom($multiple: 1)  { padding-bottom: $gutter * $multiple; }
-@mixin _pad-left($multiple: 1)    { padding-left: $gutter * $multiple; }
+@mixin _pad-left($multiple: 1)    { padding-#{$defaultFloat}: $gutter * $multiple; }
 
 @mixin _gapped($multiple: 1)      { margin: $gutter * $multiple; }
 @mixin _gap-top($multiple: 1)     { margin-top: $gutter * $multiple; }
-@mixin _gap-right($multiple: 1)   { margin-right: $gutter * $multiple; }
+@mixin _gap-right($multiple: 1)   { margin-#{$oppositeFloat}: $gutter * $multiple; }
 @mixin _gap-bottom($multiple: 1)  { margin-bottom: $gutter * $multiple; }
-@mixin _gap-left($multiple: 1)    { margin-left: $gutter * $multiple; }
+@mixin _gap-left($multiple: 1)    { margin-#{$defaultFloat}: $gutter * $multiple; }
 
 @mixin _stick($position: null) {
   position: fixed;
@@ -33,17 +33,17 @@
 @mixin _inline                    { display:inline-block; width:auto; }
 @mixin _block                     { display:block; }
 @mixin _zero                      { margin:0; padding:0; }
-@mixin _pull-right                { float:right; }
-@mixin _pull-left                 { float:left; }
+@mixin _pull-right                { float:$oppositeFloat; }
+@mixin _pull-left                 { float:$defaultFloat; }
 @mixin _bordered                  { border: 1px solid $border-color; }
 @mixin _border-top                { border-top:1px solid $border-color; }
-@mixin _border-right              { border-right:1px solid $border-color; }
+@mixin _border-right              { border-#{$oppositeFloat}:1px solid $border-color; }
 @mixin _border-bottom             { border-bottom:1px solid $border-color; }
-@mixin _border-left               { border-left:1px solid $border-color; }
+@mixin _border-left               { border-#{$defaultFloat}:1px solid $border-color; }
 @mixin _align-top                 { display:table-cell; vertical-align:top; } // must have height (experimental)
-@mixin _align-right               { text-align:right; }
+@mixin _align-right               { text-align:$oppositeFloat; }
 @mixin _align-bottom              { display:table-cell; vertical-align:bottom; } // must have height (experimental)
-@mixin _align-left                { text-align:left; }
+@mixin _align-left                { text-align:$defaultFloat; }
 @mixin _align-center              { text-align:center; }
 @mixin _justify                   { text-align:justify; }
 @mixin _truncate                  { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }

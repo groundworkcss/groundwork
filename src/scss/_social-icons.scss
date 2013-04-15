@@ -12,7 +12,7 @@
   width:1em;
   height:1em;
   text-indent: -999em;
-  text-align: left;
+  text-align: $defaultFloat;
   @include rounded(2px);
   margin-bottom: 3px;
   vertical-align: bottom;

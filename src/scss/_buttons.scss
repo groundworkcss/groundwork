@@ -136,18 +136,18 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
   }
   &.dropdown {
     position:relative;
-    padding-right:2em;
+    padding-#{$oppositeFloat}:2em;
     &:after {
       content:'...';
       position:absolute;
-      right:1em;
+      #{$oppositeFloat}:1em;
       bottom:0.25em;
     }
     &.on ul {
       display:block;
     }
     ul {
-      text-align:left;
+      text-align:$defaultFloat;
       margin:0.3em 0 0;
       padding:0;
       list-style:none;
@@ -155,7 +155,7 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
       background:white;
       border:1px solid $border-color;
       position:absolute;
-      left:0;
+      #{$defaultFloat}:0;
       width:100%;
       z-index:10;
       font-size:0.9em;
@@ -195,14 +195,22 @@ ul.button-list, ol.button-list {
   }
   li {
     display:block;
-    float:left;
+    float:$defaultFloat;
     margin:0;
     border-radius:0;
     &:first-child a {
-      border-radius:$radius 0 0 $radius;
+      @if $textDirection == ltr {
+		  @include rounded($radius 0 0 $radius);
+		} @else {
+		  @include rounded(0 $radius $radius 0);
+		}
     }
     &:last-child a {
-      border-radius:0 $radius $radius 0;
+      @if $textDirection == ltr {
+		  @include rounded(0 $radius $radius 0);
+		} @else {
+		  @include rounded($radius 0 0 $radius);
+		}
     }
     a {
       display:block;

@@ -58,11 +58,11 @@ html {
       .close, .fullscreen {
         padding:6px 7px;
         top:2px;
-        right:2px;
+        #{$oppositeFloat}:2px;
       }
       .fullscreen {
-        right:auto;
-        left:2px;
+        #{$oppositeFloat}:auto;
+        #{$defaultFloat}:2px;
       }
     }
   }
@@ -73,7 +73,7 @@ html {
         > ul {
           li {
             display:block;
-            float:left;
+            float:$defaultFloat;
             white-space-collapse:preserve;
             ul {
               width:100%;
@@ -92,8 +92,8 @@ html {
     }
     ul, ul.list, 
     ol, ol.list {
-      margin-left:0;
-      padding-left:25px;
+      margin-#{$defaultFloat}:0;
+      padding-#{$defaultFloat}:25px;
     }
     ul {
       &.list {
