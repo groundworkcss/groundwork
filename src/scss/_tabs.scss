@@ -20,12 +20,12 @@
     }
     li, [role=tab] {
       display:block;
-      float:left;
+      float:$defaultFloat;
       margin:0 2px;
-      &.pull-right  { float:right; }
-      &.pull-left   { float:left; }
+      &.pull-#{$oppositeFloat}  { float:$oppositeFloat; }
+      &.pull-#{$defaultFloat}   { float:$defaultFloat; }
       &:first-child {
-        margin-left:0;
+        margin-#{$defaultFloat}:0;
         a, a:visited {
           &:before {
             display:none;
@@ -68,17 +68,30 @@
           color:$button-text;
           z-index:2;
           &:before {
-            box-shadow:2px 1px 0 $button-active;
+            @if $textDirection == ltr {
+    			box-shadow:2px 1px 0 $button-active;
+  			} @else {
+    			box-shadow:-2px 1px 0 $button-active;
+  			}
           }
           &:after {
-            box-shadow:-2px 1px 0 $button-active;
+            @if $textDirection == ltr {
+    			box-shadow:-2px 1px 0 $button-active;
+  			} @else {
+    			box-shadow:2px 1px 0 $button-active;
+  			}
           }
         }
         &.disabled {
           @include state(disabled,normal,desaturate($button-color,20%));
           border-bottom-color:lighten(desaturate($button-color,20%), 15%) !important;
           &:before {
-            box-shadow:2px 1px 0 lighten(desaturate($button-color,20%), 15%);
+			@if $textDirection == ltr {
+    			box-shadow:2px 1px 0 lighten(desaturate($button-color,20%), 15%);
+  			} @else {
+    			box-shadow:-2px 1px 0 lighten(desaturate($button-color,20%), 15%);
+  			}
+            
           }
           &:after {
             box-shadow:-2px 1px 0 lighten(desaturate($button-color,20%), 15%);
@@ -92,16 +105,26 @@
           content:'';
         }
         &:before {
-          left:-6px;
-          border-bottom-right-radius:6px;
-          border-width:0 1px 1px 0;
-          box-shadow:2px 1px 0 $button-color;
+          #{$defaultFloat}:-6px;
+          border-bottom-#{$oppositeFloat}-radius:6px;
+		  	@if $textDirection == ltr {
+    			border-width:0 1px 1px 0;
+				box-shadow:2px 1px 0 $button-color;
+  			} @else {
+    			border-width:0 0 1px 1px;
+				box-shadow:-2px 1px 0 $button-color;
+  			}
         }
         &:after {
-          right:-6px;
-          border-bottom-left-radius:6px;
-          border-width:0 0 1px 1px;
-          box-shadow:-2px 1px 0 $button-color;
+          #{$oppositeFloat}:-6px;
+          border-bottom-#{$defaultFloat}-radius:6px;
+		  @if $textDirection == ltr {
+    			border-width:0 0 1px 1px;
+				box-shadow:-2px 1px 0 $button-color;
+  			} @else {
+    			border-width:0 1px 1px 0;
+				box-shadow:2px 1px 0 $button-color;
+  			}		
         }
       }
     }
@@ -112,7 +135,7 @@
   > div, [role=tabpanel] {
     display:none;
     padding:$gutter * 2;
-    background:$background-color;
+    background:$background-color;	
     @include rounded(0 0 $radius $radius);
     *:first-child {
       margin-top:0;
@@ -150,11 +173,11 @@
             display:none !important;
           }
           &.active {
-            border-right:none;
+            border-#{$oppositeFloat}:none;
             color:$font-color;
             background:$background-color;
             &:hover, &:focus {
-              border-right:none;
+              border-#{$oppositeFloat}:none;
               color:$font-color;
               background:$background-color;
             }
@@ -164,7 +187,7 @@
     }
     > div, [role=tabpanel] {
       position:relative;
-      left:20%;
+      #{$defaultFloat}:20%;
       width:80%;
       @include rounded(0 $radius $radius 0);
     }

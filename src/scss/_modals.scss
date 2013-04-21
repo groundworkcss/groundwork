@@ -41,9 +41,9 @@
   opacity:0;
   position:fixed;
   top:0;
-  left:0;
+  #{$defaultFloat}:0;
   bottom:0;
-  right:0;
+  #{$oppositeFloat}:0;
   z-index:998;
   width:100%;
   height:100%;
@@ -56,7 +56,7 @@ div.modal, div[role=dialog] {
   opacity:0;
   position:fixed;
   top:10%;
-  left:10%;
+  #{$defaultFloat}:10%;
   z-index:-1;
   max-width:80%;
   max-height:80%;
@@ -84,7 +84,7 @@ div.modal, div[role=dialog] {
     z-index:1000;
     font-size:1.25em;
     top:10px;
-    right:10px;
+    #{$oppositeFloat}:10px;
     padding:5px;
     cursor:pointer;
     color:#ddd;
@@ -97,7 +97,7 @@ div.modal, div[role=dialog] {
   }
   .fullscreen {
     @include rounded(0 0 $radius 0);
-    right:auto;
-    left:10px;
+    #{$oppositeFloat}:auto;
+    #{$defaultFloat}:10px;
   }
 }

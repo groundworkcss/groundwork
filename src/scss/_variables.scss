@@ -14,6 +14,20 @@ $fonts_path:          'font/';    // path to fonts (relative from $root_path)
 $boxsizing_path:      '/js/libs/boxsizing.htc';  // path to box sizing polyfill (change to absolute path from HTML document root)
 
 
+// Text Direction Settings
+$textDirection: ltr !default;     // Default text direction, 'rtl' or 'ltr'
+$defaultFloat: left !default;     // Change this to 'right' for right-to-left languages
+$oppositeFloat: right !default;   // Change this to 'left' for right-to-left languages
+
+@if $textDirection == ltr {
+  $defaultFloat: left;
+  $oppositeFloat: right;
+} @else {
+  $defaultFloat: right;
+  $oppositeFloat: left;
+}
+
+
 ///////////////////////
 //       colors      //
 ///////////////////////
