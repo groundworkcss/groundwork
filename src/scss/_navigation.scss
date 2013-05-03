@@ -135,11 +135,11 @@
         &:first-child {
           a, a:visited {
             border-top:none;
-			@if $textDirection == ltr {
-			  @include rounded(0 $radius 0 0);
-			} @else {
-			  @include rounded($radius 0 0 0);
-			}
+            @if $textDirection == ltr {
+              @include rounded(0 $radius 0 0);
+            } @else {
+              @include rounded($radius 0 0 0);
+            }
           }
         }
         &:last-child {
@@ -154,7 +154,7 @@
         }
       }
     }
-     // horizontal grid navigation
+    // horizontal grid navigation
     &.row {
       li {
         a, a:visited {
@@ -170,7 +170,7 @@
         }
         &:last-child {
           a, a:visited {
-			@include rounded(0 $radius $radius 0);
+            @include rounded(0 $radius $radius 0);
           }
         }
         &:only-child {
@@ -179,7 +179,7 @@
           }
         }
       }
-     ul {
+      ul {
         @extend %menu-closed;
         position:absolute;
         #{$defaultFloat}:auto;
@@ -224,19 +224,19 @@
           a, a:visited {
             border-#{$defaultFloat}:none;
             @if $textDirection == ltr {
-			  @include rounded($radius 0 0 $radius);
-			} @else {
-			  @include rounded(0 $radius $radius 0);
-			}
+              @include rounded($radius 0 0 $radius);
+            } @else {
+              @include rounded(0 $radius $radius 0);
+            }
           }
         }
         &:last-child {
           a, a:visited {
             @if $textDirection == ltr {
-			  @include rounded(0 $radius $radius 0);
-			} @else {
-			  @include rounded($radius 0 0 $radius);
-			}
+               @include rounded(0 $radius $radius 0);
+             } @else {
+               @include rounded($radius 0 0 $radius);
+            }
           }
         }
         &:only-child {

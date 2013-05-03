@@ -29,8 +29,8 @@
 
 %centered {
   float: none !important;
-  margin-#{$defaultFloat}: auto !important;
-  margin-#{$oppositeFloat}: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 @if $classes {
@@ -60,10 +60,10 @@ $fractions-plural: wholes halves thirds fourths fifths sixths sevenths eighths n
         }
       }
       @for $right-left-skip from 1 through $j - 1 {
-        &#{nth($selectors, $i) + "#{$oppositeFloat}-" + nth($numbers, $right-left-skip)} {
+        &#{nth($selectors, $i) + "right-" + nth($numbers, $right-left-skip)} {
           left: percentage($right-left-skip / $j);
         }
-        &#{nth($selectors, $i) + "#{$defaultFloat}-" + nth($numbers, $right-left-skip)} {
+        &#{nth($selectors, $i) + "left-" + nth($numbers, $right-left-skip)} {
           right: percentage($right-left-skip / $j);
         }
         &#{nth($selectors, $i) + "skip-" + nth($numbers, $right-left-skip)} {

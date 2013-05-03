@@ -22,8 +22,8 @@
     width:0;
     height:0;
     border-top:6px solid $button-color;
-    border-#{$oppositeFloat}:6px solid transparent;
-    border-#{$defaultFloat}:6px solid transparent;
+    border-right:6px solid transparent;
+    border-left:6px solid transparent;
   }
   &:before {
     content:'';
@@ -32,8 +32,8 @@
     bottom:-7px;
     #{$defaultFloat}:12px;
     border-top:6px solid $border-color;
-    border-#{$oppositeFloat}:9px solid transparent;
-    border-#{$defaultFloat}:9px solid transparent;
+    border-right:9px solid transparent;
+    border-left:9px solid transparent;
   }
   a.close {
     display:block;

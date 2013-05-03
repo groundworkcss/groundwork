@@ -69,28 +69,28 @@
           z-index:2;
           &:before {
             @if $textDirection == ltr {
-    			box-shadow:2px 1px 0 $button-active;
-  			} @else {
-    			box-shadow:-2px 1px 0 $button-active;
-  			}
+              box-shadow:2px 1px 0 $button-active;
+            } @else {
+              box-shadow:-2px 1px 0 $button-active;
+            }
           }
           &:after {
             @if $textDirection == ltr {
-    			box-shadow:-2px 1px 0 $button-active;
-  			} @else {
-    			box-shadow:2px 1px 0 $button-active;
-  			}
+              box-shadow:-2px 1px 0 $button-active;
+            } @else {
+              box-shadow:2px 1px 0 $button-active;
+            }
           }
         }
         &.disabled {
           @include state(disabled,normal,desaturate($button-color,20%));
           border-bottom-color:lighten(desaturate($button-color,20%), 15%) !important;
           &:before {
-			@if $textDirection == ltr {
-    			box-shadow:2px 1px 0 lighten(desaturate($button-color,20%), 15%);
-  			} @else {
-    			box-shadow:-2px 1px 0 lighten(desaturate($button-color,20%), 15%);
-  			}
+            @if $textDirection == ltr {
+              box-shadow:2px 1px 0 lighten(desaturate($button-color,20%), 15%);
+            } @else {
+              box-shadow:-2px 1px 0 lighten(desaturate($button-color,20%), 15%);
+            }
             
           }
           &:after {
@@ -107,24 +107,24 @@
         &:before {
           #{$defaultFloat}:-6px;
           border-bottom-#{$oppositeFloat}-radius:6px;
-		  	@if $textDirection == ltr {
-    			border-width:0 1px 1px 0;
-				box-shadow:2px 1px 0 $button-color;
-  			} @else {
-    			border-width:0 0 1px 1px;
-				box-shadow:-2px 1px 0 $button-color;
-  			}
+            @if $textDirection == ltr {
+              border-width:0 1px 1px 0;
+              box-shadow:2px 1px 0 $button-color;
+            } @else {
+              border-width:0 0 1px 1px;
+              box-shadow:-2px 1px 0 $button-color;
+          }
         }
         &:after {
           #{$oppositeFloat}:-6px;
           border-bottom-#{$defaultFloat}-radius:6px;
-		  @if $textDirection == ltr {
-    			border-width:0 0 1px 1px;
-				box-shadow:-2px 1px 0 $button-color;
-  			} @else {
-    			border-width:0 1px 1px 0;
-				box-shadow:2px 1px 0 $button-color;
-  			}		
+            @if $textDirection == ltr {
+              border-width:0 0 1px 1px;
+              box-shadow:-2px 1px 0 $button-color;
+            } @else {
+              border-width:0 1px 1px 0;
+              box-shadow:2px 1px 0 $button-color;
+           }		
         }
       }
     }
@@ -135,7 +135,7 @@
   > div, [role=tabpanel] {
     display:none;
     padding:$gutter * 2;
-    background:$background-color;	
+    background:$background-color;
     @include rounded(0 0 $radius $radius);
     *:first-child {
       margin-top:0;
