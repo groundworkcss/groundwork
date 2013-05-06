@@ -300,9 +300,11 @@
   }
   $elements: h1 h2 h3 h4 h5 h6 p ul ol dl blockquote cite small big em b strong sup sub del strike code pre;
   @for $i from 1 through length($elements) {
-    #{nth($elements, $i)} {
-      @extend %#{nth($elements, $i)};
-    }
+		@if not index($tag-elements, nth($elements, $i)) == false {
+			#{nth($elements, $i)} {
+				@extend %#{nth($elements, $i)};
+			}
+		}
   }
 }
 @if $classes {

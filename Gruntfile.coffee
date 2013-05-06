@@ -49,6 +49,7 @@ module.exports = (grunt) ->
       groundwork:
         options:
           config: 'config.rb'
+          trace: true
       tests:
         options:
           config: 'tests/config.rb'

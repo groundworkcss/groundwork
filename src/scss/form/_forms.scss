@@ -165,24 +165,21 @@
 }
 
 @if $tags {
-  fieldset {
-    @extend %fieldset;
-  }
-  legend {
-    @extend %legend;
-  }
-  label {
-    @extend %label;
-  }
-  input, select, textarea {
-    @extend %field;
-  }
-  input {
-    @extend %input;
-  }
-  textarea {
-    @extend %textarea;
-  }
+  $elements: fieldset legend label input select textarea;
+	@for $i from 1 through length($elements) {
+		$element: nth($elements, $i);
+		@if not index($tag-elements, $element) == false {
+			#{$element} {
+				@extend %#{$element};
+				@if $element == input or $element == select or $element == textarea {
+					@extend %field;
+				}
+				@if $element == textarea {
+					@extend %textarea;
+				}
+			}
+		}
+	}
 
   @if $classes {
     .select-wrap {

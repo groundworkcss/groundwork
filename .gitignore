@@ -2,3 +2,4 @@
 .sass-cache/*
 tests/*.css
 .idea/*
+node_modules/*

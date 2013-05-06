@@ -9,7 +9,7 @@
   *behavior: url("/js/libs/boxsizing.htc");
 }
 
-html, body, .document {
+html, body, .document, .html, .body {
   -webkit-text-size-adjust: none;
   line-height: 1;
 }
@@ -37,7 +37,7 @@ html, .html {
   height: 100%;
 }
 
-html, body, .document {
+html, body, .document, .html, .body {
   width: 100% !important;
   min-height: 100%;
   background: white;
@@ -1541,7 +1541,7 @@ a.button:visited.dropdown.on ul {
   display: none !important;
 }
 
-.small, sup, .sup, sub, .sub, small {
+.small, .sup, .sub, small {
   font-size: 0.8em;
 }
 
@@ -3216,7 +3216,7 @@ ul.icons li [class*=" icon-"] {
   font-family: AmericanTypewriter, Arial, Helvetica, Geneva, sans-serif;
 }
 
-html, body, .document {
+html, body, .document, .html, .body {
   font-family: Helvetica, Arial, Geneva, sans-serif;
   font-size: 14px;
   line-height: 1.2;
@@ -3415,7 +3415,7 @@ code, .code, pre, .pre {
   font-family: monospace;
 }
 
-del, .del, strike, .strike {
+.del, .strike {
   text-decoration: line-through;
 }
 
@@ -6177,7 +6177,7 @@ textarea, .textarea {
   background: #dfdfdf;
 }
 
-.select-wrap select, .select-wrap .select {
+select, .select-wrap select, .select-wrap .select {
   -ms-appearance: none;
   -o-appearance: none;
   -moz-appearance: none;
@@ -6193,7 +6193,7 @@ textarea, .textarea {
   position: relative;
   z-index: 2;
 }
-.select-wrap select.unselected, .select-wrap .unselected.select {
+select.unselected, .select-wrap .unselected.select {
   color: #999;
 }
 

@@ -13,6 +13,17 @@
 // framework options
 $classes:             true !default;       // enable CSS class selectors     (WIP)
 $tags:                true !default;       // enable semantic tag selectors  (WIP)
+$tag-elements: html body
+							div span header footer aside nav menu section article details
+							h1 h2 h3 h4 h5 h6 p
+							ol ul li dl dt dd
+							em small big strong b u i
+							blockquote cite pre code time address
+							a img center hr
+							form fieldset legend label input textarea select button
+							table caption tbody thead tfoot tr th td
+							iframe object canvas audio video !default;
+
 $aria:                true !default;       // enable Aria role selectors     (WIP)
 
 // file paths
@@ -113,15 +124,16 @@ $radius:              4px !default;
 ///////////////////////
 
 // elements that will be reset (trim this to include only the elements that are used in your markup)
-$html5-elements:  html body 
-                  div span header footer aside nav menu section article details 
-                  h1 h2 h3 h4 h5 h6 p 
-                  ol ul li dl dt dd 
-                  em small big strong b u i 
-                  blockquote cite pre code time address 
-                  a img center hr 
-                  form fieldset legend label input textarea select button 
-                  table caption tbody thead tfoot tr th td 
+$reset: true !default;
+$reset-elements:  html body
+                  div span header footer aside nav menu section article details
+                  h1 h2 h3 h4 h5 h6 p
+                  ol ul li dl dt dd
+                  em small big strong b u i
+                  blockquote cite pre code time address
+                  a img center hr
+                  form fieldset legend label input textarea select button
+                  table caption tbody thead tfoot tr th td
                   iframe object canvas audio video !default;
 
 
@@ -131,8 +143,8 @@ $html5-elements:  html body
 ///////////////////////
 
 // font names (no spaces or special characters, these are used to build selectors)
-$web-font-names:      AverageSans, 
+$web-font-names:      AverageSans,
                       AmericanTypewriter !default;
 // font files (must all be named the same as listed below and include .eot, .woff and .ttf file types)
-$web-font-files:      average-sans-webfont, 
+$web-font-files:      average-sans-webfont,
                       americantypewriterstd-bold !default;

@@ -37,9 +37,11 @@
 @if $tags {
   $elements: html hr img;
   @for $i from 1 through length($elements) {
-    #{nth($elements, $i)} {
-      @extend %#{nth($elements, $i)};
-    }
+		@if not index($tag-elements, nth($elements, $i)) == false {
+			#{nth($elements, $i)} {
+				@extend %#{nth($elements, $i)};
+			}
+		}
   }
   html, body {
     @extend %document;
@@ -56,4 +58,7 @@
       @extend %#{nth($names, $i)};
     }
   }
+	.html, .body {
+		@extend %document;
+	}
 }
