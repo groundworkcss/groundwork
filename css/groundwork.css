@@ -1541,7 +1541,7 @@ a.button:visited.dropdown.on ul {
   display: none !important;
 }
 
-.small, .sup, .sub, small {
+.small, sup, .sup, sub, .sub, small {
   font-size: 0.8em;
 }
 
@@ -3415,7 +3415,7 @@ code, .code, pre, .pre {
   font-family: monospace;
 }
 
-.del, .strike {
+del, .del, strike, .strike {
   text-decoration: line-through;
 }
 
