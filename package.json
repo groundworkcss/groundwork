@@ -1,6 +1,6 @@
 {
   "name": "GroundworkCSS",
-  "version": "1.7.0",
+  "version": "1.7.2",
   "description": "GroundworkCSS is a fully responsive HTML5, CSS and Javascript toolkit created by @ghepting",
   "devDependencies": {
     "grunt": "~0.4.1",
