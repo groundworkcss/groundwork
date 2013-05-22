@@ -1,6 +1,6 @@
 // =============================================
 //                Typography
-//          Last Updated:2013-4-24
+//          Last Updated:2013-5-21
 // =============================================
 
 
@@ -8,8 +8,6 @@
 
 %document {
   font-family:$font-family;
-  font-size:$font-size;
-  line-height:1.2;
   color:$font-color;
 }
 
@@ -28,52 +26,50 @@
 }
 
 %heading {
-  line-height:1.3;
   margin-bottom:15px;
 }
 
 %h1 {
   @extend %heading;
   font-weight:200;
-  font-size:$font-size * 2.3333333333;
+  @include adjust-font-size-to($base-font-size * 2.3333333333);
 }
 
 %h2 {
   @extend %heading;
   font-weight:200;
-  font-size:$font-size * 2;
+  @include adjust-font-size-to($base-font-size * 2);
 }
 
 %h3 {
   @extend %heading;
   font-weight:500;
-  font-size:$font-size * 1.5;
+  @include adjust-font-size-to($base-font-size * 1.5);
 }
 
 %h4 {
   @extend %heading;
   font-weight:500;
-  font-size:$font-size * 1.3333333333;
+  @include adjust-font-size-to($base-font-size * 1.3333333333);
 }
 
 %h5 {
   @extend %heading;
   font-weight:900;
-  font-size:$font-size * 1.1666666667;
+  @include adjust-font-size-to($base-font-size * 1.1666666667);
 }
 
 %h6 {
   @extend %heading;
   font-weight:900;
-  font-size:$font-size * 1.1666666667;
+  @include adjust-font-size-to($base-font-size * 1.1666666667);
   text-transform:uppercase;
 }
 
 %p, %ul, %ol, %dl {
   margin-bottom:10px;
   font-weight:normal;
-  font-size:1em;
-  line-height:1.6;
+  @include adjust-font-size-to($base-font-size);
 }
 
 %list {
@@ -109,7 +105,7 @@
       font-family:FontAwesome;
       font-weight:normal;
       font-style:normal;
-      font-size:1.1em;
+      @include adjust-font-size-to($base-font-size * 1.1);
       text-decoration:inherit;
       -webkit-font-smoothing:antialiased;
       line-height:normal;
@@ -126,6 +122,8 @@
   @extend %unstyled-list;
   counter-reset:li;
   margin-left:1.5em;
+  @include adjust-font-size-to($base-font-size);
+  line-height:1.6;
   %list-item {
     position:relative;
     padding:2px 6px 0;
@@ -139,6 +137,7 @@
       text-align:center;
       padding:2px;
       font-size:0.8em;
+      line-height:1.5;
       color:$background-color;
       background:$font-color;
       font-weight:bold;
@@ -150,9 +149,8 @@
 %blockquote {
   padding:1.3em 4em 1em;
   color:$font-color;
-  font-size:$font-size*1.15;
+  @include adjust-font-size-to($base-font-size, 1.15);
   font-weight:bold;
-  line-height:1.4;
   position:relative;
   z-index:0;
   &:before {
@@ -182,7 +180,7 @@
   position:relative;
   left:-1em;
   margin-top:0.25em;
-  font-size:0.95em;
+  @include adjust-font-size-to($base-font-size, 0.95);
   font-weight:normal;
   font-style:normal;
   color:lighten($font-color, 15%);
@@ -230,7 +228,7 @@
 	$border:2.6em;
 	color:white;
 	background:#050505;
-	font-size:0.9em;
+  @include adjust-font-size-to($base-font-size, 1);
 	padding:0.5em;
 	display:block;
 	border-left:#{$border} solid gray;

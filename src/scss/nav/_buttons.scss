@@ -15,7 +15,6 @@
   color:$button-text;
   font-family:$font-family;
   font-weight:bold;
-  // font-size:1em;
   text-decoration:none;
   cursor:pointer;
   line-height:1.5;
@@ -151,7 +150,6 @@
   left:0;
   width:100%;
   z-index:10;
-  // font-size:0.9em;
   @include drop-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
   @include rounded(0 0 $radius $radius);
 }
@@ -210,7 +208,6 @@
       border:1px solid $button-active;
       color:$button-text;
       font-weight:bold;
-      // font-size:1em;
       text-decoration:none;
       cursor:pointer;
       line-height:1.5;

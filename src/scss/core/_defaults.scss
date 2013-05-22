@@ -23,7 +23,6 @@ $tag-elements: html body
 							form fieldset legend label input textarea select button
 							table caption tbody thead tfoot tr th td
 							iframe object canvas audio video !default;
-
 $aria:                true !default;       // enable Aria role selectors     (WIP)
 
 // file paths
@@ -38,7 +37,6 @@ $max-width:           1200px !default;     // max container width (i.e. - 960px)
 $gutter:              10px !default;       // gutter spacing
 
 
-
 ///////////////////////
 //       colors      //
 ///////////////////////
@@ -46,7 +44,8 @@ $gutter:              10px !default;       // gutter spacing
 // base styles
 $background-color:    #ffffff !default;
 $font-color:          #2b2b2d !default;
-$font-size:           14px !default;
+$base-font-size:      16px !default;       // these are actually already set by Compass
+$base-line-height:    24px !default;       // these are actually already set by Compass
 $font-family:         Helvetica, Arial, Geneva, sans-serif !default;
 
 // links

@@ -37,22 +37,24 @@
 //
 // =======================================================
 
+/* vertical rhythm */
+@include establish-baseline;
+
 %everything {
   @include box-sizing(border-box);
   *behavior: url($boxsizing_path);  // IE 6-7  -- Thank Schepp for the polyfill for legacy IE browsers: https://github.com/Schepp/box-sizing-polyfill
 }
 
 %document {
+  @include adjust-font-size-to($base-font-size);
   -webkit-text-size-adjust:none;
-  line-height:1;
 }
 
 %html5-elements {
   margin:0;
   padding:0;
   border: 0;
-  font-size:1em;
-  font:inherit;
+  font-family:inherit;
   vertical-align:baseline;
 }
 

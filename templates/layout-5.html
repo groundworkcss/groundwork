@@ -1,39 +1,185 @@
-<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]>   <html class="no-js lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]>   <html class="no-js lt-ie9"><![endif]--><!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><title>GroundworkCSS &hearts;</title><link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png"><link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png"><link rel="apple-touch-icon" sizes="114x114" href="../images/apple-icons/apple-touch-icon-114x114-precomposed.png"><link rel="apple-touch-icon" sizes="144x144" href="../images/apple-icons/apple-touch-icon-144x144-precomposed.png"><meta name="msapplication-TileImage" content="../images/apple-icons/apple-touch-icon-144x144-precomposed.png"><meta name="msapplication-TileColor" content="#ffffff"><!-- Modernizr --><script src="../js/libs/modernizr-2.6.2.min.js"></script><!-- jQuery --><script type="text/javascript" src="../js/libs/jquery-1.8.2.min.js"></script><!-- framework css --><link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]><link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]--><!--[if lt IE 9]><script type="text/javascript" src="../js/libs/html5shiv.min.js"></script><![endif]--><!--[if IE 7]><link type="text/css" rel="stylesheet" href="../css/font-awesome-ie7.min.css"><![endif]--><script type="text/javascript">// extend Modernizr to have datauri test
-(function(){
-  var datauri = new Image();
-  datauri.onerror = function() {
-    Modernizr.addTest('datauri', function () { return false; });
-  };
-  datauri.onload = function() {
-    Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
-    Modernizr.load({
-      test: Modernizr.datauri,
-      nope: '../css/no-datauri.css'
-    });
-  };
-  datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-})();
-// fallback if SVG unsupported
-Modernizr.load({
-  test: Modernizr.inlinesvg,
-  nope: [
-    '../css/no-svg.css'
-  ]
-});
-// polyfill for HTML5 placeholders
-Modernizr.load({
-  test: Modernizr.input.placeholder,
-  nope: [
-    '../css/placeholder_polyfill.css',
-    '../js/libs/placeholder_polyfill.jquery.js'
-  ]
-});
-</script></head><body><header class="white band padded"><div class="container"><h2>GroundworkCSS</h2><nav class="inline menu gap-top"><ul><li><a href="./home.html"><i class="icon-home"></i></a></li><li class="menu"><a href="#">Layouts</a><ul><li><a href="./layout-1.html">Layout 1</a></li><li><a href="./layout-2.html">Layout 2</a></li><li><a href="./layout-3.html">Layout 3</a></li><li><a href="./layout-4.html">Layout 4</a></li><li><a href="./layout-5.html">Layout 5</a></li></ul></li><li><a href="./kitchen-sink.html">Kitchen Sink</a></li></ul></nav></div></header><div class="container"><article class="row"><section class="three fifths right-one padded"><div class="pad-bottom"><div data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" class="cycle-slideshow"><img src="http://placehold.it/700x400/24cada/ffffff/&amp;text=Slide+1" alt=""><img src="http://placehold.it/700x400/bada55/ffffff/&amp;text=Slide+2" alt=""><img src="http://placehold.it/700x400/c82647/ffffff/&amp;text=Slide+3" alt=""><img src="http://placehold.it/700x400/198d98/ffffff/&amp;text=Slide+4" alt=""></div></div><img src="http://placehold.it/250x130/198d98/ffffff/" alt="" class="pull-left gap-right gap-bottom"><h1>Section Heading 1</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Nunc vel vehicula ante.</p></section><aside class="one fifth left-three padded border-right"><h1>Section Heading 1</h1><ul class="list"><li>Unordered list item #1</li><li>Unordered list item #2</li><li>Unordered list item #3</li><li>Unordered list item #4</li></ul><ol class="list"><li>Ordered list item #1</li><li>Ordered list item #2</li><li>Ordered list item #3</li></ol><hr><h3>Section Heading 3</h3><div class="row"><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div></div><div class="row"><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div></div><div class="row"><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div></div></aside><aside class="one fifth padded border-left"><h1>Section Heading 1</h1><ul class="list"><li>Unordered list item #1</li><li>Unordered list item #2</li><li>Unordered list item #3</li><li>Unordered list item #4</li></ul><ol class="list"><li>Ordered list item #1</li><li>Ordered list item #2</li><li>Ordered list item #3</li></ol><hr><h3>Section Heading 3</h3><div class="row"><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div></div><div class="row"><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div></div><div class="row"><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div><div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div></div></aside></article><article class="row"><section class="one third padded"><h3>Section Heading 3</h3><img src="http://placehold.it/380x200/198d98/ffffff/" alt="" class="gap-top gap-bottom"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p></section><section class="one third padded"><h3>Section Heading 3</h3><img src="http://placehold.it/380x200/198d98/ffffff/" alt="" class="gap-top gap-bottom"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p></section><section class="one third padded"><h3>Section Heading 3</h3><img src="http://placehold.it/380x200/198d98/ffffff/" alt="" class="gap-top gap-bottom"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p></section></article></div><footer class="footer align-center"><p>GroundworkCSS is 100% free and open source. <a href="mailto:groundwork@sidereel.com">Give a shout out </a>if you find it extremely useful or have any feedback.</p></footer><!-- scripts--><script type="text/javascript" src="../js/plugins/jquery.cycle2.js"></script><script type="text/javascript" src="../js/plugins/jquery.magnific-popup.js"></script><script type="text/javascript" src="../js/groundwork.all.js"></script><!-- google analytics--><script type="text/javascript">var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script></body></html>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>   <html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>   <html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>GroundworkCSS &hearts;</title>
+    <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-icons/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <!-- Modernizr -->
+    <script src="../js/libs/modernizr-2.6.2.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../js/libs/jquery-1.9.1.min.js"></script>
+    <!-- framework css -->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
+    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]--><!--[if lt IE 9]>
+    <script type="text/javascript" src="../js/libs/html5shiv.min.js"></script><![endif]--><!--[if IE 7]>
+    <link type="text/css" rel="stylesheet" href="../css/font-awesome-ie7.min.css"><![endif]-->
+    <script type="text/javascript">
+      // extend Modernizr to have datauri test
+      (function(){
+        var datauri = new Image();
+        datauri.onerror = function() {
+          Modernizr.addTest('datauri', function () { return false; });
+        };
+        datauri.onload = function() {
+          Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
+          Modernizr.load({
+            test: Modernizr.datauri,
+            nope: '../css/no-datauri.css'
+          });
+        };
+        datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+      })();
+      // fallback if SVG unsupported
+      Modernizr.load({
+        test: Modernizr.inlinesvg,
+        nope: [
+          '../css/no-svg.css'
+        ]
+      });
+      // polyfill for HTML5 placeholders
+      Modernizr.load({
+        test: Modernizr.input.placeholder,
+        nope: [
+          '../css/placeholder_polyfill.css',
+          '../js/libs/placeholder_polyfill.jquery.js'
+        ]
+      });
+      
+    </script>
+  </head>
+  <body>
+    <header class="white band padded">
+      <div class="container">
+        <h2>GroundworkCSS</h2>
+        <nav class="inline menu gap-top">
+          <ul>
+            <li><a href="./home.html"><i class="icon-home"></i></a></li>
+            <li class="menu"><a href="#">Layouts</a>
+              <ul>
+                <li><a href="./layout-1.html">Layout 1</a></li>
+                <li><a href="./layout-2.html">Layout 2</a></li>
+                <li><a href="./layout-3.html">Layout 3</a></li>
+                <li><a href="./layout-4.html">Layout 4</a></li>
+                <li><a href="./layout-5.html">Layout 5</a></li>
+              </ul>
+            </li>
+            <li><a href="./kitchen-sink.html">Kitchen Sink</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <article class="row">
+        <section class="three fifths right-one padded">
+          <div class="pad-bottom">
+            <div data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" class="cycle-slideshow"><img src="http://placehold.it/700x400/24cada/ffffff/&amp;text=Slide+1" alt=""><img src="http://placehold.it/700x400/bada55/ffffff/&amp;text=Slide+2" alt=""><img src="http://placehold.it/700x400/c82647/ffffff/&amp;text=Slide+3" alt=""><img src="http://placehold.it/700x400/198d98/ffffff/&amp;text=Slide+4" alt=""></div>
+          </div><img src="http://placehold.it/250x130/198d98/ffffff/" alt="" class="pull-left gap-right gap-bottom">
+          <h1>Section Heading 1</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Nunc vel vehicula ante.</p>
+        </section>
+        <aside class="one fifth left-three padded border-right">
+          <h1>Section Heading 1</h1>
+          <ul class="list">
+            <li>Unordered list item #1</li>
+            <li>Unordered list item #2</li>
+            <li>Unordered list item #3</li>
+            <li>Unordered list item #4</li>
+          </ul>
+          <ol class="list">
+            <li>Ordered list item #1</li>
+            <li>Ordered list item #2</li>
+            <li>Ordered list item #3</li>
+          </ol>
+          <hr>
+          <h3>Section Heading 3</h3>
+          <div class="row">
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+          </div>
+        </aside>
+        <aside class="one fifth padded border-left">
+          <h1>Section Heading 1</h1>
+          <ul class="list">
+            <li>Unordered list item #1</li>
+            <li>Unordered list item #2</li>
+            <li>Unordered list item #3</li>
+            <li>Unordered list item #4</li>
+          </ul>
+          <ol class="list">
+            <li>Ordered list item #1</li>
+            <li>Ordered list item #2</li>
+            <li>Ordered list item #3</li>
+          </ol>
+          <hr>
+          <h3>Section Heading 3</h3>
+          <div class="row">
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+            <div class="one mobile half padded"><img src="http://placehold.it/120x85/198d98/ffffff/" alt=""></div>
+          </div>
+        </aside>
+      </article>
+      <article class="row">
+        <section class="one third padded">
+          <h3>Section Heading 3</h3><img src="http://placehold.it/380x200/198d98/ffffff/" alt="" class="gap-top gap-bottom">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+        </section>
+        <section class="one third padded">
+          <h3>Section Heading 3</h3><img src="http://placehold.it/380x200/198d98/ffffff/" alt="" class="gap-top gap-bottom">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+        </section>
+        <section class="one third padded">
+          <h3>Section Heading 3</h3><img src="http://placehold.it/380x200/198d98/ffffff/" alt="" class="gap-top gap-bottom">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+        </section>
+      </article>
+    </div>
+    <footer class="footer align-center">
+      <p>GroundworkCSS is 100% free and open source. <a href="mailto:groundwork@sidereel.com">Give a shout out </a>if you find it extremely useful or have any feedback.</p>
+    </footer>
+    <!-- scripts-->
+    <script type="text/javascript" src="../js/plugins/jquery.cycle2.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="../js/groundwork.all.js"></script>
+    <!-- google analytics-->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      
+    </script>
+  </body>
+</html>

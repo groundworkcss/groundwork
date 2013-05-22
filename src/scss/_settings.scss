@@ -1,6 +1,6 @@
 // =============================================
 //              Custom Settings
-//          Last Updated:2013-4-25
+//          Last Updated:2013-5-21
 // =============================================
 
 
@@ -37,7 +37,6 @@
 // $gutter:              10px;       // gutter spacing
 
 
-
 ///////////////////////
 //       colors      //
 ///////////////////////
@@ -45,7 +44,8 @@
 // base styles
 // $background-color:    #ffffff;
 // $font-color:          #2b2b2d;
-// $font-size:           14px;
+$base-font-size:         14px;      // base font size for vertical rhythm
+$base-line-height:       17px;      // base line height for vertical rhythm
 // $font-family:         Helvetica, Arial, Geneva, sans-serif;
 
 // links

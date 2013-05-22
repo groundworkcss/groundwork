@@ -40,6 +40,8 @@ module.exports = (grunt) ->
           'templates/layout-3.html':      ['src/jade/layout-3.jade']
           'templates/layout-4.html':      ['src/jade/layout-4.jade']
           'templates/layout-5.html':      ['src/jade/layout-5.jade']
+        options:
+          pretty: true
       tests:
         files:
           'tests/test-buttons.html':      ['tests/src/jade/test-buttons.jade']

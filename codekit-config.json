@@ -25,15 +25,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/js\/libs\/jquery-1.8.2.min.js" : {
+    "\/js\/libs\/jquery-1.9.1.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/jquery-1.8.2.min.js",
+      "inputAbbreviatedPath" : "\/js\/libs\/jquery-1.9.1.min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/jquery-1.8.2.min.min.js",
+      "outputAbbreviatedPath" : "\/js\/libs\/jquery-1.9.1.min.min.js",
       "fileType" : 64
     },
     "\/js\/plugins\/cycle\/jquery.cycle2.caption2.js" : {
