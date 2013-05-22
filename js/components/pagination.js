@@ -2,25 +2,33 @@
   var limitPaginationItems;
 
   $(function() {
+    var $body;
+
     limitPaginationItems();
-    $('body').on('click', '.pagination ul > li:not(.next, .prev) a', function(e) {
+    $body = $('body');
+    $body.on('click', '.pagination ul > li:not(.next, .prev) a', function(e) {
+      var $next, $prev, $this;
+
+      $this = $(this);
       $('.pagination ul > li:not(.next, .prev)').removeClass('active');
-      $(this).parent('li').addClass('active');
-      if ($(this).parent('li').hasClass('first')) {
-        $('.pagination ul > li.prev').addClass('disabled');
+      $this.parent('li').addClass('active');
+      $prev = $('.pagination ul > li.prev');
+      if ($this.parent('li').hasClass('first')) {
+        $prev.addClass('disabled');
       } else {
-        $('.pagination ul > li.prev').removeClass('disabled');
+        $prev.removeClass('disabled');
       }
-      if ($(this).parent('li').hasClass('last')) {
-        $('.pagination ul > li.next').addClass('disabled');
+      $next = $('.pagination ul > li.next');
+      if ($this.parent('li').hasClass('last')) {
+        $next.addClass('disabled');
       } else {
-        $('.pagination ul > li.next').removeClass('disabled');
+        $next.removeClass('disabled');
       }
       limitPaginationItems();
       e.preventDefault();
       return false;
     });
-    $('body').on('click', '.pagination ul > li.prev:not(.disabled)', function(e) {
+    $body.on('click', '.pagination ul > li.prev:not(.disabled)', function(e) {
       var el;
 
       $('.pagination ul > li.next').removeClass('disabled');
@@ -36,7 +44,7 @@
       e.preventDefault();
       return false;
     });
-    $('body').on('click', '.pagination ul > li.next:not(.disabled)', function(e) {
+    $body.on('click', '.pagination ul > li.next:not(.disabled)', function(e) {
       var el;
 
       $('.pagination ul > li.prev').removeClass('disabled');
@@ -52,7 +60,7 @@
       e.preventDefault();
       return false;
     });
-    $('body').on('click', '.pagination ul > li.disabled a', function(e) {
+    $body.on('click', '.pagination ul > li.disabled a', function(e) {
       e.preventDefault();
       return false;
     });
@@ -63,37 +71,37 @@
   });
 
   limitPaginationItems = function() {
-    return $('.pagination ul').each(function() {
+    $('.pagination ul').each(function() {
       var pagination, totalItemsWidth, visibleItemsWidth, visibleSpace, _results;
 
       pagination = $(this);
       visibleSpace = pagination.outerWidth() - pagination.children('li.prev').outerWidth() - pagination.children('li.next').outerWidth();
       totalItemsWidth = 0;
       pagination.children('li').each(function() {
-        return totalItemsWidth += $(this).outerWidth();
+        totalItemsWidth += $(this).outerWidth();
       });
       pagination.children('li').not('.prev, .next, .active').hide();
       visibleItemsWidth = 0;
       pagination.children('li:visible').each(function() {
-        return visibleItemsWidth += $(this).outerWidth();
+        visibleItemsWidth += $(this).outerWidth();
       });
       _results = [];
       while ((visibleItemsWidth + 29) < visibleSpace && (visibleItemsWidth + 29) < totalItemsWidth) {
         pagination.children('li:visible').not('.next').last().next().show();
         visibleItemsWidth = 0;
         pagination.children('li:visible').each(function() {
-          return visibleItemsWidth += $(this).outerWidth();
+          visibleItemsWidth += $(this).outerWidth();
         });
         if ((visibleItemsWidth + 29) <= visibleSpace) {
           pagination.children('li:visible').not('.prev').first().prev().show();
           visibleItemsWidth = 0;
           pagination.children('li:visible').each(function() {
-            return visibleItemsWidth += $(this).outerWidth();
+            visibleItemsWidth += $(this).outerWidth();
           });
         }
         visibleItemsWidth = 0;
         _results.push(pagination.children('li:visible').each(function() {
-          return visibleItemsWidth += $(this).outerWidth();
+          visibleItemsWidth += $(this).outerWidth();
         }));
       }
       return _results;

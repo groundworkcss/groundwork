@@ -84,6 +84,6 @@ html.lt-ie8 ul.button-list, html.lt-ie8 ol.button-list {
   margin: 0;
   padding: 0;
 }
-html.lt-ie8 button.dropdown ul, html.lt-ie8 .button.dropdown ul, html.lt-ie8 a.button.dropdown ul, html.lt-ie8 a.button:visited.dropdown ul {
+html.lt-ie8 button.dropdown ul, html.lt-ie8 .button.dropdown ul, html.lt-ie8 a.button.dropdown ul {
   top: 2em;
 }
