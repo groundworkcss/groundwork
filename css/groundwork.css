@@ -3551,7 +3551,8 @@ button,
 input[type=submit],
 input[type=button],
 input[type=reset], .button,
-a.button, [role~=button], nav.menu .menu-toggle, .menu.nav .menu-toggle {
+a.button,
+a.button:visited, [role~=button], nav.menu .menu-toggle, .menu.nav .menu-toggle {
   display: inline-block;
   word-wrap: break-word;
   padding: 0.25em 1em;
@@ -3593,7 +3594,8 @@ button.on,
 input[type=submit].on,
 input[type=button].on,
 input[type=reset].on, .button.on,
-a.button.on, ul.button-list li a.on,
+a.button.on,
+a.button.on:visited, ul.button-list li a.on,
 ol.button-list li a.on, [role~=button].on {
   background: #198d98;
   text-decoration: none;
@@ -3604,7 +3606,8 @@ button.active,
 input[type=submit].active,
 input[type=button].active,
 input[type=reset].active, .button.active,
-a.button.active, ul.button-list li a.active,
+a.button.active,
+a.button.active:visited, ul.button-list li a.active,
 ol.button-list li a.active, [role~=button].active, button.active:hover,
 input[type=submit].active:hover,
 input[type=button].active:hover,
@@ -3622,7 +3625,8 @@ button.disabled,
 input[type=submit].disabled,
 input[type=button].disabled,
 input[type=reset].disabled, .button.disabled,
-a.button.disabled, ul.button-list li a.disabled,
+a.button.disabled,
+a.button.disabled:visited, ul.button-list li a.disabled,
 ol.button-list li a.disabled, [role~=button].disabled {
   color: #a4dee3;
   background: #57c1cb;
@@ -3656,7 +3660,8 @@ button.green,
 input[type=submit].green,
 input[type=button].green,
 input[type=reset].green, .button.green,
-a.button.green, ul.button-list li a.green,
+a.button.green,
+a.button.green:visited, ul.button-list li a.green,
 ol.button-list li a.green, [role~=button].green {
   background-color: #2ecc71;
   color: white;
@@ -3711,7 +3716,8 @@ button.blue,
 input[type=submit].blue,
 input[type=button].blue,
 input[type=reset].blue, .button.blue,
-a.button.blue, ul.button-list li a.blue,
+a.button.blue,
+a.button.blue:visited, ul.button-list li a.blue,
 ol.button-list li a.blue, [role~=button].blue {
   background-color: #3498db;
   color: white;
@@ -3766,7 +3772,8 @@ button.purple,
 input[type=submit].purple,
 input[type=button].purple,
 input[type=reset].purple, .button.purple,
-a.button.purple, ul.button-list li a.purple,
+a.button.purple,
+a.button.purple:visited, ul.button-list li a.purple,
 ol.button-list li a.purple, [role~=button].purple {
   background-color: #9b59b6;
   color: white;
@@ -3821,7 +3828,8 @@ button.yellow,
 input[type=submit].yellow,
 input[type=button].yellow,
 input[type=reset].yellow, .button.yellow,
-a.button.yellow, ul.button-list li a.yellow,
+a.button.yellow,
+a.button.yellow:visited, ul.button-list li a.yellow,
 ol.button-list li a.yellow, [role~=button].yellow {
   background-color: #f1c40f;
   color: white;
@@ -3876,7 +3884,8 @@ button.orange,
 input[type=submit].orange,
 input[type=button].orange,
 input[type=reset].orange, .button.orange,
-a.button.orange, ul.button-list li a.orange,
+a.button.orange,
+a.button.orange:visited, ul.button-list li a.orange,
 ol.button-list li a.orange, [role~=button].orange {
   background-color: #e67e22;
   color: white;
@@ -3931,7 +3940,8 @@ button.red,
 input[type=submit].red,
 input[type=button].red,
 input[type=reset].red, .button.red,
-a.button.red, ul.button-list li a.red,
+a.button.red,
+a.button.red:visited, ul.button-list li a.red,
 ol.button-list li a.red, [role~=button].red {
   background-color: #e74c3c;
   color: white;
@@ -3986,7 +3996,8 @@ button.pink,
 input[type=submit].pink,
 input[type=button].pink,
 input[type=reset].pink, .button.pink,
-a.button.pink, ul.button-list li a.pink,
+a.button.pink,
+a.button.pink:visited, ul.button-list li a.pink,
 ol.button-list li a.pink, [role~=button].pink {
   background-color: #f02475;
   color: white;
@@ -4041,7 +4052,8 @@ button.turquoise,
 input[type=submit].turquoise,
 input[type=button].turquoise,
 input[type=reset].turquoise, .button.turquoise,
-a.button.turquoise, ul.button-list li a.turquoise,
+a.button.turquoise,
+a.button.turquoise:visited, ul.button-list li a.turquoise,
 ol.button-list li a.turquoise, [role~=button].turquoise {
   background-color: #1abc9c;
   color: white;
@@ -4096,7 +4108,8 @@ button.asphalt,
 input[type=submit].asphalt,
 input[type=button].asphalt,
 input[type=reset].asphalt, .button.asphalt,
-a.button.asphalt, ul.button-list li a.asphalt,
+a.button.asphalt,
+a.button.asphalt:visited, ul.button-list li a.asphalt,
 ol.button-list li a.asphalt, [role~=button].asphalt {
   background-color: #34495e;
   color: white;
@@ -4151,7 +4164,8 @@ button.info,
 input[type=submit].info,
 input[type=button].info,
 input[type=reset].info, .button.info,
-a.button.info, ul.button-list li a.info,
+a.button.info,
+a.button.info:visited, ul.button-list li a.info,
 ol.button-list li a.info, [role~=button].info {
   background-color: #309dd4;
   color: white;
@@ -4205,7 +4219,8 @@ button.alert,
 input[type=submit].alert,
 input[type=button].alert,
 input[type=reset].alert, .button.alert,
-a.button.alert, ul.button-list li a.alert,
+a.button.alert,
+a.button.alert:visited, ul.button-list li a.alert,
 ol.button-list li a.alert, [role~=button].alert {
   background-color: #e8ca2b;
   color: white;
@@ -4259,7 +4274,8 @@ button.warning,
 input[type=submit].warning,
 input[type=button].warning,
 input[type=reset].warning, .button.warning,
-a.button.warning, ul.button-list li a.warning,
+a.button.warning,
+a.button.warning:visited, ul.button-list li a.warning,
 ol.button-list li a.warning, [role~=button].warning {
   background-color: #fa8600;
   color: white;
@@ -4313,7 +4329,8 @@ button.error,
 input[type=submit].error,
 input[type=button].error,
 input[type=reset].error, .button.error,
-a.button.error, ul.button-list li a.error,
+a.button.error,
+a.button.error:visited, ul.button-list li a.error,
 ol.button-list li a.error, [role~=button].error {
   background-color: #b84c4c;
   color: white;
@@ -4367,7 +4384,8 @@ button.success,
 input[type=submit].success,
 input[type=button].success,
 input[type=reset].success, .button.success,
-a.button.success, ul.button-list li a.success,
+a.button.success,
+a.button.success:visited, ul.button-list li a.success,
 ol.button-list li a.success, [role~=button].success {
   background-color: #67b646;
   color: white;
@@ -4421,7 +4439,8 @@ button.block,
 input[type=submit].block,
 input[type=button].block,
 input[type=reset].block, .button.block,
-a.button.block, ul.button-list li a.block,
+a.button.block,
+a.button.block:visited, ul.button-list li a.block,
 ol.button-list li a.block, [role~=button].block {
   display: block;
   width: 100%;
@@ -4472,7 +4491,7 @@ ol.button-list li a.block, [role~=button].block {
 .dropdown ul li {
   display: block;
 }
-.dropdown ul li a {
+.dropdown ul li a, .dropdown ul li a:visited {
   display: block;
   padding: 0.5em 1em;
   border: none;
@@ -4613,7 +4632,7 @@ nav ul li, .nav ul li {
   display: block;
   position: relative;
 }
-nav ul li a, .nav ul li a {
+nav ul li a, .nav ul li a, nav ul li a:visited, .nav ul li a:visited {
   display: block;
   width: 100%;
   word-wrap: break-word;
@@ -4632,15 +4651,15 @@ nav ul li a, .nav ul li a {
   -webkit-transition: background-color 0.25s ease-out;
   transition: background-color 0.25s ease-out;
 }
-nav ul li a:hover, .nav ul li a:hover, nav ul li a:focus, .nav ul li a:focus {
+nav ul li a:hover, .nav ul li a:hover, nav ul li a:focus, .nav ul li a:focus, nav ul li a:visited:hover, .nav ul li a:visited:hover, nav ul li a:visited:focus, .nav ul li a:visited:focus {
   background: #198d98;
   color: white;
   text-decoration: none;
 }
-nav ul li a.active:hover, .nav ul li a.active:hover, nav ul li a.active:focus, .nav ul li a.active:focus {
+nav ul li a.active:hover, .nav ul li a.active:hover, nav ul li a.active:focus, .nav ul li a.active:focus, nav ul li a:visited.active:hover, .nav ul li a:visited.active:hover, nav ul li a:visited.active:focus, .nav ul li a:visited.active:focus {
   background: #198d98;
 }
-nav ul li a.disabled, .nav ul li a.disabled {
+nav ul li a.disabled, .nav ul li a.disabled, nav ul li a:visited.disabled, .nav ul li a:visited.disabled {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -4648,7 +4667,7 @@ nav ul li a.disabled, .nav ul li a.disabled {
   text-decoration: none;
   outline: none;
 }
-nav ul li a.disabled:hover, .nav ul li a.disabled:hover, nav ul li a.disabled:focus, .nav ul li a.disabled:focus, nav ul li a.disabled:visited, .nav ul li a.disabled:visited {
+nav ul li a.disabled:hover, .nav ul li a.disabled:hover, nav ul li a.disabled:focus, .nav ul li a.disabled:focus, nav ul li a.disabled:visited, .nav ul li a.disabled:visited, nav ul li a:visited.disabled:hover, .nav ul li a:visited.disabled:hover, nav ul li a:visited.disabled:focus, .nav ul li a:visited.disabled:focus, nav ul li a:visited.disabled:visited, .nav ul li a:visited.disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -4659,7 +4678,7 @@ nav ul li a.disabled:hover, .nav ul li a.disabled:hover, nav ul li a.disabled:fo
 nav ul li:first-child a, .nav ul li:first-child a {
   border-top: none;
 }
-nav ul li.menu.disabled > a, .nav ul li.menu.disabled > a {
+nav ul li.menu.disabled > a, .nav ul li.menu.disabled > a, nav ul li.menu.disabled > a:visited, .nav ul li.menu.disabled > a:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -4667,7 +4686,7 @@ nav ul li.menu.disabled > a, .nav ul li.menu.disabled > a {
   text-decoration: none;
   outline: none;
 }
-nav ul li.menu.disabled > a:hover, .nav ul li.menu.disabled > a:hover, nav ul li.menu.disabled > a:focus, .nav ul li.menu.disabled > a:focus, nav ul li.menu.disabled > a:visited, .nav ul li.menu.disabled > a:visited {
+nav ul li.menu.disabled > a:hover, .nav ul li.menu.disabled > a:hover, nav ul li.menu.disabled > a:focus, .nav ul li.menu.disabled > a:focus, nav ul li.menu.disabled > a:visited, .nav ul li.menu.disabled > a:visited, nav ul li.menu.disabled > a:visited:hover, .nav ul li.menu.disabled > a:visited:hover, nav ul li.menu.disabled > a:visited:focus, .nav ul li.menu.disabled > a:visited:focus, nav ul li.menu.disabled > a:visited:visited, .nav ul li.menu.disabled > a:visited:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -5088,7 +5107,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   display: none;
 }
 
-.tabs > ul li a, .tabs > ol li a {
+.tabs > ul li a, .tabs > ul li a:visited, .tabs > ol li a, .tabs > ol li a:visited {
   display: block;
   position: relative;
   width: 100%;
@@ -5228,7 +5247,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   border-radius: 4px 0 0 0;
 }
 
-.tabs.vertical > ul li a, .tabs.vertical > ol li a {
+.tabs.vertical > ul li a, .tabs.vertical > ul li a:visited, .tabs.vertical > ol li a, .tabs.vertical > ol li a:visited {
   height: auto;
   border-bottom: 1px solid #198d98;
   -ms-border-radius: 0;

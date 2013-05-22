@@ -28,7 +28,7 @@
     li {
       display:block;
       position:relative;
-      a {
+      a, a:visited {
         display:block;
         width:100%;
         word-wrap:break-word;
@@ -63,7 +63,7 @@
       }
       &.menu {
         &.disabled {
-          > a {
+          > a, > a:visited {
             @include state(disabled,normal,desaturate($button-color,20%));
           }
         }

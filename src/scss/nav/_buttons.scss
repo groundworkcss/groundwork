@@ -276,7 +276,7 @@
 			@extend %dropdown-list;
 			li {
 				@extend %dropdown-list-item;
-				a {
+                a, a:visited {
 					@extend %dropdown-menu-item;
 				}
 			}
@@ -289,10 +289,11 @@
 
 @if $classes {
   .button,
-  a.button {
+  a.button,
+  a.button:visited {
     @extend %button;
     @include button_modifiers;
-  }
+	}
 	.dropdown {
 		@extend %dropdown-holder;
 		&.on ul {
@@ -305,13 +306,13 @@
 			@extend %dropdown-list;
 			li {
 				@extend %dropdown-list-item;
-				a {
+                a, a:visited {
 					@extend %dropdown-menu-item;
 				}
 			}
 		}
 		hr {
-			@extend %dropdown-divider;
+			@extend %dropdown-divider; 
 		}
 	}
   ul.button-list,
