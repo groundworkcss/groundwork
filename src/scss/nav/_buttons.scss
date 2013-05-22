@@ -128,6 +128,11 @@
   width:100%;
 }
 
+%dropdown-holder {
+	position: relative;
+	display: inline-block;
+}
+
 %dropdown-button {
   position:relative;
   padding-right:2em;
@@ -141,7 +146,7 @@
 
 %dropdown-list {
   text-align:left;
-  margin:0.3em 0 0;
+  margin:0;
   padding:0;
   list-style:none;
   display:none;
@@ -253,65 +258,62 @@
   input[type=button],
   input[type=reset] {
     @extend %button;
-    
+
     @if $classes {
       @include button_modifiers;
     }
   }
 
-  @if $classes {
-    button {
-      &.dropdown {
-        @extend %dropdown-button;
-        &.on {
-          ul {
-            @extend %block;
-          }
-        }
-        ul {
-          @extend %dropdown-list;
-          li {
-            @extend %dropdown-list-item;
-            a, a:visited {
-              @extend %dropdown-menu-item;
-            }
-          }
-        }
-        hr {
-          @extend %dropdown-divider;
-        }
-      }
-    }
-  }
+	.dropdown {
+		@extend %dropdown-holder;
+		&.on ul {
+			@extend %block;
+		}
+		button {
+			@extend %dropdown-button;
+		}
+		ul {
+			@extend %dropdown-list;
+			li {
+				@extend %dropdown-list-item;
+				a {
+					@extend %dropdown-menu-item;
+				}
+			}
+		}
+		hr {
+			@extend %dropdown-divider;
+		}
+	}
 }
 
 @if $classes {
   .button,
-  a.button,
-  a.button:visited {
+  a.button {
     @extend %button;
     @include button_modifiers;
-    &.dropdown {
-      @extend %dropdown-button;
-      &.on {
-        ul {
-          @extend %block;
-        }
-      }
-      ul {
-        @extend %dropdown-list;
-        li {
-          @extend %dropdown-list-item;
-          a, a:visited {
-            @extend %dropdown-menu-item;
-          }
-        }
-      }
-      hr {
-        @extend %dropdown-divider;
-      }
-    }
   }
+	.dropdown {
+		@extend %dropdown-holder;
+		&.on ul {
+			@extend %block;
+		}
+		.button {
+			@extend %dropdown-button;
+		}
+		ul {
+			@extend %dropdown-list;
+			li {
+				@extend %dropdown-list-item;
+				a {
+					@extend %dropdown-menu-item;
+				}
+			}
+		}
+		hr {
+			@extend %dropdown-divider;
+		}
+	}
   ul.button-list,
   ol.button-list {
     @extend %button-list;

@@ -28,7 +28,7 @@
   &.pull-left   { float:left; }
   &:first-child {
     margin-left:0;
-    a, a:visited {
+    a  {
       &:before {
         display:none;
       }
@@ -135,7 +135,7 @@
   float:none;
   margin:0 -1px 0 0;
   &:first-child {
-    a, a:visited {
+    a  {
       @include rounded($radius 0 0 0);
     }
   }
@@ -174,7 +174,7 @@
         @extend %tablist;
         li {
           @extend %tab;
-          a, a:visited {
+          a {
             @extend %tab-link;
           }
         }
@@ -188,7 +188,7 @@
           @extend %vertical-tablist;
           li {
             @extend %vertical-tabs;
-            a, a:visited {
+            a  {
               @extend %vertical-tab-link;
             }
           }

@@ -28,7 +28,7 @@
     li {
       display:block;
       position:relative;
-      a, a:visited {
+      a {
         display:block;
         width:100%;
         word-wrap:break-word;
@@ -57,17 +57,17 @@
         }
       }
       &:first-child {
-        a, a:visited {
+        a {
           border-top:none;
         }
       }
       &.menu {
         &.disabled {
-          > a, > a:visited {
+          > a {
             @include state(disabled,normal,desaturate($button-color,20%));
           }
         }
-        > a, > a:visited {
+        > a {
           &:after {
             content:'\f0d7';
             display:inline-block;
@@ -88,7 +88,7 @@
           }
         }
         &.on {
-          > a, > a:visited {
+          > a {
             background:$button-active;
             text-decoration:none;
           }
@@ -98,17 +98,17 @@
         }
       }
       &:first-child {
-        a, a:visited {
+        a {
           @include rounded($radius $radius 0 0);
         }
       }
       &:last-child {
-        a, a:visited {
+        a {
           @include rounded(0 0 $radius $radius);
         }
       }
       &:only-child {
-        a, a:visited {
+        a {
           @include rounded($radius);
         }
       }
@@ -121,12 +121,12 @@
       width:auto;
       z-index:101;
       li {
-        a, a:visited {
+        a {
           @include rounded(0);
           border:none;
           border-top:1px solid $button-color;
           background:lighten($button-color, 5%);
-          &:hover, &:active {
+          &:hover {
             background:lighten($button-active, 5%);
           }
           &.disabled {
@@ -134,18 +134,18 @@
           }
         }
         &:first-child {
-          a, a:visited {
+          a {
             border-top:none;
             @include rounded(0 $radius 0 0);
           }
         }
         &:last-child {
-          a, a:visited {
+          a {
             @include rounded(0 0 $radius $radius);
           }
         }
         &:only-child {
-          a, a:visited {
+          a {
             @include rounded(0 $radius $radius 0);
           }
         }
@@ -154,24 +154,24 @@
     // horizontal grid navigation
     &.row {
       li {
-        a, a:visited {
+        a  {
           border-left:1px solid $button-active;
           border-top:none;
           @include rounded(0);
         }
         &:first-child {
-          a, a:visited {
+          a {
             border-left:none;
             @include rounded($radius 0 0 $radius);
           }
         }
         &:last-child {
-          a, a:visited {
+          a {
             @include rounded(0 $radius $radius 0);
           }
         }
         &:only-child {
-          a, a:visited {
+          a {
             @include rounded($radius);
           }
         }
@@ -184,18 +184,18 @@
         min-width:100%;
         z-index:101;
         li {
-          a, a:visited {
+          a {
             @include rounded(0);
             border-left:none;
             border-top:1px solid $button-active;
           }
           &:first-child {
-            a, a:visited {
+            a {
               @include rounded(0);
             }
           }
           &:last-child {
-            a, a:visited {
+            a {
               @include rounded(0 0 $radius $radius);
             }
           }
@@ -213,23 +213,23 @@
         display:inline-block;
         white-space-collapse:discard;
         float:none;
-        a, a:visited {
+        a {
           border-left:1px solid $button-active;
           border-top:none;
         }
         &:first-child {
-          a, a:visited {
+          a {
             border-left:none;
             @include rounded($radius 0 0 $radius);
           }
         }
         &:last-child {
-          a, a:visited {
+          a {
             @include rounded(0 $radius $radius 0);
           }
         }
         &:only-child {
-          a, a:visited {
+          a {
             @include rounded($radius);
           }
         }
@@ -243,18 +243,18 @@
           z-index:101;
           li {
             display:block;
-            a, a:visited {
+            a {
               @include rounded(0);
               border-left:none;
               border-top:1px solid $button-active;
             }
             &:first-child {
-              a, a:visited {
+              a {
                 @include rounded(0);
               }
             }
             &:last-child {
-              a, a:visited {
+              a {
                 @include rounded(0 0 $radius $radius);
               }
             }
@@ -323,12 +323,12 @@
         }
       }
       &:first-child {
-        a, a:visited {
+        a {
           @include rounded($radius);
         }
       }
       &:last-child {
-        a, a:visited {
+        a {
           @include rounded($radius);
         }
       }
@@ -360,7 +360,7 @@
   li {
     display:inline-block;
     padding:0.2em 0;
-    a, a:visited {
+    a {
       border:none;
       color:gray;
       &:before {

@@ -1,21 +1,22 @@
-$(window).load ->
-  # initialize after page load
+$(window).on 'load resize',  ->
+  # initialize after page load and on resize
   equalizeColumns();
-
-$(window).resize ->
-  # adjust on resize
-  equalizeColumns()
 
 equalizeColumns = ->
   $('.row.equalize').each ->
-    $row = $(this)
+    $row = $ this
     tallest = 0
     collapsed = false
-    $(this).children('*').each (i) ->
-      $(this).css('min-height','1px')
-      collapsed = ($(this).outerWidth() == $row.outerWidth())
+    
+    $row.children('*').each (i) ->
+      $this = $ this
+      $this.css('minHeight','1px')
+      collapsed = ($this.outerWidth() == $row.outerWidth())
       unless collapsed
-        $(this).addClass('equal') unless $(this).hasClass('equal')
-        if $(this).outerHeight() > tallest
-          tallest = $(this).outerHeight()
-    $(this).children('*').css('min-height',tallest) unless collapsed
+        $this.addClass('equal') unless $this.hasClass('equal')
+        if $this.outerHeight() > tallest
+          tallest = $this.outerHeight()
+          
+      return 
+      
+    $row.children('*').css('min-height', tallest) unless collapsed
