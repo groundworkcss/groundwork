@@ -1392,100 +1392,100 @@ img, a img, .img {
 .padded {
   padding: 10px;
 }
-.padded.double {
+.padded.double, .padded.pad-top.double, .padded.pad-right.double, .padded.pad-bottom.double, .padded.pad-left.double, .padded.gapped.double, .padded.gap-top.double, .padded.gap-right.double, .padded.gap-bottom.double, .padded.gap-left.double {
   padding: 20px;
 }
-.padded.triple {
+.padded.triple, .padded.pad-top.triple, .padded.pad-right.triple, .padded.pad-bottom.triple, .padded.pad-left.triple, .padded.gapped.triple, .padded.gap-top.triple, .padded.gap-right.triple, .padded.gap-bottom.triple, .padded.gap-left.triple {
   padding: 30px;
 }
 
 .pad-top {
   padding-top: 10px;
 }
-.pad-top.double {
+.padded.double.pad-top, .pad-top.double, .pad-top.pad-right.double, .pad-top.pad-bottom.double, .pad-top.pad-left.double, .pad-top.gapped.double, .pad-top.gap-top.double, .pad-top.gap-right.double, .pad-top.gap-bottom.double, .pad-top.gap-left.double {
   padding-top: 20px;
 }
-.pad-top.triple {
+.padded.triple.pad-top, .pad-top.triple, .pad-top.pad-right.triple, .pad-top.pad-bottom.triple, .pad-top.pad-left.triple, .pad-top.gapped.triple, .pad-top.gap-top.triple, .pad-top.gap-right.triple, .pad-top.gap-bottom.triple, .pad-top.gap-left.triple {
   padding-top: 30px;
 }
 
 .pad-right {
   padding-right: 10px;
 }
-.pad-right.double {
+.padded.double.pad-right, .pad-top.double.pad-right, .pad-right.double, .pad-right.pad-bottom.double, .pad-right.pad-left.double, .pad-right.gapped.double, .pad-right.gap-top.double, .pad-right.gap-right.double, .pad-right.gap-bottom.double, .pad-right.gap-left.double {
   padding-right: 20px;
 }
-.pad-right.triple {
+.padded.triple.pad-right, .pad-top.triple.pad-right, .pad-right.triple, .pad-right.pad-bottom.triple, .pad-right.pad-left.triple, .pad-right.gapped.triple, .pad-right.gap-top.triple, .pad-right.gap-right.triple, .pad-right.gap-bottom.triple, .pad-right.gap-left.triple {
   padding-right: 30px;
 }
 
 .pad-bottom {
   padding-bottom: 10px;
 }
-.pad-bottom.double {
+.padded.double.pad-bottom, .pad-top.double.pad-bottom, .pad-right.double.pad-bottom, .pad-bottom.double, .pad-bottom.pad-left.double, .pad-bottom.gapped.double, .pad-bottom.gap-top.double, .pad-bottom.gap-right.double, .pad-bottom.gap-bottom.double, .pad-bottom.gap-left.double {
   padding-bottom: 20px;
 }
-.pad-bottom.triple {
+.padded.triple.pad-bottom, .pad-top.triple.pad-bottom, .pad-right.triple.pad-bottom, .pad-bottom.triple, .pad-bottom.pad-left.triple, .pad-bottom.gapped.triple, .pad-bottom.gap-top.triple, .pad-bottom.gap-right.triple, .pad-bottom.gap-bottom.triple, .pad-bottom.gap-left.triple {
   padding-bottom: 30px;
 }
 
 .pad-left {
   padding-left: 10px;
 }
-.pad-left.double {
+.padded.double.pad-left, .pad-top.double.pad-left, .pad-right.double.pad-left, .pad-bottom.double.pad-left, .pad-left.double, .pad-left.gapped.double, .pad-left.gap-top.double, .pad-left.gap-right.double, .pad-left.gap-bottom.double, .pad-left.gap-left.double {
   padding-left: 20px;
 }
-.pad-left.triple {
+.padded.triple.pad-left, .pad-top.triple.pad-left, .pad-right.triple.pad-left, .pad-bottom.triple.pad-left, .pad-left.triple, .pad-left.gapped.triple, .pad-left.gap-top.triple, .pad-left.gap-right.triple, .pad-left.gap-bottom.triple, .pad-left.gap-left.triple {
   padding-left: 30px;
 }
 
 .gapped {
   margin: 10px;
 }
-.gapped.double {
+.padded.double.gapped, .pad-top.double.gapped, .pad-right.double.gapped, .pad-bottom.double.gapped, .pad-left.double.gapped, .gapped.double, .gapped.gap-top.double, .gapped.gap-right.double, .gapped.gap-bottom.double, .gapped.gap-left.double {
   margin: 20px;
 }
-.gapped.triple {
+.padded.triple.gapped, .pad-top.triple.gapped, .pad-right.triple.gapped, .pad-bottom.triple.gapped, .pad-left.triple.gapped, .gapped.triple, .gapped.gap-top.triple, .gapped.gap-right.triple, .gapped.gap-bottom.triple, .gapped.gap-left.triple {
   margin: 30px;
 }
 
 .gap-top {
   margin-top: 10px;
 }
-.gap-top.double {
+.padded.double.gap-top, .pad-top.double.gap-top, .pad-right.double.gap-top, .pad-bottom.double.gap-top, .pad-left.double.gap-top, .gapped.double.gap-top, .gap-top.double, .gap-top.gap-right.double, .gap-top.gap-bottom.double, .gap-top.gap-left.double {
   margin-top: 20px;
 }
-.gap-top.triple {
+.padded.triple.gap-top, .pad-top.triple.gap-top, .pad-right.triple.gap-top, .pad-bottom.triple.gap-top, .pad-left.triple.gap-top, .gapped.triple.gap-top, .gap-top.triple, .gap-top.gap-right.triple, .gap-top.gap-bottom.triple, .gap-top.gap-left.triple {
   margin-top: 30px;
 }
 
 .gap-right {
   margin-right: 10px;
 }
-.gap-right.double {
+.padded.double.gap-right, .pad-top.double.gap-right, .pad-right.double.gap-right, .pad-bottom.double.gap-right, .pad-left.double.gap-right, .gapped.double.gap-right, .gap-top.double.gap-right, .gap-right.double, .gap-right.gap-bottom.double, .gap-right.gap-left.double {
   margin-right: 20px;
 }
-.gap-right.triple {
+.padded.triple.gap-right, .pad-top.triple.gap-right, .pad-right.triple.gap-right, .pad-bottom.triple.gap-right, .pad-left.triple.gap-right, .gapped.triple.gap-right, .gap-top.triple.gap-right, .gap-right.triple, .gap-right.gap-bottom.triple, .gap-right.gap-left.triple {
   margin-right: 30px;
 }
 
 .gap-bottom {
   margin-bottom: 10px;
 }
-.gap-bottom.double {
+.padded.double.gap-bottom, .pad-top.double.gap-bottom, .pad-right.double.gap-bottom, .pad-bottom.double.gap-bottom, .pad-left.double.gap-bottom, .gapped.double.gap-bottom, .gap-top.double.gap-bottom, .gap-right.double.gap-bottom, .gap-bottom.double, .gap-bottom.gap-left.double {
   margin-bottom: 20px;
 }
-.gap-bottom.triple {
+.padded.triple.gap-bottom, .pad-top.triple.gap-bottom, .pad-right.triple.gap-bottom, .pad-bottom.triple.gap-bottom, .pad-left.triple.gap-bottom, .gapped.triple.gap-bottom, .gap-top.triple.gap-bottom, .gap-right.triple.gap-bottom, .gap-bottom.triple, .gap-bottom.gap-left.triple {
   margin-bottom: 30px;
 }
 
 .gap-left {
   margin-left: 10px;
 }
-.gap-left.double {
+.padded.double.gap-left, .pad-top.double.gap-left, .pad-right.double.gap-left, .pad-bottom.double.gap-left, .pad-left.double.gap-left, .gapped.double.gap-left, .gap-top.double.gap-left, .gap-right.double.gap-left, .gap-bottom.double.gap-left, .gap-left.double {
   margin-left: 20px;
 }
-.gap-left.triple {
+.padded.triple.gap-left, .pad-top.triple.gap-left, .pad-right.triple.gap-left, .pad-bottom.triple.gap-left, .pad-left.triple.gap-left, .gapped.triple.gap-left, .gap-top.triple.gap-left, .gap-right.triple.gap-left, .gap-bottom.triple.gap-left, .gap-left.triple {
   margin-left: 30px;
 }
 
@@ -1537,11 +1537,23 @@ img, a img, .img {
   display: none !important;
 }
 
-.small, sup, .sup, sub, .sub, small {
+.small, sup, .sup, sub, .sub, small, button.small,
+input[type=submit].small,
+input[type=button].small,
+input[type=reset].small, .button.small,
+a.button.small,
+a.button.small:visited, ul.button-list li a.small,
+ol.button-list li a.small, [role~=button].small {
   font-size: 0.8em;
 }
 
-big, .big, .large, big, .big {
+big, .big, .large, big, .big, button.large,
+input[type=submit].large,
+input[type=button].large,
+input[type=reset].large, .button.large,
+a.button.large,
+a.button.large:visited, ul.button-list li a.large,
+ol.button-list li a.large, [role~=button].large {
   font-size: 1.5em;
 }
 
@@ -1619,7 +1631,13 @@ big, .big, .large, big, .big {
   height: 10px;
 }
 
-.square {
+.square, button.square,
+input[type=submit].square,
+input[type=button].square,
+input[type=reset].square, .button.square,
+a.button.square,
+a.button.square:visited, ul.button-list li a.square,
+ol.button-list li a.square, [role~=button].square {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
@@ -1627,7 +1645,13 @@ big, .big, .large, big, .big {
   border-radius: 0;
 }
 
-.round {
+.round, button.round,
+input[type=submit].round,
+input[type=button].round,
+input[type=reset].round, .button.round,
+a.button.round,
+a.button.round:visited, ul.button-list li a.round,
+ol.button-list li a.round, [role~=button].round {
   -ms-border-radius: 9999px;
   -o-border-radius: 9999px;
   -moz-border-radius: 9999px;
@@ -3190,8 +3214,8 @@ ul.icons li [class*=" icon-"] {
   font-family: "AverageSans";
   font-style: normal;
   font-weight: normal;
-  src: url("../font/average-sans-webfont#iefix");
-  src: url("../font/average-sans-webfont.eot") format("embedded-opentype"), url("../font/average-sans-webfont.woff") format("woff"), url("../font/average-sans-webfont.ttf") format("truetype");
+  src: url("../font/average-sans-webfont.eot");
+  src: url("../font/average-sans-webfont.eot#iefix") format("embedded-opentype"), url("../font/average-sans-webfont.woff") format("woff"), url("../font/average-sans-webfont.ttf") format("truetype");
 }
 
 .AverageSans {
@@ -3203,8 +3227,8 @@ ul.icons li [class*=" icon-"] {
   font-family: "AmericanTypewriter";
   font-style: normal;
   font-weight: normal;
-  src: url("../font/americantypewriterstd-bold#iefix");
-  src: url("../font/americantypewriterstd-bold.eot") format("embedded-opentype"), url("../font/americantypewriterstd-bold.woff") format("woff"), url("../font/americantypewriterstd-bold.ttf") format("truetype");
+  src: url("../font/americantypewriterstd-bold.eot");
+  src: url("../font/americantypewriterstd-bold.eot#iefix") format("embedded-opentype"), url("../font/americantypewriterstd-bold.woff") format("woff"), url("../font/americantypewriterstd-bold.ttf") format("truetype");
 }
 
 .AmericanTypewriter {
@@ -3296,7 +3320,7 @@ p, .p, ul, ol, dl {
 ul, ol {
   margin-left: 20px;
 }
-ul li, ol li, ul.list > li, ol.list > li {
+ul li, ol li, ul.list > li, ol ul.list > li, ul ol.list > li, ol.list > li {
   display: list-item;
 }
 
@@ -3341,7 +3365,7 @@ ol.list {
   line-height: 2.42857em;
   line-height: 1.6;
 }
-ol.list li {
+ol.list ul li, ul ol.list li, ol.list li, ol.list ul.list > li {
   position: relative;
   padding: 2px 6px 0;
 }
@@ -3723,11 +3747,30 @@ ol.button-list li a.green:focus, [role~=button].green:focus {
   background: #29b765;
   border-color: #25a25a;
 }
-button.disabled.green,
+button.disabled.green, button.disabled.button.green, button.disabled[role~=button].green,
 input[type=submit].disabled.green,
+input[type=submit].disabled[type=button].green,
+input[type=submit].disabled[type=reset].green,
+input[type=submit].disabled.button.green,
+input[type=submit].disabled[role~=button].green,
 input[type=button].disabled.green,
-input[type=reset].disabled.green, .button.disabled.green, ul.button-list li a.disabled.green,
-ol.button-list li a.disabled.green, [role~=button].disabled.green {
+input[type=button].disabled[type=reset].green,
+input[type=button].disabled.button.green,
+input[type=button].disabled[role~=button].green,
+input[type=reset].disabled.green,
+input[type=reset].disabled.button.green,
+input[type=reset].disabled[role~=button].green, .button.disabled.green,
+a.button.disabled.green,
+a.button.disabled.green:visited, ul.button-list li a.button.disabled.green,
+ol.button-list li a.button.disabled.green, .button.disabled[role~=button].green,
+a.button.disabled[role~=button].green,
+ul.button-list li a.button.disabled.green:visited,
+ol.button-list li a.button.disabled.green:visited,
+a.button.disabled[role~=button].green:visited, ul.button-list li a.disabled.green,
+ul.button-list ol.button-list li a.disabled.green,
+ol.button-list ul.button-list li a.disabled.green, ul.button-list li a.disabled[role~=button].green,
+ol.button-list li a.disabled.green,
+ol.button-list li a.disabled[role~=button].green, [role~=button].disabled.green {
   color: #c5e8d4;
   background: #7ccb9d;
   border-color: #47b375;
@@ -3737,17 +3780,48 @@ ol.button-list li a.disabled.green, [role~=button].disabled.green {
 }
 button.disabled.green:hover,
 input[type=submit].disabled.green:hover,
+input[type=submit].disabled[type=button].green:hover,
+input[type=submit].disabled[type=reset].green:hover,
 input[type=button].disabled.green:hover,
-input[type=reset].disabled.green:hover, .button.disabled.green:hover, ul.button-list li a.disabled.green:hover,
-ol.button-list li a.disabled.green:hover, [role~=button].disabled.green:hover, button.disabled.green:focus,
+input[type=button].disabled[type=reset].green:hover,
+input[type=reset].disabled.green:hover, .button.disabled.green:hover,
+a.button.disabled.green:hover,
+a.button.disabled.green:hover:visited, ul.button-list li a.button.disabled.green:hover,
+ol.button-list li a.button.disabled.green:hover,
+ul.button-list li a.button.disabled.green:hover:visited,
+ol.button-list li a.button.disabled.green:hover:visited, ul.button-list li a.disabled.green:hover,
+ul.button-list ol.button-list li a.disabled.green:hover,
+ol.button-list ul.button-list li a.disabled.green:hover, ul.button-list li a.disabled[role~=button].green:hover,
+ol.button-list li a.disabled.green:hover,
+ol.button-list li a.disabled[role~=button].green:hover, [role~=button].disabled.green:hover, button.disabled.green:focus,
 input[type=submit].disabled.green:focus,
+input[type=submit].disabled[type=button].green:focus,
+input[type=submit].disabled[type=reset].green:focus,
 input[type=button].disabled.green:focus,
-input[type=reset].disabled.green:focus, .button.disabled.green:focus, ul.button-list li a.disabled.green:focus,
-ol.button-list li a.disabled.green:focus, [role~=button].disabled.green:focus, button.disabled.green:visited,
+input[type=button].disabled[type=reset].green:focus,
+input[type=reset].disabled.green:focus, .button.disabled.green:focus,
+a.button.disabled.green:focus,
+a.button.disabled.green:focus:visited, ul.button-list li a.button.disabled.green:focus,
+ol.button-list li a.button.disabled.green:focus,
+ul.button-list li a.button.disabled.green:focus:visited,
+ol.button-list li a.button.disabled.green:focus:visited, ul.button-list li a.disabled.green:focus,
+ul.button-list ol.button-list li a.disabled.green:focus,
+ol.button-list ul.button-list li a.disabled.green:focus, ul.button-list li a.disabled[role~=button].green:focus,
+ol.button-list li a.disabled.green:focus,
+ol.button-list li a.disabled[role~=button].green:focus, [role~=button].disabled.green:focus, button.disabled.green:visited,
 input[type=submit].disabled.green:visited,
+input[type=submit].disabled[type=button].green:visited,
+input[type=submit].disabled[type=reset].green:visited,
 input[type=button].disabled.green:visited,
-input[type=reset].disabled.green:visited, .button.disabled.green:visited, ul.button-list li a.disabled.green:visited,
-ol.button-list li a.disabled.green:visited, [role~=button].disabled.green:visited {
+input[type=button].disabled[type=reset].green:visited,
+input[type=reset].disabled.green:visited, .button.disabled.green:visited,
+a.button.disabled.green:visited, ul.button-list li a.button.disabled.green:visited,
+ol.button-list li a.button.disabled.green:visited,
+a.button.disabled[role~=button].green:visited, ul.button-list li a.disabled.green:visited,
+ul.button-list ol.button-list li a.disabled.green:visited,
+ol.button-list ul.button-list li a.disabled.green:visited, ul.button-list li a.disabled[role~=button].green:visited,
+ol.button-list li a.disabled.green:visited,
+ol.button-list li a.disabled[role~=button].green:visited, [role~=button].disabled.green:visited {
   color: #c5e8d4;
   background: #7ccb9d;
   border-color: #47b375;
@@ -3779,11 +3853,30 @@ ol.button-list li a.blue:focus, [role~=button].blue:focus {
   background: #258cd1;
   border-color: #217dbb;
 }
-button.disabled.blue,
+button.disabled.blue, button.disabled.button.blue, button.disabled[role~=button].blue,
 input[type=submit].disabled.blue,
+input[type=submit].disabled[type=button].blue,
+input[type=submit].disabled[type=reset].blue,
+input[type=submit].disabled.button.blue,
+input[type=submit].disabled[role~=button].blue,
 input[type=button].disabled.blue,
-input[type=reset].disabled.blue, .button.disabled.blue, ul.button-list li a.disabled.blue,
-ol.button-list li a.disabled.blue, [role~=button].disabled.blue {
+input[type=button].disabled[type=reset].blue,
+input[type=button].disabled.button.blue,
+input[type=button].disabled[role~=button].blue,
+input[type=reset].disabled.blue,
+input[type=reset].disabled.button.blue,
+input[type=reset].disabled[role~=button].blue, .button.disabled.blue,
+a.button.disabled.blue,
+a.button.disabled.blue:visited, ul.button-list li a.button.disabled.blue,
+ol.button-list li a.button.disabled.blue, .button.disabled[role~=button].blue,
+a.button.disabled[role~=button].blue,
+ul.button-list li a.button.disabled.blue:visited,
+ol.button-list li a.button.disabled.blue:visited,
+a.button.disabled[role~=button].blue:visited, ul.button-list li a.disabled.blue,
+ul.button-list ol.button-list li a.disabled.blue,
+ol.button-list ul.button-list li a.disabled.blue, ul.button-list li a.disabled[role~=button].blue,
+ol.button-list li a.disabled.blue,
+ol.button-list li a.disabled[role~=button].blue, [role~=button].disabled.blue {
   color: #d2e4f0;
   background: #85b6d6;
   border-color: #4c93c3;
@@ -3793,17 +3886,48 @@ ol.button-list li a.disabled.blue, [role~=button].disabled.blue {
 }
 button.disabled.blue:hover,
 input[type=submit].disabled.blue:hover,
+input[type=submit].disabled[type=button].blue:hover,
+input[type=submit].disabled[type=reset].blue:hover,
 input[type=button].disabled.blue:hover,
-input[type=reset].disabled.blue:hover, .button.disabled.blue:hover, ul.button-list li a.disabled.blue:hover,
-ol.button-list li a.disabled.blue:hover, [role~=button].disabled.blue:hover, button.disabled.blue:focus,
+input[type=button].disabled[type=reset].blue:hover,
+input[type=reset].disabled.blue:hover, .button.disabled.blue:hover,
+a.button.disabled.blue:hover,
+a.button.disabled.blue:hover:visited, ul.button-list li a.button.disabled.blue:hover,
+ol.button-list li a.button.disabled.blue:hover,
+ul.button-list li a.button.disabled.blue:hover:visited,
+ol.button-list li a.button.disabled.blue:hover:visited, ul.button-list li a.disabled.blue:hover,
+ul.button-list ol.button-list li a.disabled.blue:hover,
+ol.button-list ul.button-list li a.disabled.blue:hover, ul.button-list li a.disabled[role~=button].blue:hover,
+ol.button-list li a.disabled.blue:hover,
+ol.button-list li a.disabled[role~=button].blue:hover, [role~=button].disabled.blue:hover, button.disabled.blue:focus,
 input[type=submit].disabled.blue:focus,
+input[type=submit].disabled[type=button].blue:focus,
+input[type=submit].disabled[type=reset].blue:focus,
 input[type=button].disabled.blue:focus,
-input[type=reset].disabled.blue:focus, .button.disabled.blue:focus, ul.button-list li a.disabled.blue:focus,
-ol.button-list li a.disabled.blue:focus, [role~=button].disabled.blue:focus, button.disabled.blue:visited,
+input[type=button].disabled[type=reset].blue:focus,
+input[type=reset].disabled.blue:focus, .button.disabled.blue:focus,
+a.button.disabled.blue:focus,
+a.button.disabled.blue:focus:visited, ul.button-list li a.button.disabled.blue:focus,
+ol.button-list li a.button.disabled.blue:focus,
+ul.button-list li a.button.disabled.blue:focus:visited,
+ol.button-list li a.button.disabled.blue:focus:visited, ul.button-list li a.disabled.blue:focus,
+ul.button-list ol.button-list li a.disabled.blue:focus,
+ol.button-list ul.button-list li a.disabled.blue:focus, ul.button-list li a.disabled[role~=button].blue:focus,
+ol.button-list li a.disabled.blue:focus,
+ol.button-list li a.disabled[role~=button].blue:focus, [role~=button].disabled.blue:focus, button.disabled.blue:visited,
 input[type=submit].disabled.blue:visited,
+input[type=submit].disabled[type=button].blue:visited,
+input[type=submit].disabled[type=reset].blue:visited,
 input[type=button].disabled.blue:visited,
-input[type=reset].disabled.blue:visited, .button.disabled.blue:visited, ul.button-list li a.disabled.blue:visited,
-ol.button-list li a.disabled.blue:visited, [role~=button].disabled.blue:visited {
+input[type=button].disabled[type=reset].blue:visited,
+input[type=reset].disabled.blue:visited, .button.disabled.blue:visited,
+a.button.disabled.blue:visited, ul.button-list li a.button.disabled.blue:visited,
+ol.button-list li a.button.disabled.blue:visited,
+a.button.disabled[role~=button].blue:visited, ul.button-list li a.disabled.blue:visited,
+ul.button-list ol.button-list li a.disabled.blue:visited,
+ol.button-list ul.button-list li a.disabled.blue:visited, ul.button-list li a.disabled[role~=button].blue:visited,
+ol.button-list li a.disabled.blue:visited,
+ol.button-list li a.disabled[role~=button].blue:visited, [role~=button].disabled.blue:visited {
   color: #d2e4f0;
   background: #85b6d6;
   border-color: #4c93c3;
@@ -3835,11 +3959,30 @@ ol.button-list li a.purple:focus, [role~=button].purple:focus {
   background: #8f4bab;
   border-color: #804399;
 }
-button.disabled.purple,
+button.disabled.purple, button.disabled.button.purple, button.disabled[role~=button].purple,
 input[type=submit].disabled.purple,
+input[type=submit].disabled[type=button].purple,
+input[type=submit].disabled[type=reset].purple,
+input[type=submit].disabled.button.purple,
+input[type=submit].disabled[role~=button].purple,
 input[type=button].disabled.purple,
-input[type=reset].disabled.purple, .button.disabled.purple, ul.button-list li a.disabled.purple,
-ol.button-list li a.disabled.purple, [role~=button].disabled.purple {
+input[type=button].disabled[type=reset].purple,
+input[type=button].disabled.button.purple,
+input[type=button].disabled[role~=button].purple,
+input[type=reset].disabled.purple,
+input[type=reset].disabled.button.purple,
+input[type=reset].disabled[role~=button].purple, .button.disabled.purple,
+a.button.disabled.purple,
+a.button.disabled.purple:visited, ul.button-list li a.button.disabled.purple,
+ol.button-list li a.button.disabled.purple, .button.disabled[role~=button].purple,
+a.button.disabled[role~=button].purple,
+ul.button-list li a.button.disabled.purple:visited,
+ol.button-list li a.button.disabled.purple:visited,
+a.button.disabled[role~=button].purple:visited, ul.button-list li a.disabled.purple,
+ul.button-list ol.button-list li a.disabled.purple,
+ol.button-list ul.button-list li a.disabled.purple, ul.button-list li a.disabled[role~=button].purple,
+ol.button-list li a.disabled.purple,
+ol.button-list li a.disabled[role~=button].purple, [role~=button].disabled.purple {
   color: #e3dbe6;
   background: #b49ebd;
   border-color: #91719e;
@@ -3849,17 +3992,48 @@ ol.button-list li a.disabled.purple, [role~=button].disabled.purple {
 }
 button.disabled.purple:hover,
 input[type=submit].disabled.purple:hover,
+input[type=submit].disabled[type=button].purple:hover,
+input[type=submit].disabled[type=reset].purple:hover,
 input[type=button].disabled.purple:hover,
-input[type=reset].disabled.purple:hover, .button.disabled.purple:hover, ul.button-list li a.disabled.purple:hover,
-ol.button-list li a.disabled.purple:hover, [role~=button].disabled.purple:hover, button.disabled.purple:focus,
+input[type=button].disabled[type=reset].purple:hover,
+input[type=reset].disabled.purple:hover, .button.disabled.purple:hover,
+a.button.disabled.purple:hover,
+a.button.disabled.purple:hover:visited, ul.button-list li a.button.disabled.purple:hover,
+ol.button-list li a.button.disabled.purple:hover,
+ul.button-list li a.button.disabled.purple:hover:visited,
+ol.button-list li a.button.disabled.purple:hover:visited, ul.button-list li a.disabled.purple:hover,
+ul.button-list ol.button-list li a.disabled.purple:hover,
+ol.button-list ul.button-list li a.disabled.purple:hover, ul.button-list li a.disabled[role~=button].purple:hover,
+ol.button-list li a.disabled.purple:hover,
+ol.button-list li a.disabled[role~=button].purple:hover, [role~=button].disabled.purple:hover, button.disabled.purple:focus,
 input[type=submit].disabled.purple:focus,
+input[type=submit].disabled[type=button].purple:focus,
+input[type=submit].disabled[type=reset].purple:focus,
 input[type=button].disabled.purple:focus,
-input[type=reset].disabled.purple:focus, .button.disabled.purple:focus, ul.button-list li a.disabled.purple:focus,
-ol.button-list li a.disabled.purple:focus, [role~=button].disabled.purple:focus, button.disabled.purple:visited,
+input[type=button].disabled[type=reset].purple:focus,
+input[type=reset].disabled.purple:focus, .button.disabled.purple:focus,
+a.button.disabled.purple:focus,
+a.button.disabled.purple:focus:visited, ul.button-list li a.button.disabled.purple:focus,
+ol.button-list li a.button.disabled.purple:focus,
+ul.button-list li a.button.disabled.purple:focus:visited,
+ol.button-list li a.button.disabled.purple:focus:visited, ul.button-list li a.disabled.purple:focus,
+ul.button-list ol.button-list li a.disabled.purple:focus,
+ol.button-list ul.button-list li a.disabled.purple:focus, ul.button-list li a.disabled[role~=button].purple:focus,
+ol.button-list li a.disabled.purple:focus,
+ol.button-list li a.disabled[role~=button].purple:focus, [role~=button].disabled.purple:focus, button.disabled.purple:visited,
 input[type=submit].disabled.purple:visited,
+input[type=submit].disabled[type=button].purple:visited,
+input[type=submit].disabled[type=reset].purple:visited,
 input[type=button].disabled.purple:visited,
-input[type=reset].disabled.purple:visited, .button.disabled.purple:visited, ul.button-list li a.disabled.purple:visited,
-ol.button-list li a.disabled.purple:visited, [role~=button].disabled.purple:visited {
+input[type=button].disabled[type=reset].purple:visited,
+input[type=reset].disabled.purple:visited, .button.disabled.purple:visited,
+a.button.disabled.purple:visited, ul.button-list li a.button.disabled.purple:visited,
+ol.button-list li a.button.disabled.purple:visited,
+a.button.disabled[role~=button].purple:visited, ul.button-list li a.disabled.purple:visited,
+ul.button-list ol.button-list li a.disabled.purple:visited,
+ol.button-list ul.button-list li a.disabled.purple:visited, ul.button-list li a.disabled[role~=button].purple:visited,
+ol.button-list li a.disabled.purple:visited,
+ol.button-list li a.disabled[role~=button].purple:visited, [role~=button].disabled.purple:visited {
   color: #e3dbe6;
   background: #b49ebd;
   border-color: #91719e;
@@ -3891,11 +4065,30 @@ ol.button-list li a.yellow:focus, [role~=button].yellow:focus {
   background: #dab10d;
   border-color: #c29d0b;
 }
-button.disabled.yellow,
+button.disabled.yellow, button.disabled.button.yellow, button.disabled[role~=button].yellow,
 input[type=submit].disabled.yellow,
+input[type=submit].disabled[type=button].yellow,
+input[type=submit].disabled[type=reset].yellow,
+input[type=submit].disabled.button.yellow,
+input[type=submit].disabled[role~=button].yellow,
 input[type=button].disabled.yellow,
-input[type=reset].disabled.yellow, .button.disabled.yellow, ul.button-list li a.disabled.yellow,
-ol.button-list li a.disabled.yellow, [role~=button].disabled.yellow {
+input[type=button].disabled[type=reset].yellow,
+input[type=button].disabled.button.yellow,
+input[type=button].disabled[role~=button].yellow,
+input[type=reset].disabled.yellow,
+input[type=reset].disabled.button.yellow,
+input[type=reset].disabled[role~=button].yellow, .button.disabled.yellow,
+a.button.disabled.yellow,
+a.button.disabled.yellow:visited, ul.button-list li a.button.disabled.yellow,
+ol.button-list li a.button.disabled.yellow, .button.disabled[role~=button].yellow,
+a.button.disabled[role~=button].yellow,
+ul.button-list li a.button.disabled.yellow:visited,
+ol.button-list li a.button.disabled.yellow:visited,
+a.button.disabled[role~=button].yellow:visited, ul.button-list li a.disabled.yellow,
+ul.button-list ol.button-list li a.disabled.yellow,
+ol.button-list ul.button-list li a.disabled.yellow, ul.button-list li a.disabled[role~=button].yellow,
+ol.button-list li a.disabled.yellow,
+ol.button-list li a.disabled[role~=button].yellow, [role~=button].disabled.yellow {
   color: #f3e9bf;
   background: #e3cb69;
   border-color: #d8b528;
@@ -3905,17 +4098,48 @@ ol.button-list li a.disabled.yellow, [role~=button].disabled.yellow {
 }
 button.disabled.yellow:hover,
 input[type=submit].disabled.yellow:hover,
+input[type=submit].disabled[type=button].yellow:hover,
+input[type=submit].disabled[type=reset].yellow:hover,
 input[type=button].disabled.yellow:hover,
-input[type=reset].disabled.yellow:hover, .button.disabled.yellow:hover, ul.button-list li a.disabled.yellow:hover,
-ol.button-list li a.disabled.yellow:hover, [role~=button].disabled.yellow:hover, button.disabled.yellow:focus,
+input[type=button].disabled[type=reset].yellow:hover,
+input[type=reset].disabled.yellow:hover, .button.disabled.yellow:hover,
+a.button.disabled.yellow:hover,
+a.button.disabled.yellow:hover:visited, ul.button-list li a.button.disabled.yellow:hover,
+ol.button-list li a.button.disabled.yellow:hover,
+ul.button-list li a.button.disabled.yellow:hover:visited,
+ol.button-list li a.button.disabled.yellow:hover:visited, ul.button-list li a.disabled.yellow:hover,
+ul.button-list ol.button-list li a.disabled.yellow:hover,
+ol.button-list ul.button-list li a.disabled.yellow:hover, ul.button-list li a.disabled[role~=button].yellow:hover,
+ol.button-list li a.disabled.yellow:hover,
+ol.button-list li a.disabled[role~=button].yellow:hover, [role~=button].disabled.yellow:hover, button.disabled.yellow:focus,
 input[type=submit].disabled.yellow:focus,
+input[type=submit].disabled[type=button].yellow:focus,
+input[type=submit].disabled[type=reset].yellow:focus,
 input[type=button].disabled.yellow:focus,
-input[type=reset].disabled.yellow:focus, .button.disabled.yellow:focus, ul.button-list li a.disabled.yellow:focus,
-ol.button-list li a.disabled.yellow:focus, [role~=button].disabled.yellow:focus, button.disabled.yellow:visited,
+input[type=button].disabled[type=reset].yellow:focus,
+input[type=reset].disabled.yellow:focus, .button.disabled.yellow:focus,
+a.button.disabled.yellow:focus,
+a.button.disabled.yellow:focus:visited, ul.button-list li a.button.disabled.yellow:focus,
+ol.button-list li a.button.disabled.yellow:focus,
+ul.button-list li a.button.disabled.yellow:focus:visited,
+ol.button-list li a.button.disabled.yellow:focus:visited, ul.button-list li a.disabled.yellow:focus,
+ul.button-list ol.button-list li a.disabled.yellow:focus,
+ol.button-list ul.button-list li a.disabled.yellow:focus, ul.button-list li a.disabled[role~=button].yellow:focus,
+ol.button-list li a.disabled.yellow:focus,
+ol.button-list li a.disabled[role~=button].yellow:focus, [role~=button].disabled.yellow:focus, button.disabled.yellow:visited,
 input[type=submit].disabled.yellow:visited,
+input[type=submit].disabled[type=button].yellow:visited,
+input[type=submit].disabled[type=reset].yellow:visited,
 input[type=button].disabled.yellow:visited,
-input[type=reset].disabled.yellow:visited, .button.disabled.yellow:visited, ul.button-list li a.disabled.yellow:visited,
-ol.button-list li a.disabled.yellow:visited, [role~=button].disabled.yellow:visited {
+input[type=button].disabled[type=reset].yellow:visited,
+input[type=reset].disabled.yellow:visited, .button.disabled.yellow:visited,
+a.button.disabled.yellow:visited, ul.button-list li a.button.disabled.yellow:visited,
+ol.button-list li a.button.disabled.yellow:visited,
+a.button.disabled[role~=button].yellow:visited, ul.button-list li a.disabled.yellow:visited,
+ul.button-list ol.button-list li a.disabled.yellow:visited,
+ol.button-list ul.button-list li a.disabled.yellow:visited, ul.button-list li a.disabled[role~=button].yellow:visited,
+ol.button-list li a.disabled.yellow:visited,
+ol.button-list li a.disabled[role~=button].yellow:visited, [role~=button].disabled.yellow:visited {
   color: #f3e9bf;
   background: #e3cb69;
   border-color: #d8b528;
@@ -3947,11 +4171,30 @@ ol.button-list li a.orange:focus, [role~=button].orange:focus {
   background: #d67118;
   border-color: #bf6516;
 }
-button.disabled.orange,
+button.disabled.orange, button.disabled.button.orange, button.disabled[role~=button].orange,
 input[type=submit].disabled.orange,
+input[type=submit].disabled[type=button].orange,
+input[type=submit].disabled[type=reset].orange,
+input[type=submit].disabled.button.orange,
+input[type=submit].disabled[role~=button].orange,
 input[type=button].disabled.orange,
-input[type=reset].disabled.orange, .button.disabled.orange, ul.button-list li a.disabled.orange,
-ol.button-list li a.disabled.orange, [role~=button].disabled.orange {
+input[type=button].disabled[type=reset].orange,
+input[type=button].disabled.button.orange,
+input[type=button].disabled[role~=button].orange,
+input[type=reset].disabled.orange,
+input[type=reset].disabled.button.orange,
+input[type=reset].disabled[role~=button].orange, .button.disabled.orange,
+a.button.disabled.orange,
+a.button.disabled.orange:visited, ul.button-list li a.button.disabled.orange,
+ol.button-list li a.button.disabled.orange, .button.disabled[role~=button].orange,
+a.button.disabled[role~=button].orange,
+ul.button-list li a.button.disabled.orange:visited,
+ol.button-list li a.button.disabled.orange:visited,
+a.button.disabled[role~=button].orange:visited, ul.button-list li a.disabled.orange,
+ul.button-list ol.button-list li a.disabled.orange,
+ol.button-list ul.button-list li a.disabled.orange, ul.button-list li a.disabled[role~=button].orange,
+ol.button-list li a.disabled.orange,
+ol.button-list li a.disabled[role~=button].orange, [role~=button].disabled.orange {
   color: #f1dcc9;
   background: #dda778;
   border-color: #cd803b;
@@ -3961,17 +4204,48 @@ ol.button-list li a.disabled.orange, [role~=button].disabled.orange {
 }
 button.disabled.orange:hover,
 input[type=submit].disabled.orange:hover,
+input[type=submit].disabled[type=button].orange:hover,
+input[type=submit].disabled[type=reset].orange:hover,
 input[type=button].disabled.orange:hover,
-input[type=reset].disabled.orange:hover, .button.disabled.orange:hover, ul.button-list li a.disabled.orange:hover,
-ol.button-list li a.disabled.orange:hover, [role~=button].disabled.orange:hover, button.disabled.orange:focus,
+input[type=button].disabled[type=reset].orange:hover,
+input[type=reset].disabled.orange:hover, .button.disabled.orange:hover,
+a.button.disabled.orange:hover,
+a.button.disabled.orange:hover:visited, ul.button-list li a.button.disabled.orange:hover,
+ol.button-list li a.button.disabled.orange:hover,
+ul.button-list li a.button.disabled.orange:hover:visited,
+ol.button-list li a.button.disabled.orange:hover:visited, ul.button-list li a.disabled.orange:hover,
+ul.button-list ol.button-list li a.disabled.orange:hover,
+ol.button-list ul.button-list li a.disabled.orange:hover, ul.button-list li a.disabled[role~=button].orange:hover,
+ol.button-list li a.disabled.orange:hover,
+ol.button-list li a.disabled[role~=button].orange:hover, [role~=button].disabled.orange:hover, button.disabled.orange:focus,
 input[type=submit].disabled.orange:focus,
+input[type=submit].disabled[type=button].orange:focus,
+input[type=submit].disabled[type=reset].orange:focus,
 input[type=button].disabled.orange:focus,
-input[type=reset].disabled.orange:focus, .button.disabled.orange:focus, ul.button-list li a.disabled.orange:focus,
-ol.button-list li a.disabled.orange:focus, [role~=button].disabled.orange:focus, button.disabled.orange:visited,
+input[type=button].disabled[type=reset].orange:focus,
+input[type=reset].disabled.orange:focus, .button.disabled.orange:focus,
+a.button.disabled.orange:focus,
+a.button.disabled.orange:focus:visited, ul.button-list li a.button.disabled.orange:focus,
+ol.button-list li a.button.disabled.orange:focus,
+ul.button-list li a.button.disabled.orange:focus:visited,
+ol.button-list li a.button.disabled.orange:focus:visited, ul.button-list li a.disabled.orange:focus,
+ul.button-list ol.button-list li a.disabled.orange:focus,
+ol.button-list ul.button-list li a.disabled.orange:focus, ul.button-list li a.disabled[role~=button].orange:focus,
+ol.button-list li a.disabled.orange:focus,
+ol.button-list li a.disabled[role~=button].orange:focus, [role~=button].disabled.orange:focus, button.disabled.orange:visited,
 input[type=submit].disabled.orange:visited,
+input[type=submit].disabled[type=button].orange:visited,
+input[type=submit].disabled[type=reset].orange:visited,
 input[type=button].disabled.orange:visited,
-input[type=reset].disabled.orange:visited, .button.disabled.orange:visited, ul.button-list li a.disabled.orange:visited,
-ol.button-list li a.disabled.orange:visited, [role~=button].disabled.orange:visited {
+input[type=button].disabled[type=reset].orange:visited,
+input[type=reset].disabled.orange:visited, .button.disabled.orange:visited,
+a.button.disabled.orange:visited, ul.button-list li a.button.disabled.orange:visited,
+ol.button-list li a.button.disabled.orange:visited,
+a.button.disabled[role~=button].orange:visited, ul.button-list li a.disabled.orange:visited,
+ul.button-list ol.button-list li a.disabled.orange:visited,
+ol.button-list ul.button-list li a.disabled.orange:visited, ul.button-list li a.disabled[role~=button].orange:visited,
+ol.button-list li a.disabled.orange:visited,
+ol.button-list li a.disabled[role~=button].orange:visited, [role~=button].disabled.orange:visited {
   color: #f1dcc9;
   background: #dda778;
   border-color: #cd803b;
@@ -4003,11 +4277,30 @@ ol.button-list li a.red:focus, [role~=button].red:focus {
   background: #e43725;
   border-color: #d62c1a;
 }
-button.disabled.red,
+button.disabled.red, button.disabled.button.red, button.disabled[role~=button].red,
 input[type=submit].disabled.red,
+input[type=submit].disabled[type=button].red,
+input[type=submit].disabled[type=reset].red,
+input[type=submit].disabled.button.red,
+input[type=submit].disabled[role~=button].red,
 input[type=button].disabled.red,
-input[type=reset].disabled.red, .button.disabled.red, ul.button-list li a.disabled.red,
-ol.button-list li a.disabled.red, [role~=button].disabled.red {
+input[type=button].disabled[type=reset].red,
+input[type=button].disabled.button.red,
+input[type=button].disabled[role~=button].red,
+input[type=reset].disabled.red,
+input[type=reset].disabled.button.red,
+input[type=reset].disabled[role~=button].red, .button.disabled.red,
+a.button.disabled.red,
+a.button.disabled.red:visited, ul.button-list li a.button.disabled.red,
+ol.button-list li a.button.disabled.red, .button.disabled[role~=button].red,
+a.button.disabled[role~=button].red,
+ul.button-list li a.button.disabled.red:visited,
+ol.button-list li a.button.disabled.red:visited,
+a.button.disabled[role~=button].red:visited, ul.button-list li a.disabled.red,
+ul.button-list ol.button-list li a.disabled.red,
+ol.button-list ul.button-list li a.disabled.red, ul.button-list li a.disabled[role~=button].red,
+ol.button-list li a.disabled.red,
+ol.button-list li a.disabled[role~=button].red, [role~=button].disabled.red {
   color: #f7e1df;
   background: #e1968e;
   border-color: #d15e52;
@@ -4017,17 +4310,48 @@ ol.button-list li a.disabled.red, [role~=button].disabled.red {
 }
 button.disabled.red:hover,
 input[type=submit].disabled.red:hover,
+input[type=submit].disabled[type=button].red:hover,
+input[type=submit].disabled[type=reset].red:hover,
 input[type=button].disabled.red:hover,
-input[type=reset].disabled.red:hover, .button.disabled.red:hover, ul.button-list li a.disabled.red:hover,
-ol.button-list li a.disabled.red:hover, [role~=button].disabled.red:hover, button.disabled.red:focus,
+input[type=button].disabled[type=reset].red:hover,
+input[type=reset].disabled.red:hover, .button.disabled.red:hover,
+a.button.disabled.red:hover,
+a.button.disabled.red:hover:visited, ul.button-list li a.button.disabled.red:hover,
+ol.button-list li a.button.disabled.red:hover,
+ul.button-list li a.button.disabled.red:hover:visited,
+ol.button-list li a.button.disabled.red:hover:visited, ul.button-list li a.disabled.red:hover,
+ul.button-list ol.button-list li a.disabled.red:hover,
+ol.button-list ul.button-list li a.disabled.red:hover, ul.button-list li a.disabled[role~=button].red:hover,
+ol.button-list li a.disabled.red:hover,
+ol.button-list li a.disabled[role~=button].red:hover, [role~=button].disabled.red:hover, button.disabled.red:focus,
 input[type=submit].disabled.red:focus,
+input[type=submit].disabled[type=button].red:focus,
+input[type=submit].disabled[type=reset].red:focus,
 input[type=button].disabled.red:focus,
-input[type=reset].disabled.red:focus, .button.disabled.red:focus, ul.button-list li a.disabled.red:focus,
-ol.button-list li a.disabled.red:focus, [role~=button].disabled.red:focus, button.disabled.red:visited,
+input[type=button].disabled[type=reset].red:focus,
+input[type=reset].disabled.red:focus, .button.disabled.red:focus,
+a.button.disabled.red:focus,
+a.button.disabled.red:focus:visited, ul.button-list li a.button.disabled.red:focus,
+ol.button-list li a.button.disabled.red:focus,
+ul.button-list li a.button.disabled.red:focus:visited,
+ol.button-list li a.button.disabled.red:focus:visited, ul.button-list li a.disabled.red:focus,
+ul.button-list ol.button-list li a.disabled.red:focus,
+ol.button-list ul.button-list li a.disabled.red:focus, ul.button-list li a.disabled[role~=button].red:focus,
+ol.button-list li a.disabled.red:focus,
+ol.button-list li a.disabled[role~=button].red:focus, [role~=button].disabled.red:focus, button.disabled.red:visited,
 input[type=submit].disabled.red:visited,
+input[type=submit].disabled[type=button].red:visited,
+input[type=submit].disabled[type=reset].red:visited,
 input[type=button].disabled.red:visited,
-input[type=reset].disabled.red:visited, .button.disabled.red:visited, ul.button-list li a.disabled.red:visited,
-ol.button-list li a.disabled.red:visited, [role~=button].disabled.red:visited {
+input[type=button].disabled[type=reset].red:visited,
+input[type=reset].disabled.red:visited, .button.disabled.red:visited,
+a.button.disabled.red:visited, ul.button-list li a.button.disabled.red:visited,
+ol.button-list li a.button.disabled.red:visited,
+a.button.disabled[role~=button].red:visited, ul.button-list li a.disabled.red:visited,
+ul.button-list ol.button-list li a.disabled.red:visited,
+ol.button-list ul.button-list li a.disabled.red:visited, ul.button-list li a.disabled[role~=button].red:visited,
+ol.button-list li a.disabled.red:visited,
+ol.button-list li a.disabled[role~=button].red:visited, [role~=button].disabled.red:visited {
   color: #f7e1df;
   background: #e1968e;
   border-color: #d15e52;
@@ -4059,11 +4383,30 @@ ol.button-list li a.pink:focus, [role~=button].pink:focus {
   background: #ea1067;
   border-color: #d30e5c;
 }
-button.disabled.pink,
+button.disabled.pink, button.disabled.button.pink, button.disabled[role~=button].pink,
 input[type=submit].disabled.pink,
+input[type=submit].disabled[type=button].pink,
+input[type=submit].disabled[type=reset].pink,
+input[type=submit].disabled.button.pink,
+input[type=submit].disabled[role~=button].pink,
 input[type=button].disabled.pink,
-input[type=reset].disabled.pink, .button.disabled.pink, ul.button-list li a.disabled.pink,
-ol.button-list li a.disabled.pink, [role~=button].disabled.pink {
+input[type=button].disabled[type=reset].pink,
+input[type=button].disabled.button.pink,
+input[type=button].disabled[role~=button].pink,
+input[type=reset].disabled.pink,
+input[type=reset].disabled.button.pink,
+input[type=reset].disabled[role~=button].pink, .button.disabled.pink,
+a.button.disabled.pink,
+a.button.disabled.pink:visited, ul.button-list li a.button.disabled.pink,
+ol.button-list li a.button.disabled.pink, .button.disabled[role~=button].pink,
+a.button.disabled[role~=button].pink,
+ul.button-list li a.button.disabled.pink:visited,
+ol.button-list li a.button.disabled.pink:visited,
+a.button.disabled[role~=button].pink:visited, ul.button-list li a.disabled.pink,
+ul.button-list ol.button-list li a.disabled.pink,
+ol.button-list ul.button-list li a.disabled.pink, ul.button-list li a.disabled[role~=button].pink,
+ol.button-list li a.disabled.pink,
+ol.button-list li a.disabled[role~=button].pink, [role~=button].disabled.pink {
   color: #f6d1df;
   background: #e57ba5;
   border-color: #d93b7a;
@@ -4073,17 +4416,48 @@ ol.button-list li a.disabled.pink, [role~=button].disabled.pink {
 }
 button.disabled.pink:hover,
 input[type=submit].disabled.pink:hover,
+input[type=submit].disabled[type=button].pink:hover,
+input[type=submit].disabled[type=reset].pink:hover,
 input[type=button].disabled.pink:hover,
-input[type=reset].disabled.pink:hover, .button.disabled.pink:hover, ul.button-list li a.disabled.pink:hover,
-ol.button-list li a.disabled.pink:hover, [role~=button].disabled.pink:hover, button.disabled.pink:focus,
+input[type=button].disabled[type=reset].pink:hover,
+input[type=reset].disabled.pink:hover, .button.disabled.pink:hover,
+a.button.disabled.pink:hover,
+a.button.disabled.pink:hover:visited, ul.button-list li a.button.disabled.pink:hover,
+ol.button-list li a.button.disabled.pink:hover,
+ul.button-list li a.button.disabled.pink:hover:visited,
+ol.button-list li a.button.disabled.pink:hover:visited, ul.button-list li a.disabled.pink:hover,
+ul.button-list ol.button-list li a.disabled.pink:hover,
+ol.button-list ul.button-list li a.disabled.pink:hover, ul.button-list li a.disabled[role~=button].pink:hover,
+ol.button-list li a.disabled.pink:hover,
+ol.button-list li a.disabled[role~=button].pink:hover, [role~=button].disabled.pink:hover, button.disabled.pink:focus,
 input[type=submit].disabled.pink:focus,
+input[type=submit].disabled[type=button].pink:focus,
+input[type=submit].disabled[type=reset].pink:focus,
 input[type=button].disabled.pink:focus,
-input[type=reset].disabled.pink:focus, .button.disabled.pink:focus, ul.button-list li a.disabled.pink:focus,
-ol.button-list li a.disabled.pink:focus, [role~=button].disabled.pink:focus, button.disabled.pink:visited,
+input[type=button].disabled[type=reset].pink:focus,
+input[type=reset].disabled.pink:focus, .button.disabled.pink:focus,
+a.button.disabled.pink:focus,
+a.button.disabled.pink:focus:visited, ul.button-list li a.button.disabled.pink:focus,
+ol.button-list li a.button.disabled.pink:focus,
+ul.button-list li a.button.disabled.pink:focus:visited,
+ol.button-list li a.button.disabled.pink:focus:visited, ul.button-list li a.disabled.pink:focus,
+ul.button-list ol.button-list li a.disabled.pink:focus,
+ol.button-list ul.button-list li a.disabled.pink:focus, ul.button-list li a.disabled[role~=button].pink:focus,
+ol.button-list li a.disabled.pink:focus,
+ol.button-list li a.disabled[role~=button].pink:focus, [role~=button].disabled.pink:focus, button.disabled.pink:visited,
 input[type=submit].disabled.pink:visited,
+input[type=submit].disabled[type=button].pink:visited,
+input[type=submit].disabled[type=reset].pink:visited,
 input[type=button].disabled.pink:visited,
-input[type=reset].disabled.pink:visited, .button.disabled.pink:visited, ul.button-list li a.disabled.pink:visited,
-ol.button-list li a.disabled.pink:visited, [role~=button].disabled.pink:visited {
+input[type=button].disabled[type=reset].pink:visited,
+input[type=reset].disabled.pink:visited, .button.disabled.pink:visited,
+a.button.disabled.pink:visited, ul.button-list li a.button.disabled.pink:visited,
+ol.button-list li a.button.disabled.pink:visited,
+a.button.disabled[role~=button].pink:visited, ul.button-list li a.disabled.pink:visited,
+ul.button-list ol.button-list li a.disabled.pink:visited,
+ol.button-list ul.button-list li a.disabled.pink:visited, ul.button-list li a.disabled[role~=button].pink:visited,
+ol.button-list li a.disabled.pink:visited,
+ol.button-list li a.disabled[role~=button].pink:visited, [role~=button].disabled.pink:visited {
   color: #f6d1df;
   background: #e57ba5;
   border-color: #d93b7a;
@@ -4115,11 +4489,30 @@ ol.button-list li a.turquoise:focus, [role~=button].turquoise:focus {
   background: #17a689;
   border-color: #148f77;
 }
-button.disabled.turquoise,
+button.disabled.turquoise, button.disabled.button.turquoise, button.disabled[role~=button].turquoise,
 input[type=submit].disabled.turquoise,
+input[type=submit].disabled[type=button].turquoise,
+input[type=submit].disabled[type=reset].turquoise,
+input[type=submit].disabled.button.turquoise,
+input[type=submit].disabled[role~=button].turquoise,
 input[type=button].disabled.turquoise,
-input[type=reset].disabled.turquoise, .button.disabled.turquoise, ul.button-list li a.disabled.turquoise,
-ol.button-list li a.disabled.turquoise, [role~=button].disabled.turquoise {
+input[type=button].disabled[type=reset].turquoise,
+input[type=button].disabled.button.turquoise,
+input[type=button].disabled[role~=button].turquoise,
+input[type=reset].disabled.turquoise,
+input[type=reset].disabled.button.turquoise,
+input[type=reset].disabled[role~=button].turquoise, .button.disabled.turquoise,
+a.button.disabled.turquoise,
+a.button.disabled.turquoise:visited, ul.button-list li a.button.disabled.turquoise,
+ol.button-list li a.button.disabled.turquoise, .button.disabled[role~=button].turquoise,
+a.button.disabled[role~=button].turquoise,
+ul.button-list li a.button.disabled.turquoise:visited,
+ol.button-list li a.button.disabled.turquoise:visited,
+a.button.disabled[role~=button].turquoise:visited, ul.button-list li a.disabled.turquoise,
+ul.button-list ol.button-list li a.disabled.turquoise,
+ol.button-list ul.button-list li a.disabled.turquoise, ul.button-list li a.disabled[role~=button].turquoise,
+ol.button-list li a.disabled.turquoise,
+ol.button-list li a.disabled[role~=button].turquoise, [role~=button].disabled.turquoise {
   color: #a4e5d8;
   background: #54ceb6;
   border-color: #2fa78f;
@@ -4129,17 +4522,48 @@ ol.button-list li a.disabled.turquoise, [role~=button].disabled.turquoise {
 }
 button.disabled.turquoise:hover,
 input[type=submit].disabled.turquoise:hover,
+input[type=submit].disabled[type=button].turquoise:hover,
+input[type=submit].disabled[type=reset].turquoise:hover,
 input[type=button].disabled.turquoise:hover,
-input[type=reset].disabled.turquoise:hover, .button.disabled.turquoise:hover, ul.button-list li a.disabled.turquoise:hover,
-ol.button-list li a.disabled.turquoise:hover, [role~=button].disabled.turquoise:hover, button.disabled.turquoise:focus,
+input[type=button].disabled[type=reset].turquoise:hover,
+input[type=reset].disabled.turquoise:hover, .button.disabled.turquoise:hover,
+a.button.disabled.turquoise:hover,
+a.button.disabled.turquoise:hover:visited, ul.button-list li a.button.disabled.turquoise:hover,
+ol.button-list li a.button.disabled.turquoise:hover,
+ul.button-list li a.button.disabled.turquoise:hover:visited,
+ol.button-list li a.button.disabled.turquoise:hover:visited, ul.button-list li a.disabled.turquoise:hover,
+ul.button-list ol.button-list li a.disabled.turquoise:hover,
+ol.button-list ul.button-list li a.disabled.turquoise:hover, ul.button-list li a.disabled[role~=button].turquoise:hover,
+ol.button-list li a.disabled.turquoise:hover,
+ol.button-list li a.disabled[role~=button].turquoise:hover, [role~=button].disabled.turquoise:hover, button.disabled.turquoise:focus,
 input[type=submit].disabled.turquoise:focus,
+input[type=submit].disabled[type=button].turquoise:focus,
+input[type=submit].disabled[type=reset].turquoise:focus,
 input[type=button].disabled.turquoise:focus,
-input[type=reset].disabled.turquoise:focus, .button.disabled.turquoise:focus, ul.button-list li a.disabled.turquoise:focus,
-ol.button-list li a.disabled.turquoise:focus, [role~=button].disabled.turquoise:focus, button.disabled.turquoise:visited,
+input[type=button].disabled[type=reset].turquoise:focus,
+input[type=reset].disabled.turquoise:focus, .button.disabled.turquoise:focus,
+a.button.disabled.turquoise:focus,
+a.button.disabled.turquoise:focus:visited, ul.button-list li a.button.disabled.turquoise:focus,
+ol.button-list li a.button.disabled.turquoise:focus,
+ul.button-list li a.button.disabled.turquoise:focus:visited,
+ol.button-list li a.button.disabled.turquoise:focus:visited, ul.button-list li a.disabled.turquoise:focus,
+ul.button-list ol.button-list li a.disabled.turquoise:focus,
+ol.button-list ul.button-list li a.disabled.turquoise:focus, ul.button-list li a.disabled[role~=button].turquoise:focus,
+ol.button-list li a.disabled.turquoise:focus,
+ol.button-list li a.disabled[role~=button].turquoise:focus, [role~=button].disabled.turquoise:focus, button.disabled.turquoise:visited,
 input[type=submit].disabled.turquoise:visited,
+input[type=submit].disabled[type=button].turquoise:visited,
+input[type=submit].disabled[type=reset].turquoise:visited,
 input[type=button].disabled.turquoise:visited,
-input[type=reset].disabled.turquoise:visited, .button.disabled.turquoise:visited, ul.button-list li a.disabled.turquoise:visited,
-ol.button-list li a.disabled.turquoise:visited, [role~=button].disabled.turquoise:visited {
+input[type=button].disabled[type=reset].turquoise:visited,
+input[type=reset].disabled.turquoise:visited, .button.disabled.turquoise:visited,
+a.button.disabled.turquoise:visited, ul.button-list li a.button.disabled.turquoise:visited,
+ol.button-list li a.button.disabled.turquoise:visited,
+a.button.disabled[role~=button].turquoise:visited, ul.button-list li a.disabled.turquoise:visited,
+ul.button-list ol.button-list li a.disabled.turquoise:visited,
+ol.button-list ul.button-list li a.disabled.turquoise:visited, ul.button-list li a.disabled[role~=button].turquoise:visited,
+ol.button-list li a.disabled.turquoise:visited,
+ol.button-list li a.disabled[role~=button].turquoise:visited, [role~=button].disabled.turquoise:visited {
   color: #a4e5d8;
   background: #54ceb6;
   border-color: #2fa78f;
@@ -4171,11 +4595,30 @@ ol.button-list li a.asphalt:focus, [role~=button].asphalt:focus {
   background: #2b3c4e;
   border-color: #222f3d;
 }
-button.disabled.asphalt,
+button.disabled.asphalt, button.disabled.button.asphalt, button.disabled[role~=button].asphalt,
 input[type=submit].disabled.asphalt,
+input[type=submit].disabled[type=button].asphalt,
+input[type=submit].disabled[type=reset].asphalt,
+input[type=submit].disabled.button.asphalt,
+input[type=submit].disabled[role~=button].asphalt,
 input[type=button].disabled.asphalt,
-input[type=reset].disabled.asphalt, .button.disabled.asphalt, ul.button-list li a.disabled.asphalt,
-ol.button-list li a.disabled.asphalt, [role~=button].disabled.asphalt {
+input[type=button].disabled[type=reset].asphalt,
+input[type=button].disabled.button.asphalt,
+input[type=button].disabled[role~=button].asphalt,
+input[type=reset].disabled.asphalt,
+input[type=reset].disabled.button.asphalt,
+input[type=reset].disabled[role~=button].asphalt, .button.disabled.asphalt,
+a.button.disabled.asphalt,
+a.button.disabled.asphalt:visited, ul.button-list li a.button.disabled.asphalt,
+ol.button-list li a.button.disabled.asphalt, .button.disabled[role~=button].asphalt,
+a.button.disabled[role~=button].asphalt,
+ul.button-list li a.button.disabled.asphalt:visited,
+ol.button-list li a.button.disabled.asphalt:visited,
+a.button.disabled[role~=button].asphalt:visited, ul.button-list li a.disabled.asphalt,
+ul.button-list ol.button-list li a.disabled.asphalt,
+ol.button-list ul.button-list li a.disabled.asphalt, ul.button-list li a.disabled[role~=button].asphalt,
+ol.button-list li a.disabled.asphalt,
+ol.button-list li a.disabled[role~=button].asphalt, [role~=button].disabled.asphalt {
   color: #9aa2aa;
   background: #656f79;
   border-color: #43494f;
@@ -4185,17 +4628,48 @@ ol.button-list li a.disabled.asphalt, [role~=button].disabled.asphalt {
 }
 button.disabled.asphalt:hover,
 input[type=submit].disabled.asphalt:hover,
+input[type=submit].disabled[type=button].asphalt:hover,
+input[type=submit].disabled[type=reset].asphalt:hover,
 input[type=button].disabled.asphalt:hover,
-input[type=reset].disabled.asphalt:hover, .button.disabled.asphalt:hover, ul.button-list li a.disabled.asphalt:hover,
-ol.button-list li a.disabled.asphalt:hover, [role~=button].disabled.asphalt:hover, button.disabled.asphalt:focus,
+input[type=button].disabled[type=reset].asphalt:hover,
+input[type=reset].disabled.asphalt:hover, .button.disabled.asphalt:hover,
+a.button.disabled.asphalt:hover,
+a.button.disabled.asphalt:hover:visited, ul.button-list li a.button.disabled.asphalt:hover,
+ol.button-list li a.button.disabled.asphalt:hover,
+ul.button-list li a.button.disabled.asphalt:hover:visited,
+ol.button-list li a.button.disabled.asphalt:hover:visited, ul.button-list li a.disabled.asphalt:hover,
+ul.button-list ol.button-list li a.disabled.asphalt:hover,
+ol.button-list ul.button-list li a.disabled.asphalt:hover, ul.button-list li a.disabled[role~=button].asphalt:hover,
+ol.button-list li a.disabled.asphalt:hover,
+ol.button-list li a.disabled[role~=button].asphalt:hover, [role~=button].disabled.asphalt:hover, button.disabled.asphalt:focus,
 input[type=submit].disabled.asphalt:focus,
+input[type=submit].disabled[type=button].asphalt:focus,
+input[type=submit].disabled[type=reset].asphalt:focus,
 input[type=button].disabled.asphalt:focus,
-input[type=reset].disabled.asphalt:focus, .button.disabled.asphalt:focus, ul.button-list li a.disabled.asphalt:focus,
-ol.button-list li a.disabled.asphalt:focus, [role~=button].disabled.asphalt:focus, button.disabled.asphalt:visited,
+input[type=button].disabled[type=reset].asphalt:focus,
+input[type=reset].disabled.asphalt:focus, .button.disabled.asphalt:focus,
+a.button.disabled.asphalt:focus,
+a.button.disabled.asphalt:focus:visited, ul.button-list li a.button.disabled.asphalt:focus,
+ol.button-list li a.button.disabled.asphalt:focus,
+ul.button-list li a.button.disabled.asphalt:focus:visited,
+ol.button-list li a.button.disabled.asphalt:focus:visited, ul.button-list li a.disabled.asphalt:focus,
+ul.button-list ol.button-list li a.disabled.asphalt:focus,
+ol.button-list ul.button-list li a.disabled.asphalt:focus, ul.button-list li a.disabled[role~=button].asphalt:focus,
+ol.button-list li a.disabled.asphalt:focus,
+ol.button-list li a.disabled[role~=button].asphalt:focus, [role~=button].disabled.asphalt:focus, button.disabled.asphalt:visited,
 input[type=submit].disabled.asphalt:visited,
+input[type=submit].disabled[type=button].asphalt:visited,
+input[type=submit].disabled[type=reset].asphalt:visited,
 input[type=button].disabled.asphalt:visited,
-input[type=reset].disabled.asphalt:visited, .button.disabled.asphalt:visited, ul.button-list li a.disabled.asphalt:visited,
-ol.button-list li a.disabled.asphalt:visited, [role~=button].disabled.asphalt:visited {
+input[type=button].disabled[type=reset].asphalt:visited,
+input[type=reset].disabled.asphalt:visited, .button.disabled.asphalt:visited,
+a.button.disabled.asphalt:visited, ul.button-list li a.button.disabled.asphalt:visited,
+ol.button-list li a.button.disabled.asphalt:visited,
+a.button.disabled[role~=button].asphalt:visited, ul.button-list li a.disabled.asphalt:visited,
+ul.button-list ol.button-list li a.disabled.asphalt:visited,
+ol.button-list ul.button-list li a.disabled.asphalt:visited, ul.button-list li a.disabled[role~=button].asphalt:visited,
+ol.button-list li a.disabled.asphalt:visited,
+ol.button-list li a.disabled[role~=button].asphalt:visited, [role~=button].disabled.asphalt:visited {
   color: #9aa2aa;
   background: #656f79;
   border-color: #43494f;
@@ -4226,11 +4700,30 @@ input[type=reset].info:focus, .button.info:focus, ul.button-list li a.info:focus
 ol.button-list li a.info:focus, [role~=button].info:focus {
   background: #2582b1;
 }
-button.disabled.info,
+button.disabled.info, button.disabled.button.info, button.disabled[role~=button].info,
 input[type=submit].disabled.info,
+input[type=submit].disabled[type=button].info,
+input[type=submit].disabled[type=reset].info,
+input[type=submit].disabled.button.info,
+input[type=submit].disabled[role~=button].info,
 input[type=button].disabled.info,
-input[type=reset].disabled.info, .button.disabled.info, ul.button-list li a.disabled.info,
-ol.button-list li a.disabled.info, [role~=button].disabled.info {
+input[type=button].disabled[type=reset].info,
+input[type=button].disabled.button.info,
+input[type=button].disabled[role~=button].info,
+input[type=reset].disabled.info,
+input[type=reset].disabled.button.info,
+input[type=reset].disabled[role~=button].info, .button.disabled.info,
+a.button.disabled.info,
+a.button.disabled.info:visited, ul.button-list li a.button.disabled.info,
+ol.button-list li a.button.disabled.info, .button.disabled[role~=button].info,
+a.button.disabled[role~=button].info,
+ul.button-list li a.button.disabled.info:visited,
+ol.button-list li a.button.disabled.info:visited,
+a.button.disabled[role~=button].info:visited, ul.button-list li a.disabled.info,
+ul.button-list ol.button-list li a.disabled.info,
+ol.button-list ul.button-list li a.disabled.info, ul.button-list li a.disabled[role~=button].info,
+ol.button-list li a.disabled.info,
+ol.button-list li a.disabled[role~=button].info, [role~=button].disabled.info {
   color: #bed2dc;
   background: #7ca4b8;
   border-color: #517f96;
@@ -4240,17 +4733,48 @@ ol.button-list li a.disabled.info, [role~=button].disabled.info {
 }
 button.disabled.info:hover,
 input[type=submit].disabled.info:hover,
+input[type=submit].disabled[type=button].info:hover,
+input[type=submit].disabled[type=reset].info:hover,
 input[type=button].disabled.info:hover,
-input[type=reset].disabled.info:hover, .button.disabled.info:hover, ul.button-list li a.disabled.info:hover,
-ol.button-list li a.disabled.info:hover, [role~=button].disabled.info:hover, button.disabled.info:focus,
+input[type=button].disabled[type=reset].info:hover,
+input[type=reset].disabled.info:hover, .button.disabled.info:hover,
+a.button.disabled.info:hover,
+a.button.disabled.info:hover:visited, ul.button-list li a.button.disabled.info:hover,
+ol.button-list li a.button.disabled.info:hover,
+ul.button-list li a.button.disabled.info:hover:visited,
+ol.button-list li a.button.disabled.info:hover:visited, ul.button-list li a.disabled.info:hover,
+ul.button-list ol.button-list li a.disabled.info:hover,
+ol.button-list ul.button-list li a.disabled.info:hover, ul.button-list li a.disabled[role~=button].info:hover,
+ol.button-list li a.disabled.info:hover,
+ol.button-list li a.disabled[role~=button].info:hover, [role~=button].disabled.info:hover, button.disabled.info:focus,
 input[type=submit].disabled.info:focus,
+input[type=submit].disabled[type=button].info:focus,
+input[type=submit].disabled[type=reset].info:focus,
 input[type=button].disabled.info:focus,
-input[type=reset].disabled.info:focus, .button.disabled.info:focus, ul.button-list li a.disabled.info:focus,
-ol.button-list li a.disabled.info:focus, [role~=button].disabled.info:focus, button.disabled.info:visited,
+input[type=button].disabled[type=reset].info:focus,
+input[type=reset].disabled.info:focus, .button.disabled.info:focus,
+a.button.disabled.info:focus,
+a.button.disabled.info:focus:visited, ul.button-list li a.button.disabled.info:focus,
+ol.button-list li a.button.disabled.info:focus,
+ul.button-list li a.button.disabled.info:focus:visited,
+ol.button-list li a.button.disabled.info:focus:visited, ul.button-list li a.disabled.info:focus,
+ul.button-list ol.button-list li a.disabled.info:focus,
+ol.button-list ul.button-list li a.disabled.info:focus, ul.button-list li a.disabled[role~=button].info:focus,
+ol.button-list li a.disabled.info:focus,
+ol.button-list li a.disabled[role~=button].info:focus, [role~=button].disabled.info:focus, button.disabled.info:visited,
 input[type=submit].disabled.info:visited,
+input[type=submit].disabled[type=button].info:visited,
+input[type=submit].disabled[type=reset].info:visited,
 input[type=button].disabled.info:visited,
-input[type=reset].disabled.info:visited, .button.disabled.info:visited, ul.button-list li a.disabled.info:visited,
-ol.button-list li a.disabled.info:visited, [role~=button].disabled.info:visited {
+input[type=button].disabled[type=reset].info:visited,
+input[type=reset].disabled.info:visited, .button.disabled.info:visited,
+a.button.disabled.info:visited, ul.button-list li a.button.disabled.info:visited,
+ol.button-list li a.button.disabled.info:visited,
+a.button.disabled[role~=button].info:visited, ul.button-list li a.disabled.info:visited,
+ul.button-list ol.button-list li a.disabled.info:visited,
+ol.button-list ul.button-list li a.disabled.info:visited, ul.button-list li a.disabled[role~=button].info:visited,
+ol.button-list li a.disabled.info:visited,
+ol.button-list li a.disabled[role~=button].info:visited, [role~=button].disabled.info:visited {
   color: #bed2dc;
   background: #7ca4b8;
   border-color: #517f96;
@@ -4281,11 +4805,30 @@ input[type=reset].alert:focus, .button.alert:focus, ul.button-list li a.alert:fo
 ol.button-list li a.alert:focus, [role~=button].alert:focus {
   background: #e1c118;
 }
-button.disabled.alert,
+button.disabled.alert, button.disabled.button.alert, button.disabled[role~=button].alert,
 input[type=submit].disabled.alert,
+input[type=submit].disabled[type=button].alert,
+input[type=submit].disabled[type=reset].alert,
+input[type=submit].disabled.button.alert,
+input[type=submit].disabled[role~=button].alert,
 input[type=button].disabled.alert,
-input[type=reset].disabled.alert, .button.disabled.alert, ul.button-list li a.disabled.alert,
-ol.button-list li a.disabled.alert, [role~=button].disabled.alert {
+input[type=button].disabled[type=reset].alert,
+input[type=button].disabled.button.alert,
+input[type=button].disabled[role~=button].alert,
+input[type=reset].disabled.alert,
+input[type=reset].disabled.button.alert,
+input[type=reset].disabled[role~=button].alert, .button.disabled.alert,
+a.button.disabled.alert,
+a.button.disabled.alert:visited, ul.button-list li a.button.disabled.alert,
+ol.button-list li a.button.disabled.alert, .button.disabled[role~=button].alert,
+a.button.disabled[role~=button].alert,
+ul.button-list li a.button.disabled.alert:visited,
+ol.button-list li a.button.disabled.alert:visited,
+a.button.disabled[role~=button].alert:visited, ul.button-list li a.disabled.alert,
+ul.button-list ol.button-list li a.disabled.alert,
+ol.button-list ul.button-list li a.disabled.alert, ul.button-list li a.disabled[role~=button].alert,
+ol.button-list li a.disabled.alert,
+ol.button-list li a.disabled[role~=button].alert, [role~=button].disabled.alert {
   color: #eae5db;
   background: #c5b59b;
   border-color: #a9926a;
@@ -4295,17 +4838,48 @@ ol.button-list li a.disabled.alert, [role~=button].disabled.alert {
 }
 button.disabled.alert:hover,
 input[type=submit].disabled.alert:hover,
+input[type=submit].disabled[type=button].alert:hover,
+input[type=submit].disabled[type=reset].alert:hover,
 input[type=button].disabled.alert:hover,
-input[type=reset].disabled.alert:hover, .button.disabled.alert:hover, ul.button-list li a.disabled.alert:hover,
-ol.button-list li a.disabled.alert:hover, [role~=button].disabled.alert:hover, button.disabled.alert:focus,
+input[type=button].disabled[type=reset].alert:hover,
+input[type=reset].disabled.alert:hover, .button.disabled.alert:hover,
+a.button.disabled.alert:hover,
+a.button.disabled.alert:hover:visited, ul.button-list li a.button.disabled.alert:hover,
+ol.button-list li a.button.disabled.alert:hover,
+ul.button-list li a.button.disabled.alert:hover:visited,
+ol.button-list li a.button.disabled.alert:hover:visited, ul.button-list li a.disabled.alert:hover,
+ul.button-list ol.button-list li a.disabled.alert:hover,
+ol.button-list ul.button-list li a.disabled.alert:hover, ul.button-list li a.disabled[role~=button].alert:hover,
+ol.button-list li a.disabled.alert:hover,
+ol.button-list li a.disabled[role~=button].alert:hover, [role~=button].disabled.alert:hover, button.disabled.alert:focus,
 input[type=submit].disabled.alert:focus,
+input[type=submit].disabled[type=button].alert:focus,
+input[type=submit].disabled[type=reset].alert:focus,
 input[type=button].disabled.alert:focus,
-input[type=reset].disabled.alert:focus, .button.disabled.alert:focus, ul.button-list li a.disabled.alert:focus,
-ol.button-list li a.disabled.alert:focus, [role~=button].disabled.alert:focus, button.disabled.alert:visited,
+input[type=button].disabled[type=reset].alert:focus,
+input[type=reset].disabled.alert:focus, .button.disabled.alert:focus,
+a.button.disabled.alert:focus,
+a.button.disabled.alert:focus:visited, ul.button-list li a.button.disabled.alert:focus,
+ol.button-list li a.button.disabled.alert:focus,
+ul.button-list li a.button.disabled.alert:focus:visited,
+ol.button-list li a.button.disabled.alert:focus:visited, ul.button-list li a.disabled.alert:focus,
+ul.button-list ol.button-list li a.disabled.alert:focus,
+ol.button-list ul.button-list li a.disabled.alert:focus, ul.button-list li a.disabled[role~=button].alert:focus,
+ol.button-list li a.disabled.alert:focus,
+ol.button-list li a.disabled[role~=button].alert:focus, [role~=button].disabled.alert:focus, button.disabled.alert:visited,
 input[type=submit].disabled.alert:visited,
+input[type=submit].disabled[type=button].alert:visited,
+input[type=submit].disabled[type=reset].alert:visited,
 input[type=button].disabled.alert:visited,
-input[type=reset].disabled.alert:visited, .button.disabled.alert:visited, ul.button-list li a.disabled.alert:visited,
-ol.button-list li a.disabled.alert:visited, [role~=button].disabled.alert:visited {
+input[type=button].disabled[type=reset].alert:visited,
+input[type=reset].disabled.alert:visited, .button.disabled.alert:visited,
+a.button.disabled.alert:visited, ul.button-list li a.button.disabled.alert:visited,
+ol.button-list li a.button.disabled.alert:visited,
+a.button.disabled[role~=button].alert:visited, ul.button-list li a.disabled.alert:visited,
+ul.button-list ol.button-list li a.disabled.alert:visited,
+ol.button-list ul.button-list li a.disabled.alert:visited, ul.button-list li a.disabled[role~=button].alert:visited,
+ol.button-list li a.disabled.alert:visited,
+ol.button-list li a.disabled[role~=button].alert:visited, [role~=button].disabled.alert:visited {
   color: #eae5db;
   background: #c5b59b;
   border-color: #a9926a;
@@ -4336,11 +4910,30 @@ input[type=reset].warning:focus, .button.warning:focus, ul.button-list li a.warn
 ol.button-list li a.warning:focus, [role~=button].warning:focus {
   background: #e07800;
 }
-button.disabled.warning,
+button.disabled.warning, button.disabled.button.warning, button.disabled[role~=button].warning,
 input[type=submit].disabled.warning,
+input[type=submit].disabled[type=button].warning,
+input[type=submit].disabled[type=reset].warning,
+input[type=submit].disabled.button.warning,
+input[type=submit].disabled[role~=button].warning,
 input[type=button].disabled.warning,
-input[type=reset].disabled.warning, .button.disabled.warning, ul.button-list li a.disabled.warning,
-ol.button-list li a.disabled.warning, [role~=button].disabled.warning {
+input[type=button].disabled[type=reset].warning,
+input[type=button].disabled.button.warning,
+input[type=button].disabled[role~=button].warning,
+input[type=reset].disabled.warning,
+input[type=reset].disabled.button.warning,
+input[type=reset].disabled[role~=button].warning, .button.disabled.warning,
+a.button.disabled.warning,
+a.button.disabled.warning:visited, ul.button-list li a.button.disabled.warning,
+ol.button-list li a.button.disabled.warning, .button.disabled[role~=button].warning,
+a.button.disabled[role~=button].warning,
+ul.button-list li a.button.disabled.warning:visited,
+ol.button-list li a.button.disabled.warning:visited,
+a.button.disabled[role~=button].warning:visited, ul.button-list li a.disabled.warning,
+ul.button-list ol.button-list li a.disabled.warning,
+ol.button-list ul.button-list li a.disabled.warning, ul.button-list li a.disabled[role~=button].warning,
+ol.button-list li a.disabled.warning,
+ol.button-list li a.disabled[role~=button].warning, [role~=button].disabled.warning {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -4350,17 +4943,48 @@ ol.button-list li a.disabled.warning, [role~=button].disabled.warning {
 }
 button.disabled.warning:hover,
 input[type=submit].disabled.warning:hover,
+input[type=submit].disabled[type=button].warning:hover,
+input[type=submit].disabled[type=reset].warning:hover,
 input[type=button].disabled.warning:hover,
-input[type=reset].disabled.warning:hover, .button.disabled.warning:hover, ul.button-list li a.disabled.warning:hover,
-ol.button-list li a.disabled.warning:hover, [role~=button].disabled.warning:hover, button.disabled.warning:focus,
+input[type=button].disabled[type=reset].warning:hover,
+input[type=reset].disabled.warning:hover, .button.disabled.warning:hover,
+a.button.disabled.warning:hover,
+a.button.disabled.warning:hover:visited, ul.button-list li a.button.disabled.warning:hover,
+ol.button-list li a.button.disabled.warning:hover,
+ul.button-list li a.button.disabled.warning:hover:visited,
+ol.button-list li a.button.disabled.warning:hover:visited, ul.button-list li a.disabled.warning:hover,
+ul.button-list ol.button-list li a.disabled.warning:hover,
+ol.button-list ul.button-list li a.disabled.warning:hover, ul.button-list li a.disabled[role~=button].warning:hover,
+ol.button-list li a.disabled.warning:hover,
+ol.button-list li a.disabled[role~=button].warning:hover, [role~=button].disabled.warning:hover, button.disabled.warning:focus,
 input[type=submit].disabled.warning:focus,
+input[type=submit].disabled[type=button].warning:focus,
+input[type=submit].disabled[type=reset].warning:focus,
 input[type=button].disabled.warning:focus,
-input[type=reset].disabled.warning:focus, .button.disabled.warning:focus, ul.button-list li a.disabled.warning:focus,
-ol.button-list li a.disabled.warning:focus, [role~=button].disabled.warning:focus, button.disabled.warning:visited,
+input[type=button].disabled[type=reset].warning:focus,
+input[type=reset].disabled.warning:focus, .button.disabled.warning:focus,
+a.button.disabled.warning:focus,
+a.button.disabled.warning:focus:visited, ul.button-list li a.button.disabled.warning:focus,
+ol.button-list li a.button.disabled.warning:focus,
+ul.button-list li a.button.disabled.warning:focus:visited,
+ol.button-list li a.button.disabled.warning:focus:visited, ul.button-list li a.disabled.warning:focus,
+ul.button-list ol.button-list li a.disabled.warning:focus,
+ol.button-list ul.button-list li a.disabled.warning:focus, ul.button-list li a.disabled[role~=button].warning:focus,
+ol.button-list li a.disabled.warning:focus,
+ol.button-list li a.disabled[role~=button].warning:focus, [role~=button].disabled.warning:focus, button.disabled.warning:visited,
 input[type=submit].disabled.warning:visited,
+input[type=submit].disabled[type=button].warning:visited,
+input[type=submit].disabled[type=reset].warning:visited,
 input[type=button].disabled.warning:visited,
-input[type=reset].disabled.warning:visited, .button.disabled.warning:visited, ul.button-list li a.disabled.warning:visited,
-ol.button-list li a.disabled.warning:visited, [role~=button].disabled.warning:visited {
+input[type=button].disabled[type=reset].warning:visited,
+input[type=reset].disabled.warning:visited, .button.disabled.warning:visited,
+a.button.disabled.warning:visited, ul.button-list li a.button.disabled.warning:visited,
+ol.button-list li a.button.disabled.warning:visited,
+a.button.disabled[role~=button].warning:visited, ul.button-list li a.disabled.warning:visited,
+ul.button-list ol.button-list li a.disabled.warning:visited,
+ol.button-list ul.button-list li a.disabled.warning:visited, ul.button-list li a.disabled[role~=button].warning:visited,
+ol.button-list li a.disabled.warning:visited,
+ol.button-list li a.disabled[role~=button].warning:visited, [role~=button].disabled.warning:visited {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -4391,11 +5015,30 @@ input[type=reset].error:focus, .button.error:focus, ul.button-list li a.error:fo
 ol.button-list li a.error:focus, [role~=button].error:focus {
   background: #9a3d3d;
 }
-button.disabled.error,
+button.disabled.error, button.disabled.button.error, button.disabled[role~=button].error,
 input[type=submit].disabled.error,
+input[type=submit].disabled[type=button].error,
+input[type=submit].disabled[type=reset].error,
+input[type=submit].disabled.button.error,
+input[type=submit].disabled[role~=button].error,
 input[type=button].disabled.error,
-input[type=reset].disabled.error, .button.disabled.error, ul.button-list li a.disabled.error,
-ol.button-list li a.disabled.error, [role~=button].disabled.error {
+input[type=button].disabled[type=reset].error,
+input[type=button].disabled.button.error,
+input[type=button].disabled[role~=button].error,
+input[type=reset].disabled.error,
+input[type=reset].disabled.button.error,
+input[type=reset].disabled[role~=button].error, .button.disabled.error,
+a.button.disabled.error,
+a.button.disabled.error:visited, ul.button-list li a.button.disabled.error,
+ol.button-list li a.button.disabled.error, .button.disabled[role~=button].error,
+a.button.disabled[role~=button].error,
+ul.button-list li a.button.disabled.error:visited,
+ol.button-list li a.button.disabled.error:visited,
+a.button.disabled[role~=button].error:visited, ul.button-list li a.disabled.error,
+ul.button-list ol.button-list li a.disabled.error,
+ol.button-list ul.button-list li a.disabled.error, ul.button-list li a.disabled[role~=button].error,
+ol.button-list li a.disabled.error,
+ol.button-list li a.disabled[role~=button].error, [role~=button].disabled.error {
   color: #e3d1d1;
   background: #bd9291;
   border-color: #a06261;
@@ -4405,17 +5048,48 @@ ol.button-list li a.disabled.error, [role~=button].disabled.error {
 }
 button.disabled.error:hover,
 input[type=submit].disabled.error:hover,
+input[type=submit].disabled[type=button].error:hover,
+input[type=submit].disabled[type=reset].error:hover,
 input[type=button].disabled.error:hover,
-input[type=reset].disabled.error:hover, .button.disabled.error:hover, ul.button-list li a.disabled.error:hover,
-ol.button-list li a.disabled.error:hover, [role~=button].disabled.error:hover, button.disabled.error:focus,
+input[type=button].disabled[type=reset].error:hover,
+input[type=reset].disabled.error:hover, .button.disabled.error:hover,
+a.button.disabled.error:hover,
+a.button.disabled.error:hover:visited, ul.button-list li a.button.disabled.error:hover,
+ol.button-list li a.button.disabled.error:hover,
+ul.button-list li a.button.disabled.error:hover:visited,
+ol.button-list li a.button.disabled.error:hover:visited, ul.button-list li a.disabled.error:hover,
+ul.button-list ol.button-list li a.disabled.error:hover,
+ol.button-list ul.button-list li a.disabled.error:hover, ul.button-list li a.disabled[role~=button].error:hover,
+ol.button-list li a.disabled.error:hover,
+ol.button-list li a.disabled[role~=button].error:hover, [role~=button].disabled.error:hover, button.disabled.error:focus,
 input[type=submit].disabled.error:focus,
+input[type=submit].disabled[type=button].error:focus,
+input[type=submit].disabled[type=reset].error:focus,
 input[type=button].disabled.error:focus,
-input[type=reset].disabled.error:focus, .button.disabled.error:focus, ul.button-list li a.disabled.error:focus,
-ol.button-list li a.disabled.error:focus, [role~=button].disabled.error:focus, button.disabled.error:visited,
+input[type=button].disabled[type=reset].error:focus,
+input[type=reset].disabled.error:focus, .button.disabled.error:focus,
+a.button.disabled.error:focus,
+a.button.disabled.error:focus:visited, ul.button-list li a.button.disabled.error:focus,
+ol.button-list li a.button.disabled.error:focus,
+ul.button-list li a.button.disabled.error:focus:visited,
+ol.button-list li a.button.disabled.error:focus:visited, ul.button-list li a.disabled.error:focus,
+ul.button-list ol.button-list li a.disabled.error:focus,
+ol.button-list ul.button-list li a.disabled.error:focus, ul.button-list li a.disabled[role~=button].error:focus,
+ol.button-list li a.disabled.error:focus,
+ol.button-list li a.disabled[role~=button].error:focus, [role~=button].disabled.error:focus, button.disabled.error:visited,
 input[type=submit].disabled.error:visited,
+input[type=submit].disabled[type=button].error:visited,
+input[type=submit].disabled[type=reset].error:visited,
 input[type=button].disabled.error:visited,
-input[type=reset].disabled.error:visited, .button.disabled.error:visited, ul.button-list li a.disabled.error:visited,
-ol.button-list li a.disabled.error:visited, [role~=button].disabled.error:visited {
+input[type=button].disabled[type=reset].error:visited,
+input[type=reset].disabled.error:visited, .button.disabled.error:visited,
+a.button.disabled.error:visited, ul.button-list li a.button.disabled.error:visited,
+ol.button-list li a.button.disabled.error:visited,
+a.button.disabled[role~=button].error:visited, ul.button-list li a.disabled.error:visited,
+ul.button-list ol.button-list li a.disabled.error:visited,
+ol.button-list ul.button-list li a.disabled.error:visited, ul.button-list li a.disabled[role~=button].error:visited,
+ol.button-list li a.disabled.error:visited,
+ol.button-list li a.disabled[role~=button].error:visited, [role~=button].disabled.error:visited {
   color: #e3d1d1;
   background: #bd9291;
   border-color: #a06261;
@@ -4446,11 +5120,30 @@ input[type=reset].success:focus, .button.success:focus, ul.button-list li a.succ
 ol.button-list li a.success:focus, [role~=button].success:focus {
   background: #549539;
 }
-button.disabled.success,
+button.disabled.success, button.disabled.button.success, button.disabled[role~=button].success,
 input[type=submit].disabled.success,
+input[type=submit].disabled[type=button].success,
+input[type=submit].disabled[type=reset].success,
+input[type=submit].disabled.button.success,
+input[type=submit].disabled[role~=button].success,
 input[type=button].disabled.success,
-input[type=reset].disabled.success, .button.disabled.success, ul.button-list li a.disabled.success,
-ol.button-list li a.disabled.success, [role~=button].disabled.success {
+input[type=button].disabled[type=reset].success,
+input[type=button].disabled.button.success,
+input[type=button].disabled[role~=button].success,
+input[type=reset].disabled.success,
+input[type=reset].disabled.button.success,
+input[type=reset].disabled[role~=button].success, .button.disabled.success,
+a.button.disabled.success,
+a.button.disabled.success:visited, ul.button-list li a.button.disabled.success,
+ol.button-list li a.button.disabled.success, .button.disabled[role~=button].success,
+a.button.disabled[role~=button].success,
+ul.button-list li a.button.disabled.success:visited,
+ol.button-list li a.button.disabled.success:visited,
+a.button.disabled[role~=button].success:visited, ul.button-list li a.disabled.success,
+ul.button-list ol.button-list li a.disabled.success,
+ol.button-list ul.button-list li a.disabled.success, ul.button-list li a.disabled[role~=button].success,
+ol.button-list li a.disabled.success,
+ol.button-list li a.disabled[role~=button].success, [role~=button].disabled.success {
   color: #b9c8b9;
   background: #809b80;
   border-color: #5b735b;
@@ -4460,17 +5153,48 @@ ol.button-list li a.disabled.success, [role~=button].disabled.success {
 }
 button.disabled.success:hover,
 input[type=submit].disabled.success:hover,
+input[type=submit].disabled[type=button].success:hover,
+input[type=submit].disabled[type=reset].success:hover,
 input[type=button].disabled.success:hover,
-input[type=reset].disabled.success:hover, .button.disabled.success:hover, ul.button-list li a.disabled.success:hover,
-ol.button-list li a.disabled.success:hover, [role~=button].disabled.success:hover, button.disabled.success:focus,
+input[type=button].disabled[type=reset].success:hover,
+input[type=reset].disabled.success:hover, .button.disabled.success:hover,
+a.button.disabled.success:hover,
+a.button.disabled.success:hover:visited, ul.button-list li a.button.disabled.success:hover,
+ol.button-list li a.button.disabled.success:hover,
+ul.button-list li a.button.disabled.success:hover:visited,
+ol.button-list li a.button.disabled.success:hover:visited, ul.button-list li a.disabled.success:hover,
+ul.button-list ol.button-list li a.disabled.success:hover,
+ol.button-list ul.button-list li a.disabled.success:hover, ul.button-list li a.disabled[role~=button].success:hover,
+ol.button-list li a.disabled.success:hover,
+ol.button-list li a.disabled[role~=button].success:hover, [role~=button].disabled.success:hover, button.disabled.success:focus,
 input[type=submit].disabled.success:focus,
+input[type=submit].disabled[type=button].success:focus,
+input[type=submit].disabled[type=reset].success:focus,
 input[type=button].disabled.success:focus,
-input[type=reset].disabled.success:focus, .button.disabled.success:focus, ul.button-list li a.disabled.success:focus,
-ol.button-list li a.disabled.success:focus, [role~=button].disabled.success:focus, button.disabled.success:visited,
+input[type=button].disabled[type=reset].success:focus,
+input[type=reset].disabled.success:focus, .button.disabled.success:focus,
+a.button.disabled.success:focus,
+a.button.disabled.success:focus:visited, ul.button-list li a.button.disabled.success:focus,
+ol.button-list li a.button.disabled.success:focus,
+ul.button-list li a.button.disabled.success:focus:visited,
+ol.button-list li a.button.disabled.success:focus:visited, ul.button-list li a.disabled.success:focus,
+ul.button-list ol.button-list li a.disabled.success:focus,
+ol.button-list ul.button-list li a.disabled.success:focus, ul.button-list li a.disabled[role~=button].success:focus,
+ol.button-list li a.disabled.success:focus,
+ol.button-list li a.disabled[role~=button].success:focus, [role~=button].disabled.success:focus, button.disabled.success:visited,
 input[type=submit].disabled.success:visited,
+input[type=submit].disabled[type=button].success:visited,
+input[type=submit].disabled[type=reset].success:visited,
 input[type=button].disabled.success:visited,
-input[type=reset].disabled.success:visited, .button.disabled.success:visited, ul.button-list li a.disabled.success:visited,
-ol.button-list li a.disabled.success:visited, [role~=button].disabled.success:visited {
+input[type=button].disabled[type=reset].success:visited,
+input[type=reset].disabled.success:visited, .button.disabled.success:visited,
+a.button.disabled.success:visited, ul.button-list li a.button.disabled.success:visited,
+ol.button-list li a.button.disabled.success:visited,
+a.button.disabled[role~=button].success:visited, ul.button-list li a.disabled.success:visited,
+ul.button-list ol.button-list li a.disabled.success:visited,
+ol.button-list ul.button-list li a.disabled.success:visited, ul.button-list li a.disabled[role~=button].success:visited,
+ol.button-list li a.disabled.success:visited,
+ol.button-list li a.disabled[role~=button].success:visited, [role~=button].disabled.success:visited {
   color: #b9c8b9;
   background: #809b80;
   border-color: #5b735b;
@@ -4535,7 +5259,7 @@ ol.button-list li a.block, [role~=button].block {
 .dropdown ul li {
   display: block;
 }
-.dropdown ul li a {
+.dropdown ul li a, .dropdown ul li a:visited {
   display: block;
   padding: 0.5em 1em;
   border: none;
@@ -4543,16 +5267,16 @@ ol.button-list li a.block, [role~=button].block {
   text-shadow: none;
   text-decoration: none;
 }
-.dropdown ul li a:hover, .dropdown ul li a:focus {
+.dropdown ul li a:hover, .dropdown ul li a:hover:visited, .dropdown ul li a:focus, .dropdown ul li a:focus:visited {
   background: #efefef;
 }
-.dropdown ul li a.disabled {
+.dropdown ul li a.disabled, .dropdown ul li a.disabled:visited {
   color: #d9d9d9;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
 }
-.dropdown ul li a.disabled:hover, .dropdown ul li a.disabled:focus, .dropdown ul li a.disabled:visited {
+.dropdown ul li a.disabled:hover, .dropdown ul li a.disabled:hover:visited, .dropdown ul li a.disabled:focus, .dropdown ul li a.disabled:focus:visited, .dropdown ul li a.disabled:visited {
   color: #d9d9d9;
   cursor: not-allowed;
   text-decoration: none;
@@ -4645,7 +5369,7 @@ ol.button-list li a.disabled:visited {
   outline: none;
 }
 
-nav ul ul, .nav ul ul {
+nav ul ul, .nav ul ul, nav ul.row ul, .nav ul.row ul, nav.inline ul li ul, .inline.nav ul li ul {
   display: none;
 }
 
@@ -5151,7 +5875,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   display: none;
 }
 
-.tabs > ul li a, .tabs > ol li a {
+.tabs > ul li a, .tabs > ul li a:visited, .tabs > ol li a, .tabs > ol li a:visited {
   display: block;
   position: relative;
   width: 100%;
@@ -5178,31 +5902,31 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-.tabs > ul li a:hover, .tabs > ol li a:hover, .tabs > ul li a:focus, .tabs > ol li a:focus {
+.tabs > ul li a:hover, .tabs > ul li a:hover:visited, .tabs > ol li a:hover, .tabs > ol li a:hover:visited, .tabs > ul li a:focus, .tabs > ul li a:focus:visited, .tabs > ol li a:focus, .tabs > ol li a:focus:visited {
   background: #198d98;
   border: 1px solid #198d98;
   color: white;
   text-decoration: none;
 }
-.tabs > ul li a:hover:before, .tabs > ol li a:hover:before, .tabs > ul li a:focus:before, .tabs > ol li a:focus:before {
+.tabs > ul li a:hover:before, .tabs > ul li a:visited:hover:before, .tabs > ol li a:hover:before, .tabs > ol li a:visited:hover:before, .tabs > ul li a:focus:before, .tabs > ul li a:visited:focus:before, .tabs > ol li a:focus:before, .tabs > ol li a:visited:focus:before {
   box-shadow: 2px 1px 0 #198d98;
 }
-.tabs > ul li a:hover:after, .tabs > ol li a:hover:after, .tabs > ul li a:focus:after, .tabs > ol li a:focus:after {
+.tabs > ul li a:hover:after, .tabs > ul li a:visited:hover:after, .tabs > ol li a:hover:after, .tabs > ol li a:visited:hover:after, .tabs > ul li a:focus:after, .tabs > ul li a:visited:focus:after, .tabs > ol li a:focus:after, .tabs > ol li a:visited:focus:after {
   box-shadow: -2px 1px 0 #198d98;
 }
-.tabs > ul li a.active, .tabs > ol li a.active, .tabs > ul li a.active:hover, .tabs > ol li a.active:hover, .tabs > ul li a.active:focus, .tabs > ol li a.active:focus {
+.tabs > ul li a.active, .tabs > ul li a.active:visited, .tabs > ol li a.active, .tabs > ol li a.active:visited, .tabs > ul li a.active:hover, .tabs > ul li a.active:hover:visited, .tabs > ol li a.active:hover, .tabs > ol li a.active:hover:visited, .tabs > ul li a.active:focus, .tabs > ul li a.active:focus:visited, .tabs > ol li a.active:focus, .tabs > ol li a.active:focus:visited {
   background: #198d98;
   border: 1px solid #198d98;
   color: white;
   z-index: 2;
 }
-.tabs > ul li a.active:before, .tabs > ol li a.active:before, .tabs > ul li a.active:hover:before, .tabs > ol li a.active:hover:before, .tabs > ul li a.active:focus:before, .tabs > ol li a.active:focus:before {
+.tabs > ul li a.active:before, .tabs > ul li a.active:visited:before, .tabs > ol li a.active:before, .tabs > ol li a.active:visited:before, .tabs > ul li a.active:hover:before, .tabs > ul li a.active:visited:hover:before, .tabs > ol li a.active:hover:before, .tabs > ol li a.active:visited:hover:before, .tabs > ul li a.active:focus:before, .tabs > ul li a.active:visited:focus:before, .tabs > ol li a.active:focus:before, .tabs > ol li a.active:visited:focus:before {
   box-shadow: 2px 1px 0 #198d98;
 }
-.tabs > ul li a.active:after, .tabs > ol li a.active:after, .tabs > ul li a.active:hover:after, .tabs > ol li a.active:hover:after, .tabs > ul li a.active:focus:after, .tabs > ol li a.active:focus:after {
+.tabs > ul li a.active:after, .tabs > ul li a.active:visited:after, .tabs > ol li a.active:after, .tabs > ol li a.active:visited:after, .tabs > ul li a.active:hover:after, .tabs > ul li a.active:visited:hover:after, .tabs > ol li a.active:hover:after, .tabs > ol li a.active:visited:hover:after, .tabs > ul li a.active:focus:after, .tabs > ul li a.active:visited:focus:after, .tabs > ol li a.active:focus:after, .tabs > ol li a.active:visited:focus:after {
   box-shadow: -2px 1px 0 #198d98;
 }
-.tabs > ul li a.disabled, .tabs > ol li a.disabled {
+.tabs > ul li a.disabled, .tabs > ul li a.disabled:visited, .tabs > ol li a.disabled, .tabs > ol li a.disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -5211,7 +5935,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   outline: none;
   border-bottom-color: #57c1cb !important;
 }
-.tabs > ul li a.disabled:hover, .tabs > ol li a.disabled:hover, .tabs > ul li a.disabled:focus, .tabs > ol li a.disabled:focus, .tabs > ul li a.disabled:visited, .tabs > ol li a.disabled:visited {
+.tabs > ul li a.disabled:hover, .tabs > ul li a.disabled:hover:visited, .tabs > ol li a.disabled:hover, .tabs > ol li a.disabled:hover:visited, .tabs > ul li a.disabled:focus, .tabs > ul li a.disabled:focus:visited, .tabs > ol li a.disabled:focus, .tabs > ol li a.disabled:focus:visited, .tabs > ul li a.disabled:visited, .tabs > ol li a.disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -5219,26 +5943,26 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   text-decoration: none;
   outline: none;
 }
-.tabs > ul li a.disabled:before, .tabs > ol li a.disabled:before {
+.tabs > ul li a.disabled:before, .tabs > ul li a.disabled:visited:before, .tabs > ol li a.disabled:before, .tabs > ol li a.disabled:visited:before {
   box-shadow: 2px 1px 0 #57c1cb;
 }
-.tabs > ul li a.disabled:after, .tabs > ol li a.disabled:after {
+.tabs > ul li a.disabled:after, .tabs > ul li a.disabled:visited:after, .tabs > ol li a.disabled:after, .tabs > ol li a.disabled:visited:after {
   box-shadow: -2px 1px 0 #57c1cb;
 }
-.tabs > ul li a:before, .tabs > ol li a:before, .tabs > ul li a:after, .tabs > ol li a:after {
+.tabs > ul li a:before, .tabs > ul li a:visited:before, .tabs > ol li a:before, .tabs > ol li a:visited:before, .tabs > ul li a:after, .tabs > ul li a:visited:after, .tabs > ol li a:after, .tabs > ol li a:visited:after {
   position: absolute;
   bottom: -1px;
   width: 6px;
   height: 6px;
   content: '';
 }
-.tabs > ul li a:before, .tabs > ol li a:before {
+.tabs > ul li a:before, .tabs > ul li a:visited:before, .tabs > ol li a:before, .tabs > ol li a:visited:before {
   left: -6px;
   border-bottom-right-radius: 6px;
   border-width: 0 1px 1px 0;
   box-shadow: 2px 1px 0 #1dabb8;
 }
-.tabs > ul li a:after, .tabs > ol li a:after {
+.tabs > ul li a:after, .tabs > ul li a:visited:after, .tabs > ol li a:after, .tabs > ol li a:visited:after {
   right: -6px;
   border-bottom-left-radius: 6px;
   border-width: 0 0 1px 1px;
@@ -5291,7 +6015,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   border-radius: 4px 0 0 0;
 }
 
-.tabs.vertical > ul li a, .tabs.vertical > ol li a {
+.tabs.vertical > ul li a, .tabs.vertical > ul li a:visited, .tabs.vertical > ol li a, .tabs.vertical > ol li a:visited {
   height: auto;
   border-bottom: 1px solid #198d98;
   -ms-border-radius: 0;
@@ -5300,15 +6024,15 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-.tabs.vertical > ul li a:before, .tabs.vertical > ol li a:before, .tabs.vertical > ul li a:after, .tabs.vertical > ol li a:after {
+.tabs.vertical > ul li a:before, .tabs.vertical > ul li a:visited:before, .tabs.vertical > ol li a:before, .tabs.vertical > ol li a:visited:before, .tabs.vertical > ul li a:after, .tabs.vertical > ul li a:visited:after, .tabs.vertical > ol li a:after, .tabs.vertical > ol li a:visited:after {
   display: none !important;
 }
-.tabs.vertical > ul li a.active, .tabs.vertical > ol li a.active {
+.tabs.vertical > ul li a.active, .tabs.vertical > ul li a.active:visited, .tabs.vertical > ol li a.active, .tabs.vertical > ol li a.active:visited {
   border-right: none;
   color: #2b2b2d;
   background: white;
 }
-.tabs.vertical > ul li a.active:hover, .tabs.vertical > ol li a.active:hover, .tabs.vertical > ul li a.active:focus, .tabs.vertical > ol li a.active:focus {
+.tabs.vertical > ul li a.active:hover, .tabs.vertical > ul li a.active:hover:visited, .tabs.vertical > ol li a.active:hover, .tabs.vertical > ol li a.active:hover:visited, .tabs.vertical > ul li a.active:focus, .tabs.vertical > ul li a.active:focus:visited, .tabs.vertical > ol li a.active:focus, .tabs.vertical > ol li a.active:focus:visited {
   border-right: none;
   color: #2b2b2d;
   background: white;
@@ -5391,7 +6115,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #3a87ad;
   border-color: #bce8f1;
 }
-.message.info.disabled, [role~=alert].info.disabled {
+.message.info.disabled, .message.info[role~=alert].disabled, [role~=alert].info.disabled {
   color: #bed2dc;
   background: #7ca4b8;
   border-color: #517f96;
@@ -5413,7 +6137,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #c09853;
   border-color: #fbeee0;
 }
-.message.alert.disabled, [role~=alert].alert.disabled {
+.message.alert.disabled, .message.alert[role~=alert].disabled, [role~=alert].alert.disabled {
   color: #eae5db;
   background: #c5b59b;
   border-color: #a9926a;
@@ -5435,7 +6159,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #ff971e;
   border-color: #ffdbb3;
 }
-.message.warning.disabled, [role~=alert].warning.disabled {
+.message.warning.disabled, .message.warning[role~=alert].disabled, [role~=alert].warning.disabled {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -5457,7 +6181,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #b94a48;
   border-color: #eed3d7;
 }
-.message.error.disabled, [role~=alert].error.disabled {
+.message.error.disabled, .message.error[role~=alert].disabled, [role~=alert].error.disabled {
   color: #e3d1d1;
   background: #bd9291;
   border-color: #a06261;
@@ -5479,7 +6203,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #468847;
   border-color: #d6e9c6;
 }
-.message.success.disabled, [role~=alert].success.disabled {
+.message.success.disabled, .message.success[role~=alert].disabled, [role~=alert].success.disabled {
   color: #b9c8b9;
   background: #809b80;
   border-color: #5b735b;
@@ -5578,7 +6302,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #3a87ad;
   border-color: #bce8f1;
 }
-.callout.info.disabled, [role~=status].info.disabled {
+.callout.info.disabled, .callout.info[role~=status].disabled, [role~=status].info.disabled {
   color: #bed2dc;
   background: #7ca4b8;
   border-color: #517f96;
@@ -5600,7 +6324,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #c09853;
   border-color: #fbeee0;
 }
-.callout.alert.disabled, [role~=status].alert.disabled {
+.callout.alert.disabled, .callout.alert[role~=status].disabled, [role~=status].alert.disabled {
   color: #eae5db;
   background: #c5b59b;
   border-color: #a9926a;
@@ -5622,7 +6346,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #ff971e;
   border-color: #ffdbb3;
 }
-.callout.warning.disabled, [role~=status].warning.disabled {
+.callout.warning.disabled, .callout.warning[role~=status].disabled, [role~=status].warning.disabled {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -5644,7 +6368,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #b94a48;
   border-color: #eed3d7;
 }
-.callout.error.disabled, [role~=status].error.disabled {
+.callout.error.disabled, .callout.error[role~=status].disabled, [role~=status].error.disabled {
   color: #e3d1d1;
   background: #bd9291;
   border-color: #a06261;
@@ -5666,7 +6390,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   color: #468847;
   border-color: #d6e9c6;
 }
-.callout.success.disabled, [role~=status].success.disabled {
+.callout.success.disabled, .callout.success[role~=status].disabled, [role~=status].success.disabled {
   color: #b9c8b9;
   background: #809b80;
   border-color: #5b735b;
