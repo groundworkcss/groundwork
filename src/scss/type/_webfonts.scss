@@ -12,8 +12,8 @@
     font-family: '#{nth($web-font-names, $i)}';
     font-style: normal;
     font-weight: normal;
-    src: url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}#iefix');
-    src: url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.eot') format('embedded-opentype'), 
+    src: url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.eot');
+    src: url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.eot#iefix') format('embedded-opentype'), 
          url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.woff') format('woff'), 
          url('#{$root_path}#{$fonts_path}#{nth($web-font-files, $i)}.ttf') format('truetype');
   }
