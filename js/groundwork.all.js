@@ -765,4 +765,20 @@
     };
   })(jQuery);
 
+  /*
+   * jQuery Dismissible by John Rodkey aka Puchesjr
+   *
+   * Open Source under MIT License
+   *
+   * Copyright 2013 John Rodkey | All Rights Reserved
+  */
+
+  (function ( $ ) {
+    $('.dismissible').click(function() {
+      $(this).hide(150, function() {
+        $(this).remove();
+      });
+    });
+  }( jQuery ));
+
 }).call(this);
