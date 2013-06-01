@@ -3758,15 +3758,29 @@ ol.list li.asphalt:before {
   padding-right: 3em;
 }
 .message.dismissible:after, [role~=alert].dismissible:after, .extend-message.extend-dismissible:after {
-  content: 'X';
-  display: block;
-  padding: 0.5em 0;
-  font-size: 0.8em;
-  text-align: center;
+  font-family: "FontAwesome";
+  content: "\f00d";
+  color: inherit;
   position: absolute;
-  top: 0;
-  right: 1em;
-  line-height: 1.5;
+  top: 5px;
+  right: 15px;
+  z-index: 999;
+  font-weight: normal;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.dismissible:after {
+  font-family: "FontAwesome";
+  content: "\f00d";
+  color: inherit;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  z-index: 999;
+  font-weight: normal;
+  font-style: normal;
+  cursor: pointer;
 }
 
 .callout, [role~=status], .extend-callout {
