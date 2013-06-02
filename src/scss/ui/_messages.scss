@@ -70,19 +70,7 @@
 }
 
 %message-dismissible {
-  padding-right:3em;
-  &:after {
-    font-family:"FontAwesome";
-    content:"\f00d";
-    color:inherit;
-    position:absolute;
-    top:0.25em;
-    right:0.35em;
-    z-index:999;
-    font-weight:normal;
-    font-style:normal;
-    cursor:pointer;
-  }
+  padding-right:1.5em;
 }
 
 @mixin message-modifiers() {
@@ -100,8 +88,18 @@
     @include message-modifiers;
   }
   .dismiss {
-    @extend %message;
-    @include message-modifiers;
+    &:after {
+      font-family:"FontAwesome";
+      font-weight:normal;
+      font-style:normal;
+      content:"\f00d";
+      color:inherit;
+      position:absolute;
+      top:0.25em;
+      right:0.35em;
+      z-index:999;
+      cursor:pointer;
+    }
   }
 }
 

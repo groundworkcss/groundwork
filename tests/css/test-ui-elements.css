@@ -3587,7 +3587,7 @@ ol.list li.asphalt:before {
   background: #34495e;
 }
 
-.message, [role~=alert], .extend-message {
+.message, .dismiss, [role~=alert], .extend-message {
   position: relative;
   word-wrap: break-word;
   padding: 0.25em 1em;
@@ -3603,15 +3603,15 @@ ol.list li.asphalt:before {
   border-radius: 4px;
 }
 
-.message.small, [role~=alert].small, .extend-message.extend-small {
+.message.small, .dismiss.small, [role~=alert].small, .extend-message.extend-small {
   font-size: 0.8em;
 }
 
-.message.large, [role~=alert].large, .extend-message.extend-large {
+.message.large, .dismiss.large, [role~=alert].large, .extend-message.extend-large {
   font-size: 1.5em;
 }
 
-.message.square, [role~=alert].square, .extend-message.extend-square {
+.message.square, .dismiss.square, [role~=alert].square, .extend-message.extend-square {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
@@ -3619,7 +3619,7 @@ ol.list li.asphalt:before {
   border-radius: 0;
 }
 
-.message.round, [role~=alert].round, .extend-message.extend-round {
+.message.round, .dismiss.round, [role~=alert].round, .extend-message.extend-round {
   -ms-border-radius: 9999px;
   -o-border-radius: 9999px;
   -moz-border-radius: 9999px;
@@ -3627,7 +3627,7 @@ ol.list li.asphalt:before {
   border-radius: 9999px;
 }
 
-.message.disabled, [role~=alert].disabled, .extend-message.extend-disabled {
+.message.disabled, .dismiss.disabled, [role~=alert].disabled, .extend-message.extend-disabled {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -3635,7 +3635,7 @@ ol.list li.asphalt:before {
   text-decoration: none;
   outline: none;
 }
-.message.disabled:hover, [role~=alert].disabled:hover, .extend-message.extend-disabled:hover, .message.disabled:focus, [role~=alert].disabled:focus, .extend-message.extend-disabled:focus, .message.disabled:visited, [role~=alert].disabled:visited, .extend-message.extend-disabled:visited {
+.message.disabled:hover, .dismiss.disabled:hover, [role~=alert].disabled:hover, .extend-message.extend-disabled:hover, .message.disabled:focus, .dismiss.disabled:focus, [role~=alert].disabled:focus, .extend-message.extend-disabled:focus, .message.disabled:visited, .dismiss.disabled:visited, [role~=alert].disabled:visited, .extend-message.extend-disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -3644,12 +3644,12 @@ ol.list li.asphalt:before {
   outline: none;
 }
 
-.message.info, [role~=alert].info, .extend-message.extend-info {
+.message.info, .dismiss.info, [role~=alert].info, .extend-message.extend-info {
   background-color: #d9edf7;
   color: #3a87ad;
   border-color: #bce8f1;
 }
-.message.info.disabled, .message.info.extend-message.extend-disabled, .message.disabled.extend-message.extend-info, [role~=alert].info.disabled, [role~=alert].info.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-info, .extend-message.extend-info.extend-disabled {
+.message.info.disabled, .message.info.extend-message.extend-disabled, .message.disabled.extend-message.extend-info, .dismiss.info.disabled, .dismiss.info.extend-message.extend-disabled, .dismiss.disabled.extend-message.extend-info, [role~=alert].info.disabled, [role~=alert].info.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-info, .extend-message.extend-info.extend-disabled {
   color: #bed2dc;
   background: #7ca4b8;
   border-color: #517f96;
@@ -3657,7 +3657,7 @@ ol.list li.asphalt:before {
   text-decoration: none;
   outline: none;
 }
-.message.info.disabled:hover, .message.info.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-info:hover, [role~=alert].info.disabled:hover, [role~=alert].info.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-info:hover, .extend-message.extend-info.extend-disabled:hover, .message.info.disabled:focus, .message.info.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-info:focus, [role~=alert].info.disabled:focus, [role~=alert].info.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-info:focus, .extend-message.extend-info.extend-disabled:focus, .message.info.disabled:visited, .message.info.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-info:visited, [role~=alert].info.disabled:visited, [role~=alert].info.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-info:visited, .extend-message.extend-info.extend-disabled:visited {
+.message.info.disabled:hover, .message.info.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-info:hover, .dismiss.info.disabled:hover, .dismiss.info.extend-message.extend-disabled:hover, .dismiss.disabled.extend-message.extend-info:hover, [role~=alert].info.disabled:hover, [role~=alert].info.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-info:hover, .extend-message.extend-info.extend-disabled:hover, .message.info.disabled:focus, .message.info.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-info:focus, .dismiss.info.disabled:focus, .dismiss.info.extend-message.extend-disabled:focus, .dismiss.disabled.extend-message.extend-info:focus, [role~=alert].info.disabled:focus, [role~=alert].info.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-info:focus, .extend-message.extend-info.extend-disabled:focus, .message.info.disabled:visited, .message.info.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-info:visited, .dismiss.info.disabled:visited, .dismiss.info.extend-message.extend-disabled:visited, .dismiss.disabled.extend-message.extend-info:visited, [role~=alert].info.disabled:visited, [role~=alert].info.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-info:visited, .extend-message.extend-info.extend-disabled:visited {
   color: #bed2dc;
   background: #7ca4b8;
   border-color: #517f96;
@@ -3666,12 +3666,12 @@ ol.list li.asphalt:before {
   outline: none;
 }
 
-.message.alert, [role~=alert].alert, .extend-message.extend-alert {
+.message.alert, .dismiss.alert, [role~=alert].alert, .extend-message.extend-alert {
   background-color: #fcf8e3;
   color: #c09853;
   border-color: #fbeee0;
 }
-.message.alert.disabled, .message.alert.extend-message.extend-disabled, .message.disabled.extend-message.extend-alert, [role~=alert].alert.disabled, [role~=alert].alert.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-alert, .extend-message.extend-alert.extend-disabled {
+.message.alert.disabled, .message.alert.extend-message.extend-disabled, .message.disabled.extend-message.extend-alert, .dismiss.alert.disabled, .dismiss.alert.extend-message.extend-disabled, .dismiss.disabled.extend-message.extend-alert, [role~=alert].alert.disabled, [role~=alert].alert.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-alert, .extend-message.extend-alert.extend-disabled {
   color: #eae5db;
   background: #c5b59b;
   border-color: #a9926a;
@@ -3679,7 +3679,7 @@ ol.list li.asphalt:before {
   text-decoration: none;
   outline: none;
 }
-.message.alert.disabled:hover, .message.alert.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-alert:hover, [role~=alert].alert.disabled:hover, [role~=alert].alert.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-alert:hover, .extend-message.extend-alert.extend-disabled:hover, .message.alert.disabled:focus, .message.alert.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-alert:focus, [role~=alert].alert.disabled:focus, [role~=alert].alert.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-alert:focus, .extend-message.extend-alert.extend-disabled:focus, .message.alert.disabled:visited, .message.alert.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-alert:visited, [role~=alert].alert.disabled:visited, [role~=alert].alert.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-alert:visited, .extend-message.extend-alert.extend-disabled:visited {
+.message.alert.disabled:hover, .message.alert.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-alert:hover, .dismiss.alert.disabled:hover, .dismiss.alert.extend-message.extend-disabled:hover, .dismiss.disabled.extend-message.extend-alert:hover, [role~=alert].alert.disabled:hover, [role~=alert].alert.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-alert:hover, .extend-message.extend-alert.extend-disabled:hover, .message.alert.disabled:focus, .message.alert.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-alert:focus, .dismiss.alert.disabled:focus, .dismiss.alert.extend-message.extend-disabled:focus, .dismiss.disabled.extend-message.extend-alert:focus, [role~=alert].alert.disabled:focus, [role~=alert].alert.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-alert:focus, .extend-message.extend-alert.extend-disabled:focus, .message.alert.disabled:visited, .message.alert.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-alert:visited, .dismiss.alert.disabled:visited, .dismiss.alert.extend-message.extend-disabled:visited, .dismiss.disabled.extend-message.extend-alert:visited, [role~=alert].alert.disabled:visited, [role~=alert].alert.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-alert:visited, .extend-message.extend-alert.extend-disabled:visited {
   color: #eae5db;
   background: #c5b59b;
   border-color: #a9926a;
@@ -3688,12 +3688,12 @@ ol.list li.asphalt:before {
   outline: none;
 }
 
-.message.warning, [role~=alert].warning, .extend-message.extend-warning {
+.message.warning, .dismiss.warning, [role~=alert].warning, .extend-message.extend-warning {
   background: #ffe5c7;
   color: #ff971e;
   border-color: #ffdbb3;
 }
-.message.warning.disabled, .message.warning.extend-message.extend-disabled, .message.disabled.extend-message.extend-warning, [role~=alert].warning.disabled, [role~=alert].warning.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-warning, .extend-message.extend-warning.extend-disabled {
+.message.warning.disabled, .message.warning.extend-message.extend-disabled, .message.disabled.extend-message.extend-warning, .dismiss.warning.disabled, .dismiss.warning.extend-message.extend-disabled, .dismiss.disabled.extend-message.extend-warning, [role~=alert].warning.disabled, [role~=alert].warning.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-warning, .extend-message.extend-warning.extend-disabled {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -3701,7 +3701,7 @@ ol.list li.asphalt:before {
   text-decoration: none;
   outline: none;
 }
-.message.warning.disabled:hover, .message.warning.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-warning:hover, [role~=alert].warning.disabled:hover, [role~=alert].warning.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-warning:hover, .extend-message.extend-warning.extend-disabled:hover, .message.warning.disabled:focus, .message.warning.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-warning:focus, [role~=alert].warning.disabled:focus, [role~=alert].warning.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-warning:focus, .extend-message.extend-warning.extend-disabled:focus, .message.warning.disabled:visited, .message.warning.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-warning:visited, [role~=alert].warning.disabled:visited, [role~=alert].warning.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-warning:visited, .extend-message.extend-warning.extend-disabled:visited {
+.message.warning.disabled:hover, .message.warning.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-warning:hover, .dismiss.warning.disabled:hover, .dismiss.warning.extend-message.extend-disabled:hover, .dismiss.disabled.extend-message.extend-warning:hover, [role~=alert].warning.disabled:hover, [role~=alert].warning.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-warning:hover, .extend-message.extend-warning.extend-disabled:hover, .message.warning.disabled:focus, .message.warning.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-warning:focus, .dismiss.warning.disabled:focus, .dismiss.warning.extend-message.extend-disabled:focus, .dismiss.disabled.extend-message.extend-warning:focus, [role~=alert].warning.disabled:focus, [role~=alert].warning.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-warning:focus, .extend-message.extend-warning.extend-disabled:focus, .message.warning.disabled:visited, .message.warning.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-warning:visited, .dismiss.warning.disabled:visited, .dismiss.warning.extend-message.extend-disabled:visited, .dismiss.disabled.extend-message.extend-warning:visited, [role~=alert].warning.disabled:visited, [role~=alert].warning.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-warning:visited, .extend-message.extend-warning.extend-disabled:visited {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -3710,12 +3710,12 @@ ol.list li.asphalt:before {
   outline: none;
 }
 
-.message.error, [role~=alert].error, .extend-message.extend-error {
+.message.error, .dismiss.error, [role~=alert].error, .extend-message.extend-error {
   background: #f2dede;
   color: #b94a48;
   border-color: #eed3d7;
 }
-.message.error.disabled, .message.error.extend-message.extend-disabled, .message.disabled.extend-message.extend-error, [role~=alert].error.disabled, [role~=alert].error.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-error, .extend-message.extend-error.extend-disabled {
+.message.error.disabled, .message.error.extend-message.extend-disabled, .message.disabled.extend-message.extend-error, .dismiss.error.disabled, .dismiss.error.extend-message.extend-disabled, .dismiss.disabled.extend-message.extend-error, [role~=alert].error.disabled, [role~=alert].error.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-error, .extend-message.extend-error.extend-disabled {
   color: #e3d1d1;
   background: #bd9291;
   border-color: #a06261;
@@ -3723,7 +3723,7 @@ ol.list li.asphalt:before {
   text-decoration: none;
   outline: none;
 }
-.message.error.disabled:hover, .message.error.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-error:hover, [role~=alert].error.disabled:hover, [role~=alert].error.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-error:hover, .extend-message.extend-error.extend-disabled:hover, .message.error.disabled:focus, .message.error.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-error:focus, [role~=alert].error.disabled:focus, [role~=alert].error.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-error:focus, .extend-message.extend-error.extend-disabled:focus, .message.error.disabled:visited, .message.error.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-error:visited, [role~=alert].error.disabled:visited, [role~=alert].error.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-error:visited, .extend-message.extend-error.extend-disabled:visited {
+.message.error.disabled:hover, .message.error.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-error:hover, .dismiss.error.disabled:hover, .dismiss.error.extend-message.extend-disabled:hover, .dismiss.disabled.extend-message.extend-error:hover, [role~=alert].error.disabled:hover, [role~=alert].error.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-error:hover, .extend-message.extend-error.extend-disabled:hover, .message.error.disabled:focus, .message.error.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-error:focus, .dismiss.error.disabled:focus, .dismiss.error.extend-message.extend-disabled:focus, .dismiss.disabled.extend-message.extend-error:focus, [role~=alert].error.disabled:focus, [role~=alert].error.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-error:focus, .extend-message.extend-error.extend-disabled:focus, .message.error.disabled:visited, .message.error.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-error:visited, .dismiss.error.disabled:visited, .dismiss.error.extend-message.extend-disabled:visited, .dismiss.disabled.extend-message.extend-error:visited, [role~=alert].error.disabled:visited, [role~=alert].error.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-error:visited, .extend-message.extend-error.extend-disabled:visited {
   color: #e3d1d1;
   background: #bd9291;
   border-color: #a06261;
@@ -3732,12 +3732,12 @@ ol.list li.asphalt:before {
   outline: none;
 }
 
-.message.success, [role~=alert].success, .extend-message.extend-success {
+.message.success, .dismiss.success, [role~=alert].success, .extend-message.extend-success {
   background: #dff0d8;
   color: #468847;
   border-color: #d6e9c6;
 }
-.message.success.disabled, .message.success.extend-message.extend-disabled, .message.disabled.extend-message.extend-success, [role~=alert].success.disabled, [role~=alert].success.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-success, .extend-message.extend-success.extend-disabled {
+.message.success.disabled, .message.success.extend-message.extend-disabled, .message.disabled.extend-message.extend-success, .dismiss.success.disabled, .dismiss.success.extend-message.extend-disabled, .dismiss.disabled.extend-message.extend-success, [role~=alert].success.disabled, [role~=alert].success.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-success, .extend-message.extend-success.extend-disabled {
   color: #b9c8b9;
   background: #809b80;
   border-color: #5b735b;
@@ -3745,7 +3745,7 @@ ol.list li.asphalt:before {
   text-decoration: none;
   outline: none;
 }
-.message.success.disabled:hover, .message.success.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-success:hover, [role~=alert].success.disabled:hover, [role~=alert].success.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-success:hover, .extend-message.extend-success.extend-disabled:hover, .message.success.disabled:focus, .message.success.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-success:focus, [role~=alert].success.disabled:focus, [role~=alert].success.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-success:focus, .extend-message.extend-success.extend-disabled:focus, .message.success.disabled:visited, .message.success.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-success:visited, [role~=alert].success.disabled:visited, [role~=alert].success.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-success:visited, .extend-message.extend-success.extend-disabled:visited {
+.message.success.disabled:hover, .message.success.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-success:hover, .dismiss.success.disabled:hover, .dismiss.success.extend-message.extend-disabled:hover, .dismiss.disabled.extend-message.extend-success:hover, [role~=alert].success.disabled:hover, [role~=alert].success.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-success:hover, .extend-message.extend-success.extend-disabled:hover, .message.success.disabled:focus, .message.success.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-success:focus, .dismiss.success.disabled:focus, .dismiss.success.extend-message.extend-disabled:focus, .dismiss.disabled.extend-message.extend-success:focus, [role~=alert].success.disabled:focus, [role~=alert].success.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-success:focus, .extend-message.extend-success.extend-disabled:focus, .message.success.disabled:visited, .message.success.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-success:visited, .dismiss.success.disabled:visited, .dismiss.success.extend-message.extend-disabled:visited, .dismiss.disabled.extend-message.extend-success:visited, [role~=alert].success.disabled:visited, [role~=alert].success.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-success:visited, .extend-message.extend-success.extend-disabled:visited {
   color: #b9c8b9;
   background: #809b80;
   border-color: #5b735b;
@@ -3754,29 +3754,16 @@ ol.list li.asphalt:before {
   outline: none;
 }
 
-.message.dismissible, [role~=alert].dismissible, .extend-message.extend-dismissible {
+.message.dismissible, .dismiss.dismissible, [role~=alert].dismissible, .extend-message.extend-dismissible {
   padding-right: 3em;
 }
-.message.dismissible:after, [role~=alert].dismissible:after, .extend-message.extend-dismissible:after {
+.message.dismissible:after, .dismiss.dismissible:after, [role~=alert].dismissible:after, .extend-message.extend-dismissible:after {
   font-family: "FontAwesome";
   content: "\f00d";
   color: inherit;
   position: absolute;
-  top: 5px;
-  right: 15px;
-  z-index: 999;
-  font-weight: normal;
-  font-style: normal;
-  cursor: pointer;
-}
-
-.dismissible:after {
-  font-family: "FontAwesome";
-  content: "\f00d";
-  color: inherit;
-  position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 0.25em;
+  right: 0.35em;
   z-index: 999;
   font-weight: normal;
   font-style: normal;
@@ -3959,15 +3946,16 @@ ol.list li.asphalt:before {
   padding-right: 3em;
 }
 .extend-callout.extend-dismissible:after {
-  content: 'X';
-  display: block;
-  padding: 0.5em 0;
-  font-size: 0.8em;
-  text-align: center;
+  font-family: "FontAwesome";
+  content: "\f00d";
+  color: inherit;
   position: absolute;
-  top: 0;
-  right: 1em;
-  line-height: 1.5;
+  top: 0.25em;
+  right: 0.35em;
+  z-index: 999;
+  font-weight: normal;
+  font-style: normal;
+  cursor: pointer;
 }
 
 table {

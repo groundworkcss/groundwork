@@ -76,23 +76,11 @@
 }
 
 %callout-dismissible {
-  padding-right:3em;
-  &:after {
-    font-family:"FontAwesome";
-    content:"\f00d";
-    color:inherit;
-    position:absolute;
-    top:0.25em;
-    right:0.35em;
-    z-index:999;
-    font-weight:normal;
-    font-style:normal;
-    cursor:pointer;
-  }
+  padding-right:1.5em;
 }
 
 @mixin callout_modifiers() {
-  $modifiers: small large info alert warning error success square round disabled;
+  $modifiers: small large info alert warning error success square round disabled dismissible;
   @for $i from 1 through length($modifiers) {
     &.#{nth($modifiers, $i)} {
       @extend %callout-#{nth($modifiers, $i)};

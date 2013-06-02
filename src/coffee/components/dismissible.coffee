@@ -1,4 +1,4 @@
 $ ->
-  $(".dismissible").click ->
-    $(this).closest("[data-dismissible]").hide 150, ->
-      $(this).closest("[data-dismissible]").remove()
+  $(".dismiss").click ->
+    $(this).closest(".dismissible").hide 150, ->
+      $(this).closest(".dismissible").remove()
