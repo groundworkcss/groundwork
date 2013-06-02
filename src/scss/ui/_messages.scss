@@ -77,7 +77,7 @@
     color:inherit;
     position:absolute;
     top:5px;
-    right:15px;
+    right:7px;
     z-index:999;
     font-weight:normal;
     font-style:normal;
@@ -99,6 +99,10 @@
     @extend %message;
     @include message-modifiers;
   }
+  .dismiss {
+    @extend %message;
+    @include message-dismissible;
+  }
 }
 
 @if $aria {
@@ -109,17 +113,4 @@
       @include message-modifiers;
     }
   }
-}
-
-.dismissible:after {
-  font-family: "FontAwesome";
-  content:"\f00d";
-  color:inherit;
-  position:absolute;
-  top:5px;
-  right:15px;
-  z-index:999;
-  font-weight:normal;
-  font-style:normal;
-  cursor:pointer;
 }
