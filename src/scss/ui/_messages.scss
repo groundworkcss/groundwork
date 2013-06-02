@@ -76,8 +76,8 @@
     content:"\f00d";
     color:inherit;
     position:absolute;
-    top:5px;
-    right:7px;
+    top:0.25em;
+    right:0.35em;
     z-index:999;
     font-weight:normal;
     font-style:normal;
@@ -101,7 +101,7 @@
   }
   .dismiss {
     @extend %message;
-    @include message-dismissible;
+    @include message-modifiers;
   }
 }
 
