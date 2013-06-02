@@ -17,9 +17,9 @@
   });
 
   $(function() {
-    return $(".dismissible").click(function() {
-      return $(this).closest("[data-dismissible]").hide(150, function() {
-        return $(this).closest("[data-dismissible]").remove();
+    return $(".dismiss").click(function() {
+      return $(this).closest(".dismissible").hide(150, function() {
+        return $(this).closest(".dismissible").remove();
       });
     });
   });

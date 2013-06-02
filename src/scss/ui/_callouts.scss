@@ -80,7 +80,7 @@
 }
 
 @mixin callout_modifiers() {
-  $modifiers: small large info alert warning error success square round disabled dismissible;
+  $modifiers: dismissible small large info alert warning error success square round disabled;
   @for $i from 1 through length($modifiers) {
     &.#{nth($modifiers, $i)} {
       @extend %callout-#{nth($modifiers, $i)};

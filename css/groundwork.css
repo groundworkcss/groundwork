@@ -5497,7 +5497,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
 }
 
 .message.dismissible, [role~=alert].dismissible {
-  padding-right: 1em;
+  padding-right: 1.5em;
 }
 
 .dismiss:after {
@@ -5683,6 +5683,10 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
+}
+
+.callout.dismissible, [role~=status].dismissible {
+  padding-right: 1.5em;
 }
 
 table {
