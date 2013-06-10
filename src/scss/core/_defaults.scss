@@ -95,7 +95,7 @@ $success-color:       #468847 !default;
 $success-background:  #dff0d8 !default;
 $success-border:      #d6e9c6 !default;
 
-$state-name:    disabled         info         alert         warning         error         success        !default;
+$state-name:   'disabled'       'info'       'alert'       'warning'       'error'       'success'       !default;
 $state-code:   $disabled-color  $info-color  $alert-color  $warning-color  $error-color  $success-color  !default;
 $state-text:   $white           $white       $white        $white          $white        $white          !default;
 
@@ -110,9 +110,9 @@ $pink:                #f02475 !default;
 $turquoise:           #1abc9c !default;
 $asphalt:             #34495e !default;
 
-$modifier-name:    green     blue     purple     yellow     orange     red     pink     turquoise     asphalt  !default;
-$modifier-code:   $green    $blue    $purple    $yellow    $orange    $red    $pink    $turquoise    $asphalt  !default;
-$modifier-text:   $white    $white   $white     $white     $white     $white  $white   $white        $white    !default;
+$modifier-name:   'green'   'blue'   'purple'   'yellow'   'orange'   'red'   'pink'   'turquoise'   'asphalt'  !default;
+$modifier-code:   $green    $blue    $purple    $yellow    $orange    $red    $pink    $turquoise    $asphalt   !default;
+$modifier-text:   $white    $white   $white     $white     $white     $white  $white   $white        $white     !default;
 
 // rounded corners
 $radius:              4px !default;
