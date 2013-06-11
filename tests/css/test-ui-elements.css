@@ -3760,18 +3760,20 @@ ol.list li.asphalt:before {
 }
 
 .message.dismissible, [role~=alert].dismissible, .extend-message.extend-dismissible {
-  padding-right: 3em;
+  padding-right: 1.5em;
 }
-.message.dismissible:after, [role~=alert].dismissible:after, .extend-message.extend-dismissible:after {
-  content: 'X';
-  display: block;
-  padding: 0.5em 0;
-  font-size: 0.8em;
-  text-align: center;
+
+.dismiss:after {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  content: "\f00d";
+  color: inherit;
   position: absolute;
-  top: 0;
-  right: 1em;
-  line-height: 1.5;
+  top: 0.25em;
+  right: 0.35em;
+  z-index: 999;
+  cursor: pointer;
 }
 
 .callout, [role~=status], .extend-callout {
@@ -3946,19 +3948,8 @@ ol.list li.asphalt:before {
   outline: none;
 }
 
-.extend-callout.extend-dismissible {
-  padding-right: 3em;
-}
-.extend-callout.extend-dismissible:after {
-  content: 'X';
-  display: block;
-  padding: 0.5em 0;
-  font-size: 0.8em;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  right: 1em;
-  line-height: 1.5;
+.callout.dismissible, [role~=status].dismissible, .extend-callout.extend-dismissible {
+  padding-right: 1.5em;
 }
 
 table {

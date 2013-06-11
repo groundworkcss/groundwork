@@ -1,8 +1,8 @@
 (function() {
   $(function() {
-    return $(".dismissible").click(function() {
-      return $(this).hide(150, function() {
-        return $(this).remove();
+    return $(".dismiss").click(function() {
+      return $(this).closest(".dismissible").hide(150, function() {
+        return $(this).closest(".dismissible").remove();
       });
     });
   });

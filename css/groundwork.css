@@ -5498,18 +5498,20 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
 }
 
 .message.dismissible, [role~=alert].dismissible {
-  padding-right: 3em;
+  padding-right: 1.5em;
 }
-.message.dismissible:after, [role~=alert].dismissible:after {
-  content: 'X';
-  display: block;
-  padding: 0.5em 0;
-  font-size: 0.8em;
-  text-align: center;
+
+.dismiss:after {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  content: "\f00d";
+  color: inherit;
   position: absolute;
-  top: 0;
-  right: 1em;
-  line-height: 1.5;
+  top: 0.25em;
+  right: 0.35em;
+  z-index: 999;
+  cursor: pointer;
 }
 
 .callout, [role~=status] {
@@ -5682,6 +5684,10 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
+}
+
+.callout.dismissible, [role~=status].dismissible {
+  padding-right: 1.5em;
 }
 
 table {
