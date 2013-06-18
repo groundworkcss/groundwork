@@ -1,19 +1,29 @@
 {
-  "name": "groundworkcss",
-  "version": "1.8.0",
-  "main": ["src/scss/groundwork.scss"],
-  "ignore": [
+  "name"        : "groundworkcss",
+  "version"     : "1.8.0",
+  "main"        : [
+    "js/groundwork.all.js",
+    "css/groundwork.css"
+  ],
+  "ignore"      : [
     "**/.*",
+    "*.rb",
+    "js/components",
+    "js/plugins",
+    "src",
+    "templates",
+    "tests",
+    "Gemfile",
+    "Gemfile.lock",
+    "Gruntfile.coffee",
+    "*.json",
+    "robots.txt",
     "node_modules",
     "components"
-  ]
-},
-devDependencies: {
-  "grunt": "~0.4.1",
-  "grunt-contrib-watch": "~0.3.1",
-  "grunt-contrib-coffee": "~0.7.0",
-  "grunt-contrib-jade": "~0.5.0",
-  "grunt-contrib-sass": "~0.3.0",
-  "grunt-contrib-compass": "~0.2.0",
-  "grunt-contrib-concat": "~0.3.0"
+  ],
+  "dependencies": {
+    "jquery"       : "~1.9.0",
+    "html5shiv"    : "*",
+    "jquery-cycle2": "*"
+  }
 }
