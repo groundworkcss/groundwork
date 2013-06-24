@@ -55,7 +55,7 @@ $adapters: $one-whole $one-half $one-third $one-fourth $one-fifth;
 
 // function to generate the grid code (placeholders and optionally, classes)
 @for $i from 1 through length($selectors) {
-  @for $j from 1 through length($numbers) {
+  @for $j from 1 through $grid {
     #{nth($selectors, $i) + nth($fractions, $j)},
     #{nth($selectors, $i) + nth($fractions-plural, $j)} {
       width: percentage(1 / $j);
@@ -104,28 +104,54 @@ $adapters: $one-whole $one-half $one-third $one-fourth $one-fifth;
 
 // grid classes responsive
 @mixin grid-responsive($both: true) {
-  // responsive grid
-  %half, %halves,
-  %third, %thirds,
-  %fourth, %fourths,
-  %fifth, %fifths,
-  %sixth, %sixths,
-  %seventh, %sevenths,
-  %eighth, %eighths,
-  %ninth, %ninths,
-  %tenth, %tenths,
-  %eleventh, %elevenths,
-  %twelfth, %twelfths#{if($classes, ", .half, .halves, .third, .thirds, .fourth, .fourths, .fifth, .fifths, .sixth, .sixths, .seventh, .sevenths, .eighth, .eighths, .ninth, .ninths, .tenth, .tenths, .eleventh, .elevenths, .twelfth, .twelfths", "")} {
-    @if $both {
-      &:not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet) {
-        @include grid-collapse();
+  $responsive-grid: ();
+  $responsive-grid-right: ();
+  $responsive-grid-left: ();
+  $responsive-grid-skip: ();
+  @for $i from 1 through length($selectors) {
+    @for $j from 2 through $grid {
+      @if $both {
+        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)"), comma);
+        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)"), comma);
+        @for $right-left-skip from 1 through $j - 1 {
+          $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.small-tablet):not(.mobile)#{nth($selectors, $i)}right-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.small-tablet):not(.mobile)#{nth($selectors, $i)}right-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-left: join($responsive-grid-left, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.small-tablet):not(.mobile)#{nth($selectors, $i)}left-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-left: join($responsive-grid-left, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.small-tablet):not(.mobile)#{nth($selectors, $i)}left-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-skip: join($responsive-grid-skip, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.small-tablet):not(.mobile)#{nth($selectors, $i)}skip-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-skip: join($responsive-grid-skip, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.small-tablet):not(.mobile)#{nth($selectors, $i)}skip-#{nth($numbers, $right-left-skip)}"), comma);
+        }
+      }
+      @else {
+        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)"), comma);
+        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)"), comma);
+        @for $right-left-skip from 1 through $j - 1 {
+          $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile)#{nth($selectors, $i)}right-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile)#{nth($selectors, $i)}right-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-left: join($responsive-grid-left, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile)#{nth($selectors, $i)}left-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-left: join($responsive-grid-left, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile)#{nth($selectors, $i)}left-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-skip: join($responsive-grid-skip, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile)#{nth($selectors, $i)}skip-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-skip: join($responsive-grid-skip, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile)#{nth($selectors, $i)}skip-#{nth($numbers, $right-left-skip)}"), comma);
+        }
       }
     }
-    @else {
-      &:not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile) {
-        @include grid-collapse();
-      }
-    }
+  }
+  #{$responsive-grid} {
+    width:100% !important;
+    float:none;
+    clear:both;
+  }
+  // reset push
+  #{$responsive-grid-right} {
+    left: 0;
+  }
+  // reset pull
+  #{$responsive-grid-left} {
+    right: 0;
+  }
+  // reset offset
+  #{$responsive-grid-skip} {
+    margin-left: 0;
   }
 }
 
@@ -147,46 +173,4 @@ $adapters: $one-whole $one-half $one-third $one-fourth $one-fifth;
       }
     }
   }
-}
-
-@mixin grid-collapse() {
-  width:100% !important;
-  float:none;
-  clear:both;
-  // reset push
-  &%right-one,
-  &%right-two,
-  &%right-three,
-  &%right-four,
-  &%right-five,
-  &%right-six,
-  &%right-seven,
-  &%right-eight,
-  &%right-nine,
-  &%right-ten,
-  &%right-eleven#{if($classes, ", &.right-one, &.right-two, &.right-three, &.right-four, &.right-five, &.right-six, &.right-seven, &.right-eight, &.right-nine, &.right-ten, &.right-eleven", "")}  { left:0; }
-  // reset pull
-  &%left-one,
-  &%left-two,
-  &%left-three,
-  &%left-four,
-  &%left-five,
-  &%left-six,
-  &%left-seven,
-  &%left-eight,
-  &%left-nine,
-  &%left-ten,
-  &%left-eleven#{if($classes, ", &.left-one, &.left-two, &.left-three, &.left-four, &.left-five, &.left-six, &.left-seven, &.left-eight, &.left-nine, &.left-ten, &.left-eleven", "")}   { right:0; }
-  // reset offset
-  &%skip-one,
-  &%skip-two,
-  &%skip-three,
-  &%skip-four,
-  &%skip-five,
-  &%skip-six,
-  &%skip-seven,
-  &%skip-eight,
-  &%skip-nine,
-  &%skip-ten,
-  &%skip-eleven#{if($classes, ", &.skip-one, &.skip-two, &.skip-three, &.skip-four, &.skip-five, &.skip-six, &.skip-seven, &.skip-eight, &.skip-nine, &.skip-ten, &.skip-eleven", "")}   { margin-left:0; }
 }

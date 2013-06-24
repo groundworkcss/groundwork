@@ -6815,7 +6815,7 @@ table tfoot tr td {
   position: relative;
   padding: 5px 15px;
   background: #1dabb8;
-  border: 1px solid #dddddd;
+  border: 1px solid #16828c;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -6879,7 +6879,7 @@ table tfoot tr td {
   z-index: 101;
   padding: 5px 15px;
   background: #1dabb8;
-  border: 1px solid #dddddd;
+  border: 1px solid #16828c;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -7081,7 +7081,7 @@ table tfoot tr td {
   right: 10px;
   bottom: -7px;
   left: auto;
-  border-top: 6px solid #dddddd;
+  border-top: 6px solid #16828c;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
 }
@@ -7099,7 +7099,7 @@ table tfoot tr td {
   right: auto;
   bottom: -7px;
   left: 10px;
-  border-top: 6px solid #dddddd;
+  border-top: 6px solid #16828c;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
 }
@@ -7118,7 +7118,7 @@ table tfoot tr td {
   bottom: auto;
   left: auto;
   border-right: 8px solid transparent;
-  border-bottom: 6px solid #dddddd;
+  border-bottom: 6px solid #16828c;
   border-left: 8px solid transparent;
 }
 #tooltip.bottom.left:after {
@@ -7136,7 +7136,7 @@ table tfoot tr td {
   bottom: auto;
   left: 10px;
   border-right: 8px solid transparent;
-  border-bottom: 6px solid #dddddd;
+  border-bottom: 6px solid #16828c;
   border-left: 8px solid transparent;
 }
 

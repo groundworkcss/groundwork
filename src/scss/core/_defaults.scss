@@ -35,6 +35,7 @@ $boxsizing_path:      '/js/libs/boxsizing.htc' !default;  // path to box sizing 
 // layout/grid settings
 $max-width:           1200px !default;     // max container width (i.e. - 960px)
 $gutter:              10px !default;       // gutter spacing
+$grid:                12 !default;         // number of columns, max 12
 
 // breakpoints
 $small-mobile:        "(max-width: 319px)" !default;
