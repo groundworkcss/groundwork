@@ -115,26 +115,42 @@ $selectors: if($grid-classes, "%" ".", "%");
 
 // grid classes responsive
 @mixin grid-responsive($both: true) {
-  // responsive grid
-  %half, %halves,
-  %third, %thirds,
-  %fourth, %fourths,
-  %fifth, %fifths,
-  %sixth, %sixths,
-  %seventh, %sevenths,
-  %eighth, %eighths,
-  %ninth, %ninths,
-  %tenth, %tenths,
-  %eleventh, %elevenths,
-  %twelfth, %twelfths#{if($grid-classes, ", .half, .halves, .third, .thirds, .fourth, .fourths, .fifth, .fifths, .sixth, .sixths, .seventh, .sevenths, .eighth, .eighths, .ninth, .ninths, .tenth, .tenths, .eleventh, .elevenths, .twelfth, .twelfths", "")} {
-    @if $both {
-      &:not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet) {
-        @include grid-collapse();
+  $nots: ':not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)'; // set up mobile $nots
+  %responsive-grid#{$both} { // reset grid
+    width:100% !important;
+    float:none;
+    clear:both;
+  }
+  %responsive-grid-right#{$both} { // reset push
+    left: 0;
+  }
+  %responsive-grid-left#{$both} { // reset pull
+    right: 0;
+  }
+  %responsive-grid-skip#{$both} { // reset offset
+    margin-left: 0;
+  }
+  @for $i from 1 through length($selectors) {
+    @for $j from 2 through length($numerators) {
+      @if $both {
+        $nots: ':not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)'; // setup tablet $nots
       }
-    }
-    @else {
-      &:not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile) {
-        @include grid-collapse();
+      #{nth($selectors, $i) + nth($denominators, $j) + $nots},
+      #{nth($selectors, $i) + nth($denominators-plural, $j) + $nots} {
+        @extend %responsive-grid#{$both};
+        @for $width from 1 through $j {
+          @if $width < $j {
+            &#{nth($selectors, $i) + "left-" + nth($numerators, $width)} {
+              @extend %responsive-grid-left#{$both};
+            }
+            &#{nth($selectors, $i) + "right-" + nth($numerators, $width)} {
+              @extend %responsive-grid-right#{$both};
+            }
+            &#{nth($selectors, $i) + "skip-" + nth($numerators, $width)} {
+              @extend %responsive-grid-skip#{$both};
+            }
+          }
+        }
       }
     }
   }
@@ -158,46 +174,4 @@ $selectors: if($grid-classes, "%" ".", "%");
       }
     }
   }
-}
-
-@mixin grid-collapse() {
-  width:100% !important;
-  float:none;
-  clear:both;
-  // reset push
-  &%right-one,
-  &%right-two,
-  &%right-three,
-  &%right-four,
-  &%right-five,
-  &%right-six,
-  &%right-seven,
-  &%right-eight,
-  &%right-nine,
-  &%right-ten,
-  &%right-eleven#{if($grid-classes, ", &.right-one, &.right-two, &.right-three, &.right-four, &.right-five, &.right-six, &.right-seven, &.right-eight, &.right-nine, &.right-ten, &.right-eleven", "")}  { left:0; }
-  // reset pull
-  &%left-one,
-  &%left-two,
-  &%left-three,
-  &%left-four,
-  &%left-five,
-  &%left-six,
-  &%left-seven,
-  &%left-eight,
-  &%left-nine,
-  &%left-ten,
-  &%left-eleven#{if($grid-classes, ", &.left-one, &.left-two, &.left-three, &.left-four, &.left-five, &.left-six, &.left-seven, &.left-eight, &.left-nine, &.left-ten, &.left-eleven", "")}   { right:0; }
-  // reset offset
-  &%skip-one,
-  &%skip-two,
-  &%skip-three,
-  &%skip-four,
-  &%skip-five,
-  &%skip-six,
-  &%skip-seven,
-  &%skip-eight,
-  &%skip-nine,
-  &%skip-ten,
-  &%skip-eleven#{if($grid-classes, ", &.skip-one, &.skip-two, &.skip-three, &.skip-four, &.skip-five, &.skip-six, &.skip-seven, &.skip-eight, &.skip-nine, &.skip-ten, &.skip-eleven", "")}   { margin-left:0; }
 }

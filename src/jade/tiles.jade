@@ -123,7 +123,7 @@ block content
       h4.AverageSans Hidden Field &amp; Custom Callback Function
       .tiles
         input.value(type='hidden', value='', id='yepNope')
-        script(type='text/javascript')
+        script(type='text/javascript').
           $(document).ready(function() {
             $('input#yepNope').on('change', function() {
               if($(this).val() == 'yep')

@@ -1,12 +1,12 @@
 !!! 5
-//\[if lt IE 7]><html class="no-js ie ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]
-//\[if IE 7]>   <html class="no-js ie ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]
-//\[if IE 8]>   <html class="no-js ie ie8 lt-ie9 lt-ie10"><![endif]
-//\[if IE 9]>   <html class="no-js ie ie9 lt-ie10"><![endif]
-//\[if gt IE 9]><html class="no-js ie ie10"><![endif]
-//\[if !IE]><!
+| <!--[if lt IE 7]><html class="no-js ie ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+| <!--[if IE 7]>   <html class="no-js ie ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+| <!--[if IE 8]>   <html class="no-js ie ie8 lt-ie9 lt-ie10"><![endif]-->
+| <!--[if IE 9]>   <html class="no-js ie ie9 lt-ie10"><![endif]-->
+| <!--[if gt IE 9]><html class="no-js ie ie10"><![endif]-->
+| <!--[if !IE]><!-->
 html.no-js
-  //\<![endif]
+  | <!--<![endif]-->
 
   head
     meta(charset='utf-8')
@@ -28,7 +28,7 @@ html.no-js
     link(type='text/css', rel='stylesheet', href='../css/groundwork.css')
     //if IE
       link(type='text/css', rel='stylesheet', href='../css/groundwork-ie.css')
-    script(type='text/javascript')
+    script(type='text/javascript').
       // extend Modernizr to have datauri test
       (function(){
         var datauri = new Image();
@@ -126,7 +126,7 @@ html.no-js
                   a(href='./cycle2.html', title='Cycle2 Slideshows') Cycle2
 
     block content
-    
+
     footer.footer
       .container.padded
         .green.callout
@@ -162,7 +162,7 @@ html.no-js
     script(type='text/javascript', src='../js/plugins/jquery.magnific-popup.js')
     script(type='text/javascript', src='../js/groundwork.all.js')
     // google analytics
-    script(type='text/javascript')
+    script(type='text/javascript').
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
       _gaq.push(['_trackPageview']);
