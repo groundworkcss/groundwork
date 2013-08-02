@@ -1,0 +1,58 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Unresponsive UI Elements
+    link(rel="stylesheet", href="css/test-unresponsive-ui-elements.css")
+
+  body
+    .container
+      .padded.align-center
+        h1 Groundwork Test: Unresponsive UI Elements
+        p This page generates UI elements using classes and extends. Things are good when:
+        ul.list
+          li Elements appear as they should regardless of whether classes or extends are used.
+
+      .row.headings
+        .one.half Classes
+        .one.half Placeholders
+
+      - var elements = ["callout", "message"]
+
+      each element in elements
+
+        - var types = ["", "info", "alert", "warning", "error", "success"]
+
+        each type in types
+          .row.demo
+            .one.half: div(class="#{element} #{type}")
+              | .#{element}.#{type}
+            .one.half: div(class="extend-#{element} extend-#{type}")
+              | .extend-#{element}.extend-#{type}
+
+          - var states = ["active", "disabled"] // dismissible requires inclusion of javascript component
+
+          each state in states
+            .row.demo
+              .one.half: div(class="#{element} #{type} #{state}")
+                | .#{element}.#{type}.#{state}
+              .one.half: div(class="extend-#{element} extend-#{type} extend-#{state}")
+                | .extend-#{element}.extend-#{type}.extend-#{state}
+
+          - var sizes = ["small", "large"]
+
+          each size in sizes
+            .row.demo
+              .one.half: div(class="#{element} #{type} #{size}")
+                | .#{element}.#{type}.#{size}
+              .one.half: div(class="extend-#{element} extend-#{type} extend-#{size}")
+                | .extend-#{element}.extend-#{type}.extend-#{size}
+
+          - var styles = ["square", "round"]
+
+          each style in styles
+            .row.demo
+              .one.half: div(class="#{element} #{type} #{style}")
+                | .#{element}.#{type}.#{style}
+              .one.half: div(class="extend-#{element} extend-#{type} extend-#{style}")
+                | .extend-#{element}.extend-#{type}.extend-#{style}

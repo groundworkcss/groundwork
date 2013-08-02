@@ -14,7 +14,11 @@
 ///////////////////////////////////////////////
 
 %container {
-  max-width: $max-width;
+	@if $responsive {
+	  max-width: $max-width;
+	} @else {
+		width: $max-width;
+	}
   margin: 0 auto;
 }
 
@@ -75,103 +79,107 @@ $selectors: if($grid-classes, "%" ".", "%");
   }
 }
 
-// small-tablet grid adapters
-@media #{$small-tablet} {
-  @for $i from 1 through length($grid-adapters) {
-    .#{nth($numerators, ($i))}-up-small-tablet {
-      width: nth($grid-adapters, $i) !important;
-      clear: none !important;
-      float: left !important;
-      left: 0 !important;
-      right: 0 !important;
-    }
-  }
-}
-// grid adapter nth clearfix
-@media #{$small-tablet} and #{$not-mobile} {
-  @for $i from 1 through length($grid-adapters) {
-    .#{nth($numerators, ($i))}-up-small-tablet {
-      &:nth-child(#{$i + 1}) {
-        clear: both !important;
-      }
-    }
-  }
-}
-// mobile grid adapters
-@media #{$mobile} {
-  @for $i from 1 through length($grid-adapters) {
-    .#{nth($numerators, ($i))}-up-mobile {
-      width: nth($grid-adapters, $i) !important;
-      clear: none !important;
-      float: left !important;
-      left: 0 !important;
-      right: 0 !important;
-      &:nth-child(#{$i + 1}) {
-        clear: both !important;
-      }
-    }
-  }
-}
-
 // grid classes responsive
 @mixin grid-responsive($both: true) {
-  $nots: ':not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)'; // set up mobile $nots
-  %responsive-grid#{$both} { // reset grid
-    width:100% !important;
-    float:none;
-    clear:both;
-  }
-  %responsive-grid-right#{$both} { // reset push
-    left: 0;
-  }
-  %responsive-grid-left#{$both} { // reset pull
-    right: 0;
-  }
-  %responsive-grid-skip#{$both} { // reset offset
-    margin-left: 0;
-  }
-  @for $i from 1 through length($selectors) {
-    @for $j from 2 through length($numerators) {
-      @if $both {
-        $nots: ':not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)'; // setup tablet $nots
-      }
-      #{nth($selectors, $i) + nth($denominators, $j) + $nots},
-      #{nth($selectors, $i) + nth($denominators-plural, $j) + $nots} {
-        @extend %responsive-grid#{$both};
-        @for $width from 1 through $j {
-          @if $width < $j {
-            &#{nth($selectors, $i) + "left-" + nth($numerators, $width)} {
-              @extend %responsive-grid-left#{$both};
-            }
-            &#{nth($selectors, $i) + "right-" + nth($numerators, $width)} {
-              @extend %responsive-grid-right#{$both};
-            }
-            &#{nth($selectors, $i) + "skip-" + nth($numerators, $width)} {
-              @extend %responsive-grid-skip#{$both};
-            }
-          }
-        }
-      }
-    }
-  }
+	$nots: ':not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)'; // set up mobile $nots
+	%responsive-grid#{$both} { // reset grid
+		width:100% !important;
+		float:none;
+		clear:both;
+	}
+	%responsive-grid-right#{$both} { // reset push
+		left: 0;
+	}
+	%responsive-grid-left#{$both} { // reset pull
+		right: 0;
+	}
+	%responsive-grid-skip#{$both} { // reset offset
+		margin-left: 0;
+	}
+	@for $i from 1 through length($selectors) {
+		@for $j from 2 through length($numerators) {
+			@if $both {
+				$nots: ':not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)'; // setup tablet $nots
+			}
+			#{nth($selectors, $i) + nth($denominators, $j) + $nots},
+			#{nth($selectors, $i) + nth($denominators-plural, $j) + $nots} {
+				@extend %responsive-grid#{$both};
+				@for $width from 1 through $j {
+					@if $width < $j {
+						&#{nth($selectors, $i) + "left-" + nth($numerators, $width)} {
+							@extend %responsive-grid-left#{$both};
+						}
+						&#{nth($selectors, $i) + "right-" + nth($numerators, $width)} {
+							@extend %responsive-grid-right#{$both};
+						}
+						&#{nth($selectors, $i) + "skip-" + nth($numerators, $width)} {
+							@extend %responsive-grid-skip#{$both};
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-@media #{$small-tablet} and #{$not-mobile} {
-  @for $i from 1 through length($grid-adapters) {
-    .#{nth($numerators, ($i))}-up-small-tablet {
-      &:nth-child(#{$i + 1}) {
-        clear: both !important;
-      }
-    }
-  }
-}
+@if $responsive {
 
-@media #{$mobile} {
-  @for $i from 1 through length($grid-adapters) {
-    .#{nth($numerators, ($i))}-up-mobile {
-      &:nth-child(#{$i + 1}) {
-        clear: both !important;
-      }
-    }
-  }
+	// small-tablet grid adapters
+	@media #{$small-tablet} {
+		@for $i from 1 through length($grid-adapters) {
+			.#{nth($numerators, ($i))}-up-small-tablet {
+				width: nth($grid-adapters, $i) !important;
+				clear: none !important;
+				float: left !important;
+				left: 0 !important;
+				right: 0 !important;
+			}
+		}
+	}
+	// grid adapter nth clearfix
+	@media #{$small-tablet} and #{$not-mobile} {
+		@for $i from 1 through length($grid-adapters) {
+			.#{nth($numerators, ($i))}-up-small-tablet {
+				&:nth-child(#{$i + 1}) {
+					clear: both !important;
+				}
+			}
+		}
+	}
+	// mobile grid adapters
+	@media #{$mobile} {
+		@for $i from 1 through length($grid-adapters) {
+			.#{nth($numerators, ($i))}-up-mobile {
+				width: nth($grid-adapters, $i) !important;
+				clear: none !important;
+				float: left !important;
+				left: 0 !important;
+				right: 0 !important;
+				&:nth-child(#{$i + 1}) {
+					clear: both !important;
+				}
+			}
+		}
+	}
+
+	@media #{$small-tablet} and #{$not-mobile} {
+		@for $i from 1 through length($grid-adapters) {
+			.#{nth($numerators, ($i))}-up-small-tablet {
+				&:nth-child(#{$i + 1}) {
+					clear: both !important;
+				}
+			}
+		}
+	}
+
+	@media #{$mobile} {
+		@for $i from 1 through length($grid-adapters) {
+			.#{nth($numerators, ($i))}-up-mobile {
+				&:nth-child(#{$i + 1}) {
+					clear: both !important;
+				}
+			}
+		}
+	}
+
 }

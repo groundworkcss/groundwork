@@ -1,0 +1,128 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Unresponsive grid
+    link(rel="stylesheet", href="css/test-unresponsive-grid.css")
+    script(type='text/javascript', src='../js/libs/jquery-1.10.2.min.js')
+    script(type='text/javascript', src='../js/components/equalizeColumns.js')
+
+  body
+    .container
+      .padded.align-center
+        h1 Groundwork Test: Unresponsive grid
+        p This page generates grid elements using classes and extends. Things are good when:
+        ul.list
+          li The grid doesn't adjust when the viewport is resized (width 1200px).
+          li All grid elements are static in width.
+
+      - var selectors = { class: "", extend: "extend-"}
+
+      .row.headings
+        .one.whole Standard Grid
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 3; i++) {
+              div(class="#{type}one #{type}third") one third #{name}
+            - }
+      br
+
+      .row.headings
+        .one.whole Small-Tablet Grid
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 3; i++) {
+              div(class="#{type}one #{type}third small-tablet") one third small-tablet #{name}
+            - }
+      br
+
+      .row.headings
+        .one.whole Mobile Grid
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 3; i++) {
+              div(class="#{type}one #{type}third mobile") one third mobile #{name}
+            - }
+      br
+
+      .row.headings
+        .one.whole Grid Adapters
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 4; i++) {
+              div(class="#{type}one #{type}fourth two-up-small-tablet") one fourth two-up-small-tablet #{name}
+            - }
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 4; i++) {
+              div(class="#{type}one #{type}fourth small-tablet two-up-mobile") one fourth small-tablet two-up-mobile #{name}
+            - }
+      br
+
+      .row.headings
+        .one.whole Re-ordering
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            div(class="#{type}three #{type}fifths")
+              p First (#{name})
+            div(class="#{type}two #{type}fifths")
+              p Second (#{name})
+          div.demo(class="#{type}row")
+            div(class="#{type}three #{type}fifths #{type}right-two")
+              p First (right-two #{name})
+            div(class="#{type}two #{type}fifths #{type}left-three")
+              p Second (left-three #{name})
+      br
+
+      .row.headings
+        .one.whole Centering
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            div(class="#{type}one #{type}third #{type}centered")
+              p One third centered #{name}
+      br
+
+      .row.headings
+        .one.whole Offsetting
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            div(class="#{type}one #{type}fifths")
+              p One fifths #{name}
+            div(class="#{type}two #{type}fifths #{type}skip-two")
+              p Two fifths skip-two #{name}
+      br
+
+      .row.headings
+        .one.whole Mobile Grid
+      each type, name in selectors
+        div(class="#{type}container")
+          each device in ["small-tablet", "mobile"]
+            div.demo(class="#{type}row")
+              div(class="#{type}one #{type}fifths #{type}#{device}")
+                p One fifths #{device} #{name}
+              div(class="#{type}one #{type}fifths #{type}right-one #{type}#{device}")
+                p One fifths right-one #{device} #{name}
+              div(class="#{type}one #{type}fifths #{type}skip-two #{type}#{device}")
+                p One fifths skip-two #{device} #{name}
+      br
+
+      .row.headings
+        .one.whole Equal Height Columns
+      div(class="container")
+        each device in ["", "small-tablet", "mobile"]
+          div.demo(class="row equalize")
+            div(class="one third #{device}", style="background:#999;")
+              img(src="http://placehold.it/100x100&amp;text=Short")
+            div(class="one third #{device}", style="background:#777;")
+              img(src="http://placehold.it/200x200&amp;text=Medium")
+            div(class="one third #{device}", style="background:#555;")
+              img(src="http://placehold.it/300x300&amp;text=Tall")
+          br

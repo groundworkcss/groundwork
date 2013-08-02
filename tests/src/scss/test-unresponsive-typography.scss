@@ -1,0 +1,20 @@
+$type-classes: true;
+$root_path: '../../';
+$responsive: false;
+@import "../../../src/scss/core/all-core";
+@import "../../../src/scss/base/all-base";
+@import "../../../src/scss/type/all-type";
+@import "../../../src/scss/icons/all-icons";
+// @import "../../../src/scss/nav/all-nav";
+// @import "../../../src/scss/ui/all-ui";
+// @import "../../../src/scss/form/all-form";
+// @import "../../../src/scss/responsive/all-responsive";
+
+@import "demo";
+
+
+$elements: h1 h2 h3 h4 h5 h6 p ul ol dl blockquote cite small big large em italic b bold strong sup sub code pre error invalid success valid warning;
+
+@for $i from 1 through length($elements) {
+  .extend-#{nth($elements, $i)} { @extend %#{nth($elements, $i)}; }
+}

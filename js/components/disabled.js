@@ -2,6 +2,7 @@
   $(function() {
     $('.disabled').each(function() {
       var $this;
+
       $this = $(this);
       $this.attr('tabindex', '-1');
       $this.find('a').attr('tabindex', '-1');

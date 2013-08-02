@@ -31,6 +31,8 @@ $reset-elements:      html body
 
 $global-tags:         true !default;       // enable output in base/_global.scss  (recommended)
 
+$responsive:          true !default;       // enable media queries and container width (recommended)
+
 // grid settings
 $grid-classes:        true !default;       // enable output of grid classes       (recommended)
 $numerators:          one    two    three  four    five   six    seven    eight   nine   ten    eleven    twelve !default;

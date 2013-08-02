@@ -39,6 +39,7 @@
 
     TruncateLines.prototype.measure = function() {
       var i;
+
       this.reset();
       $(this.el).html(".");
       this.singleLineHeight = $(this.el).outerHeight();
@@ -55,6 +56,7 @@
 
     TruncateLines.prototype.setContent = function() {
       var truncated;
+
       this.reset();
       truncated = false;
       this.addWords(this.words.length);
@@ -67,6 +69,7 @@
 
     TruncateLines.prototype.addNumberWordsThatFit = function() {
       var can, cant, mid;
+
       cant = this.words.length;
       can = 0;
       mid = Math.floor(this.words.length / 2);
@@ -93,6 +96,7 @@
 
     TruncateLines.prototype.adjustOnResize = function() {
       var _this = this;
+
       return $(window).on('resize', function() {
         clearTimeout(delayedAdjustTruncation[_this.index]);
         return delayedAdjustTruncation[_this.index] = setTimeout(function() {
@@ -111,6 +115,7 @@
 
   (function($) {
     var truncateInitialized, truncatedLineElements;
+
     truncateInitialized = false;
     truncatedLineElements = [];
     return $.fn.truncateLines = function() {

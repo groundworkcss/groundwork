@@ -69,11 +69,15 @@ module.exports = (grunt) ->
           pretty: true
       tests:
         files:
-          'tests/test-buttons.html':      ['tests/src/jade/test-buttons.jade']
-          'tests/test-grid.html':         ['tests/src/jade/test-grid.jade']
-          'tests/test-helpers.html':      ['tests/src/jade/test-helpers.jade']
-          'tests/test-typography.html':   ['tests/src/jade/test-typography.jade']
-          'tests/test-ui-elements.html':  ['tests/src/jade/test-ui-elements.jade']
+          'tests/test-buttons.html'                 : ['tests/src/jade/test-buttons.jade']
+          'tests/test-grid.html'                    : ['tests/src/jade/test-grid.jade']
+          'tests/test-helpers.html'                 : ['tests/src/jade/test-helpers.jade']
+          'tests/test-typography.html'              : ['tests/src/jade/test-typography.jade']
+          'tests/test-ui-elements.html'             : ['tests/src/jade/test-ui-elements.jade']
+          'tests/test-unresponsive-grid.html'       : ['tests/src/jade/test-unresponsive-grid.jade']
+          'tests/test-unresponsive-ui-elements.html': ['tests/src/jade/test-unresponsive-ui-elements.jade']
+          'tests/test-unresponsive-typography.html' : ['tests/src/jade/test-unresponsive-typography.jade']
+          'tests/test-unresponsive-buttons.html'    : ['tests/src/jade/test-unresponsive-buttons.jade']
 
     compass:
       groundwork:

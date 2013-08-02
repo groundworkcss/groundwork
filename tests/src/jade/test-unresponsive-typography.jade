@@ -1,0 +1,55 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Unresponsive Typography
+    link(rel="stylesheet", href="css/test-unresponsive-typography.css")
+
+  body
+    .container
+      .padded.align-center
+        h1 Groundwork Test: Unresponsive Typography
+        p This page generates typography elements using tags, classes and extends. Things are good when:
+        ul.list
+          li Elements appear as they should regardless of whether tags, classes or extends are used.
+
+      .row.headings
+        .one.third Tags
+        .one.third Classes
+        .one.third Placeholders
+
+      - var elements = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "sup", "sub", "small", "big", "em", "b", "blockquote", "code", "pre"]
+
+      each element in elements
+        .row.demo
+          .one.third: #{element}
+            | #{element}
+          .one.third: div(class="#{element}")
+            | .#{element}
+          .one.third: div(class="extend-#{element}")
+            | .extend-#{element}
+
+      - var structures = ["ul", "ol", "dl", "pre", "blockquote"]
+
+      each structure in structures
+
+        case structure
+          when "ul"
+            - var text = ["List item"]
+            - var elements = ["li"]
+          when "ol"
+            - var text = ["List item"]
+            - var elements = ["li"]
+          when "dl"
+            - var text = ["Something", "definition of something"]
+            - var elements = ["dt", "dd"]
+          when "pre"
+            - var text = ["Formatted code sample"]
+            - var elements = ["code"]
+          when "blockquote"
+            - var text = ["Example quotation", "Author"]
+            - var elements = ["span", "cite"]
+
+        #{structure}
+          each element, i in elements
+            #{element} #{text[i]}

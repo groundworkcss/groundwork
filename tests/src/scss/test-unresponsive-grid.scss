@@ -1,12 +1,13 @@
 $root_path: '../../';
+$responsive: false;
 @import "../../../src/scss/core/all-core";
 @import "../../../src/scss/base/all-base";
 @import "../../../src/scss/type/all-type";
 @import "../../../src/scss/icons/all-icons";
-@import "../../../src/scss/responsive/all-responsive";
 // @import "../../../src/scss/nav/all-nav";
 // @import "../../../src/scss/ui/all-ui";
 // @import "../../../src/scss/form/all-form";
+@import "../../../src/scss/responsive/all-responsive";
 
 @import "demo";
 

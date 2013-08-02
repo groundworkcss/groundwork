@@ -8,6 +8,7 @@
   $(function() {
     var $body, delay, openMenu,
       _this = this;
+
     $body = $('body');
     delay = void 0;
     openMenu = function($target) {
@@ -29,6 +30,7 @@
     });
     $body.on('click', navSelector + ' > ul > li.menu:not(.disabled) > a', function(e) {
       var $target;
+
       $target = $(e.target);
       if (!$target.hasClass('focused')) {
         if (Modernizr.touch || $window.width() < 768) {
@@ -45,6 +47,7 @@
     });
     $body.on('focusin', navSelector + ' > ul > li.menu > a', function(e) {
       var $target;
+
       $target = $(e.currentTarget);
       $target.addClass('focused');
       openMenu($target);
@@ -55,12 +58,14 @@
     });
     $body.on('dropdown', function(e) {
       var $target;
+
       $target = $(e.target);
       $('.dropdown').not($target).removeClass('on');
       $target[$target.hasClass('on') ? 'removeClass' : 'addClass']('on');
     });
     $body.on('click', '.dropdown', function(e) {
       var $target;
+
       $target = $(e.currentTarget);
       if (!$target.is('a')) {
         e.stopPropagation();
@@ -73,6 +78,7 @@
     });
     $body.on('click', function() {
       var $dropdown, $menu;
+
       $dropdown = $('.dropdown.on');
       if ($dropdown.length) {
         $dropdown.removeClass('on');
@@ -84,6 +90,7 @@
     });
     $body.on('focus', '.dropdown', function(e) {
       var $target;
+
       $target = $(e.currentTarget);
       if (!$(e.target).is('a')) {
         if ($target.hasClass('dropdown')) {
@@ -98,11 +105,13 @@
     });
     $body.on('menu-toggle', function(e) {
       var $target;
+
       $target = $(e.target).parents(navSelector + '.menu');
       $target[$target.hasClass('on') ? 'removeClass' : 'addClass']('on');
     });
     $(navSelector + '.menu').each(function() {
       var $this;
+
       $this = $(this);
       if (!$this.attr('data-label')) {
         $this.attr('data-label', 'Menu');
@@ -113,6 +122,7 @@
     });
     $body.on('click', navSelector + '.menu .menu-toggle', function(e) {
       var $parent, $target;
+
       $target = $(e.target);
       e.stopPropagation();
       e.preventDefault();
@@ -131,6 +141,7 @@
     });
     $body.on('focusin', navSelector + '.menu .menu-toggle', function(e) {
       var $parent, $target;
+
       $target = $(e.target);
       if ($target.hasClass('menu-toggle')) {
         $target.addClass('focused').trigger('menu-toggle');
@@ -145,6 +156,7 @@
 
   $window.on('resize', function() {
     var selector;
+
     selector = $(navSelector + ' > ul > li.menu.on');
     if (selector.length > 1) {
       return selector.removeClass('on').first().addClass('on');

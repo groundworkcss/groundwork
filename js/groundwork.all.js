@@ -4,6 +4,7 @@
   $(function() {
     $('.disabled').each(function() {
       var $this;
+
       $this = $(this);
       $this.attr('tabindex', '-1');
       $this.find('a').attr('tabindex', '-1');
@@ -30,11 +31,13 @@
   equalizeColumns = function() {
     return $('.row.equalize').each(function() {
       var $row, collapsed, tallest;
+
       $row = $(this);
       tallest = 0;
       collapsed = false;
       $row.children('*').each(function(i) {
         var $this;
+
         $this = $(this);
         $this.css('minHeight', '1px');
         collapsed = $this.outerWidth() === $row.outerWidth();
@@ -55,12 +58,14 @@
 
   $(function() {
     var $body;
+
     $body = $('body');
     $body.on('click', ['.error input', '.error textarea', '.invalid input', '.invalid textarea', 'input.error', 'textarea.error ', 'input.invalid', 'textarea.invalid '].join(','), function() {
       return $(this).focus().select();
     });
     $('.select select').each(function() {
       var $this;
+
       $this = $(this);
       if ($this.children('option').first().val() === '' && $this.children('option').first().attr('selected')) {
         $this.addClass('unselected');
@@ -70,6 +75,7 @@
     });
     $body.on('change', '.select select', function() {
       var $this;
+
       $this = $(this);
       if ($this.children('option').first().val() === '' && $this.children('option').first().attr('selected')) {
         $this.addClass('unselected');
@@ -86,6 +92,7 @@
   $(function() {
     var $body, delay, openMenu,
       _this = this;
+
     $body = $('body');
     delay = void 0;
     openMenu = function($target) {
@@ -107,6 +114,7 @@
     });
     $body.on('click', navSelector + ' > ul > li.menu:not(.disabled) > a', function(e) {
       var $target;
+
       $target = $(e.target);
       if (!$target.hasClass('focused')) {
         if (Modernizr.touch || $window.width() < 768) {
@@ -123,6 +131,7 @@
     });
     $body.on('focusin', navSelector + ' > ul > li.menu > a', function(e) {
       var $target;
+
       $target = $(e.currentTarget);
       $target.addClass('focused');
       openMenu($target);
@@ -133,12 +142,14 @@
     });
     $body.on('dropdown', function(e) {
       var $target;
+
       $target = $(e.target);
       $('.dropdown').not($target).removeClass('on');
       $target[$target.hasClass('on') ? 'removeClass' : 'addClass']('on');
     });
     $body.on('click', '.dropdown', function(e) {
       var $target;
+
       $target = $(e.currentTarget);
       if (!$target.is('a')) {
         e.stopPropagation();
@@ -151,6 +162,7 @@
     });
     $body.on('click', function() {
       var $dropdown, $menu;
+
       $dropdown = $('.dropdown.on');
       if ($dropdown.length) {
         $dropdown.removeClass('on');
@@ -162,6 +174,7 @@
     });
     $body.on('focus', '.dropdown', function(e) {
       var $target;
+
       $target = $(e.currentTarget);
       if (!$(e.target).is('a')) {
         if ($target.hasClass('dropdown')) {
@@ -176,11 +189,13 @@
     });
     $body.on('menu-toggle', function(e) {
       var $target;
+
       $target = $(e.target).parents(navSelector + '.menu');
       $target[$target.hasClass('on') ? 'removeClass' : 'addClass']('on');
     });
     $(navSelector + '.menu').each(function() {
       var $this;
+
       $this = $(this);
       if (!$this.attr('data-label')) {
         $this.attr('data-label', 'Menu');
@@ -191,6 +206,7 @@
     });
     $body.on('click', navSelector + '.menu .menu-toggle', function(e) {
       var $parent, $target;
+
       $target = $(e.target);
       e.stopPropagation();
       e.preventDefault();
@@ -209,6 +225,7 @@
     });
     $body.on('focusin', navSelector + '.menu .menu-toggle', function(e) {
       var $parent, $target;
+
       $target = $(e.target);
       if ($target.hasClass('menu-toggle')) {
         $target.addClass('focused').trigger('menu-toggle');
@@ -223,6 +240,7 @@
 
   $window.on('resize', function() {
     var selector;
+
     selector = $(navSelector + ' > ul > li.menu.on');
     if (selector.length > 1) {
       return selector.removeClass('on').first().addClass('on');
@@ -266,10 +284,12 @@
 
   $(function() {
     var $body;
+
     limitPaginationItems();
     $body = $('body');
     $body.on('click', '.pagination ul > li:not(.next, .prev) a', function(e) {
       var $next, $prev, $this;
+
       $this = $(this);
       $('.pagination ul > li:not(.next, .prev)').removeClass('active');
       $this.parent('li').addClass('active');
@@ -291,6 +311,7 @@
     });
     $body.on('click', '.pagination ul > li.prev:not(.disabled)', function(e) {
       var el;
+
       $('.pagination ul > li.next').removeClass('disabled');
       el = $('.pagination ul > li.active');
       if (!el.hasClass('first')) {
@@ -306,6 +327,7 @@
     });
     $body.on('click', '.pagination ul > li.next:not(.disabled)', function(e) {
       var el;
+
       $('.pagination ul > li.prev').removeClass('disabled');
       el = $('.pagination ul > li.active');
       if (!el.hasClass('last')) {
@@ -332,6 +354,7 @@
   limitPaginationItems = function() {
     $('.pagination ul').each(function() {
       var pagination, totalItemsWidth, visibleItemsWidth, visibleSpace, _results;
+
       pagination = $(this);
       visibleSpace = pagination.outerWidth() - pagination.children('li.prev').outerWidth() - pagination.children('li.next').outerWidth();
       totalItemsWidth = 0;
@@ -369,6 +392,7 @@
   $(function() {
     $('body').on('click', '.tabs > ul li a[href^=#], [role=tab] a', function(e) {
       var $this, tabs;
+
       $this = $(this);
       if (!$this.hasClass('disabled')) {
         if ($this.parents('[role=tabpanel]').length > 0) {
@@ -388,15 +412,18 @@
 
   $(function() {
     var $body;
+
     $body = $('body');
     $('.tiles').each(function() {
       var $this;
+
       $this = $(this);
       $this.find('.tile').attr('role', 'button');
       $this.find('.tile[data-value=' + $this.find('input.value, select.value').val() + ']').addClass('active');
     });
     $body.on('click', '.tiles .tile', function(e) {
       var $this, tiles;
+
       $this = $(this);
       if (!$this.hasClass('disabled')) {
         tiles = $this.parents('.tiles');
@@ -409,6 +436,7 @@
     });
     $body.on('change', '.tiles input.value, .tiles select.value', function() {
       var $this, tiles;
+
       $this = $(this);
       tiles = $this.parents('.tiles');
       tiles.find('.tile').removeClass('active');
@@ -455,6 +483,7 @@
 
     ResponsiveTable.prototype.fontSize = function() {
       var compressed;
+
       if (this.height === "auto") {
         compressed = $('tbody td', $(this.el)).first().width() / this.compression;
       } else {
@@ -489,6 +518,7 @@
 
     ResponsiveTable.prototype.adjustOnLoad = function() {
       var _this = this;
+
       return $(window).on('load', function() {
         return _this.resizeTable();
       });
@@ -496,6 +526,7 @@
 
     ResponsiveTable.prototype.adjustOnResize = function() {
       var _this = this;
+
       return $(window).on('resize', function() {
         clearTimeout(delayedAdjustTables[_this.index]);
         return delayedAdjustTables[_this.index] = setTimeout(function() {
@@ -510,6 +541,7 @@
 
   (function($) {
     var responsiveTableElements;
+
     responsiveTableElements = [];
     return $.fn.responsiveTables = function(options) {
       return this.each(function() {
@@ -565,6 +597,7 @@
 
     ResponsiveText.prototype.adjustOnLoad = function() {
       var _this = this;
+
       return $(window).on('load', function() {
         return _this.resizeText();
       });
@@ -572,6 +605,7 @@
 
     ResponsiveText.prototype.adjustOnResize = function() {
       var _this = this;
+
       return $(window).on('resize', function() {
         clearTimeout(delayedAdjustText[_this.index]);
         return delayedAdjustText[_this.index] = setTimeout(function() {
@@ -582,6 +616,7 @@
 
     ResponsiveText.prototype.scrollOnHover = function() {
       var _this = this;
+
       $(this.el).css({
         'overflow': 'hidden',
         'text-overflow': 'ellipsis',
@@ -613,6 +648,7 @@
 
   (function($) {
     var responsiveTextElements;
+
     responsiveTextElements = [];
     return $.fn.responsiveText = function(options) {
       return this.each(function() {
@@ -639,6 +675,7 @@
   (function($) {
     return $.fn.tooltip = function(options) {
       var closetooltip, defaults, delayShow, getElementPosition, resettooltip, setPosition, showtooltip, tooltip, trigger;
+
       defaults = {
         topOffset: 0,
         delay: 100,
@@ -654,6 +691,7 @@
       }
       getElementPosition = function(el) {
         var bottom, left, offset, right, top, win;
+
         offset = el.offset();
         win = $(window);
         return {
@@ -665,6 +703,7 @@
       };
       setPosition = function(trigger) {
         var attrs, coords, height, width;
+
         coords = getElementPosition(trigger);
         if (tooltip.outerWidth() > ($(window).width() - 20)) {
           tooltip.css('width', $(window).width() - 20);
@@ -727,6 +766,7 @@
       };
       this.each(function() {
         var $this;
+
         $this = $(this);
         $this.attr('role', 'tooltip').attr('data-title', $this.attr('title'));
         return $this.removeAttr("title");
@@ -798,6 +838,7 @@
 
     TruncateLines.prototype.measure = function() {
       var i;
+
       this.reset();
       $(this.el).html(".");
       this.singleLineHeight = $(this.el).outerHeight();
@@ -814,6 +855,7 @@
 
     TruncateLines.prototype.setContent = function() {
       var truncated;
+
       this.reset();
       truncated = false;
       this.addWords(this.words.length);
@@ -826,6 +868,7 @@
 
     TruncateLines.prototype.addNumberWordsThatFit = function() {
       var can, cant, mid;
+
       cant = this.words.length;
       can = 0;
       mid = Math.floor(this.words.length / 2);
@@ -852,6 +895,7 @@
 
     TruncateLines.prototype.adjustOnResize = function() {
       var _this = this;
+
       return $(window).on('resize', function() {
         clearTimeout(delayedAdjustTruncation[_this.index]);
         return delayedAdjustTruncation[_this.index] = setTimeout(function() {
@@ -870,6 +914,7 @@
 
   (function($) {
     var truncateInitialized, truncatedLineElements;
+
     truncateInitialized = false;
     truncatedLineElements = [];
     return $.fn.truncateLines = function() {

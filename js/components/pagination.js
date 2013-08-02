@@ -3,10 +3,12 @@
 
   $(function() {
     var $body;
+
     limitPaginationItems();
     $body = $('body');
     $body.on('click', '.pagination ul > li:not(.next, .prev) a', function(e) {
       var $next, $prev, $this;
+
       $this = $(this);
       $('.pagination ul > li:not(.next, .prev)').removeClass('active');
       $this.parent('li').addClass('active');
@@ -28,6 +30,7 @@
     });
     $body.on('click', '.pagination ul > li.prev:not(.disabled)', function(e) {
       var el;
+
       $('.pagination ul > li.next').removeClass('disabled');
       el = $('.pagination ul > li.active');
       if (!el.hasClass('first')) {
@@ -43,6 +46,7 @@
     });
     $body.on('click', '.pagination ul > li.next:not(.disabled)', function(e) {
       var el;
+
       $('.pagination ul > li.prev').removeClass('disabled');
       el = $('.pagination ul > li.active');
       if (!el.hasClass('last')) {
@@ -69,6 +73,7 @@
   limitPaginationItems = function() {
     $('.pagination ul').each(function() {
       var pagination, totalItemsWidth, visibleItemsWidth, visibleSpace, _results;
+
       pagination = $(this);
       visibleSpace = pagination.outerWidth() - pagination.children('li.prev').outerWidth() - pagination.children('li.next').outerWidth();
       totalItemsWidth = 0;

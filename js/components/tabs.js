@@ -2,6 +2,7 @@
   $(function() {
     $('body').on('click', '.tabs > ul li a[href^=#], [role=tab] a', function(e) {
       var $this, tabs;
+
       $this = $(this);
       if (!$this.hasClass('disabled')) {
         if ($this.parents('[role=tabpanel]').length > 0) {

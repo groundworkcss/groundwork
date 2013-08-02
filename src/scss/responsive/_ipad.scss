@@ -7,19 +7,21 @@
 
 
 @mixin ipad {
-  @media #{$ipad} {
-    // conditional helpers
-    .ipad-only { display: block !important; }
-    span.ipad-only { display: inline !important; }
-    .hide-on-ipad { display: none !important; }
-    .desktop-only { display: none !important; }
-    // spacer overrides
-    .zero-ipad { @include helper_reset(); }
-    .no-padding-ipad, .no-pad-ipad { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-    .no-margin-ipad, .no-gap-ipad { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
-    .no-border-ipad { border: 0; }
-    @content;
-  }
+	@if $responsive {
+		@media #{$ipad} {
+			// conditional helpers
+			.ipad-only { display: block !important; }
+			span.ipad-only { display: inline !important; }
+			.hide-on-ipad { display: none !important; }
+			.desktop-only { display: none !important; }
+			// spacer overrides
+			.zero-ipad { @include helper_reset(); }
+			.no-padding-ipad, .no-pad-ipad { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+			.no-margin-ipad, .no-gap-ipad { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+			.no-border-ipad { border: 0; }
+			@content;
+		}
+	}
 }
 
 

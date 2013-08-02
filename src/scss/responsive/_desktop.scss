@@ -7,16 +7,18 @@
 
 
 @mixin desktop {
-  @media #{$desktop} {
-    // conditional helpers
-    .hide-on-desktop { display: none !important; }
-    // spacer overrides
-    .zero-desktop { @include helper_reset(); }
-    .no-padding-desktop, .no-pad-desktop { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-    .no-margin-desktop, .no-gap-desktop { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
-    .no-border-desktop { border: 0; }
-    @content;
-  }
+	@if $responsive {
+		@media #{$desktop} {
+			// conditional helpers
+			.hide-on-desktop { display: none !important; }
+			// spacer overrides
+			.zero-desktop { @include helper_reset(); }
+			.no-padding-desktop, .no-pad-desktop { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+			.no-margin-desktop, .no-gap-desktop { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+			.no-border-desktop { border: 0; }
+			@content;
+		}
+	}
 }
 
 

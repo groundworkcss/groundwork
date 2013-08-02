@@ -44,6 +44,7 @@
 
     ResponsiveText.prototype.adjustOnLoad = function() {
       var _this = this;
+
       return $(window).on('load', function() {
         return _this.resizeText();
       });
@@ -51,6 +52,7 @@
 
     ResponsiveText.prototype.adjustOnResize = function() {
       var _this = this;
+
       return $(window).on('resize', function() {
         clearTimeout(delayedAdjustText[_this.index]);
         return delayedAdjustText[_this.index] = setTimeout(function() {
@@ -61,6 +63,7 @@
 
     ResponsiveText.prototype.scrollOnHover = function() {
       var _this = this;
+
       $(this.el).css({
         'overflow': 'hidden',
         'text-overflow': 'ellipsis',
@@ -92,6 +95,7 @@
 
   (function($) {
     var responsiveTextElements;
+
     responsiveTextElements = [];
     return $.fn.responsiveText = function(options) {
       return this.each(function() {

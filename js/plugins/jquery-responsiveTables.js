@@ -40,6 +40,7 @@
 
     ResponsiveTable.prototype.fontSize = function() {
       var compressed;
+
       if (this.height === "auto") {
         compressed = $('tbody td', $(this.el)).first().width() / this.compression;
       } else {
@@ -74,6 +75,7 @@
 
     ResponsiveTable.prototype.adjustOnLoad = function() {
       var _this = this;
+
       return $(window).on('load', function() {
         return _this.resizeTable();
       });
@@ -81,6 +83,7 @@
 
     ResponsiveTable.prototype.adjustOnResize = function() {
       var _this = this;
+
       return $(window).on('resize', function() {
         clearTimeout(delayedAdjustTables[_this.index]);
         return delayedAdjustTables[_this.index] = setTimeout(function() {
@@ -95,6 +98,7 @@
 
   (function($) {
     var responsiveTableElements;
+
     responsiveTableElements = [];
     return $.fn.responsiveTables = function(options) {
       return this.each(function() {

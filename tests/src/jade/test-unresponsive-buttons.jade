@@ -1,0 +1,85 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Unresponsive Buttons
+    link(rel="stylesheet", href="css/test-unresponsive-buttons.css")
+
+  body
+    .container
+      .padded.align-center
+        h1 Groundwork Test: Unresponsive Buttons
+        p This page generates button elements using classes and extends. Things are good when:
+        ul.list
+          li Elements appear as they should regardless of whether classes or extends are used.
+
+      .row.headings
+        .one.third Tags
+        .one.third Classes
+        .one.third Placeholders
+
+      - var element = "button"
+
+      - var types = ["", "info", "alert", "warning", "error", "success", "green", "blue", "purple", "yellow", "orange", "red", "asphalt"]
+
+      each type in types
+        .row.demo
+          .one.third: #{element}(class="#{type}")
+            | &lt;#{element} class="#{type}"&gt;
+          .one.third: a(href="#", class="#{element} #{type}")
+            | .#{element}.#{type}
+          .one.third: a(href="#", class="extend-#{element} extend-#{type}")
+            | .extend-#{element}.#{type}
+
+        - var states = ["active", "disabled"]
+
+        each state in states
+          .row.demo
+            .one.third: #{element}(class="#{type} #{state}")
+              | &lt;#{element} class="#{type} #{state}"&gt;
+            .one.third: a(href="#", class="#{element} #{type} #{state}")
+              | .#{element}.#{type}.#{state}
+            .one.third: a(href="#", class="extend-#{element} extend-#{type} extend-#{state}")
+              | .extend-#{element}.#{type}.#{state}
+
+        - var sizes = ["small", "large"]
+
+        each size in sizes
+          .row.demo
+            .one.third: #{element}(class="#{type} #{size}")
+              | &lt;#{element} class="#{type} #{size}"&gt;
+            .one.third: a(href="#", class="#{element} #{type} #{size}")
+              | .#{element}.#{type}.#{size}
+            .one.third: a(href="#", class="extend-#{element} extend-#{type} extend-#{size}")
+              | .extend-#{element}.#{type}.#{size}
+
+        - var styles = ["square", "round", "block"]
+
+        each style in styles
+          .row.demo
+            .one.third: #{element}(class="#{type} #{style}")
+              | &lt;#{element} class="#{type} #{style}"&gt;
+            .one.third: a(href="#", class="#{element} #{type} #{style}")
+              | .#{element}.#{type}.#{style}
+            .one.third: a(href="#", class="extend-#{element} extend-#{type} extend-#{style}")
+              | .extend-#{element}.#{type}.#{style}
+
+      //- .row.demo
+      //-   .one.third
+      //-     button(class="dropdown")
+      //-       | &lt;button class="dropdown"&gt;
+      //-       ul
+      //-         li
+      //-           a(href="#") Example menu item
+      //-   .one.third
+      //-     span(class="button dropdown")
+      //-       | &lt;span class="button dropdown"&gt;
+      //-       span(class="dropdown-list")
+      //-         span(class="dropdown-list-item")
+      //-           span(class="dropdown-menu-item") Example menu item
+      //-   .one.third
+      //-     span(class="extend-button extend-dropdown")
+      //-       | &lt;span class="extend-button extend-dropdown"&gt;
+      //-       span(class="extend-dropdown-list")
+      //-         span(class="extend-dropdown-list-item")
+      //-           span(class="extend-dropdown-menu-item") Example menu item
