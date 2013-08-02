@@ -36,6 +36,7 @@ $grid-classes:        true !default;       // enable output of grid classes     
 $numerators:          one    two    three  four    five   six    seven    eight   nine   ten    eleven    twelve !default;
 $denominators:        whole  half   third  fourth  fifth  sixth  seventh  eighth  ninth  tenth  eleventh  twelfth !default;
 $denominators-plural: wholes halves thirds fourths fifths sixths sevenths eighths ninths tenths elevenths twelfths !default;
+$adapter-classes:     true !default;       // enable output of grid adapter classes (recommended)
 $grid-adapters:       $one-whole $one-half $one-third $one-fourth $one-fifth !default;
 $max-width:           1200px !default;     // maximum container width (i.e. - 960px)
 $gutter:              10px !default;       // gutter spacing (used by padded/gapped helpers, elements with padding, etc.)
