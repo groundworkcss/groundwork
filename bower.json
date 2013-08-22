@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "jquery": "~1.10.2",
-    "modernizer": "~2.6.2",
+    "modernizr": "~2.6.2",
     "jquery-cycle2": "*"
   }
 }
