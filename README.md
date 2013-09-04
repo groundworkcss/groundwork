@@ -43,7 +43,6 @@ markup. The 2 most important files are:
 In addition, these support files may be used:
 
 * css/groundwork-ie.css (IE Compatibility)
-* js/libs/html5shiv.min.js (IE Compatibility)
 * css/font-awesome-ie7.min.css (IE Compatibility)
 * js/plugins/jquery.cycle2.js (Required for Cycle2)
 
