@@ -4,10 +4,10 @@ $ ->
     $this = $ this
     unless $this.hasClass('disabled')
       
-      if $this.parents('[role=tabpanel]').length > 0
-        tabs = $this.parents('[role=tabpanel]')
+      if $this.closest('[role=tabpanel]').length > 0
+        tabs = $this.closest('[role=tabpanel]')
       else
-        tabs = $this.parents('.tabs')
+        tabs = $this.closest('.tabs')
         
       tabs.find('> ul li a, [role=tab] a').removeClass('active')
       $this.addClass('active')
