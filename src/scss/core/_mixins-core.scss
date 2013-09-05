@@ -44,21 +44,52 @@
   *background-image: url("#{$root_path}#{$images_path}#{$file}");       // IE7- hack
 }
 
-// gradient
-@mixin gradient($startColor: $white, $endColor: $gray-2, $direction: "top") {
-  @include background-image(linear-gradient($direction, $startColor, $endColor));
-  @if $direction == "top" {
-    $direction: "to bottom";
-  } @elseif $direction == "bottom" {
-    $direction: "to top";
+// Return the modulo of two numbers
+@function mod($dividend,$divisor) {
+  @return $dividend - (floor($dividend/$divisor)*$divisor);
+}
+
+// Return the corrected angle or position for a css gradient
+@function angle($deg) {
+  @if type-of($deg) == 'number' {
+    @return mod(abs($deg - 450), 360deg);
   } @else {
-    @if $direction == "left" {
-      $direction: "to right";
-    } @else {
-      $direction: "to left";
+    $position: to + " ";
+    @each $pos in $deg {
+      $position: $position + opposite-position($pos) + " ";
     }
+    @return $position;
   }
-  -pie-background: linear-gradient($direction, $startColor, $endColor);  // IE 6-7  -- Thank Jason for these polyfills for legacy IE browsers: http://css3pie.com/
+}
+
+@mixin gradient($startColor: $white, $endColor: $gray-2, $direction: "top") {
+  $direction: unquote($direction);
+  $old: top;
+  $correct: to bottom;
+
+  @if(index($direction, unquote("to")) == 1) {
+    $correct: $direction;
+    @if(length($direction) == 2) {
+      $old: opposite-position(nth($direction, 2));
+    } @elseif(length($direction) == 3) {
+      $old: opposite-position(join(nth($direction, 2), nth($direction, 3)));
+    }
+  } @else {
+    $old: $direction;
+    $correct: angle($old); // handle both angles and old literals
+                           // I'm not sure for the angle part though
+                           // as it assumes that the mixin user is 
+                           // doing it wrong...
+  }
+  // works with compass 0.13.alpha.4
+  // @include background-image(linear-gradient($correct, $startColor, $endColor));
+
+  // works with compass 0.12
+  @include background-image(linear-gradient($old, $startColor, $endColor));
+  background-image: linear-gradient($correct, $startColor, $endColor); // override with correct css3 syntax
+
+  // For poor old IE
+  -pie-background: linear-gradient($correct, $startColor, $endColor);  // IE 6-7  -- Thank Jason for these polyfills for legacy IE browsers: http://css3pie.com/
   *behavior: url($PIE_path);  // IE 6-7  -- Thank Jason for these polyfills for legacy IE browsers: http://css3pie.com/
 }
 
