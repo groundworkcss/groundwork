@@ -8,10 +8,6 @@
   "ignore"      : [
     "**/.*",
     "*.rb",
-    "js/components",
-    "js/plugins",
-    "src",
-    "templates",
     "tests",
     "Gemfile",
     "Gemfile.lock",
