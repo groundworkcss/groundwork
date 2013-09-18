@@ -11,11 +11,11 @@
 // =============================================
 
 // file paths
-// $root_path:                 "../"; path to HTML document root (relative from CSS)
-// $images_path:               "images/"; path to images (relative from $root_path)
-// $fonts_path:                "fonts/"; path to fonts (relative from $root_path)
-// $boxsizing_path:            "/js/libs/boxsizing.htc"; path to box sizing polyfill (change to absolute path from HTML document root)
-// $PIE_path:                  "/js/libs/PIE.htc"; path to IE CSS3 polyfill (change to absolute path from HTML document root)
+// $root_path:                 "../"; // path to HTML document root (relative from CSS)
+// $images_path:               "images/"; // path to images (relative from $root_path)
+// $fonts_path:                "fonts/"; // path to fonts (relative from $root_path)
+// $boxsizing_path:            "/js/libs/boxsizing.htc"; // path to box sizing polyfill (change to absolute path from HTML document root)
+// $PIE_path:                  "/js/libs/PIE.htc"; // path to IE CSS3 polyfill (change to absolute path from HTML document root)
 
 
 // =============================================
@@ -45,8 +45,8 @@
 //                 Color Palette
 // =============================================
 
-// $white:               #ffffff;
-// $black:               #111111;
+// $white:                     #ffffff;
+// $black:                     #111111;
 
 // document
 // $background-color:          #ffffff;
@@ -57,7 +57,7 @@
 // $link-active:               #198D98;
 
 // selection highlight
-// $selection-color:           $link-color;
+// $selection-color:           // $link-color;
 // $selection-text:            #ffffff;
 
 // code
@@ -68,7 +68,7 @@
 // $border-thickness:          1px;
 // $border-style:              solid;
 // $border-color:              #dddddd;
-// $border:                    #{$border-thickness} #{$border-style} #{$border-color};
+// $border:                    #{// $border-thickness} #{// $border-style} #{// $border-color};
 
 // buttons
 // $button-color:              lighten(gray, 32.5%);
@@ -132,13 +132,13 @@
 // disabled
 // $disabled-color:            #808080;
 // $disabled-text:             #dddddd;
-// $disabled-background:       lighten($disabled-color, 20%);
-// $disabled-border:           darken($disabled-color, 10%);
+// $disabled-background:       lighten(// $disabled-color, 20%);
+// $disabled-border:           darken(// $disabled-color, 10%);
 
 // modifier states
 // $state-name:                "info"       "alert"       "warning"       "error"       "success"       "question"       "disabled";
-// $state-code:                $info-color  $alert-color  $warning-color  $error-color  $success-color  $question-color  $disabled-color;
-// $state-text:                $info-text   $alert-text   $warning-text   $error-text   $success-text   $question-text   $disabled-text;
+// $state-code:                // $info-color  // $alert-color  // $warning-color  // $error-color  // $success-color  // $question-color  // $disabled-color;
+// $state-text:                // $info-text   // $alert-text   // $warning-text   // $error-text   // $success-text   // $question-text   // $disabled-text;
 
 // modifier colors
 // $yellow:                    #f1c40f;
@@ -153,8 +153,8 @@
 // $green:                     #2ecc71;
 
 // $modifier-name:             "green"   "blue"   "purple"   "yellow"   "orange"   "red"   "pink"   "turquoise"   "asphalt"  "charcoal"  "white"   "black";
-// $modifier-code:             $green    $blue    $purple    $yellow    $orange    $red    $pink    $turquoise    $asphalt   $charcoal   $white    $black;
-// $modifier-text:             $white    $white   $white     $white     $white     $white  $white   $white        $white     $white      $black    $white;
+// $modifier-code:             // $green    // $blue    // $purple    // $yellow    // $orange    // $red    // $pink    // $turquoise    // $asphalt   // $charcoal   // $white    // $black;
+// $modifier-text:             // $white    // $white   // $white     // $white     // $white     // $white  // $white   // $white        // $white     // $white      // $black    // $white;
 
 
 // =============================================
@@ -167,7 +167,7 @@
 // $denominators-plural:       "wholes" "halves" "thirds" "fourths" "fifths" "sixths" "sevenths" "eighths" "ninths" "tenths" "elevenths" "twelfths";
 // $grid-classes:              true;
 // $grid-adapter-classes:      true;
-// $grid-adapters:             $one-whole $one-half $one-third $one-fourth $one-fifth;
+// $grid-adapters:             // $one-whole // $one-half // $one-third // $one-fourth // $one-fifth;
 // $grid-adapters-clearfix:    15;
 // $container-width:           1200px;
 // $gutter:                    10px;
@@ -198,7 +198,7 @@
 // =============================================
 
 // flexible box layout
-// $flexbox-classes:           true; enable output of flexbox classes
+// $flexbox-classes:           true; // enable output of flexbox classes
 // $flexbox-helpers:           "flex-wrapper" "flex-box" "vertical-center";
 
 
@@ -274,12 +274,12 @@
 // $multi-column-names:        "one-column" "two-column" "three-column" "four-column" "five-column";
 // $ui-states:                 "info"  "alert" "warning" "error" "success" "question";
 // $ui-icons:                  "\f05a" "\f06a" "\f071"   "\f057" "\f058"   "\f059";
-// $ui-states-colors:          $info-color $alert-color $warning-color $error-color $success-color $question-color;
+// $ui-states-colors:          // $info-color // $alert-color // $warning-color // $error-color // $success-color // $question-color;
 // $font-family:               Helvetica, Arial, Geneva, sans-serif;
 // $font-size:                 14px;
 // $line-height:               1.5;
 // $heading-line-height:       1.3;
-// $headings-font:             nth($web-font-names, 1);
+// $headings-font:             nth(// $web-font-names, 1);
 // $links-underlined:          false;
 // $links-active-underlined:   true;
 // $link-type-icons:           true;

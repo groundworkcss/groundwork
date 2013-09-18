@@ -10,7 +10,6 @@
     "*.json",
     "*.rb",
     "js/demo",
-    "src",
     "Gruntfile.coffee",
     "node_modules"
   ],
