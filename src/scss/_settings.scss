@@ -11,11 +11,11 @@
 // =============================================
 
 // file paths
-// $root_path:                 "../"; path to HTML document root (relative from CSS)
-// $images_path:               "images/"; path to images (relative from $root_path)
-// $fonts_path:                "fonts/"; path to fonts (relative from $root_path)
-// $boxsizing_path:            "/js/libs/boxsizing.htc"; path to box sizing polyfill (change to absolute path from HTML document root)
-// $PIE_path:                  "/js/libs/PIE.htc"; path to IE CSS3 polyfill (change to absolute path from HTML document root)
+// $root_path:                 "../"; // path to HTML document root (relative from CSS)
+// $images_path:               "images/"; // path to images (relative from $root_path)
+// $fonts_path:                "fonts/"; // path to fonts (relative from $root_path)
+// $boxsizing_path:            "/js/libs/boxsizing.htc"; // path to box sizing polyfill (change to absolute path from HTML document root)
+// $PIE_path:                  "/js/libs/PIE.htc"; // path to IE CSS3 polyfill (change to absolute path from HTML document root)
 
 
 // =============================================
@@ -45,8 +45,8 @@
 //                 Color Palette
 // =============================================
 
-// $white:               #ffffff;
-// $black:               #111111;
+// $white:                     #ffffff;
+// $black:                     #111111;
 
 // document
 // $background-color:          #ffffff;
@@ -198,7 +198,7 @@
 // =============================================
 
 // flexible box layout
-// $flexbox-classes:           true; enable output of flexbox classes
+// $flexbox-classes:           true; // enable output of flexbox classes
 // $flexbox-helpers:           "flex-wrapper" "flex-box" "vertical-center";
 
 
