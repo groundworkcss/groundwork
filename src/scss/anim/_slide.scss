@@ -1,0 +1,96 @@
+$slide-animations: true !default;
+
+
+@if $slide-animations {
+
+  @keyframes slideInDown {
+	0% {
+	  opacity: 0;
+	  transform: translateY(-2000px);
+	}
+	
+	100% {
+	  transform: translateY(0);
+	}
+  }
+
+  .slideInDown {
+    animation-name: slideInDown;
+  }
+
+  @keyframes slideInLeft {
+	0% {
+	  opacity: 0;
+	  transform: translateX(-2000px);
+	}
+	
+	100% {
+	  transform: translateX(0);
+	}
+  }
+
+  .slideInLeft {
+    animation-name: slideInLeft;
+  }
+
+  @keyframes slideInRight {
+	0% {
+	  opacity: 0;
+	  transform: translateX(2000px);
+	}
+	
+	100% {
+	  transform: translateX(0);
+	}
+  }
+
+  .slideInRight {
+    animation-name: slideInRight;
+  }
+
+  @keyframes slideOutLeft {
+	0% {
+	  transform: translateX(0);
+	}
+	
+	100% {
+	  opacity: 0;
+	  transform: translateX(-2000px);
+	}
+  }
+
+  .slideOutLeft {
+    animation-name: slideOutLeft;
+  }
+
+  @keyframes slideOutRight {
+	0% {
+	  transform: translateX(0);
+	}
+	
+	100% {
+	  opacity: 0;
+	  transform: translateX(2000px);
+	}
+  }
+
+  .slideOutRight {
+    animation-name: slideOutRight;
+  }
+
+  @keyframes slideOutUp {
+	0% {
+	  transform: translateY(0);
+	}
+	
+	100% {
+	  opacity: 0;
+	  transform: translateY(-2000px);
+	}
+  }
+
+  .slideOutUp {
+    animation-name: slideOutUp;
+  }
+
+}
