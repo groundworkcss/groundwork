@@ -41,7 +41,35 @@ $grid-count: 0;
 }
 
 %guttered {
-  padding: $gutter / 2;
+  width: auto;
+  @include _offset-left();
+  & > * {
+    @include _pad-left();
+  }
+}
+
+%half-guttered {
+  width: auto;
+  @include _offset-left(0.5);
+  & > * {
+    @include _pad-left(0.5);
+  }
+}
+
+%double-guttered {
+  width: auto;
+  @include _offset-left(2);
+  & > * {
+    @include _pad-left(2);
+  }
+}
+
+%triple-guttered {
+  width: auto;
+  @include _offset-left(3);
+  & > * {
+    @include _pad-left(3);
+  }
 }
 
 %column {
@@ -60,9 +88,15 @@ $grid-selector-types: "%";
   .row                { @extend %row;
     &.guttered {
       @extend %guttered;
-      > * {
-        @extend %guttered;
-      }
+    }
+    &.half-guttered {
+      @extend %half-guttered;
+    }
+    &.double-guttered {
+      @extend %double-guttered;
+    }
+    &.triple-guttered {
+      @extend %double-guttered;
     }
   }
   .column             { @extend %column; }
