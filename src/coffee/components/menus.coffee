@@ -1,4 +1,4 @@
-$ ->
+(($) ->
 
   $body = $('body')
 
@@ -43,3 +43,5 @@ $ ->
   $body.on 'focusout', '.dropdown li:last-child a,
                         .dropdown li:last-child button', (e) ->
     $('.dropdown[aria-pressed="true"]').attr('aria-pressed', 'false')
+
+) jQuery

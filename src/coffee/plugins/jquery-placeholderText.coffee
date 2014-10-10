@@ -94,7 +94,7 @@
 
 ) jQuery
 
-$ ->
+jQuery ($) ->
 
   $('.placeholderText').placeholderText()
 

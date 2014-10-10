@@ -104,7 +104,7 @@
     };
   })(jQuery);
 
-  $(document).ready(function() {
+  jQuery(document).ready(function($) {
     return $("table.responsive").responsiveTables();
   });
 

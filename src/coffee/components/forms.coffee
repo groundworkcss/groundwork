@@ -1,4 +1,4 @@
-$ ->
+(($) ->
 
   $body = $ 'body'
   $targets = [
@@ -17,3 +17,4 @@ $ ->
     $(@).focus()
     $(@).select()
 
+) jQuery
