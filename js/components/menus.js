@@ -50,8 +50,7 @@
         return $dropdown.attr('aria-pressed', 'false');
       }
     });
-    return $body.on('focusout', '.dropdown li:last-child a,\
-                        .dropdown li:last-child button', function(e) {
+    return $body.on('focusout', '.dropdown li:last-child a, .dropdown li:last-child button', function(e) {
       return $('.dropdown[aria-pressed="true"]').attr('aria-pressed', 'false');
     });
   });

@@ -1,3 +1,4 @@
+
 /*
  *
  *  jQuery TruncateLines by Gary Hepting
@@ -7,8 +8,7 @@
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
-*/
-
+ */
 
 (function() {
   var TruncateLines, delayedAdjustTruncation, truncateIndex;
@@ -93,13 +93,14 @@
     };
 
     TruncateLines.prototype.adjustOnResize = function() {
-      var _this = this;
-      return $(window).on('resize', function() {
-        clearTimeout(delayedAdjustTruncation[_this.index]);
-        return delayedAdjustTruncation[_this.index] = setTimeout(function() {
-          return _this.truncate();
-        }, 20);
-      });
+      return $(window).on('resize', (function(_this) {
+        return function() {
+          clearTimeout(delayedAdjustTruncation[_this.index]);
+          return delayedAdjustTruncation[_this.index] = setTimeout(function() {
+            return _this.truncate();
+          }, 20);
+        };
+      })(this));
     };
 
     TruncateLines.prototype.trimTrailingPunctuation = function(str) {
@@ -116,11 +117,7 @@
     truncatedLineElements = [];
     return $.fn.truncateLines = function() {
       if (!truncateInitialized) {
-        $('head').append('\
-<style type="text/css">\
-  [data-truncated="true"] { overflow: hidden; }\
-  [data-truncated="true"]:after { content: "..."; position: absolute; }\
-</style>');
+        $('head').append('<style type="text/css"> [data-truncated="true"] { overflow: hidden; } [data-truncated="true"]:after { content: "..."; position: absolute; } </style>');
       }
       return this.each(function() {
         return truncatedLineElements.push(new TruncateLines(this));
