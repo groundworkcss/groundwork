@@ -5,7 +5,7 @@
 
 $button-tags: true !default
 $button-classes: true !default
-$button-modifiers: "small" "large" "on" "active" "square" "round" "block" !default
+$button-modifiers: "small" "large" "on" "active" "square" "round" "block" "thick" !default
 $button-states: "on" "active" "selected" "pressed" "disabled" "info" "alert" "warning" "error" "success" "question" !default
 $aria-selectors: true !default
 $aria-states: "selected" "pressed" "disabled" "readonly" "invalid" !default
@@ -64,6 +64,9 @@ $disabled-border: darken($disabled-color, 10%) !default
 
 %button-large
   +_large
+
+%button-thick
+  +_thick
 
 %button-square
   +_square

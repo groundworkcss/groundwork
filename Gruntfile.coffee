@@ -31,7 +31,7 @@ module.exports = (grunt) ->
         options:
           sassDir: 'src/sass'
           cssDir: 'css'
-          outputStyle: 'compressed'
+          outputStyle: 'expanded'
 
     autoprefixer:
       build:
