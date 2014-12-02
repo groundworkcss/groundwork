@@ -10,16 +10,16 @@ block content
         .three.fifths.bounceInRight.animated
           h1.zero.museo-slab Animations
           p.quicksand
-            | A collection of pure CSS3 animations, mostly from 
+            | A collection of pure CSS3 animations, mostly from
             a(href='http://daneden.me/animate/', target='_blank') Animate.css
-            |  by 
+            |  by
             a(href='http://twitter.com/_dte', target='_blank') Dan Eden
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 14 of 14
           p
             a.blue.button(href='placeholder-text.html', rel='prev')
               | Back
-            | 
+            |  
             a.green.button(href='home.html', rel='next')
               | Return Home
       hr
@@ -133,18 +133,19 @@ block content
           button.gap-bottom(data-test='spin-slow-once', data-timing='5000') spin-slow-once
           button.gap-bottom(data-test='spin-slow-twice', data-timing='10000') spin-slow-twice
           button.gap-bottom(data-test='spin-slow-thrice', data-timing='15000') spin-slow-thrice
-      
-      :coffeescript
-        $ ->
-          resetTest = ->
-            $('#animateTest').removeClass().addClass('large asphalt animated').text('I do awesome things.')
 
-          $('body').on 'click', '[data-test]', (e) ->
-            resetTest()
-            clearTimeout(window.reset)
-            
-            $('#animateTest').removeClass().addClass('large asphalt animated '+$(this).attr('data-test')).text('I '+$(this).attr('data-test')+'.')
-            
-            window.reset = setTimeout( =>
+      script
+        :coffee
+          $ ->
+            resetTest = ->
+              $('#animateTest').removeClass().addClass('large asphalt animated').text('I do awesome things.')
+
+            $('body').on 'click', '[data-test]', (e) ->
               resetTest()
-            , ($(this).attr('data-timing') || 1300) )
+              clearTimeout(window.reset)
+
+              $('#animateTest').removeClass().addClass('large asphalt animated '+$(this).attr('data-test')).text('I '+$(this).attr('data-test')+'.')
+
+              window.reset = setTimeout( =>
+                resetTest()
+              , ($(this).attr('data-timing') || 1300) )

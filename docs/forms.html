@@ -10,17 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>GroundworkCSS 2 &hearts; Forms</title>
-    <!-- Modernizr -->
+    <!-- Modernizr-->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
     <script type="text/javascript" src="../js/libs/jquery-1.10.2.min.js"></script>
-    <!-- framework css --><!--[if gt IE 9]><!-->
-    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]--><!--[if lte IE 9]>
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-core.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-type.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ui.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-anim.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
+    <!-- framework css--><!--[if gt IE 9]><!-->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]-->
+    <!--if lte IE 9
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-core.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-type.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-ui.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-anim.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-ie.css')
+    
+    -->
     <style type="text/css">
       .logo {
         position: relative;
@@ -40,9 +43,8 @@
     </style>
     <!-- snippet (syntax highlighting for code examples)-->
     <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
-(function() {
-
+    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css">
+    <script>(function() {
   $(document).ready(function() {
     $('pre[data-lang="html"]').snippet("html", {
       style: "groundwork",
@@ -63,7 +65,8 @@
   });
 
 }).call(this);
-</script>
+
+    </script>
   </head>
   <body>
     <header class="padded">
@@ -73,7 +76,7 @@
             <h2 class="logo"><a href="/" target="_parent"><img src="../images/groundwork-logo.svg" alt="GroundworkCSS">GroundworkCSS 2</a></h2>
           </div>
           <div class="one half">
-            <p class="small double-pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.5.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
+            <p class="small double-pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.5.0<br>Created & Maintained by<a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
         </div>
         <nav role="navigation" class="nav gap-top">
@@ -296,167 +299,167 @@
           </form>
           <div class="row">
             <div class="one whole pad-top">
-              <pre data-lang="html">&lt;form action=&quot;#&quot; method=&quot;post&quot;&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Example HTML5 Form&lt;/legend&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;one half padded&quot;&gt;
-        &lt;label for=&quot;name&quot;&gt;Text Field&lt;/label&gt;
-        &lt;input id=&quot;name&quot; type=&quot;text&quot; placeholder=&quot;First &amp; Last Name&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;one half padded&quot;&gt;
-        &lt;label for=&quot;email&quot;&gt;Email Field&lt;/label&gt;
-        &lt;input id=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;you@example.com&quot;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;one whole padded&quot;&gt;
-        &lt;label for=&quot;address&quot;&gt;Address&lt;/label&gt;
-        &lt;input id=&quot;address&quot; type=&quot;text&quot; placeholder=&quot;Street Address&quot;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;two fourths padded&quot;&gt;
-        &lt;input type=&quot;text&quot; placeholder=&quot;City&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;one fourth padded&quot;&gt;&lt;span class=&quot;select-wrap&quot;&gt;
-          &lt;select class=&quot;unselected&quot;&gt;
-            &lt;option value=&quot;&quot; disabled=&quot;&quot; selected=&quot;&quot;&gt;State&lt;/option&gt;
-            &lt;option value=&quot;AL&quot;&gt;Alabama&lt;/option&gt;
-            &lt;option value=&quot;AK&quot;&gt;Alaska&lt;/option&gt;
-            &lt;option value=&quot;AZ&quot;&gt;Arizona&lt;/option&gt;
-            &lt;option value=&quot;AR&quot;&gt;Arkansas&lt;/option&gt;
-            &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
-            &lt;option value=&quot;CO&quot;&gt;Colorado&lt;/option&gt;
-            &lt;option value=&quot;CT&quot;&gt;Connecticut&lt;/option&gt;
-            &lt;option value=&quot;DE&quot;&gt;Delaware&lt;/option&gt;
-            &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
-            &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
-            &lt;option value=&quot;HI&quot;&gt;Hawaii&lt;/option&gt;
-            &lt;option value=&quot;ID&quot;&gt;Idaho&lt;/option&gt;
-            &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
-            &lt;option value=&quot;IN&quot;&gt;Indiana&lt;/option&gt;
-            &lt;option value=&quot;IA&quot;&gt;Iowa&lt;/option&gt;
-            &lt;option value=&quot;KS&quot;&gt;Kansas&lt;/option&gt;
-            &lt;option value=&quot;KY&quot;&gt;Kentucky&lt;/option&gt;
-            &lt;option value=&quot;LA&quot;&gt;Louisiana&lt;/option&gt;
-            &lt;option value=&quot;ME&quot;&gt;Maine&lt;/option&gt;
-            &lt;option value=&quot;MD&quot;&gt;Maryland&lt;/option&gt;
-            &lt;option value=&quot;MA&quot;&gt;Massachusetts&lt;/option&gt;
-            &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
-            &lt;option value=&quot;MN&quot;&gt;Minnesota&lt;/option&gt;
-            &lt;option value=&quot;MS&quot;&gt;Mississippi&lt;/option&gt;
-            &lt;option value=&quot;MO&quot;&gt;Missouri&lt;/option&gt;
-            &lt;option value=&quot;MT&quot;&gt;Montana&lt;/option&gt;
-            &lt;option value=&quot;NE&quot;&gt;Nebraska&lt;/option&gt;
-            &lt;option value=&quot;NV&quot;&gt;Nevada&lt;/option&gt;
-            &lt;option value=&quot;NH&quot;&gt;New Hampshire&lt;/option&gt;
-            &lt;option value=&quot;NJ&quot;&gt;New Jersey&lt;/option&gt;
-            &lt;option value=&quot;NM&quot;&gt;New Mexico&lt;/option&gt;
-            &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
-            &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
-            &lt;option value=&quot;ND&quot;&gt;North Dakota&lt;/option&gt;
-            &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
-            &lt;option value=&quot;OK&quot;&gt;Oklahoma&lt;/option&gt;
-            &lt;option value=&quot;OR&quot;&gt;Oregon&lt;/option&gt;
-            &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;
-            &lt;option value=&quot;RI&quot;&gt;Rhode Island&lt;/option&gt;
-            &lt;option value=&quot;SC&quot;&gt;South Carolina&lt;/option&gt;
-            &lt;option value=&quot;SD&quot;&gt;South Dakota&lt;/option&gt;
-            &lt;option value=&quot;TN&quot;&gt;Tennessee&lt;/option&gt;
-            &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
-            &lt;option value=&quot;UT&quot;&gt;Utah&lt;/option&gt;
-            &lt;option value=&quot;VT&quot;&gt;Vermont&lt;/option&gt;
-            &lt;option value=&quot;VA&quot;&gt;Virginia&lt;/option&gt;
-            &lt;option value=&quot;WA&quot;&gt;Washington&lt;/option&gt;
-            &lt;option value=&quot;WV&quot;&gt;West Virginia&lt;/option&gt;
-            &lt;option value=&quot;WI&quot;&gt;Wisconsin&lt;/option&gt;
-            &lt;option value=&quot;WY&quot;&gt;Wyoming&lt;/option&gt;
-            &lt;option value=&quot;AS&quot;&gt;American Samoa&lt;/option&gt;
-            &lt;option value=&quot;DC&quot;&gt;District of Columbia&lt;/option&gt;
-            &lt;option value=&quot;FM&quot;&gt;Federated States of Micronesia&lt;/option&gt;
-            &lt;option value=&quot;GU&quot;&gt;Guam&lt;/option&gt;
-            &lt;option value=&quot;MH&quot;&gt;Marshall Islands&lt;/option&gt;
-            &lt;option value=&quot;MP&quot;&gt;Northern Mariana Islands&lt;/option&gt;
-            &lt;option value=&quot;PW&quot;&gt;Palau&lt;/option&gt;
-            &lt;option value=&quot;PR&quot;&gt;Puerto Rico&lt;/option&gt;
-            &lt;option value=&quot;VI&quot;&gt;Virgin Islands&lt;/option&gt;
-            &lt;option value=&quot;AE&quot;&gt;Armed Forces Africa&lt;/option&gt;
-            &lt;option value=&quot;AA&quot;&gt;Armed Forces Americas&lt;/option&gt;
-            &lt;option value=&quot;AE&quot;&gt;Armed Forces Canada&lt;/option&gt;
-            &lt;option value=&quot;AE&quot;&gt;Armed Forces Europe&lt;/option&gt;
-            &lt;option value=&quot;AE&quot;&gt;Armed Forces Middle East&lt;/option&gt;
-            &lt;option value=&quot;AP&quot;&gt;Armed Forces Pacific&lt;/option&gt;
-            &lt;option value=&quot;AB&quot;&gt;Alberta&lt;/option&gt;
-            &lt;option value=&quot;BC&quot;&gt;British Columbia&lt;/option&gt;
-            &lt;option value=&quot;MB&quot;&gt;Manitoba&lt;/option&gt;
-            &lt;option value=&quot;NB&quot;&gt;New Brunswick&lt;/option&gt;
-            &lt;option value=&quot;NL&quot;&gt;Newfoundland and Labrador&lt;/option&gt;
-            &lt;option value=&quot;NS&quot;&gt;Nova Scotia&lt;/option&gt;
-            &lt;option value=&quot;NT&quot;&gt;Northwest Territories&lt;/option&gt;
-            &lt;option value=&quot;NU&quot;&gt;Nunavut&lt;/option&gt;
-            &lt;option value=&quot;ON&quot;&gt;Ontario&lt;/option&gt;
-            &lt;option value=&quot;PE&quot;&gt;Prince Edward Island&lt;/option&gt;
-            &lt;option value=&quot;QC&quot;&gt;Quebec&lt;/option&gt;
-            &lt;option value=&quot;SK&quot;&gt;Saskatchewan&lt;/option&gt;
-            &lt;option value=&quot;YT&quot;&gt;Yukon Territory&lt;/option&gt;
-          &lt;/select&gt;&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;one fourth padded&quot;&gt;
-        &lt;input type=&quot;text&quot; placeholder=&quot;Zip Code&quot;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;one whole padded&quot;&gt;
-        &lt;label for=&quot;message&quot;&gt;Special Instructions&lt;/label&gt;
-        &lt;textarea id=&quot;message&quot; placeholder=&quot;Enter your message...&quot;&gt;&lt;/textarea&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;one whole pad-left&quot;&gt;
-        &lt;label for=&quot;twitter&quot;&gt;Prefixed &amp; Suffixed&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;one half padded&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
-          &lt;div class=&quot;one mobile sixth&quot;&gt;&lt;span class=&quot;prefix&quot;&gt;@&lt;/span&gt;&lt;/div&gt;
-          &lt;div class=&quot;five mobile sixths&quot;&gt;
-            &lt;input id=&quot;twitter&quot; type=&quot;text&quot; name=&quot;twitter&quot; placeholder=&quot;twitter handle&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;one half padded&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
-          &lt;div class=&quot;three mobile fifths&quot;&gt;
-            &lt;input type=&quot;text&quot; name=&quot;sidereel&quot; placeholder=&quot;desired username&quot;&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;two mobile fifths&quot;&gt;&lt;span class=&quot;suffix&quot;&gt;@example.com&lt;/span&gt;&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;one whole padded&quot;&gt;
-        &lt;label for=&quot;thing1&quot;&gt;Radio Buttons:&lt;/label&gt;
-        &lt;ul class=&quot;unstyled zero&quot;&gt;
-          &lt;li&gt;
-            &lt;input id=&quot;thing1&quot; type=&quot;radio&quot; name=&quot;things&quot; checked=&quot;&quot;&gt;
-            &lt;label for=&quot;thing1&quot; class=&quot;inline&quot;&gt;Thing one&lt;/label&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;input id=&quot;thing2&quot; type=&quot;radio&quot; name=&quot;things&quot;&gt;
-            &lt;label for=&quot;thing2&quot; class=&quot;inline&quot;&gt;Thing two&lt;/label&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;one whole padded&quot;&gt;
-        &lt;input id=&quot;allthings&quot; type=&quot;checkbox&quot; name=&quot;things&quot; checked=&quot;&quot;&gt;
-        &lt;label for=&quot;allthings&quot; class=&quot;inline&quot;&gt; I want all the things!&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+              <pre data-lang="html"><form action="#" method="post">
+  <fieldset>
+    <legend>Example HTML5 Form</legend>
+    <div class="row">
+      <div class="one half padded">
+        <label for="name">Text Field</label>
+        <input id="name" type="text" placeholder="First &amp; Last Name">
+      </div>
+      <div class="one half padded">
+        <label for="email">Email Field</label>
+        <input id="email" type="email" placeholder="you@example.com">
+      </div>
+    </div>
+    <div class="row">
+      <div class="one whole padded">
+        <label for="address">Address</label>
+        <input id="address" type="text" placeholder="Street Address">
+      </div>
+    </div>
+    <div class="row">
+      <div class="two fourths padded">
+        <input type="text" placeholder="City">
+      </div>
+      <div class="one fourth padded"><span class="select-wrap">
+          <select class="unselected">
+            <option value="" disabled="" selected="">State</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+            <option value="AS">American Samoa</option>
+            <option value="DC">District of Columbia</option>
+            <option value="FM">Federated States of Micronesia</option>
+            <option value="GU">Guam</option>
+            <option value="MH">Marshall Islands</option>
+            <option value="MP">Northern Mariana Islands</option>
+            <option value="PW">Palau</option>
+            <option value="PR">Puerto Rico</option>
+            <option value="VI">Virgin Islands</option>
+            <option value="AE">Armed Forces Africa</option>
+            <option value="AA">Armed Forces Americas</option>
+            <option value="AE">Armed Forces Canada</option>
+            <option value="AE">Armed Forces Europe</option>
+            <option value="AE">Armed Forces Middle East</option>
+            <option value="AP">Armed Forces Pacific</option>
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon Territory</option>
+          </select></span></div>
+      <div class="one fourth padded">
+        <input type="text" placeholder="Zip Code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="one whole padded">
+        <label for="message">Special Instructions</label>
+        <textarea id="message" placeholder="Enter your message..."></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one whole pad-left">
+        <label for="twitter">Prefixed &amp; Suffixed</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one half padded">
+        <div class="row">
+          <div class="one mobile sixth"><span class="prefix">@</span></div>
+          <div class="five mobile sixths">
+            <input id="twitter" type="text" name="twitter" placeholder="twitter handle">
+          </div>
+        </div>
+      </div>
+      <div class="one half padded">
+        <div class="row">
+          <div class="three mobile fifths">
+            <input type="text" name="sidereel" placeholder="desired username">
+          </div>
+          <div class="two mobile fifths"><span class="suffix">@example.com</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one whole padded">
+        <label for="thing1">Radio Buttons:</label>
+        <ul class="unstyled zero">
+          <li>
+            <input id="thing1" type="radio" name="things" checked="">
+            <label for="thing1" class="inline">Thing one</label>
+          </li>
+          <li>
+            <input id="thing2" type="radio" name="things">
+            <label for="thing2" class="inline">Thing two</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one whole padded">
+        <input id="allthings" type="checkbox" name="things" checked="">
+        <label for="allthings" class="inline"> I want all the things!</label>
+      </div>
+    </div>
+  </fieldset>
+</form></pre>
             </div>
           </div>
         </div>
@@ -493,26 +496,26 @@
           </div>
           <div class="row gap-top">
             <div class="one half pad-left pad-right">
-              <pre data-lang="html">&lt;p class=&quot;invalid&quot;&gt;
-  &lt;input value=&quot;Invalid entry&quot;&gt;
-&lt;/p&gt;
-&lt;div class=&quot;invalid row&quot;&gt;
-  &lt;div class=&quot;one mobile tenth&quot;&gt;&lt;span class=&quot;prefix&quot;&gt;@&lt;/span&gt;&lt;/div&gt;
-  &lt;div class=&quot;nine mobile tenths&quot;&gt;
-    &lt;input value=&quot;Invalid entry&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+              <pre data-lang="html"><p class="invalid">
+  <input value="Invalid entry">
+</p>
+<div class="invalid row">
+  <div class="one mobile tenth"><span class="prefix">@</span></div>
+  <div class="nine mobile tenths">
+    <input value="Invalid entry">
+  </div>
+</div></pre>
             </div>
             <div class="one half pad-left pad-right">
-              <pre data-lang="html">&lt;p class=&quot;valid&quot;&gt;
-  &lt;input value=&quot;Valid entry&quot;&gt;
-&lt;/p&gt;
-&lt;div class=&quot;valid row&quot;&gt;
-  &lt;div class=&quot;one mobile tenth&quot;&gt;&lt;span class=&quot;prefix&quot;&gt;@&lt;/span&gt;&lt;/div&gt;
-  &lt;div class=&quot;nine mobile tenths&quot;&gt;
-    &lt;input value=&quot;Valid entry&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+              <pre data-lang="html"><p class="valid">
+  <input value="Valid entry">
+</p>
+<div class="valid row">
+  <div class="one mobile tenth"><span class="prefix">@</span></div>
+  <div class="nine mobile tenths">
+    <input value="Valid entry">
+  </div>
+</div></pre>
             </div>
           </div>
         </div>
@@ -557,8 +560,8 @@
         <div class="container padded">
           <div class="row">
             <div class="one half padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
-              <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
+              <p>GroundworkCSS is<b>100% free</b> and<b>open source</b>.<a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
+              <p>Find a bug? Help squash it by<a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
             <div class="one half padded">
               <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>

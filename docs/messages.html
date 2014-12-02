@@ -10,17 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>GroundworkCSS &hearts; UI Elements</title>
-    <!-- Modernizr -->
+    <!-- Modernizr-->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
     <script type="text/javascript" src="../js/libs/jquery-1.10.2.min.js"></script>
-    <!-- framework css --><!--[if gt IE 9]><!-->
-    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]--><!--[if lte IE 9]>
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-core.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-type.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ui.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-anim.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
+    <!-- framework css--><!--[if gt IE 9]><!-->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]-->
+    <!--if lte IE 9
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-core.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-type.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-ui.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-anim.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-ie.css')
+    
+    -->
     <style type="text/css">
       .logo {
         position: relative;
@@ -40,9 +43,8 @@
     </style>
     <!-- snippet (syntax highlighting for code examples)-->
     <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
-(function() {
-
+    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css">
+    <script>(function() {
   $(document).ready(function() {
     $('pre[data-lang="html"]').snippet("html", {
       style: "groundwork",
@@ -63,7 +65,8 @@
   });
 
 }).call(this);
-</script>
+
+    </script>
   </head>
   <body>
     <header class="padded">
@@ -73,7 +76,7 @@
             <h2 class="logo"><a href="/" target="_parent"><img src="../images/groundwork-logo.svg" alt="GroundworkCSS">GroundworkCSS 2</a></h2>
           </div>
           <div class="one half">
-            <p class="small double-pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.5.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
+            <p class="small double-pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.5.0<br>Created & Maintained by<a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
         </div>
         <nav role="navigation" class="nav gap-top">
@@ -147,10 +150,10 @@
               </div>
               <div class="row">
                 <div class="one half pad-left pad-right">
-                  <pre data-lang="html">&lt;p class=&quot;message&quot;&gt;This is an important message.&lt;/p&gt;</pre>
+                  <pre data-lang="html"><p class="message">This is an important message.</p></pre>
                 </div>
                 <div class="one half pad-left pad-right">
-                  <pre data-lang="html">&lt;p class=&quot;message dismissible&quot;&gt;This is a dismissible message.&lt;/p&gt;</pre>
+                  <pre data-lang="html"><p class="message dismissible">This is a dismissible message.</p></pre>
                 </div>
               </div>
             </div>
@@ -249,8 +252,8 @@
         <div class="container padded">
           <div class="row">
             <div class="one half padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
-              <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
+              <p>GroundworkCSS is<b>100% free</b> and<b>open source</b>.<a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
+              <p>Find a bug? Help squash it by<a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
             <div class="one half padded">
               <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>

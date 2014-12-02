@@ -1,4 +1,4 @@
-!!! 5
+doctype html
 | <!--[if lt IE 7]><html class="no-js ie ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
 | <!--[if IE 7]>   <html class="no-js ie ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
 | <!--[if IE 8]>   <html class="no-js ie ie8 lt-ie9 lt-ie10"><![endif]-->
@@ -15,13 +15,13 @@ html.no-js
 
     block title
 
-    // Modernizr 
+    // Modernizr
     script(src='../js/libs/modernizr-2.6.2.min.js')
 
     // jQuery
     script(type='text/javascript', src='../js/libs/jquery-1.10.2.min.js')
 
-    // framework css 
+    // framework css
     | <!--[if gt IE 9]><!-->
     link(type='text/css', rel='stylesheet', href='../css/groundwork.css')
     | <!--<![endif]-->
@@ -52,24 +52,25 @@ html.no-js
     // snippet (syntax highlighting for code examples)
     script(type='text/javascript', src='../js/demo/jquery.snippet.min.js')
     link(type='text/css', rel='stylesheet', href='../css/demo/jquery.snippet.css')
-    :coffeescript
-      $(document).ready ->
-        $('pre[data-lang="html"]').snippet("html", {
-          style:"groundwork"
-          clipboard:"../js/demo/ZeroClipboard.swf"
-        })
-        $('pre[data-lang="css"]').snippet("css", {
-          style:"groundwork"
-          clipboard:"../js/demo/ZeroClipboard.swf"
-        })
-        $('pre[data-lang="sass"]').snippet("sass", {
-          style:"groundwork"
-          clipboard:"../js/demo/ZeroClipboard.swf"
-        })
-        $('pre[data-lang="js"]').snippet("javascript", {
-          style:"groundwork"
-          clipboard:"../js/demo/ZeroClipboard.swf"
-        })
+    script
+      :coffee
+        $(document).ready ->
+          $('pre[data-lang="html"]').snippet("html", {
+            style:"groundwork"
+            clipboard:"../js/demo/ZeroClipboard.swf"
+          })
+          $('pre[data-lang="css"]').snippet("css", {
+            style:"groundwork"
+            clipboard:"../js/demo/ZeroClipboard.swf"
+          })
+          $('pre[data-lang="sass"]').snippet("sass", {
+            style:"groundwork"
+            clipboard:"../js/demo/ZeroClipboard.swf"
+          })
+          $('pre[data-lang="js"]').snippet("javascript", {
+            style:"groundwork"
+            clipboard:"../js/demo/ZeroClipboard.swf"
+          })
   body
     header.padded
       .container
@@ -84,7 +85,7 @@ html.no-js
               a(href='https://github.com/groundworkcss/groundwork', target="_parent") Github Project
               |  - Version 2.5.0
               br
-              | Created & Maintained by 
+              | Created & Maintained by
               a(href='http://twitter.com/ghepting', target='_blank') Gary Hepting
         nav.nav.gap-top(role='navigation')
           ul(role='menubar')
@@ -191,16 +192,16 @@ html.no-js
           .row
             .one.half.padded
               p
-                | GroundworkCSS is 
+                | GroundworkCSS is
                 b 100% free
-                |  and 
+                |  and
                 b open source
-                |. 
+                |.
                 a(href='mailto:groundworkcss@gmail.com')
                   | Give a shout out
                 |  if you have any feedback.
               p
-                | Find a bug? Help squash it by 
+                | Find a bug? Help squash it by
                 a(href="https://github.com/groundworkcss/groundwork/issues", target="_blank")
                   | filing an issue
                 |  on Github.

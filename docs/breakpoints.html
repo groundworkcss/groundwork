@@ -10,17 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>GroundworkCSS &hearts; Breakpoints</title>
-    <!-- Modernizr -->
+    <!-- Modernizr-->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
     <script type="text/javascript" src="../js/libs/jquery-1.10.2.min.js"></script>
-    <!-- framework css --><!--[if gt IE 9]><!-->
-    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]--><!--[if lte IE 9]>
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-core.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-type.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ui.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-anim.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
+    <!-- framework css--><!--[if gt IE 9]><!-->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]-->
+    <!--if lte IE 9
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-core.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-type.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-ui.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-anim.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-ie.css')
+    
+    -->
     <style type="text/css">
       .logo {
         position: relative;
@@ -40,9 +43,8 @@
     </style>
     <!-- snippet (syntax highlighting for code examples)-->
     <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
-(function() {
-
+    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css">
+    <script>(function() {
   $(document).ready(function() {
     $('pre[data-lang="html"]').snippet("html", {
       style: "groundwork",
@@ -63,7 +65,8 @@
   });
 
 }).call(this);
-</script>
+
+    </script>
   </head>
   <body>
     <header class="padded">
@@ -73,7 +76,7 @@
             <h2 class="logo"><a href="/" target="_parent"><img src="../images/groundwork-logo.svg" alt="GroundworkCSS">GroundworkCSS 2</a></h2>
           </div>
           <div class="one half">
-            <p class="small double-pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.5.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
+            <p class="small double-pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.5.0<br>Created & Maintained by<a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
         </div>
         <nav role="navigation" class="nav gap-top">
@@ -140,14 +143,14 @@
                   <dt>Small Mobiles</dt>
                   <dd>Designed to target mobile devices with viewport sizes smaller than an iPhone.</dd>
                 </dl>
-                <pre data-lang="css">$small-mobile: &quot;(max-width: 319px)&quot;;</pre>
+                <pre data-lang="css">$small-mobile: "(max-width: 319px)";</pre>
               </div>
               <div class="one half padded">
                 <dl>
                   <dt>iPhone (up to 4S)</dt>
                   <dd>Designed to target mobile devices with viewport sizes up to the iPhone 4/4S.</dd>
                 </dl>
-                <pre data-lang="css">$iphone: &quot;(min-device-width: 320px) and (max-device-width: 480px)&quot;;</pre>
+                <pre data-lang="css">$iphone: "(min-device-width: 320px) and (max-device-width: 480px)";</pre>
               </div>
             </div><br>
             <div class="row">
@@ -156,14 +159,14 @@
                   <dt>iPhone (up to 5)</dt>
                   <dd>Designed to target mobile devies with viewport sizes up to the iPhones 5.</dd>
                 </dl>
-                <pre data-lang="css">$iphone5: &quot;(min-device-width: 320px) and (max-device-width: 568px)&quot;;</pre>
+                <pre data-lang="css">$iphone5: "(min-device-width: 320px) and (max-device-width: 568px)";</pre>
               </div>
               <div class="one half padded">
                 <dl>
                   <dt>Mobile</dt>
                   <dd>Designed to target mobile devices with viewport sizes similar to the larger Androids.</dd>
                 </dl>
-                <pre data-lang="css">$mobile: &quot;(max-width: 480px)&quot;;</pre>
+                <pre data-lang="css">$mobile: "(max-width: 480px)";</pre>
               </div>
             </div><br>
             <div class="row">
@@ -172,14 +175,14 @@
                   <dt>Not Mobile</dt>
                   <dd>Designed to target devices with viewport sizes greater than those within the <em>"mobile"</em> category.</dd>
                 </dl>
-                <pre data-lang="css">$not-mobile: &quot;(min-width: 481px)&quot;;</pre>
+                <pre data-lang="css">$not-mobile: "(min-width: 481px)";</pre>
               </div>
               <div class="one half padded">
                 <dl>
                   <dt>Small Tablet</dt>
                   <dd>Designed to target devices with viewport sizes smaller than an iPad.</dd>
                 </dl>
-                <pre data-lang="css">$small-tablet: &quot;(max-width: 767px)&quot;;</pre>
+                <pre data-lang="css">$small-tablet: "(max-width: 767px)";</pre>
               </div>
             </div><br>
             <div class="row">
@@ -188,14 +191,14 @@
                   <dt>Tablet</dt>
                   <dd>Designed to target devices with viewport sizes similar to or greater than an iPad.</dd>
                 </dl>
-                <pre data-lang="css">$tablet: &quot;(min-width: 768px)&quot;;</pre>
+                <pre data-lang="css">$tablet: "(min-width: 768px)";</pre>
               </div>
               <div class="one half padded">
                 <dl>
                   <dt>iPad (including iPad Mini)</dt>
                   <dd>Designed to target devices with viewport sizes similar to an iPad.</dd>
                 </dl>
-                <pre data-lang="css">$ipad: &quot;(min-width: 768px) and (max-width:1024px)&quot;;</pre>
+                <pre data-lang="css">$ipad: "(min-width: 768px) and (max-width:1024px)";</pre>
               </div>
             </div><br>
             <div class="row">
@@ -204,14 +207,14 @@
                   <dt>iPad (Retina only)</dt>
                   <dd>Designed to target devices with viewport sizes similar to an iPad, and with retina display.</dd>
                 </dl>
-                <pre data-lang="css">$retina-ipad: &quot;(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)&quot;;</pre>
+                <pre data-lang="css">$retina-ipad: "(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)";</pre>
               </div>
               <div class="one half padded">
                 <dl>
                   <dt>Not Desktop</dt>
                   <dd>Designed to target devices with viewport sizes up to, but not greater than an iPad.</dd>
                 </dl>
-                <pre data-lang="css">$not-desktop: &quot;(max-width: 1024px)&quot;;</pre>
+                <pre data-lang="css">$not-desktop: "(max-width: 1024px)";</pre>
               </div>
             </div><br>
             <div class="row">
@@ -220,14 +223,14 @@
                   <dt>Desktop</dt>
                   <dd>Designed to target devices with viewport sizes greater than an iPad.</dd>
                 </dl>
-                <pre data-lang="css">$desktop: &quot;(min-width: 1025px)&quot;;</pre>
+                <pre data-lang="css">$desktop: "(min-width: 1025px)";</pre>
               </div>
               <div class="one half padded">
                 <dl>
                   <dt>Retina</dt>
                   <dd>Designed to target devices of any size with retina display.</dd>
                 </dl>
-                <pre data-lang="css">$retina: &quot;(-webkit-min-device-pixel-ratio: 1.5)&quot;;</pre>
+                <pre data-lang="css">$retina: "(-webkit-min-device-pixel-ratio: 1.5)";</pre>
               </div>
             </div><br>
             <hr><br>
@@ -298,8 +301,8 @@
         <div class="container padded">
           <div class="row">
             <div class="one half padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
-              <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
+              <p>GroundworkCSS is<b>100% free</b> and<b>open source</b>.<a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
+              <p>Find a bug? Help squash it by<a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
             <div class="one half padded">
               <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>
