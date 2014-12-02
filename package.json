@@ -3,7 +3,7 @@
   "version": "2.5.0",
   "description": "GroundworkCSS is a fully responsive HTML5, CSS and Javascript toolkit created by @ghepting",
   "devDependencies": {
-    "grunt": "^0.4.1",
+    "grunt": "^0.4.5",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-contrib-coffee": "^0.12.0",
     "grunt-contrib-jade": "^0.13.0",
