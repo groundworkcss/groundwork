@@ -9,7 +9,7 @@ module.exports = (grunt) ->
         tasks: ['jade']
       compass:
         files: '**/*.sass'
-        tasks: ['compass', 'autoprefixer', 'cssmin']
+        tasks: ['compass', 'autoprefixer']
       coffee:
         files: '**/*.coffee'
         tasks: ['coffee', 'uglify']
@@ -29,8 +29,9 @@ module.exports = (grunt) ->
     compass:
       build:
         options:
-          config: 'config.rb'
-          trace: true
+          sassDir: 'src/sass'
+          cssDir: 'css'
+          outputStyle: 'compressed'
 
     autoprefixer:
       build:
@@ -57,23 +58,13 @@ module.exports = (grunt) ->
         files:
           'js/groundwork.all.js': ['js/groundwork.all.js']
 
-    cssmin:
-      minify:
-        expand: true
-        cwd: 'css/'
-        src: ['*.css', '!*.min.css']
-        dest: 'css/'
-        ext: '.css'
-
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-jade'
-  grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-autoprefixer'
-  grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
 
   grunt.registerTask 'default',           ['build']
-  grunt.registerTask 'build',             ['compass', 'autoprefixer', 'coffee:individual', 'coffee:concatenated', 'cssmin', 'uglify']
+  grunt.registerTask 'build',             ['compass', 'autoprefixer', 'coffee:individual', 'coffee:concatenated', 'uglify']
   grunt.registerTask 'docs',              ['jade']

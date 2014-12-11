@@ -1,3 +1,4 @@
+
 /*
  *
  *  Responsive Navigation by Gary Hepting
@@ -6,8 +7,7 @@
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
-*/
-
+ */
 
 (function() {
   var ResponsiveNavigation, responsiveNavigationIndex;
@@ -84,17 +84,17 @@
         }
       });
       return $('body').on('mouseleave', '.nav:not(.vertical) li[role="menu"]', function(e) {
-        var _this = this;
         if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
-          return window.delayMenuClose = setTimeout(function() {
-            return $(_this).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false');
-          }, 500);
+          return window.delayMenuClose = setTimeout((function(_this) {
+            return function() {
+              return $(_this).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false');
+            };
+          })(this), 500);
         }
       });
     };
     touchBindings = function() {
-      $('body').on('click', '.nav li[role="menu"] > a,\
-                           .nav li[role="menu"] > button', function(e) {
+      $('body').on('click', '.nav li[role="menu"] > a, .nav li[role="menu"] > button', function(e) {
         var list, menu;
         list = $(this).siblings('ul');
         menu = $(this).parent('[role="menu"]');

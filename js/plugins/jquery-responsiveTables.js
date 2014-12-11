@@ -1,3 +1,4 @@
+
 /*
  *
  *  jQuery ResponsiveTables by Gary Hepting
@@ -7,8 +8,7 @@
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
-*/
-
+ */
 
 (function() {
   var ResponsiveTable, delayedAdjustTables, responsiveTableIndex;
@@ -74,20 +74,22 @@
     };
 
     ResponsiveTable.prototype.adjustOnLoad = function() {
-      var _this = this;
-      return $(window).on('load', function() {
-        return _this.resizeTable();
-      });
+      return $(window).on('load', (function(_this) {
+        return function() {
+          return _this.resizeTable();
+        };
+      })(this));
     };
 
     ResponsiveTable.prototype.adjustOnResize = function() {
-      var _this = this;
-      return $(window).on('resize', function() {
-        clearTimeout(delayedAdjustTables[_this.index]);
-        return delayedAdjustTables[_this.index] = setTimeout(function() {
-          return _this.resizeTable();
-        }, 20);
-      });
+      return $(window).on('resize', (function(_this) {
+        return function() {
+          clearTimeout(delayedAdjustTables[_this.index]);
+          return delayedAdjustTables[_this.index] = setTimeout(function() {
+            return _this.resizeTable();
+          }, 20);
+        };
+      })(this));
     };
 
     return ResponsiveTable;

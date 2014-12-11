@@ -10,17 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>GroundworkCSS &hearts; Navigation</title>
-    <!-- Modernizr -->
+    <!-- Modernizr-->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
     <script type="text/javascript" src="../js/libs/jquery-1.10.2.min.js"></script>
-    <!-- framework css --><!--[if gt IE 9]><!-->
-    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]--><!--[if lte IE 9]>
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-core.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-type.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ui.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-anim.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
+    <!-- framework css--><!--[if gt IE 9]><!-->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]-->
+    <!--if lte IE 9
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-core.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-type.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-ui.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-anim.css')
+    link(type='text/css', rel='stylesheet', href='../css/groundwork-ie.css')
+    
+    -->
     <style type="text/css">
       .logo {
         position: relative;
@@ -40,9 +43,8 @@
     </style>
     <!-- snippet (syntax highlighting for code examples)-->
     <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
-(function() {
-
+    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css">
+    <script>(function() {
   $(document).ready(function() {
     $('pre[data-lang="html"]').snippet("html", {
       style: "groundwork",
@@ -63,7 +65,8 @@
   });
 
 }).call(this);
-</script>
+
+    </script>
   </head>
   <body>
     <header class="padded">
@@ -73,7 +76,7 @@
             <h2 class="logo"><a href="/" target="_parent"><img src="../images/groundwork-logo.svg" alt="GroundworkCSS">GroundworkCSS 2</a></h2>
           </div>
           <div class="one half">
-            <p class="small double-pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.5.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
+            <p class="small double-pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.5.0<br>Created & Maintained by<a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
         </div>
         <nav role="navigation" class="nav gap-top">
@@ -169,24 +172,24 @@
                     </li>
                   </ul>
                 </nav><br>
-                <pre data-lang="html">&lt;nav class=&quot;nav&quot; title=&quot;iPad Menu&quot;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;button&gt;Nav Item 1&lt;/button&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;button&gt;Nav Menu 1&lt;/button&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;button&gt;Menu Item 1&lt;/button&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;button&gt;Sub Menu 1&lt;/button&gt;
-          &lt;ul&gt;
-            &lt;li&gt;&lt;button&gt;Sub Menu Item 1&lt;/button&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;button&gt;Sub Menu Item 2&lt;/button&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;&lt;button&gt;Menu Item 2&lt;/button&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;button&gt;Nav Item 3&lt;/button&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;</pre>
+                <pre data-lang="html"><nav class="nav" title="iPad Menu">
+  <ul>
+    <li><button>Nav Item 1</button></li>
+    <li><button>Nav Menu 1</button>
+      <ul>
+        <li><button>Menu Item 1</button></li>
+        <li><button>Sub Menu 1</button>
+          <ul>
+            <li><button>Sub Menu Item 1</button></li>
+            <li><button>Sub Menu Item 2</button></li>
+          </ul>
+        </li>
+        <li><button>Menu Item 2</button></li>
+      </ul>
+    </li>
+    <li><button>Nav Item 3</button></li>
+  </ul>
+</nav></pre>
               </div>
             </div>
             <div class="row">
@@ -224,7 +227,7 @@
                     </li>
                   </ul>
                 </nav><br>
-                <pre data-lang="html">&lt;nav class=&quot;nav small-tablet&quot; title=&quot;Small Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
+                <pre data-lang="html"><nav class="nav small-tablet" title="Small Tablet Menu">...</nav></pre>
               </div>
             </div>
             <div class="row">
@@ -262,7 +265,7 @@
                     </li>
                   </ul>
                 </nav><br>
-                <pre data-lang="html">&lt;nav class=&quot;nav mobile&quot; title=&quot;Mobile Menu&quot;&gt;...&lt;/nav&gt;</pre>
+                <pre data-lang="html"><nav class="nav mobile" title="Mobile Menu">...</nav></pre>
               </div>
             </div>
             <div class="row">
@@ -300,7 +303,7 @@
                     </li>
                   </ul>
                 </nav><br>
-                <pre data-lang="html">&lt;nav class=&quot;nav nocollapse&quot; title=&quot;Vegetarian Menu&quot;&gt;...&lt;/nav&gt;</pre>
+                <pre data-lang="html"><nav class="nav nocollapse" title="Vegetarian Menu">...</nav></pre>
               </div>
             </div>
           </div><br>
@@ -692,7 +695,7 @@
                   </li>
                 </ul>
               </nav><br>
-              <pre data-lang="html">&lt;nav class=&quot;nav vertical&quot; title=&quot;Vertical iPad Menu&quot;&gt;...&lt;/nav&gt;</pre>
+              <pre data-lang="html"><nav class="nav vertical" title="Vertical iPad Menu">...</nav></pre>
             </div>
             <div class="one third padded">
               <h4>Small Tablet</h4>
@@ -728,7 +731,7 @@
                   </li>
                 </ul>
               </nav><br>
-              <pre data-lang="html">&lt;nav class=&quot;nav small-tablet vertical&quot; title=&quot;Vertical Small-Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
+              <pre data-lang="html"><nav class="nav small-tablet vertical" title="Vertical Small-Tablet Menu">...</nav></pre>
             </div>
             <div class="one third padded">
               <h4>Mobile</h4>
@@ -764,7 +767,7 @@
                   </li>
                 </ul>
               </nav><br>
-              <pre data-lang="html">&lt;nav class=&quot;nav mobile vertical&quot; title=&quot;Vertical Mobile Menu&quot;&gt;...&lt;/nav&gt;</pre>
+              <pre data-lang="html"><nav class="nav mobile vertical" title="Vertical Mobile Menu">...</nav></pre>
             </div>
           </div>
           <div class="row">
@@ -802,7 +805,7 @@
                   </li>
                 </ul>
               </nav><br>
-              <pre data-lang="html">&lt;nav class=&quot;nav vertical nocollapse&quot;&gt;...&lt;/nav</pre>
+              <pre data-lang="html"><nav class="nav vertical nocollapse">...</nav</pre>
             </div>
           </div>
         </div>
@@ -847,8 +850,8 @@
         <div class="container padded">
           <div class="row">
             <div class="one half padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
-              <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
+              <p>GroundworkCSS is<b>100% free</b> and<b>open source</b>.<a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
+              <p>Find a bug? Help squash it by<a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
             <div class="one half padded">
               <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>

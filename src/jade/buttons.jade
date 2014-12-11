@@ -15,7 +15,7 @@ block content
           p
             a.blue.button(href='navigation.html', rel='prev')
               | Back
-            | 
+            |  
             a.green.button(href='boxes.html', rel='next')
               | Next: Boxes
     hr
@@ -32,6 +32,12 @@ block content
                 button Medium Button
               p
                 button.large Large Button
+              p
+                button.small.thick Small Thick Button
+              p
+                button.thick Medium Thick Button
+              p
+                button.large.thick Large Thick Button
             .one.small-tablet.third.padded
               h4 Types
               p
@@ -244,13 +250,13 @@ block content
                   i.icon-twitter
               li
                 button
-                  i.icon-linkedin-sign
+                  i.icon-linkedin
               li
                 button
                   i.icon-google-plus
               li
                 button
-                  i.icon-facebook-sign
+                  i.icon-facebook
               li
                 button
                   i.icon-pinterest
@@ -264,13 +270,13 @@ block content
                   i.icon-twitter
               li
                 button.red
-                  i.icon-linkedin-sign
+                  i.icon-linkedin
               li
                 button.pink
                   i.icon-google-plus
               li
                 button.purple
-                  i.icon-facebook-sign
+                  i.icon-facebook
               li
                 button.asphalt
                   i.icon-pinterest
@@ -349,7 +355,7 @@ block content
                   button Normal Button
               .two.thirds.small-tablet.padded
                 pre(data-lang='html')
-                  | <button>Normal Button</button>
+                  = '<button>Normal Button</button>'
           .one.half
             .row
               .one.third.small-tablet.pad-top.pad-left.pad-right.align-center
@@ -357,7 +363,7 @@ block content
                   input(type='button', value='Input Button')
               .two.thirds.small-tablet.padded
                 pre(data-lang='html')
-                  | <input type="button" value="Input Button" />
+                  = '<input type="button" value="Input Button" />'
         .row
           .one.half
             .row
@@ -366,7 +372,7 @@ block content
                   a.gap-bottom.gap-right(role='button', href='#') ARIA Role Button
               .two.thirds.small-tablet.padded
                 pre(data-lang='html')
-                  | <a role="button" href="#">ARIA Role Button</button>
+                  = '<a role="button" href="#">ARIA Role Button</button>'
           .one.half
             .row
               .one.third.small-tablet.pad-top.pad-left.pad-right.align-center
@@ -374,4 +380,4 @@ block content
                   a.blue.button(href='#') Blue Button
               .two.thirds.small-tablet.padded
                 pre(data-lang='html')
-                  | <a class="blue button" href="#">Blue Button</a>
+                  = '<a class="blue button" href="#">Blue Button</a>'

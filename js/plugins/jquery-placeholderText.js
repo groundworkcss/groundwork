@@ -1,3 +1,4 @@
+
 /*
  *
  *  jQuery PlaceholderText by Gary Hepting
@@ -6,8 +7,7 @@
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
-*/
-
+ */
 
 (function() {
   (function($) {

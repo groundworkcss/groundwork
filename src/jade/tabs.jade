@@ -1,6 +1,6 @@
 mixin tab-structure
-  colors = ["f1c40f", "e67e22", "e74c3c", "f02475", "9b59b6", "383636", "34495e", "3498db", "1abc9c", "2ecc71"]
-  classes = ["yellow", "orange", "pink", "red", "purple", "charcoal", "asphalt", "blue", "turquoise", "green"]
+  - var colors= ["f1c40f", "e67e22", "e74c3c", "f02475", "9b59b6", "383636", "34495e", "3498db", "1abc9c", "2ecc71"]
+  - var classes= ["yellow", "orange", "pink", "red", "purple", "charcoal", "asphalt", "blue", "turquoise", "green"]
   ul(role='tablist')
     each color, i in colors
       tab = i+1
@@ -9,7 +9,7 @@ mixin tab-structure
     tab = i+1
     div(id='tab#{tab}', role='tabpanel')
       h1
-        | This is the content of tab 
+        | This is the content of tab
         span(style='display:inline-block;padding:0 0.3em;border-radius:4px;color:#fff;background:##{colors[i]};') panel #{tab}
       .pull-right.pull-none-small-tablet.gap-left.no-gap-small-tablet.align-center
         img(src='http://placehold.it/520x300/#{colors[i]}/ffffff')
@@ -28,14 +28,14 @@ block content
         .three.fifths.bounceInRight.animated
           h1.zero.museo-slab Tabs
           p.quicksand
-            | Accessible, responsive tab panels that collapse into accordions at 
+            | Accessible, responsive tab panels that collapse into accordions at
             a(href='breakpoints.html') targeted breakpoints
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 9 of 14
           p
             a.blue.button(href='tables.html', rel='prev')
               | Back
-            | 
+            |  
             a.green.button(href='forms.html', rel='next')
               | Next: Forms
     hr

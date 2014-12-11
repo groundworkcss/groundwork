@@ -1,3 +1,4 @@
+
 /*
  *
  *  jQuery ResponsiveText by Gary Hepting
@@ -7,8 +8,7 @@
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
-*/
-
+ */
 
 (function() {
   var ResponsiveText, delayedAdjustText, responsiveTextIndex;
@@ -49,47 +49,52 @@
     };
 
     ResponsiveText.prototype.adjustOnLoad = function() {
-      var _this = this;
-      return $(window).on('load', function() {
-        return _this.resizeText();
-      });
+      return $(window).on('load', (function(_this) {
+        return function() {
+          return _this.resizeText();
+        };
+      })(this));
     };
 
     ResponsiveText.prototype.adjustOnResize = function() {
-      var _this = this;
-      return $(window).on('resize', function() {
-        clearTimeout(delayedAdjustText[_this.index]);
-        return delayedAdjustText[_this.index] = setTimeout(function() {
-          return _this.resizeText();
-        }, 20);
-      });
+      return $(window).on('resize', (function(_this) {
+        return function() {
+          clearTimeout(delayedAdjustText[_this.index]);
+          return delayedAdjustText[_this.index] = setTimeout(function() {
+            return _this.resizeText();
+          }, 20);
+        };
+      })(this));
     };
 
     ResponsiveText.prototype.scrollOnHover = function() {
-      var _this = this;
       $(this.el).css({
         'overflow': 'hidden',
         'text-overflow': 'ellipsis',
         'white-space': 'nowrap'
       });
-      return $(this.el).hover(function() {
-        _this.difference = _this.el.scrollWidth - $(_this.el).width();
-        if (_this.difference > _this.scrollSpeed) {
-          _this.scrollSpeed = _this.difference;
-        }
-        if (_this.difference > 0) {
-          $(_this.el).css('cursor', 'e-resize');
+      return $(this.el).hover((function(_this) {
+        return function() {
+          _this.difference = _this.el.scrollWidth - $(_this.el).width();
+          if (_this.difference > _this.scrollSpeed) {
+            _this.scrollSpeed = _this.difference;
+          }
+          if (_this.difference > 0) {
+            $(_this.el).css('cursor', 'e-resize');
+            return $(_this.el).stop().animate({
+              "text-indent": -_this.difference
+            }, _this.scrollSpeed, function() {
+              return $(_this.el).css('cursor', 'text');
+            });
+          }
+        };
+      })(this), (function(_this) {
+        return function() {
           return $(_this.el).stop().animate({
-            "text-indent": -_this.difference
-          }, _this.scrollSpeed, function() {
-            return $(_this.el).css('cursor', 'text');
-          });
-        }
-      }, function() {
-        return $(_this.el).stop().animate({
-          "text-indent": 0
-        }, _this.scrollReset);
-      });
+            "text-indent": 0
+          }, _this.scrollReset);
+        };
+      })(this));
     };
 
     return ResponsiveText;

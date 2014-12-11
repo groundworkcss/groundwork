@@ -127,7 +127,7 @@ $placeholderText-fallback: true !default
   margin-left: 0
   %checklist-item
     &:before
-      content: $icon-check-empty
+      content: $fa-var-square-o
       display: inline-block
       width: 1.1em
       margin-right: 0.25em
@@ -140,7 +140,7 @@ $placeholderText-fallback: true !default
       margin-top: 0
     &[aria-checked~="true"], &[data-checked~="true"], &[checked="checked"], &.checked, &.completed
       &:before
-        content: $icon-check
+        content: $fa-var-check-square-o
   &:not([readonly])
     %checklist-item
       &:not([readonly])
@@ -151,7 +151,7 @@ $placeholderText-fallback: true !default
   margin-left: 0
   %list-item
     &:before
-      content: $icon-circle
+      content: $fa-var-circle-o
       display: inline-block
       width: 1.1em
       margin-right: 0.25em
