@@ -151,11 +151,11 @@ $default-radius: 4px !default
         &[role="menu"]
           > a, > button
             &:after
-              content: $icon-caret-down
+              content: $fa-var-chevron-down
           &[aria-pressed="true"]
             > a, > button
               &:after
-                content: $icon-caret-up
+                content: $fa-var-chevron-up
         ul
           @extend %vertical-navigation-menu
         li
@@ -179,7 +179,7 @@ $default-radius: 4px !default
           &:after
             @extend %pull-right
             margin-left: 0.5em
-            content: $icon-caret-down
+            content: $fa-var-chevron-down
             font-family: FontAwesome
             font-weight: normal
             font-style: normal
@@ -206,7 +206,7 @@ $default-radius: 4px !default
         &[role="menu"]
           > a, > button
             &:after
-              content: $icon-caret-right
+              content: $fa-var-chevron-right
         ul
           top: 0
           left: 100%

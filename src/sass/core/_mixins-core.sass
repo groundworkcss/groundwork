@@ -68,7 +68,7 @@ $oldIE: false !default
     $correct: angle($old)
     // handle both angles and old literals
     // I'm not sure for the angle part though
-    // as it assumes that the mixin user is 
+    // as it assumes that the mixin user is
     // doing it wrong...
   // works with compass 0.13.alpha.4
   // @include background-image(linear-gradient($correct, $startColor, $endColor));
@@ -145,10 +145,10 @@ $oldIE: false !default
       display: inline-block
       &:before
         +icon-FontAwesome
-        content: $icon-list
+        content: $fa-var-list
       &[aria-expanded="true"]
         &:before
-          content: $icon-collapse-top
+          content: $fa-var-chevron-up
     > ul
       display: none
       > li
@@ -177,11 +177,11 @@ $oldIE: false !default
         > a, > button
           &:after
             float: none
-            content: $icon-caret-down
+            content: $fa-var-chevron-down
         &[aria-pressed="true"]
           > a, > button
             &:after
-              content: $icon-caret-up
+              content: $fa-var-chevron-up
     a, button:not(.hamburger)
       display: block
       width: 100%

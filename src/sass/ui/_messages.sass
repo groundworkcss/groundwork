@@ -24,7 +24,7 @@ $default-radius: 4px !default
   +rounded($default-radius)
   &:before
     +icon-FontAwesome
-    content: $icon-info-sign
+    content: $fa-var-info-circle
     position: absolute
     top: 50%
     margin-top: -0.9em
@@ -62,7 +62,7 @@ $default-radius: 4px !default
   color: $alert-color
   border-color: $alert-border
   &:before
-    content: $icon-exclamation-sign
+    content: $fa-var-exclamation-circle
   &%message-disabled
     +state(disabled, normal, desaturate($alert-color, 20%))
 
@@ -71,7 +71,7 @@ $default-radius: 4px !default
   color: $warning-color
   border-color: $warning-border
   &:before
-    content: $icon-warning-sign
+    content: $fa-var-warning
   &%message-disabled
     +state(disabled, normal, desaturate($warning-color, 20%))
 
@@ -80,7 +80,7 @@ $default-radius: 4px !default
   color: $error-color
   border-color: $error-border
   &:before
-    content: $icon-remove-sign
+    content: $fa-var-times-circle
   &%message-disabled
     +state(disabled, normal, desaturate($error-color, 20%))
 
@@ -89,7 +89,7 @@ $default-radius: 4px !default
   color: $success-color
   border-color: $success-border
   &:before
-    content: $icon-ok-sign
+    content: $fa-var-check-circle
   &%message-disabled
     +state(disabled, normal, desaturate($success-color, 20%))
 
@@ -98,7 +98,7 @@ $default-radius: 4px !default
   color: $question-color
   border-color: $question-border
   &:before
-    content: $icon-question-sign
+    content: $fa-var-question-circle
   &%message-disabled
     +state(disabled, normal, desaturate($question-color, 20%))
 
@@ -107,7 +107,7 @@ $default-radius: 4px !default
   cursor: pointer
   &:after
     +icon-FontAwesome
-    content: $icon-remove
+    content: $fa-var-close
     position: absolute
     top: 50%
     margin-top: -0.9em
