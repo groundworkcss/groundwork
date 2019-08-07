@@ -80,5 +80,5 @@ class ResponsiveText
 
 ) jQuery
 
-$(document).ready ->
+jQuery(document).ready ($) ->
   $(".responsive").not('table').responsiveText()

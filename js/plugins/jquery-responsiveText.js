@@ -106,7 +106,7 @@
     };
   })(jQuery);
 
-  $(document).ready(function() {
+  jQuery(document).ready(function($) {
     return $(".responsive").not('table').responsiveText();
   });
 

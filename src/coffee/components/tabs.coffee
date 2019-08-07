@@ -1,4 +1,4 @@
-$ ->
+(($) ->
 
   $('.tabs').each ->
     activeTab = $(@).children('ul').children('li.active')
@@ -92,3 +92,4 @@ $ ->
     transformTabs()
     adjustVerticalTabs()
 
+) jQuery

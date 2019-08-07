@@ -1,5 +1,5 @@
 (function() {
-  $(function() {
+  (function($) {
     var $body;
     $body = $('body');
     $('.dropdown').each(function() {
@@ -54,6 +54,6 @@
                         .dropdown li:last-child button', function(e) {
       return $('.dropdown[aria-pressed="true"]').attr('aria-pressed', 'false');
     });
-  });
+  })(jQuery);
 
 }).call(this);

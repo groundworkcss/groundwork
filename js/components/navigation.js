@@ -65,7 +65,7 @@
 
   })();
 
-  $(function() {
+  (function($) {
     var mouseBindings, responsiveNavigationElements, touchBindings;
     mouseBindings = function() {
       $('body').on('mouseenter', '.nav:not(.vertical) li[role="menu"]', function(e) {
@@ -134,6 +134,6 @@
     if (!Modernizr.touch) {
       return mouseBindings();
     }
-  });
+  })(jQuery);
 
 }).call(this);

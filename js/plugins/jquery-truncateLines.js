@@ -128,8 +128,9 @@
     };
   })(jQuery);
 
-  $(window).load(function() {
+  (function($) {
+    $(window).load(function() {});
     return $("[data-truncate]").truncateLines();
-  });
+  })(jQuery);
 
 }).call(this);

@@ -41,7 +41,7 @@ class ResponsiveNavigation
   hamburgerHelper: ->
     @el.prepend('<button class="hamburger"></button>')
 
-$ ->
+(($) ->
 
   mouseBindings = -> # needs more <3
     $('body').on 'mouseenter', '.nav:not(.vertical) li[role="menu"]', (e) ->
@@ -98,3 +98,5 @@ $ ->
   touchBindings()
   unless Modernizr.touch
     mouseBindings()
+
+) jQuery

@@ -1,4 +1,4 @@
-$ ->
+(($) ->
 
   $('body').on 'click', '.dismissible', ->
     $(@).addClass('dismiss animated')
@@ -6,3 +6,5 @@ $ ->
       $(@).hide 250, ->
         $(@).remove()
     , 1000)
+
+) jQuery

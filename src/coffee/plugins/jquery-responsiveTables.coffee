@@ -88,5 +88,5 @@ class ResponsiveTable
 
 ) jQuery
 
-$(document).ready ->
+jQuery(document).ready ($) ->
   $("table.responsive").responsiveTables()

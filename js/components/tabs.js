@@ -1,5 +1,5 @@
 (function() {
-  $(function() {
+  (function($) {
     var adjustVerticalTabs, convertToAccordion, restoreTabStructure, transformTabs;
     $('.tabs').each(function() {
       var activeTab, tabs;
@@ -108,6 +108,6 @@
       transformTabs();
       return adjustVerticalTabs();
     });
-  });
+  })(jQuery);
 
 }).call(this);

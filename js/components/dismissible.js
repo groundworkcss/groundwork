@@ -1,5 +1,5 @@
 (function() {
-  $(function() {
+  (function($) {
     return $('body').on('click', '.dismissible', function() {
       var _this = this;
       $(this).addClass('dismiss animated');
@@ -9,6 +9,6 @@
         });
       }, 1000);
     });
-  });
+  })(jQuery);
 
 }).call(this);

@@ -104,5 +104,9 @@ class TruncateLines
 
 ) jQuery
 
-$(window).load ->
+(($) ->
+
+  $(window).load ->
   $("[data-truncate]").truncateLines()
+
+) jQuery

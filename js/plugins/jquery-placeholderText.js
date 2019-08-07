@@ -113,7 +113,7 @@
     };
   })(jQuery);
 
-  $(function() {
+  jQuery(function($) {
     return $('.placeholderText').placeholderText();
   });
 
